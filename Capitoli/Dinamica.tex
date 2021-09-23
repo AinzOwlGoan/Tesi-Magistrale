@@ -1,0 +1,238 @@
+\section{Dinamica Manipolatore}
+Il modello dinamico del manipolatore ci fornisce una descrizione matematica della relazione che è instaurata tra le forze agenti sul robot (generalizzate) ed il movimento prodotto dalla struttura del robot, quindi le configurazioni che assume nel tempo. Inizialmente nel calcolo della dinamica sono stati usati tre metodi diversi, il metodo delle azioni vincolari, il metodo di Lagrange e quello dei lavori virtuali.
+\subsection{Prerequisiti per il calcolo della dinamica}\label{sec:prerequisiti-dinamica}
+Prima di andare ad analizzare i metodi utilizzati per la dinamica diretta e la dinamica inversa, è importante andare a ricavare tutte le matrici delle quali avremo bisogno, in particolare è necessario trovare delle matrici che ci permettano di ottenere $\theta_3, \theta_4$ in funzione di $\theta_1, \theta_2$.
+\subsubsection{Jacobiana $J_{34}$ e calcolo $\dot{\theta_3},\dot{\theta_4}$}
+Andiamo quindi a definire le seguenti quantità:
+\begin{equation*}
+    N_{13} = \frac{\cos\theta_4}{\sin\theta_4}\sin\theta_1-\cos\theta_1
+\end{equation*}
+\begin{equation*}
+    N_{23} = \cos\theta_2-\frac{\cos\theta_4}{\sin\theta_4}\sin\theta_2
+\end{equation*}
+\begin{equation*}
+    D_{13} = \cos\theta_3-\frac{\cos\theta_4}{\sin\theta_4}\sin\theta_3
+\end{equation*}
+Da queste tre formule possiamo andare a ricavare $\dot{\theta_3}$ nel seguente modo:
+\begin{equation}
+    \dot{\theta_3} = \frac{\dot{\theta_1}N_{13}}{D_{13}}+\frac{\dot{\theta_2}N_{23}}{D_{13}}
+\end{equation}
+Proseguiamo ora definendo:
+\begin{equation*}
+    N_{14} = \frac{\sin\theta_1\cos\theta_3}{\sin\theta_3}-\frac{\cos\theta_4}{\sin\theta_4}+\frac{\cos\theta_4}{\sin\theta_4}\sin\theta_1 - \cos\theta_1
+\end{equation*}
+\begin{equation*}
+    N_{24} = -\frac{\sin\theta_2\cos\theta_3}{\sin\theta_3}-\frac{\cos\theta_4}{\sin\theta_4}-\frac{\cos\theta_4}{\sin\theta_4}\sin\theta_2+\cos\theta_2
+\end{equation*}
+\begin{equation*}
+    D_{14} = \frac{\sin\theta_4\cos\theta_3}{\sin\theta_3}-\frac{\cos\theta_4}{\sin\theta_4}
+\end{equation*}
+Possiamo da questo ricavare $\dot{\theta_4}$ nel seguente modo:
+\begin{equation}
+    \dot{\theta_4} = \dot{\theta_1}\frac{N_{14}}{D_{14}}+\dot{\theta_2}\frac{N_{24}}{D_{14}}
+\end{equation}
+Il passo finale è quello di andare a rappresentare la matrice Jacobiana che lega le velocità $\dot{\theta_3}, \dot{\theta_4}$ con le velocità in ingresso al manipolatore.
+\begin{equation}
+    J_{34} = \begin{bmatrix}
+    \frac{N_{13}}{D_{13}} & \frac{N_{23}}{D_{13}} \\
+    \frac{N_{14}}{D_{14}} & \frac{N_{24}}{D_{14}}
+    \end{bmatrix}
+\end{equation}
+Siamo quindi riusciti ad ottenere la matrice che lega la velocità dei link distali a quella dei link motorizzati.
+\subsubsection{Jacobiana $\dot{J_{34}}$ e calcolo di $\ddot{\theta_3}, \ddot{\theta_4}$}
+Per andar ad ottenere la jacobiana finale, ed i valori delle accelerazioni sui link distali occorre derivare tutti gli elementi visti in precedenza, in particolare:
+\begin{equation*} %  N11p =  N13p
+    \dot{N_{13}} = \frac{-1}{\sin^2\theta_4\cdot\dot{\theta_4}\sin\theta_1}+\frac{\cos\theta_4}{\sin\theta_4}\cos\theta_1\dot{\theta_1}+\sin\theta_1\dot{\theta_1}
+\end{equation*}
+\begin{equation*} %N12p = N23p
+   \dot{N_{23}} =\frac{1}{\sin^2\theta_4\cdot\dot{\theta_4}\sin\theta_2}-\frac{\cos\theta_4}{\sin\theta_4}\cos\theta_2\dot{\theta_2}-\sin\theta_2\dot{\theta_2}
+\end{equation*}
+\begin{equation*} % D1p = D13p
+  \dot{D_{13}} =  -\sin\theta_3\dot{\theta_3} + \frac{1}{\sin^2\theta_4}\dot{\theta_4}\sin\theta_3 -\frac{ \cos\theta_4} {\sin\theta_4}\cos\theta_3\dot{\theta_3}
+\end{equation*}
+\begin{equation*} % N21p = N14p
+\begin{aligned}
+    \dot{N_{14}} = \cos\theta_1\dot{\theta_1}\bigg(\frac{\cos\theta_3}{\sin\theta_3}-\frac{\cos\theta_4}{\sin\theta_4}\bigg) + \sin\theta_1\bigg(\frac{1}{\sin^2\theta_3}\dot{\theta_3}+\frac{1}{\sin^2\theta_4}\dot{\theta_4}\bigg)+\\+\frac{-1}{\sin^2\theta_4}\dot{\theta_4}\sin\theta_1 +\cot\theta_4\cos\theta_1\dot{\theta_1}+\sin\theta_1\dot{\theta_1}
+    \end{aligned}
+\end{equation*}
+\begin{equation*} % N22p = N24p
+    \begin{aligned}
+    \dot{N_{24}} = -\cos\theta_2\dot{\theta_2}\bigg(\frac{\cos\theta_3}{\sin\theta_3} - \frac{\cos\theta_4}{\sin\theta_4} \bigg) - \sin\theta_2\bigg(\frac{-1}{\sin^2\theta_3}\dot{\theta_3} + \frac{1}{\sin^2\theta_4}\dot{\theta_4}\bigg) -\\
+    - \frac{-1}{\sin^2\theta_4}\dot{\theta_4}\sin\theta_2-\cot\theta_4\cos\theta_2\dot{\theta_2}-\sin\theta_2\dot{\theta_2}
+    \end{aligned}
+\end{equation*}
+\begin{equation*} % D2p = D14p
+   \dot{D_{14}} = \cos\theta_4\dot{\theta_4}(\cot\theta_3-\cot\theta_4)+\sin\theta_4\bigg(\frac{-1}{\sin^2\theta_3}\dot{\theta_3} + \frac{1}{\sin^2\theta_4}\dot{\theta_4}\bigg)
+\end{equation*}
+Possiamo ora andare a scrivere la matrice jacobiana $\dot{J_{34}}$ come:
+\begin{equation}
+    \dot{J_{34}} =
+    \begin{bmatrix}
+    \frac{\dot{N_{13}}D_{13}-N_{13}\dot{D_{13}}}{D_{13}^2} & 
+     \frac{\dot{N_{23}}D_{13}-N_{23}\dot{D_{13}}}{D_{13}^2} \\
+    \frac{\dot{N_{14}}D_{14}-N_{14}\dot{D_{14}}}{D_{14}^2} &
+     \frac{\dot{N_{24}}D_{14}-N_{24}\dot{D_{14}}}{D_{14}^2}
+    \end{bmatrix}
+\end{equation}
+Per concludere andiamo a trovare:
+\begin{equation}
+    \begin{bmatrix}
+    \ddot{\theta_3} \\ \ddot{\theta_4}
+    \end{bmatrix}
+    = 
+    \dot{J_{34}}\begin{bmatrix}
+    \dot{\theta_1} \\ \dot{\theta_2}
+    \end{bmatrix} + 
+    J_{34} \begin{bmatrix}
+    \ddot{\theta_1} \\ \ddot{\theta_2}
+    \end{bmatrix}
+\end{equation}
+\subsubsection{Matrici importanti}
+Per effettuare il calcolo della formula del PLV introduciamo infine le matrici fondamentali da utilizzare:
+\begin{equation*}
+    J_1 = \begin{bmatrix}
+     -0.5l\sin\theta_1 & 0 \\ 0.5l\cos\theta_1 & 0
+    \end{bmatrix} \Rightarrow
+    \dot{J_1} = \begin{bmatrix}
+     -0.5l\cos\theta_1\dot{\theta_1} & 0 \\ -0.5l\sin\theta_1\dot{\theta_1} & 0
+    \end{bmatrix}
+\end{equation*}
+\begin{equation*}
+    J_2 = \begin{bmatrix}
+           0 & -0.5*l*\sin\theta_2 \\
+           0 & 0.5*l*\cos\theta_2 
+           \end{bmatrix}
+           \Rightarrow
+   \dot{J_2} = \begin{bmatrix} 0 & -0.5l\cos\theta_2\dot{theta_2} \\
+           0 & -0.5l\sin\theta_2\dot{\theta_2}
+           \end{bmatrix}
+\end{equation*}
+\begin{equation*}
+    J_3 = \begin{bmatrix}
+    -l\sin\theta_1+0.5\sin\theta_3\cdot J_{34}(1,1) & 
+    -0.5l\sin\theta_3\cdot J_{34}(1,2) \\
+    l\cos\theta_1+0.5\cos\theta_3\cdot J_{34}(1,1) & 
+    0.5l\cos\theta_3\cdot J_{34}(1,2)
+    \end{bmatrix}
+\end{equation*}
+\begin{equation*}
+    J_4 = \begin{bmatrix}
+    -0.5l\sin\theta_4\cdot J_{34}(2,1) &
+    -l\sin\theta_2+0.5\sin\theta_4\cdot J_{34}(2,2) \\
+    0.5l\cos\theta_4\cdot J_{34}(2,1) &
+    l\cos\theta_2+0.5\cos\theta_4\cdot J_{34}(2,2)
+    \end{bmatrix}
+\end{equation*}
+\begin{equation*}
+    J_E = \begin{bmatrix}
+    -l(\sin\theta_1+\sin\theta_3\cdot J_{34}(1,1)) & 
+    -l\sin\theta_3 \cdot J_{34}(1,2) \\
+    l(\cos\theta_1+\cos\theta_3\cdot J_{34}(1,1)) &
+    l\cos\theta_3 \cdot J_{34}(1,2)
+    \end{bmatrix}
+\end{equation*} 
+Importanti nel calcolo della dinamica saranno anche le derivate delle matrici che abbiamo appena visto, ovvero $\dot{J_3}, \dot{J_4}, \dot{J_E}$
+\subsection{Principio dei lavori virtuali}
+Il lavoro virtuale è il lavoro svolto da una forza reale che agisce attraverso uno spostamento virtuale o da una forza virtuale che agisce attraverso uno spostamento reale.
+Uno spostamento virtuale è uno spostamento coerente con i vincoli della struttura, cioè che soddisfano le condizioni al contorno in corrispondenza degli appoggi.
+Una forza virtuale è un qualsiasi sistema di forze in equilibrio.
+\\Per problemi nei quali i corpo sono composti da membri interconnessi che si possono muovere relativamente gli uni rispetto agli altri, originando diverse configurazioni di equilibrio un buon metodo di analisi è quello del "principio dei lavori virtuali" conosciuto anche come PLV ci permette di ottenere una relazione relativamente semplice, è basato sul concetto di Lavoro sviluppato da una forza, ed inoltre ci consente di analizzare la stabilità di un sistema in equilibrio.
+\begin{equation}
+    \sum_{i=0}^m F_i\delta q_j
+\end{equation}
+\subsubsection{Dinamica inversa}
+Il problema della dinamica inversa consiste nel determinare le coppie ai giunti necessarie per generare il movimento a partire da posizione, velocità ed accelerazione.
+\\Andando a sviluppare l'equazione dei principi virtuali troviamo le coppie dei link motorizzati nel seguente modo:
+\begin{equation*}
+\begin{aligned}
+    \delta \theta^T C = \delta \theta^T I_2 \ddot{\theta} + \delta \theta^T J_{34}^T I_2(J_{34}\ddot{\theta}+\dot{J_{34}}\dot{\theta})+ \delta \theta^T \frac{25}{4}ml^2\\\bigg(\begin{bmatrix}
+    -\cos\theta_1 & -\sin\theta_1 \\ -\cos\theta_2 & -\sin\theta_2
+    \end{bmatrix}
+    \dot{\theta^2} + \begin{bmatrix}
+    -\sin\theta_1 & \cos\theta_1 \\ -\sin\theta_2 & \cos\theta_2
+    \end{bmatrix} \ddot{\theta}\bigg) +  \delta \theta^T J_{34}^T\frac{9}{4}l^2(m+m_v)\\\bigg(\begin{bmatrix}
+    -\cos\theta_3 & -\sin\theta_3 \\ -\cos\theta_4 & -\sin\theta_4
+    \end{bmatrix}J_{34}J_{34}^T\dot{\theta^2}+\begin{bmatrix}
+    -\sin\theta_3 & \cos\theta_3 \\ -\sin\theta_4 & \cos\theta_4
+    \end{bmatrix}(\dot{J_{34}}\dot{\theta}+J_{34}\ddot{\theta})\bigg)
+    \end{aligned}
+\end{equation*}
+Semplificando e raccogliendo otteniamo:
+\begin{equation}
+    \tau = M \ddot{\theta} + K \dot{\theta}
+    \label{eq:dinamicaInv}
+\end{equation}
+Dove:
+\begin{equation}
+    M = J_r I_2 + m(J_1^T J_1 + J_2^TJ_2+J_3^TJ_3+J_4^TJ_4)+J_rJ_{34}^TJ_{34} + m_vJ_E^TJ_E
+    \label{eq:M}
+\end{equation}
+\begin{equation}
+    K = m(J_1^T\dot{J_1}+J_2^T\dot{J_2}+J_3^T\dot{J_3}+J_4^T\dot{J_4})+J_rJ_{34}^T\dot{J_{34}}+m_vJ_E^T\dot{J_E}
+    \label{eq:K}
+\end{equation}
+Sostituendo, possiamo andare ad esprimere l'equazione (12) nel seguente modo, ottenendo:
+\begin{equation}
+    \begin{bmatrix}
+    \tau_1 \\ \tau_2
+    \end{bmatrix} = 
+    M\begin{bmatrix}
+    \ddot{\theta_1} \\ \ddot{\theta_2}
+    \end{bmatrix}
+    + K \begin{bmatrix}
+    \dot{\theta_1} \\ \dot{\theta_2}
+    \end{bmatrix}
+\end{equation}
+\subsection{Dinamica diretta}
+Il problema della dinamica diretta invece consiste nel determinare le accelerazioni ai giunti a partire dalle coppie, dalla posizione e velocità iniziali di entrambi i link.
+\\Identifichiamo quindi $\Theta$ come vettore delle condizioni iniziali, in particolare possiamo definirlo come segue:
+\begin{equation*}
+    \Theta = \begin{bmatrix}
+    \theta_1(t_0) \\ \theta_2(t_0) \\ \dot{\theta_1(t_0)} \\ \dot{\theta_2(t_0)}
+    \end{bmatrix}
+\end{equation*}
+Possiamo andare a calcolare $\theta_3$ e $\theta_4$ come abbiamo visto in precedenza nella sezione \ref{sec:Cinematica-pos}, e di conseguenza anche tutte le matrici viste nella sezione \ref{sec:prerequisiti-dinamica}. Con tutti questi dati possiamo andare a ricalcolare le equazioni \ref{eq:M} e \ref{eq:K}. 
+\\Andiamo ora a definire l'equazione della dinamica diretta andando ad invertire l'equazione \ref{eq:dinamicaInv} in questo modo:
+\begin{equation}
+    \ddot{\theta} = M^{-1}(-K\dot{\theta}+\tau)
+    \label{eq:dinamicaDiretta}
+\end{equation}
+Infine, da questa possiamo andare anche a calcolare velocità e posizioni integrando l'equazione.
+\subsection{Punti di singolarità}
+Nell'ambito matematico, una singolarità è un punto nel quale un oggetto non è definito, oppure un punto nel quale l'oggetto non ha un comportamento normale, nel nostro caso i punti di singolarità saranno punti che andranno a delimitare lo spazio di lavoro del robot. Definiamo spazio di lavoro del robot tutto un insieme di punti nei quali il robot ha un funzionamento normale e non presenta problematiche.\footnote{Passando per un punto di singolarità il robot potrebbe aver problemi che potrebbero causare anche la rottura di parti meccaniche} Andando a considerare la foto vista sezione \textbf{INSERISCI FOTO IN INTRODUZIONE}, possiamo trovare sei casi di punti di singolarità, in particolare però non sono punti ma sono traiettorie. Di conseguenza il robot avrà come spazio di lavoro, tutto lo spazio che è interno (delimitato) da queste traiettorie.
+\subsubsection{Primo e secondo caso}
+In questo primo caso abbiamo CD che è parallelo a DE, schematicamente possiamo andarlo a rappresentare nel seguente modo \textbf{INSERISCI FOTO}
+Per andare a risolvere il problema ci basterà risolvere l'equazione \textbf{inserisci equazione}. Lasciando la x libera troviamo 
+\begin{equation}
+    y_1 = \sqrt{4l^2-(x-d)^2}
+\end{equation}
+Per quanto riguarda il secondo caso è molto simile al primo, la differenza sta nel fatto che abbiamo AB//BC, anche qua il procedimento è simile a prima, partendo dall'equazione \textbf{inserisci equazione} troviamo come soluzione:
+\begin{equation}
+    y_2 = \sqrt{4l^2-(x+d)^2}
+\end{equation}
+\subsubsection{Terzo e quarto caso}
+Per il terzo e quarto caso andiamo rispettivamente a considerare quando la x è uguale a d (lunghezza semitelaio) e -d. Come soluzioni avremo semplicemente due punti e possiamo andare a calcolarli nei seguenti modi:
+\begin{equation}
+    y_3 = \sqrt{-(x-d)^2}
+\end{equation}
+e
+\begin{equation}
+    y_4 = \sqrt{-(x+d)^2}
+\end{equation}
+\subsubsection{Quinto caso}
+\textbf{DA RIVEDERE}
+\subsubsection{Sesto caso}
+In questo sesto caso andiamo prendiamo in considerazione il valore $x=0$, abbiamo due soluzioni a questa equazione ed in particolare sono due punti
+\begin{equation}
+    y_{6p} = \sqrt{l^2-d^2}+l , y_{6m} = -\sqrt{l^2-d^2}-l
+\end{equation}
+\subsection{Manipolabilità}
+La manipolabilità ci permette di avere una rappresentazione geometrica delle capacità che ha un punto del nostro sistema. Per andare a calcolarla abbiamo bisogno dell'equazione \ref{eq:J12}, vista nella sezione \ref{sec:CalcoloVelCin}.
+\\Andiamo a definire una matrice
+\begin{equation*}
+    J_{man} = JJ^T
+\end{equation*}
+Di questa andiamo a ricavare gli autovalori $\Lambda$. Definiamo quindi il parametro r che è il nostro indice di manipolabilità come segue:
+\begin{equation}
+    r = \frac{\max\lambda}{\min\lambda}
+\end{equation}

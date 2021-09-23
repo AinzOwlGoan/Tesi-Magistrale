@@ -1,0 +1,22 @@
+\section{Framework e tecnologie utilizzate}
+\subsection{Matlab}
+Matlab, abbreviazione di Matrix Laboratory, è una piattaforma di calcolo ottimizzata nella risoluzione di problemi tecnici. Si basa sull'utilizzo delle matrici, inoltre l'ampia libreria di toolbox permette un'estensione delle sue funzionalità in diversi ambiti. 
+% aggiungi altro
+
+\subsection{Simulink Real time}
+Simulink real-time è un plugin di matlab, consente di creare applicazioni real-time e di eseguirle su un hardware target, in questo caso un PC, collegato alla porta ethernet del computer.
+% aggiungi altro
+\subsection{Adams}
+\subsection{Collegamento in rete}
+L'obiettivo di questa sezione è quello di presentare il protocollo di comunicazione utilizzato per interfacciarsi col robot PKM, evidenziandone le sue caratteristiche, e presentare la configurazione della rete
+\subsubsection{EtherCAT}
+EtherCAT è una tecnologia ethernet sviluppata in origine da Beckhoff automation, il protocollo è stato pubblicato nello standard IEC61158\footnote{${https://webstore.iec.ch/publication/59890}$}, soddisfa requisiti \textit{hard} e \textit{soft} real time in particolare nell'ambito dell'automazione. Una caratteristica particolare sono i tempi di ciclo che sono molto veloci infatti una durata media di un tempo di ciclo è inferiore a $100 \mu s$. Il principio base di funzionamento si basa sul concetto di \textit{Master/Slave}.
+\\Venne introdotto nell'aprile 2003, e nei mesi successivi è nata una società chiamata EtherCAT Technology Group (ETG) che è diventata una delle più grandi organizzazioni ethernet al mondo.
+\subsubsection{Proprietà}
+Il master EtherCAT invia un pacchetto, chiamato telegramma che va ad attraversare tutti i nodi, ogni singolo slave collegato legge i dati che riguardano lui e scrive i dati prodotti intanto che il telegramma si propaga sulla rete verso i nodi successivi. Non appena il pacchetto arriva all'ultimo nodo, è quest'ultimo che si occupa di reinviarlo al master grazie alla comunicazione full-duplex presa da Ethernet, facendo questo, il flusso di dati teorico riesce a superare i $100 Mbit/s$. Il fatto che il master sia l'unico nodo che può inviare frame in maniera attiva garantisce prestazioni deterministiche.  
+
+
+Il master utilizza un Media Access Controller (MAC) standard, senza alcun processore dedicato alla comunicazione. Questo consente di implementare un dispositivo master su qualunque piattaforma hardware dotata di una porta di rete, indipendentemente dal Sistema Operativo o software applicativo utilizzato. I dispositivi EtherCAT slave integrano un cosiddetto EtherCAT Slave Controller (ESC) in grado di processare i frame on-the-fly e in modo puramente hardware, il che rende le prestazioni della rete predicibili e indipendenti dalla particolare implementazione dei dispositivi slave.
+\subsubsection{Gestione della rete}
+\subsubsection{Configurazione della rete}
+\subsubsection{Struttura dei pacchetti}
