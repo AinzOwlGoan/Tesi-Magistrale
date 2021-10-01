@@ -17,9 +17,15 @@ L'obiettivo di questa sezione è quello di andare ad illustrare le metodologie c
 \caption{Parametri manipolatore}
 \label{table:1}
 \end{table}
-Tutti e quattro i link hanno lunghezza, massa, posizione del centro di massa e momento di inerzia uguali, per questo si è deciso di rappresentare i dati una sola volta
+Tutti e quattro i link hanno lunghezza, massa, posizione del centro di massa e momento di inerzia uguali, per questo si è deciso di rappresentare i dati una sola volta.
+\begin{figure}[ht]
+\begin{center}
+    \includegraphics[scale=0.5]{Immagini/Robot2.png}
+    \caption{Rappresentazione fisica del robot}
+\end{center}
+\end{figure}
 \subsection{Cinematica Diretta}
-La cinematica diretta si occupa di trovare il legame tra i parametri interni del robot e la posa che esso assume, per posa intendiamo posizione ed orientamento.
+La cinematica diretta si occupa di trovare il legame tra i parametri interni del robot e la posa che esso assume, per posa intendiamo posizione ed orientamento. In questa sezione andremo ad analizzare la cinematica diretta di posizione, velocità ed accelerazione.
 \subsubsection{Posizione}\label{sec:Cinematica-pos}
 Nella cinematica diretta di posizione, a partire dal robot e da $\theta_1$ e $\theta_2$, riusciamo a ricavare la posizione dei link distali (ovvero quelli non motorizzati), il loro angolo, quindi $\theta_3$ e $\theta_4$ e per concludere troviamo anche la posizione $[x,y]$ dell'end-effector.
 \\L'approccio al calcolo della cinematica diretta è stato l'utilizzo delle equazioni alle circonferenze:
@@ -98,7 +104,7 @@ Fatto questo possiamo andare a definire i parametri della Jacobiana così come s
 \begin{equation*}
     J_{22} = \frac{N_{22}}{D_2}
 \end{equation*}
-Andando ad unire queste variabili troviamo la prima Jacobiana che va a legare $\theta_1$ e $\theta_2$ \textbf{[MIGLIORA LINGUAGGIO]}, in questo modo:
+Andando ad unire le equazioni che abbiamo appena definito troviamo la Jacobiana che lega $\theta_1$ e $\theta_2$:
 \begin{equation}
     J = \begin{bmatrix}
     J_{11} & J_{12} \\ J_{21} & J_{22}
@@ -127,6 +133,30 @@ Da queste quantità possiamo trovare $\ddot{P} = [\ddot{x},\ddot{y}]$, nel segue
     \ddot{x} = -\frac{\ddot{y}\cdot(y-l\sin\theta_1)}{x+d-l\cos\theta_1}, \ddot{y} = \frac{\frac{B_{f}\cdot(x-d-l\cos\theta_2)}{x+dl\cos\theta_1-A}}{y-l\sin\theta_2-\frac{x-d-l\cos\theta_2}{(x+d-l\cos\theta_1)\cdot(y-l\sin\theta_1)}}
 \end{equation}
 \subsection{Cinematica inversa}
-Il problema della cinematica inversa consiste nel ricavare i valori da assegnare ai parametri del robot per riuscire a seguire una determinata legge di moto.
-\\\textbf{[DA RIVEDERE ED INSERIRE}
+Il problema della cinematica inversa consiste nel ricavare i valori degli angoli da assegnare ai parametri del robot per riuscire a seguire una determinata legge di moto. L'analisi della cinematica inversa è stata fatta per posizione, velocità ed accelerazione.
+\subsubsection{Posizione}
+Nella cinematica inversa di posizione, a partire dalla posizione dei link distali, andiamo a ricavare $\theta_1$ e $\theta_2$. Andiamo per semplicità a definire i seguenti parametri:
+\begin{equation*}
+    p = 2dl + 2xl, e = 2yl, f = x^2+d^2+y^2+2px
+\end{equation*}
+che serviranno per $\theta_1$
+\begin{equation*}
+ a = -2dl+2xl, b = 2yl, c = x^2+d^2+y^2-2xd
+\end{equation*}
+che serviranno per $\theta_2$. 
+\\Andiamo a calcolare quindi: 
+\begin{equation}
+    \theta_1 = 2\arctan\frac{e+\sqrt{p^2+e^2-f^2}}{p+f}
+\end{equation}
+e
+\begin{equation}
+    \theta_2 = 2\arctan\frac{b-\sqrt{a^2+b^2-c^2}}{a+c}
+\end{equation}
+\subsubsection{Velocità}
+Per quanto riguarda il calcolo della cinematica inversa in velocità andiamo a prendere l'equazione \ref{eq:J12} e, dopo averla invertita ricaviamo le velocità relative:
+\begin{equation}
+    \dot{\Theta} = \begin{bmatrix} \dot{\theta_1} \\ \dot{\theta_2}
+    \end{bmatrix} = J^{-1} \begin{bmatrix} \dot{x} \\ \dot{y} \end{bmatrix}
+\end{equation}
+Siamo quindi riusciti ad ottenere le velocità degli angoli a partire dalle velocità all'end-effector.
 \subsection{Modellazione su Adams}

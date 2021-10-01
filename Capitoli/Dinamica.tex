@@ -138,9 +138,9 @@ Uno spostamento virtuale è uno spostamento coerente con i vincoli della struttu
 Una forza virtuale è un qualsiasi sistema di forze in equilibrio.
 \\Per problemi nei quali i corpo sono composti da membri interconnessi che si possono muovere relativamente gli uni rispetto agli altri, originando diverse configurazioni di equilibrio un buon metodo di analisi è quello del "principio dei lavori virtuali" conosciuto anche come PLV ci permette di ottenere una relazione relativamente semplice, è basato sul concetto di Lavoro sviluppato da una forza, ed inoltre ci consente di analizzare la stabilità di un sistema in equilibrio.
 \begin{equation}
-    \sum_{i=0}^m F_i\delta q_j
+    \sum_{i=0}^m F_i\delta q_j\label{eq:din}
 \end{equation}
-\subsubsection{Dinamica inversa}
+\subsection{Dinamica inversa}
 Il problema della dinamica inversa consiste nel determinare le coppie ai giunti necessarie per generare il movimento a partire da posizione, velocità ed accelerazione.
 \\Andando a sviluppare l'equazione dei principi virtuali troviamo le coppie dei link motorizzati nel seguente modo:
 \begin{equation*}
@@ -171,7 +171,7 @@ Dove:
     K = m(J_1^T\dot{J_1}+J_2^T\dot{J_2}+J_3^T\dot{J_3}+J_4^T\dot{J_4})+J_rJ_{34}^T\dot{J_{34}}+m_vJ_E^T\dot{J_E}
     \label{eq:K}
 \end{equation}
-Sostituendo, possiamo andare ad esprimere l'equazione (12) nel seguente modo, ottenendo:
+Sostituendo, possiamo andare ad esprimere l'equazione \ref{eq:din} nel seguente modo, ottenendo:
 \begin{equation}
     \begin{bmatrix}
     \tau_1 \\ \tau_2
@@ -198,8 +198,60 @@ Possiamo andare a calcolare $\theta_3$ e $\theta_4$ come abbiamo visto in preced
     \label{eq:dinamicaDiretta}
 \end{equation}
 Infine, da questa possiamo andare anche a calcolare velocità e posizioni integrando l'equazione.
+\\Avendo sia il grafico della legge di moto iniziale relativa a posizione, velocità ed accelerazione assegnata agli angoli $\theta_1$ e $\theta_2$, che le coppie, possiamo andare a calcolare la dinamica con le coppie e le condizioni iniziali e \textit{plottare} il confronto tra queste due curve. In particolare andiamo a vedere il confronto su accelerazioni, velocità e posizioni sia per $\theta_1$ che per $\theta_2$: 
+\begin{figure}[!ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.8\linewidth]{Immagini/confracct1.png}  
+  \caption{Accelerazione $\theta_1$}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=.8\linewidth]{Immagini/confracct2.png}  
+  \caption{Accelerazione $\theta_2$}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Confronto dinamica leggi di moto su accelerazioni}
+\end{figure}
+\begin{figure}[!ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.8\linewidth]{Immagini/confrvelt1.png}  
+  \caption{Velocità $\theta_1$}
+  \label{fig:sub-firstv}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=.8\linewidth]{Immagini/confrtvelt2.png}  
+  \caption{Velocità $\theta_2$}
+  \label{fig:sub-secondv}
+\end{subfigure}
+\caption{Confronto dinamica leggi di moto su velocità}
+\end{figure}
+\begin{figure}[!ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.8\linewidth]{Immagini/confrpost1.png}  
+  \caption{Posizione $\theta_1$}
+  \label{fig:sub-firsta}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=.8\linewidth]{Immagini/confrpost2.png}  
+  \caption{Posizione $\theta_2$}
+  \label{fig:sub-seconda}
+\end{subfigure}
+\caption{Confronto dinamica leggi di moto su posizioni}
+\end{figure}
 \subsection{Punti di singolarità}
-Nell'ambito matematico, una singolarità è un punto nel quale un oggetto non è definito, oppure un punto nel quale l'oggetto non ha un comportamento normale, nel nostro caso i punti di singolarità saranno punti che andranno a delimitare lo spazio di lavoro del robot. Definiamo spazio di lavoro del robot tutto un insieme di punti nei quali il robot ha un funzionamento normale e non presenta problematiche.\footnote{Passando per un punto di singolarità il robot potrebbe aver problemi che potrebbero causare anche la rottura di parti meccaniche} Andando a considerare la foto vista sezione \textbf{INSERISCI FOTO IN INTRODUZIONE}, possiamo trovare sei casi di punti di singolarità, in particolare però non sono punti ma sono traiettorie. Di conseguenza il robot avrà come spazio di lavoro, tutto lo spazio che è interno (delimitato) da queste traiettorie.
+Nell'ambito matematico, una singolarità è un punto nel quale un oggetto non è definito, oppure un punto nel quale l'oggetto non ha un comportamento normale, nel nostro caso i punti di singolarità saranno punti che andranno a delimitare lo spazio di lavoro del robot. Definiamo spazio di lavoro del robot tutto un insieme di punti nei quali il robot ha un funzionamento normale e non presenta problematiche.\footnote{Passando per un punto di singolarità il robot potrebbe aver problemi che potrebbero causare anche la rottura di parti meccaniche} Andando a considerare la foto vista nell'introduzione, possiamo trovare sei casi di punti di singolarità, in particolare però non sono punti ma sono traiettorie. Di conseguenza il robot avrà come spazio di lavoro, tutto lo spazio che è interno (delimitato) da queste traiettorie.
 \subsubsection{Primo e secondo caso}
 In questo primo caso abbiamo CD che è parallelo a DE, schematicamente possiamo andarlo a rappresentare nel seguente modo \textbf{INSERISCI FOTO}
 Per andare a risolvere il problema ci basterà risolvere l'equazione \textbf{inserisci equazione}. Lasciando la x libera troviamo 
@@ -220,12 +272,40 @@ e
     y_4 = \sqrt{-(x+d)^2}
 \end{equation}
 \subsubsection{Quinto caso}
-\textbf{DA RIVEDERE}
+Per quanto riguarda il quinto caso, consideriamo $\theta_1$ che varia da 0 a $360^\circ$ e andiamo a cercare le coppie $[x,y]$ relative alla singolarità. Uscirà un'equazione di secondo grado, con i seguenti coefficienti:
+\begin{equation*}
+    a = l^2\sin^2\theta_1 + 4d^2-4dl\cos\theta_1 + l^2\cos^2\theta_1
+\end{equation*}
+\begin{equation*}
+    b = 2l^3\sin\theta_1 + 2dl^2\sin\theta_1\cos\theta_1-2dl\sin\theta_1\cdot(2d-2l\cos\theta_1)
+\end{equation*}
+\begin{equation*}
+    c = l^2\cdot(l^2+d^2\cos^2\theta_1+2ld\cos\theta_1)-2dl\cdot(l+d\cos\theta_1)(2d-l\cos\theta_1)+d^2-l^2(2d-l\cos\theta_1)^2
+\end{equation*}
+Andando ora a definire 
+\begin{equation*}
+    \Delta = b^2-4ac
+\end{equation*}
+Andiamo a trovare le radici Y di quest'equazione, definendo poi: $sx = -b+l\cos\theta_1$ ed $sy = l\sin\theta_1$ possiamo andare a trovare le soluzioni dell'equazione come:
+\begin{equation}
+    x_5 = \bigg|\frac{x_{5p}+sx}{2}\bigg|, y_5 = \bigg|\frac{y_{5p}+sy}{2}\bigg|
+\end{equation}
+Con 
+\begin{equation*}
+    x_{5p} = \frac{l^2+y_{5p}l\sin\theta_1+ld\cos\theta_1}{2d-l\cos\theta_1}
+\end{equation*}
 \subsubsection{Sesto caso}
 In questo sesto caso andiamo prendiamo in considerazione il valore $x=0$, abbiamo due soluzioni a questa equazione ed in particolare sono due punti
 \begin{equation}
     y_{6p} = \sqrt{l^2-d^2}+l , y_{6m} = -\sqrt{l^2-d^2}-l
 \end{equation}
+Andando ad unire tutti casi che abbiamo visto fino ad ora possiamo rappresentare graficamente questi punti di singolarità nel seguente modo:
+\begin{figure}[ht]
+\begin{center}
+    \includegraphics[scale=0.35]{Immagini/sing.jpg}
+    \caption{Punti di singolarità}
+\end{center}
+\end{figure}
 \subsection{Manipolabilità}
 La manipolabilità ci permette di avere una rappresentazione geometrica delle capacità che ha un punto del nostro sistema. Per andare a calcolarla abbiamo bisogno dell'equazione \ref{eq:J12}, vista nella sezione \ref{sec:CalcoloVelCin}.
 \\Andiamo a definire una matrice

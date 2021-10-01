@@ -1,0 +1,25 @@
+\section{Sistema reale}
+\subsection{Struttura del robot}
+Il manipolatore PKM è un manipolatore a cinematica parallela, composto da due braccia ed un end-effector. Alle braccia sono collegati due motori, uno per il braccio sinistro e l'altro per il braccio destro. Anche l'end-effector è composto da due motori, il primo motore permette di far salire/scendere la vite, il secondo invece genera un moto elicoidale che permette la rotazione della vite con conseguente salita/discesa. Un'altra parte fondamentale.
+Per quanto riguarda la parte elettronica abbiamo la presenza di due azionamenti che sono collegati alle braccia e alla vite ed un modulo beckhoff che si occupa della gestione degli input digitali.
+\subsubsection{Azionamenti}
+Gli azionamenti utilizzati sono gli accelnet plus a 2 assi BE2, sono progettati appositamente per EtherCAT, operano con tensioni da 14 a 90 volt, riescono a fornire in uscita fino a 30A.
+\\Sono predisposti per controllo in posizione, velocità e coppia di motori brushless, per la configurazione utilizzano il software CME 2 e la comunicazione avviene mediante l'interfaccia seriale RS-232. Il BE2 opera come ethercat slave, utilizzando il layer applicativo CAN su ethercat CoE. Inoltre, viene fornito un input AuxHV che permette in casi critici di tener vivo l'azionamento anche quando non c'è alimentazione senza perdere le informazioni sulla posizione o le comunicazioni con il sistema di controllo.
+Per la comunicazione con ethercat invece sono predisposti due cavi RJ-45, la porta d'ingresso IN permette la connessione ad un master o alla porta d'uscita OUT di un dispositivo che nella gerarchia è interposto tra il master e l'azionamento. Inoltre, se l'accelnet è l'ultimo nodo della rete nonvi è bisogno di un terminatore sulla porta d'uscita.
+ 
+\subsubsection{Beckhoff}
+TODO
+\subsubsection{Quadro elettrico}
+\subsection{Struttura dell'end-effector}
+\subsubsection{Movimentazione}
+\subsubsection{Fase di Homing}
+\subsubsection{Gestione della traiettoria}
+\subsection{Struttura del robot}
+\subsubsection{Movimentazione}
+\subsubsection{Fase di Homing}
+\subsubsection{Gestione della traiettoria}
+\subsection{Implementazione in simulink}
+\subsubsection{Vite}
+\subsubsection{Braccia}
+\subsubsection{Sistema totale}
+\subsection{Problemi riscontrati}
