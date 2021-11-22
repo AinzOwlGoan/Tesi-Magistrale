@@ -1,0 +1,65 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Introduzione}{5}{}%
+\contentsline {subsection}{\numberline {1.1}Obiettivi e descrizione}{5}{}%
+\contentsline {subsection}{\numberline {1.2}Software modellazione teorica}{6}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Matlab}{6}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Adams}{7}{}%
+\contentsline {section}{\numberline {2}Cinematica Manipolatore}{8}{}%
+\contentsline {subsection}{\numberline {2.1}Cinematica Diretta}{9}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Posizione}{9}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Velocità}{11}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}Accelerazione}{12}{}%
+\contentsline {subsection}{\numberline {2.2}Cinematica inversa}{13}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Posizione}{13}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Velocità}{14}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Accelerazione}{15}{}%
+\contentsline {section}{\numberline {3}Dinamica Manipolatore}{16}{}%
+\contentsline {subsection}{\numberline {3.1}Prerequisiti per il calcolo della dinamica}{16}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Jacobiana $J_{34}$ e calcolo $\dot {\theta _3},\dot {\theta _4}$}{16}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Jacobiana $\dot {J_{34}}$ e calcolo di $\ddot {\theta _3}, \ddot {\theta _4}$}{17}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Matrici di inerzia}{18}{}%
+\contentsline {subsection}{\numberline {3.2}Principio dei lavori virtuali}{19}{}%
+\contentsline {subsection}{\numberline {3.3}Dinamica inversa}{19}{}%
+\contentsline {subsection}{\numberline {3.4}Dinamica diretta}{20}{}%
+\contentsline {subsubsection}{Modellazione su Adams}{22}{}%
+\contentsline {subsubsection}{Validazione e confronto}{23}{}%
+\contentsline {subsection}{\numberline {3.5}Punti di singolarità}{24}{}%
+\contentsline {subsubsection}{Primo e secondo caso}{25}{}%
+\contentsline {subsubsection}{Terzo e quarto caso}{25}{}%
+\contentsline {subsubsection}{Quinto caso}{26}{}%
+\contentsline {subsubsection}{Sesto caso}{26}{}%
+\contentsline {subsection}{\numberline {3.6}Manipolabilità}{27}{}%
+\contentsline {section}{\numberline {4}Modellazione end-effector}{28}{}%
+\contentsline {subsection}{\numberline {4.1}Cinematica end-effector}{28}{}%
+\contentsline {subsection}{\numberline {4.2}Dinamica della vite}{29}{}%
+\contentsline {subsection}{\numberline {4.3}Modellazione su Adams}{30}{}%
+\contentsline {section}{\numberline {5}Tecnologie implementate}{31}{}%
+\contentsline {subsection}{\numberline {5.1}Simulink Real time}{31}{}%
+\contentsline {subsection}{\numberline {5.2}EtherCAT}{31}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Proprietà}{32}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Gestione della rete}{32}{}%
+\contentsline {subsubsection}{\numberline {5.2.3}Implementazione interfacce}{33}{}%
+\contentsline {subsection}{\numberline {5.3}CME2}{33}{}%
+\contentsline {subsection}{\numberline {5.4}EC-Engineer}{35}{}%
+\contentsline {section}{\numberline {6}Sistema reale}{36}{}%
+\contentsline {subsection}{\numberline {6.1}Struttura del robot}{36}{}%
+\contentsline {subsubsection}{\numberline {6.1.1}Azionamenti}{36}{}%
+\contentsline {subsubsection}{\numberline {6.1.2}Beckhoff EK1814}{37}{}%
+\contentsline {subsubsection}{\numberline {6.1.3}Configurazione della rete}{37}{}%
+\contentsline {subsection}{\numberline {6.2}Stateflow}{39}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Fase di Homing}{39}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Fase di posizionamento}{40}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}Fase di traiettoria}{40}{}%
+\contentsline {subsection}{\numberline {6.3}Struttura del manipolatore}{42}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}Sistema vite}{42}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}Sistema braccia}{42}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}Gestione della traiettoria}{42}{}%
+\contentsline {subsection}{\numberline {6.4}Controllo}{42}{}%
+\contentsline {subsubsection}{\numberline {6.4.1}Controllo Vite}{42}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}Controllo PD}{42}{}%
+\contentsline {subsubsection}{\numberline {6.4.3}Controllo in dinamica inversa}{42}{}%
+\contentsline {subsection}{\numberline {6.5}Traiettorie eseguite}{43}{}%
+\contentsline {section}{\numberline {7}Conclusioni}{44}{}%
+\contentsline {subsection}{\numberline {7.1}Confronto modellazione teorica-pratica}{44}{}%
+\contentsline {subsection}{\numberline {7.2}Sviluppi futuri}{44}{}%

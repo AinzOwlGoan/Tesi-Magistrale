@@ -1,0 +1,26 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Robot PKM\relax }}{5}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Rappresentazione fisica del robot\relax }}{8}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Equazioni alle circonferenze\relax }}{9}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Confronto dinamica leggi di moto su accelerazioni\relax }}{21}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Confronto dinamica leggi di moto su velocità\relax }}{21}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Confronto dinamica leggi di moto su posizioni\relax }}{21}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Modello simulink manipolatore\relax }}{22}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Modello Adams manipolatore 5R\relax }}{22}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Coppie in uscita Simulink\relax }}{23}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Coppie in uscita Adams\relax }}{23}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Errore Simulink-Adams\relax }}{24}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Caso 1 singolarità\relax }}{25}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Punti di singolarità\relax }}{27}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Coppie e posizione end-effector\relax }}{29}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Schema azionamento\relax }}{34}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Registri azionamento\relax }}{34}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Topologia della rete\relax }}{37}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Configurazione rete ethernet user PC\relax }}{38}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces PDO in input\relax }}{38}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces PDO Output 1 e 2\relax }}{38}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces State flow: fase di homing\relax }}{39}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces State flow: fase di posizionamento\relax }}{40}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces State flow: traiettoria\relax }}{41}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Test su $K_d$\relax }}{43}{}%
