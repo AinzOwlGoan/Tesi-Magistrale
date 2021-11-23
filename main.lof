@@ -12,15 +12,21 @@
 \contentsline {figure}{\numberline {10}{\ignorespaces Coppie in uscita Adams\relax }}{23}{}%
 \contentsline {figure}{\numberline {11}{\ignorespaces Errore Simulink-Adams\relax }}{24}{}%
 \contentsline {figure}{\numberline {12}{\ignorespaces Caso 1 singolarità\relax }}{25}{}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Punti di singolarità\relax }}{27}{}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Coppie e posizione end-effector\relax }}{29}{}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Schema azionamento\relax }}{34}{}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Registri azionamento\relax }}{34}{}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Topologia della rete\relax }}{37}{}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Configurazione rete ethernet user PC\relax }}{38}{}%
-\contentsline {figure}{\numberline {19}{\ignorespaces PDO in input\relax }}{38}{}%
-\contentsline {figure}{\numberline {20}{\ignorespaces PDO Output 1 e 2\relax }}{38}{}%
-\contentsline {figure}{\numberline {21}{\ignorespaces State flow: fase di homing\relax }}{39}{}%
-\contentsline {figure}{\numberline {22}{\ignorespaces State flow: fase di posizionamento\relax }}{40}{}%
-\contentsline {figure}{\numberline {23}{\ignorespaces State flow: traiettoria\relax }}{41}{}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Test su $K_d$\relax }}{43}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Caso 2 singolarità\relax }}{25}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Caso 3 singolarità\relax }}{26}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Caso 4 e 5 singolarità\relax }}{27}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Punti di singolarità\relax }}{28}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Numero di condizionamento\relax }}{29}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Angoli di movimentazione dei giunti motorizzati\relax }}{29}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Angoli di movimentazione del manipolatore\relax }}{30}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Coppie e posizione end-effector\relax }}{32}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Schema azionamento\relax }}{37}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Registri azionamento\relax }}{37}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Topologia della rete\relax }}{40}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Configurazione rete ethernet user PC\relax }}{41}{}%
+\contentsline {figure}{\numberline {25}{\ignorespaces PDO in input\relax }}{41}{}%
+\contentsline {figure}{\numberline {26}{\ignorespaces PDO Output 1 e 2\relax }}{41}{}%
+\contentsline {figure}{\numberline {27}{\ignorespaces State flow: fase di homing\relax }}{42}{}%
+\contentsline {figure}{\numberline {28}{\ignorespaces State flow: fase di posizionamento\relax }}{43}{}%
+\contentsline {figure}{\numberline {29}{\ignorespaces State flow: traiettoria\relax }}{44}{}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Test su $K_d$\relax }}{46}{}%
