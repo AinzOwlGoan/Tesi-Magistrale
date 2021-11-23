@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.21)  23 NOV 2021 18:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.21)  23 NOV 2021 19:22
 entering extended mode
 **./main.tex
 (main.tex
@@ -757,96 +757,103 @@ File: Immagini/Singolarity/Worksing.png Graphic file (type png)
 <use Immagini/Singolarity/Worksing.png>
 Package pdftex.def Info: Immagini/Singolarity/Worksing.png  used on input line 
 490.
-(pdftex.def)             Requested size: 342.52562pt x 256.89421pt.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+<Immagini/Singolarity/ncondsl.png, id=153, 526.96875pt x 395.22656pt>
+File: Immagini/Singolarity/ncondsl.png Graphic file (type png)
+<use Immagini/Singolarity/ncondsl.png>
+Package pdftex.def Info: Immagini/Singolarity/ncondsl.png  used on input line 4
+97.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 ) [29 <./Immagini/Singolarity/Ncond.png (PNG copy)> <./Immagini/Singolarity/Nco
 nd_surf.png (PNG copy)> <./Immagini/Singolarity/workangle.png>] [30 <./Immagini
-/Singolarity/Worksing.png>]
+/Singolarity/Worksing.png> <./Immagini/Singolarity/ncondsl.png (PNG copy)>] [31
+]
 \openout2 = `Capitoli/Vite.aux'.
 
-(Capitoli/Vite.tex
+ (Capitoli/Vite.tex
 Underfull \vbox (badness 1924) has occurred while \output is active []
 
- [31
+ [32
 
 
 
 ]
-<Immagini/coppiaTeoricaVite.png, id=165, 508.90125pt x 389.455pt>
+<Immagini/coppiaTeoricaVite.png, id=169, 508.90125pt x 389.455pt>
 File: Immagini/coppiaTeoricaVite.png Graphic file (type png)
 <use Immagini/coppiaTeoricaVite.png>
 Package pdftex.def Info: Immagini/coppiaTeoricaVite.png  used on input line 74.
 
 (pdftex.def)             Requested size: 279.89655pt x 214.2009pt.
 )
-[32 <./Immagini/coppiaTeoricaVite.png>] [33]
+[33 <./Immagini/coppiaTeoricaVite.png>] [34]
 \openout2 = `Capitoli/Implementazione.aux'.
 
  (Capitoli/Implementazione.tex
 Underfull \vbox (badness 6110) has occurred while \output is active []
 
- [34
+ [35
 
 
 
 ]
-[35]
-<Immagini/Sperimentale/azionamenti.PNG, id=180, 442.0515pt x 215.6055pt>
+[36]
+<Immagini/Sperimentale/azionamenti.PNG, id=184, 442.0515pt x 215.6055pt>
 File: Immagini/Sperimentale/azionamenti.PNG Graphic file (type png)
 <use Immagini/Sperimentale/azionamenti.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/azionamenti.PNG  used on input l
 ine 21.
 (pdftex.def)             Requested size: 353.64168pt x 172.48462pt.
-<Immagini/Sperimentale/registri.PNG, id=181, 632.96475pt x 77.088pt>
+<Immagini/Sperimentale/registri.PNG, id=185, 632.96475pt x 77.088pt>
 File: Immagini/Sperimentale/registri.PNG Graphic file (type png)
 <use Immagini/Sperimentale/registri.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/registri.PNG  used on input line
  29.
 (pdftex.def)             Requested size: 379.78177pt x 46.25314pt.
- [36])
+ [37])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./Immagini/Sperimentale/azionamenti.PNG> <./Immagini/Sperimentale/registr
+ [38 <./Immagini/Sperimentale/azionamenti.PNG> <./Immagini/Sperimentale/registr
 i.PNG>]
-[38]
+[39]
 \openout2 = `Capitoli/SistemaReale.aux'.
 
- (Capitoli/SistemaReale.tex [39
+ (Capitoli/SistemaReale.tex [40
 
 
 
 ]
-<Immagini/Sperimentale/network topology.PNG, id=197, 211.38976pt x 229.45724pt>
+<Immagini/Sperimentale/network topology.PNG, id=201, 211.38976pt x 229.45724pt>
 
 File: Immagini/Sperimentale/network topology.PNG Graphic file (type png)
 <use Immagini/Sperimentale/network topology.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/network topology.PNG  used on in
 put line 18.
 (pdftex.def)             Requested size: 147.9718pt x 160.61896pt.
-<Immagini/Sperimentale/ConfEthernet.png, id=198, 390.258pt x 97.5645pt>
+<Immagini/Sperimentale/ConfEthernet.png, id=202, 390.258pt x 97.5645pt>
 File: Immagini/Sperimentale/ConfEthernet.png Graphic file (type png)
 <use Immagini/Sperimentale/ConfEthernet.png>
 Package pdftex.def Info: Immagini/Sperimentale/ConfEthernet.png  used on input 
 line 25.
 (pdftex.def)             Requested size: 273.17873pt x 68.29466pt.
-<Immagini/Sperimentale/pdo1in.png, id=199, 277.035pt x 113.223pt>
+<Immagini/Sperimentale/pdo1in.png, id=203, 277.035pt x 113.223pt>
 File: Immagini/Sperimentale/pdo1in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo1in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo1in.png  used on input line 3
 4.
 (pdftex.def)             Requested size: 170.71718pt x 69.7708pt.
-<Immagini/Sperimentale/pdo2in.png, id=200, 275.22826pt x 115.02975pt>
+<Immagini/Sperimentale/pdo2in.png, id=204, 275.22826pt x 115.02975pt>
 File: Immagini/Sperimentale/pdo2in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo2in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo2in.png  used on input line 4
 1.
 (pdftex.def)             Requested size: 170.71718pt x 71.35104pt.
-<Immagini/Sperimentale/pdo3in.png, id=201, 275.8305pt x 96.96225pt>
+<Immagini/Sperimentale/pdo3in.png, id=205, 275.8305pt x 96.96225pt>
 File: Immagini/Sperimentale/pdo3in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo3in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo3in.png  used on input line 4
 8.
 (pdftex.def)             Requested size: 170.71718pt x 60.01091pt.
-<Immagini/Sperimentale/pdo4in.png, id=202, 274.02374pt x 118.041pt>
+<Immagini/Sperimentale/pdo4in.png, id=206, 274.02374pt x 118.041pt>
 File: Immagini/Sperimentale/pdo4in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo4in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo4in.png  used on input line 5
@@ -862,50 +869,50 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 31--59
 []$ $[]$ 
  []
 
-<Immagini/Sperimentale/pdo12out.png, id=203, 347.49825pt x 151.767pt>
+<Immagini/Sperimentale/pdo12out.png, id=207, 347.49825pt x 151.767pt>
 File: Immagini/Sperimentale/pdo12out.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo12out.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo12out.png  used on input line
  63.
 (pdftex.def)             Requested size: 243.2471pt x 106.23616pt.
-[40 <./Immagini/Sperimentale/network topology.PNG>] [41 <./Immagini/Sperimental
+[41 <./Immagini/Sperimentale/network topology.PNG>] [42 <./Immagini/Sperimental
 e/ConfEthernet.png> <./Immagini/Sperimentale/pdo1in.png> <./Immagini/Sperimenta
 le/pdo2in.png> <./Immagini/Sperimentale/pdo3in.png> <./Immagini/Sperimentale/pd
 o4in.png> <./Immagini/Sperimentale/pdo12out.png>]
-<Immagini/Sperimentale/state1.png, id=218, 740.7675pt x 458.9145pt>
+<Immagini/Sperimentale/state1.png, id=222, 740.7675pt x 458.9145pt>
 File: Immagini/Sperimentale/state1.png Graphic file (type png)
 <use Immagini/Sperimentale/state1.png>
 Package pdftex.def Info: Immagini/Sperimentale/state1.png  used on input line 7
 4.
 (pdftex.def)             Requested size: 407.42339pt x 252.40375pt.
- [42 <./Immagini/Sperimentale/state1.png>]
-<Immagini/Sperimentale/state2.png, id=223, 1344.222pt x 385.44pt>
+ [43 <./Immagini/Sperimentale/state1.png>]
+<Immagini/Sperimentale/state2.png, id=227, 1344.222pt x 385.44pt>
 File: Immagini/Sperimentale/state2.png Graphic file (type png)
 <use Immagini/Sperimentale/state2.png>
 Package pdftex.def Info: Immagini/Sperimentale/state2.png  used on input line 8
 3.
 (pdftex.def)             Requested size: 416.70451pt x 119.48515pt.
-<Immagini/Sperimentale/state3.png, id=224, 743.77875pt x 211.38976pt>
+<Immagini/Sperimentale/state3.png, id=228, 743.77875pt x 211.38976pt>
 File: Immagini/Sperimentale/state3.png Graphic file (type png)
 <use Immagini/Sperimentale/state3.png>
 Package pdftex.def Info: Immagini/Sperimentale/state3.png  used on input line 9
 2.
 (pdftex.def)             Requested size: 409.07957pt x 116.26471pt.
- [43 <./Immagini/Sperimentale/state2.png>] [44 <./Immagini/Sperimentale/state3.
+ [44 <./Immagini/Sperimentale/state2.png>] [45 <./Immagini/Sperimentale/state3.
 png>]
-<Immagini/Sperimentale/Test_Kd=1.5.png, id=233, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=1.5.png, id=237, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=1.5.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=1.5.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=1.5.png  used on input l
 ine 146.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=2.png, id=234, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=2.png, id=238, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=2.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=2.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=2.png  used on input lin
 e 153.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=3.png, id=235, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=3.png, id=239, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=3.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=3.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=3.png  used on input lin
@@ -926,32 +933,32 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 143--171
 []$ $[]$ 
  []
 
-) [45] [46 <./Immagini/Sperimentale/Test_Kd=1.5.png (PNG copy)> <./Immagini/Spe
+) [46] [47 <./Immagini/Sperimentale/Test_Kd=1.5.png (PNG copy)> <./Immagini/Spe
 rimentale/Test_Kd=2.png (PNG copy)> <./Immagini/Sperimentale/Test_Kd=3.png (PNG
  copy)>]
 \openout2 = `./Capitoli/Conclusioni.aux'.
 
- (Capitoli/Conclusioni.tex) [47
+ (Capitoli/Conclusioni.tex) [48
 
 
 
-] (main.lof)
+] (main.lof [49
+
+
+])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- [48
-
-
-] [49] (main.aux
+ [50] (main.aux
 (begin.aux) (Capitoli/Contesto.aux) (Capitoli/StudiCorrelati.aux)
 (Capitoli/Introduzione.aux) (Capitoli/Cinematica.aux) (Capitoli/Dinamica.aux)
 (Capitoli/Vite.aux) (Capitoli/Implementazione.aux) (Capitoli/SistemaReale.aux)
 (Capitoli/Conclusioni.aux)) ) 
 Here is how much of TeX's memory you used:
- 7723 strings out of 478927
- 129824 string characters out of 2852534
+ 7734 strings out of 478927
+ 130202 string characters out of 2852534
  460558 words of memory out of 3000000
- 25355 multiletter control sequences out of 15000+600000
+ 25365 multiletter control sequences out of 15000+600000
  414777 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,14n,77p,1754b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -975,9 +982,9 @@ Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Danie
 rs/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
 b><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmti12.pfb>
-Output written on main.pdf (51 pages, 1749984 bytes).
+Output written on main.pdf (52 pages, 1786821 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
+ 328 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
