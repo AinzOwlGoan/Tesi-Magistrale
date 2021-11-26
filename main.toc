@@ -31,9 +31,8 @@
 \contentsline {subsection}{\numberline {3.6}Manipolabilità}{28}{}%
 \contentsline {subsection}{\numberline {3.7}Workspace}{29}{}%
 \contentsline {section}{\numberline {4}Modellazione end-effector}{32}{}%
-\contentsline {subsection}{\numberline {4.1}Cinematica end-effector}{32}{}%
-\contentsline {subsection}{\numberline {4.2}Dinamica della vite}{33}{}%
-\contentsline {subsection}{\numberline {4.3}Modellazione su Adams}{34}{}%
+\contentsline {subsection}{\numberline {4.1}Cinematica end-effector}{33}{}%
+\contentsline {subsection}{\numberline {4.2}Dinamica della vite}{34}{}%
 \contentsline {section}{\numberline {5}Tecnologie implementate}{35}{}%
 \contentsline {subsection}{\numberline {5.1}Simulink Real time}{35}{}%
 \contentsline {subsection}{\numberline {5.2}EtherCAT}{35}{}%
@@ -44,22 +43,22 @@
 \contentsline {subsection}{\numberline {5.4}EC-Engineer}{39}{}%
 \contentsline {section}{\numberline {6}Sistema reale}{40}{}%
 \contentsline {subsection}{\numberline {6.1}Struttura del robot}{40}{}%
-\contentsline {subsubsection}{\numberline {6.1.1}Azionamenti}{40}{}%
+\contentsline {subsubsection}{\numberline {6.1.1}Azionamenti}{41}{}%
 \contentsline {subsubsection}{\numberline {6.1.2}Beckhoff EK1814}{41}{}%
-\contentsline {subsubsection}{\numberline {6.1.3}Configurazione della rete}{41}{}%
-\contentsline {subsection}{\numberline {6.2}Stateflow}{43}{}%
-\contentsline {subsubsection}{\numberline {6.2.1}Fase di Homing}{43}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}Fase di posizionamento}{44}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}Fase di traiettoria}{44}{}%
-\contentsline {subsection}{\numberline {6.3}Struttura del manipolatore}{46}{}%
-\contentsline {subsubsection}{\numberline {6.3.1}Sistema vite}{46}{}%
-\contentsline {subsubsection}{\numberline {6.3.2}Sistema braccia}{46}{}%
-\contentsline {subsubsection}{\numberline {6.3.3}Gestione della traiettoria}{46}{}%
-\contentsline {subsection}{\numberline {6.4}Controllo}{46}{}%
-\contentsline {subsubsection}{\numberline {6.4.1}Controllo Vite}{46}{}%
-\contentsline {subsubsection}{\numberline {6.4.2}Controllo PD}{46}{}%
-\contentsline {subsubsection}{\numberline {6.4.3}Controllo in dinamica inversa}{46}{}%
-\contentsline {subsection}{\numberline {6.5}Traiettorie eseguite}{47}{}%
-\contentsline {section}{\numberline {7}Conclusioni}{48}{}%
-\contentsline {subsection}{\numberline {7.1}Confronto modellazione teorica-pratica}{48}{}%
-\contentsline {subsection}{\numberline {7.2}Sviluppi futuri}{48}{}%
+\contentsline {subsubsection}{\numberline {6.1.3}Configurazione della rete}{42}{}%
+\contentsline {subsection}{\numberline {6.2}Stateflow}{45}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Fase di Homing}{45}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Fase di posizionamento}{46}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}Fase di traiettoria}{46}{}%
+\contentsline {subsection}{\numberline {6.3}Struttura del manipolatore}{48}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}Sistema vite}{48}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}Sistema braccia}{48}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}Gestione della traiettoria}{48}{}%
+\contentsline {subsection}{\numberline {6.4}Controllo}{48}{}%
+\contentsline {subsubsection}{\numberline {6.4.1}Controllo Vite}{48}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}Controllo PD}{48}{}%
+\contentsline {subsubsection}{\numberline {6.4.3}Controllo in dinamica inversa}{48}{}%
+\contentsline {subsection}{\numberline {6.5}Traiettorie eseguite}{49}{}%
+\contentsline {section}{\numberline {7}Conclusioni}{50}{}%
+\contentsline {subsection}{\numberline {7.1}Confronto modellazione teorica-pratica}{50}{}%
+\contentsline {subsection}{\numberline {7.2}Sviluppi futuri}{50}{}%

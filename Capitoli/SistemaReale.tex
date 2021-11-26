@@ -1,70 +1,100 @@
 \section{Sistema reale}
-Dopo tutta l'introduzione teorica ed i calcoli mostrati, l'obiettivo di questo capitolo riguarderà la presentazione del sistema reale, la sua struttura, compresa di configurazione e le operazioni che hanno consentito la movimentazione.
+Avendo introdotto anche le tecnologie implementate, andiamo ora a discutere del sistema reale, in particolare concentrandoci sulla sua struttura, compresa la configurazione, le operazioni che hanno consentito la movimentazione e le tecniche di controllo
 \subsection{Struttura del robot}
-Il manipolatore PKM è un manipolatore a cinematica parallela, composto da due braccia ed un end-effector. Alle braccia sono collegati due motori, uno per il braccio sinistro e l'altro per il braccio destro. Anche l'end-effector è composto da due motori, il primo motore permette di far salire/scendere la vite, il secondo invece genera un moto elicoidale che permette la rotazione della vite con conseguente salita/discesa. Un'altra parte fondamentale.
-Per quanto riguarda la parte elettronica abbiamo la presenza di due azionamenti che sono collegati alle braccia e alla vite ed un modulo beckhoff che si occupa della gestione degli input digitali.
+Il manipolatore PKM è un manipolatore a cinematica parallela, composto da due braccia ed un end-effector. Alle braccia sono collegati due motori, uno per il link motorizzato sinistro e l'altro per il link motorizzato destro, i link distali si muovono in conseguenza al movimento di quelli motorizzati. Anche l'end-effector è composto da due motori, il primo motore permette di far salire/scendere la vite, il secondo invece genera un moto elicoidale che permette la rotazione della vite con conseguente salita/discesa. 
+Per quanto riguarda la parte elettronica abbiamo la presenza di due azionamenti che sono collegati uno ai motori delle braccia e l'altro ai motori della vite ed un modulo beckhoff che si occupa della gestione degli input digitali.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/banco}
+		\caption{Banco di test}
+	\end{center}
+\end{figure}
+Per funzionare il sistema ha bisogno di due alimentatori, uno che serve ad alimentare la logica,alimentato a 24 Volt e un altro che serve ad alimentare i quattro motori, 80 Volt.
 \subsubsection{Azionamenti}
 Gli azionamenti utilizzati sono gli accelnet plus a 2 assi BE2, sono progettati appositamente per EtherCAT, operano con tensioni da 14 a 90 volt, riescono a fornire in uscita fino a 30A.
 \\Sono predisposti per controllo in posizione, velocità e coppia di motori brushless, per la configurazione utilizzano il software CME 2 e la comunicazione avviene mediante l'interfaccia seriale RS-232. Il BE2 opera come ethercat slave, utilizzando il layer applicativo CAN su ethercat CoE. Inoltre, viene fornito un input AuxHV che permette in casi critici di tener vivo l'azionamento anche quando non c'è alimentazione senza perdere le informazioni sulla posizione o le comunicazioni con il sistema di controllo.
-Per la comunicazione con ethercat invece sono predisposti due cavi RJ-45, la porta d'ingresso IN permette la connessione ad un master o alla porta d'uscita OUT di un dispositivo che nella gerarchia è interposto tra il master e l'azionamento. Inoltre, se l'accelnet è l'ultimo nodo della rete nonvi è bisogno di un terminatore sulla porta d'uscita.
+Per la comunicazione con ethercat invece sono predisposti due cavi RJ-45, la porta d'ingresso IN permette la connessione ad un master o alla porta d'uscita OUT di un dispositivo che nella gerarchia è interposto tra il master e l'azionamento. Inoltre, se l'accelnet è l'ultimo nodo della rete non vi è bisogno di un terminatore sulla porta d'uscita.
  
 \subsubsection{Beckhoff EK1814}
 Il beckhoff EK1814 è un accoppiatore EtherCAT che fa da \textit{link} tra il protocollo EtherCAT a livello di bus di campo e il terminali EtherCAT. Inoltre, su questo modello sono anche integrati quattro input digitali e quattro output digitali. La sua struttura lo rende ideale per applicazioni con pochi input/output. L'accoppiatore converte i telegrammi che passano da Ethernet \textit{100BASE-TX} a rappresentazioni di segnali \textit{E-bus}. Una stazione EtherCAT è formata da un accoppiatore e da un numero N di terminali che vengono identificati automaticamente.
 \\Inoltre, l'EK1814 ha due connessioni RJ45, l'interfaccia Ethernet superiore è utilizzata per collegare l'accoppiatore alla rete, mentre quella posteriore serve per il collegamento di altri dispositivi EtherCAT nello stesso commento. Nel nostro progetto è stato usato come master, a questo sono stati connessi gli slave (ovvero gli azionamenti), inoltre gli input e output digitali sono stati usati per controllare la pressione del fungo di emergenza e le luci di segnalazione delle fasi del manipolatore.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/Beckoffschema.PNG}
+		\caption{Schema modulo bechoff}
+	\end{center}
+\end{figure}
 \subsubsection{Configurazione della rete}
-La configurazione della rete prevede alla base della rete il PC Target, in questo vi è una chiavetta USB che permette di eseguire simulink real time. Il target ha due uscite ethernet, la prima è collegata direttamente al bechkoff, il quale prende l'identità di master, e come abbiamo visto precedentemente, al bechkoff sono attaccati e i due azionamenti che si comportano come slave.
+La configurazione della rete prevede alla base il PC Target, in questo vi è una chiavetta USB che fa \textit{runnare} sul pc un sistema operativo simulink real time. Il target è il master della rete, ha due uscite ethernet, la prima è collegata direttamente al modulo bechkoff, il quale prende l'identità di primo slave, e come abbiamo visto precedentemente, al bechkoff sono attaccati e i due azionamenti che si comportano come slave aggiuntivi slave.
 \begin{figure}[ht]
 \begin{center}
-    \includegraphics[scale=0.7]{Immagini/Sperimentale/network topology.PNG}
+    \includegraphics[scale=0.5]{Immagini/Sperimentale/Topology.PNG}
     \caption{Topologia della rete}
 \end{center}
 \end{figure}
-Invece, alla seconda porta ethernet, vi è collegato il PC dell'utente, che provvede a generare, compilare, caricare ed eseguire i programmi sul PC target. Da User-PC è anche possibile vedere i grafici e fare delle analisi sui movimenti e le traiettorie eseguite dal manipolatore. La connessione avviene tramite una rete ethernet, l'indirizzo del target è 192.168.4.200, invece per User-PC:
+Invece, alla seconda porta ethernet, vi è collegato il PC dell'utente, il quale provvede a generare, compilare, e caricare ed  i programmi sul PC target. Da User-PC è anche possibile vedere i grafici e fare delle analisi sui movimenti e le traiettorie eseguite dal manipolatore. La connessione avviene tramite una rete ethernet, l'indirizzo del target è 192.168.4.200, invece per User-PC:
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.7]{Immagini/Sperimentale/ConfEthernet.png}
     \caption{Configurazione rete ethernet user PC}
 \end{center}
 \end{figure}
-Dopo che è stata configurata la rete, sono stati configurati anche i messaggi, come è stato anticipato nella sezione precedente il metodo di comunicazione utilizzato è stato quello delle PDO. 
+Va precisato che il pc dell'utente non fa parte della rete ethercat, ma la rete inizia soltanto dal pc target in poi, infatti, ad esclusione delle operazioni viste prima il manipolatore non ha bisogno del pc utente per funzionare.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.7]{Immagini/Sperimentale/NetTopology.png}
+		\caption{Topologia rete mediante Ec-engineer}
+	\end{center}
+\end{figure}
+Una volta configurata la rete, il passo successivo è stato quello della configurazione dei messaggi, come è stato anticipato nel capitolo precedente il metodo di comunicazione sono le PDO. Le PDO possono essere in input o in output, la differenza sta nel fatto che le primo sono PDO che gli azionamenti trasmettono al master, di conseguenza il master le riceve, quelle di output invece sono PDO che il master trasmette e che gli azionamenti ricevono. 
+\\Nelle immagini seguenti sono elencate le PDO di input, in particolare:
+\begin{itemize}
+ 	\item PDO1 e PDO2 contengono i parametri di posizione, velocità coppia effettiva e modalità operativa che vengono trasmesse dagli azionamenti
+ 	\item PDO3, contiene input generici che sono indipendenti dalla modalità operativa del motore, in particolare è presente il \textit{general purpose inputs} che è il registro che permette la visione dei finecorsa
+ 	\item PDO4 contiene \textit{status word} e \textit{control word}, sono registri importanti che servono per verificare la modalità operativa e lo stato dell'azionamento, quindi sono utili per capire se l'azionamento è in fase pre-operativa, operativa o in errore
+\end{itemize}
 \begin{figure}[!ht]
 \begin{subfigure}{.5\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/pdo1in.png}  
+  \includegraphics[width=.7\linewidth]{Immagini/Sperimentale/pdo1in.png}  
   \caption{PDO Input 1}
   \label{fig:sub-firstpdo}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/pdo2in.png}  
+  \includegraphics[width=.7\linewidth]{Immagini/Sperimentale/pdo2in.png}  
   \caption{PDO Input 2}
   \label{fig:sub-secondpdo}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/pdo3in.png}  
+  \includegraphics[width=.7\linewidth]{Immagini/Sperimentale/pdo3in.png}  
   \caption{PDO Input 3}
   \label{fig:sub-thirdpdo}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include fourth image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/pdo4in.png}  
+  \includegraphics[width=.7\linewidth]{Immagini/Sperimentale/pdo4in.png}  
   \caption{PDO Input 4}
   \label{fig:sub-fourthpdo}
 \end{subfigure}
 \caption{PDO in input}
 \end{figure}
+Per quanto riguarda le PDO che riceve l'azionamento sono solo due, ed i parametri ricevuti sono:
+\begin{itemize}
+	\item \textit{Modes of operation}, è un registro che specifica la modalità con la verrà controllato l'azionamento, per esempio coppia, posizione, velocità o ciclica
+	\item \textit{Target torque}, specifica il valore di coppia che l'azionamento dovrà fornire al motore
+\end{itemize}
 \begin{figure}[ht]
 \begin{center}
-    \includegraphics[scale=0.7]{Immagini/Sperimentale/pdo12out.png}
+    \includegraphics[scale=0.67]{Immagini/Sperimentale/pdo12out.png}
     \caption{PDO Output 1 e 2}
 \end{center}
 \end{figure}
-Nelle immagini appena presentate vi sono i parametri che vengono trasmessi mediante le PDO, sono tutti parametri che servono per far operazioni di movimentazione e di controllo, più avanti verranno analizzati nel particolare.
 \subsection{Stateflow}
 \textit{Stateflow} si occupa di fornire diagrammi di transizione, stato e di flusso utilizzando un linguaggio grafico. Nel caso del manipolatore è stato utilizzato per la progettazione di diagrammi di transizione in base agli stati del robot. In questa sezione andremo a vedere le fasi gli stadi di evoluzione che sono stati costruiti.
 \subsubsection{Fase di Homing}

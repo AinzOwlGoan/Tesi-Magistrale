@@ -1,10 +1,11 @@
 \section{Tecnologie implementate}
+Conclusa la spiegazione della modellazione di bracci e vite è il momento di iniziare l'attività sperimentale. Lo scopo di questa sezione è l'introduzione alle tecnologie software utilizzate per la modellazione fisica del manipolatore.
 \subsection{Simulink Real time}
 Simulink real-time è un plugin di matlab, consente di creare applicazioni real-time ed eseguirle su un hardware target, come per esempio un computer. Simulink-real time gira su un computer di "sviluppo" che è il PC utente, ed è diverso dal sistema che permette il movimento in real-time e l'esecuzione del modello reale ovvero il dispositivo target. Di conseguenza simulink real-time può raggiungere tempi di campionamento molto più veloci per uno stesso modello rispetto ad kernel real-time che condivide le risorse hardware con il computer, vi è la possibilità di raggiungere anche i 20 kHz. 
 Un'altra caratteristica fondamentale è il fatto che su SLRT è possibile far funzionare il dispositivo target in modalità \textit{stand-alone} cioè può riuscire ad avviarsi senza il bisogno di una procedura di installazione. 
 
 \subsection{EtherCAT}
-L'obiettivo di questa sezione è quello di presentare il protocollo di comunicazione utilizzato per interfacciarsi col robot PKM, evidenziandone le sue caratteristiche principali.\\
+L'obiettivo di questa sottosezione è quello di presentare il protocollo di comunicazione utilizzato per interfacciarsi col robot PKM, evidenziandone le sue caratteristiche principali.\\
 EtherCAT è una tecnologia ethernet sviluppata in origine da Beckhoff automation, il protocollo è stato pubblicato nello standard IEC61158\footnote{${https://webstore.iec.ch/publication/59890}$}, soddisfa requisiti \textit{hard} e \textit{soft} real time in particolare nell'ambito dell'automazione. Una caratteristica particolare sono i tempi di ciclo che sono molto veloci infatti una durata media di un tempo di ciclo è inferiore a $100 \mu s$. Il principio base di funzionamento si basa sul concetto di \textit{Master/Slave}.
 \\Venne introdotto nell'aprile 2003, e nei mesi successivi è nata una società chiamata EtherCAT Technology Group (ETG) che è diventata una delle più grandi organizzazioni ethernet al mondo.
 \subsubsection{Proprietà}

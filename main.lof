@@ -20,14 +20,19 @@
 \contentsline {figure}{\numberline {18}{\ignorespaces Angoli di movimentazione dei giunti motorizzati\relax }}{29}{}%
 \contentsline {figure}{\numberline {19}{\ignorespaces \textit {Workspace} 5R\relax }}{30}{}%
 \contentsline {figure}{\numberline {20}{\ignorespaces Numero di condizionamento workspace\relax }}{30}{}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Coppie e posizione end-effector\relax }}{33}{}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Schema azionamento\relax }}{38}{}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Registri azionamento\relax }}{38}{}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Topologia della rete\relax }}{41}{}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Configurazione rete ethernet user PC\relax }}{42}{}%
-\contentsline {figure}{\numberline {26}{\ignorespaces PDO in input\relax }}{42}{}%
-\contentsline {figure}{\numberline {27}{\ignorespaces PDO Output 1 e 2\relax }}{42}{}%
-\contentsline {figure}{\numberline {28}{\ignorespaces State flow: fase di homing\relax }}{43}{}%
-\contentsline {figure}{\numberline {29}{\ignorespaces State flow: fase di posizionamento\relax }}{44}{}%
-\contentsline {figure}{\numberline {30}{\ignorespaces State flow: traiettoria\relax }}{45}{}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Test su $K_d$\relax }}{47}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Struttura vite\relax }}{32}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Utensile da disegno\relax }}{32}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Coppie e posizione end-effector\relax }}{34}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Schema azionamento\relax }}{38}{}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Registri azionamento\relax }}{38}{}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Banco di test\relax }}{40}{}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Schema modulo bechoff\relax }}{42}{}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Topologia della rete\relax }}{42}{}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Configurazione rete ethernet user PC\relax }}{43}{}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Topologia rete mediante Ec-engineer\relax }}{43}{}%
+\contentsline {figure}{\numberline {31}{\ignorespaces PDO in input\relax }}{44}{}%
+\contentsline {figure}{\numberline {32}{\ignorespaces PDO Output 1 e 2\relax }}{44}{}%
+\contentsline {figure}{\numberline {33}{\ignorespaces State flow: fase di homing\relax }}{45}{}%
+\contentsline {figure}{\numberline {34}{\ignorespaces State flow: fase di posizionamento\relax }}{46}{}%
+\contentsline {figure}{\numberline {35}{\ignorespaces State flow: traiettoria\relax }}{47}{}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Test su $K_d$\relax }}{49}{}%
