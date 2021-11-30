@@ -9,7 +9,6 @@
 \usepackage{url}
 \geometry{a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm}
 \linespread{1.5}
-\graphicspath{ {./Immagini/} }
 \usepackage{setspace}
 \usepackage{systeme}
 \usepackage{mathtools}
@@ -24,7 +23,7 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{1pt}
 \fancyfoot[LE,RO]{\thepage} 
-%\fancyhead[LE,RO]{\rightmark}
+\fancyhead[LE,RO]{\rightmark}
 \renewcommand{\headrulewidth}{1pt}
 
 
@@ -37,7 +36,9 @@
   \fancyhf[lef,rof]{\thepage}
 }
 
-
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{equation}{section}
 \begin{document}
 
 \include{./begin}
@@ -60,9 +61,9 @@
 \tableofcontents
 \newpage
 	
-\include{./Capitoli/Contesto}
+%\include{./Capitoli/Contesto}
 
-\include{./Capitoli/StudiCorrelati}
+%\include{./Capitoli/StudiCorrelati}
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}
@@ -75,4 +76,5 @@
 \include{./Capitoli/Conclusioni}
 %\include{./Capitoli/SviluppiFuturi}
 \listoffigures
+\listoftables
 \end{document}

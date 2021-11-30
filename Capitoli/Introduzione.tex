@@ -1,17 +1,31 @@
 \section{Introduzione}
-\subsection{Obiettivi e descrizione}
-Alla base di questa tesi vi è il manipolatore PKM (\textit{parallel kinematic manipulator}). Un manipolatore parallelo è un sistema meccanico che utilizza "catene" seriali per supportare un \textit{end-effector}, ogni catena solitamente è corta, semplice e di conseguenza può essere rigida rispetto a movimenti non voluti rispetto ad un manipolatore seriali. La movimentazione e la flessibilità di un \textit{joint} è vincolata dall'effetto delle altre catene, questo rende il manipolatore rigido rispetto alle sue componenti. 
+
+\subsection{Obiettivo}
+L'obiettivo di questa tesi riguarda lo studio teorico e l'implementazione pratica di approcci di controllo centralizzato ad un manipolatore a cinematica parallela (5 gradi di libertà) con l'obiettivo di andare a trovare il migliore. In primis verrà eseguita una modellazione fisica e teorica del manipolatore, successivamente mediante un'attività sperimentale che comprende l'implementazione degli schemi di controllo analizzati e la generazione di traiettorie bidimensionali e tridimensionali, si andranno ad analizzare i risultati ottenuti.
+\subsection{Stato dell'arte}
+Il lavoro di tesi è stato svolto in collaborazione con il laboratorio di meccatronica dell'università degli studi di Bergamo. Alla base di questa tesi vi è il manipolatore PKM (\textit{parallel kinematic manipulator}) costruito nel 2013. Un manipolatore parallelo è un sistema meccanico che utilizza "catene" seriali per supportare un \textit{end-effector}, ogni catena solitamente è corta, semplice e di conseguenza può essere rigida rispetto a movimenti non voluti rispetto ad un manipolatore seriali. La movimentazione e la flessibilità di un \textit{joint} è vincolata dall'effetto delle altre catene, questo rende il manipolatore rigido rispetto alle sue componenti. 
 \\In particolare, nel nostro caso il manipolatore è composto da quattro link, due distali ovvero motorizzati e due prossimali, all'estermità è connessa una vite che consente traslazione e rotazione nell'asse Z, in questa configurazione il robot arriva ad avere 5 gradi di libertà.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.7]{Immagini/Robot1.png}
-		\caption{Robot PKM}
+		\caption{Robot PKM 
+		\label{fig:PKM}}
 	\end{center}
 \end{figure}
-\\L'obiettivo di questa tesi riguarda lo studio teorico e pratico di vari approcci di controllo, in modo da andare a trovare il migliore, in primis verrà eseguita una modellazione teorica del manipolatore, successivamente verrà svolta un'attività sperimentale che comprende l'implementazione degli schemi di controllo e la generazione di traiettorie bidimensionali e tridimensionali,
-\\Escludendo l'introduzione, la tesi è articolata sette capitoli: nel secondo capitolo viene presentata l'analisi cinematica del manipolatore, in particolare verranno analizzate sia cinematica diretta che inversa, nel terzo capitolo si parla di dinamica, punti di singolarità e manipolabilità del robot; il quarto capitolo mostra la modellazione dell'\textit{end-effector}, nel nostro caso la vite; il quinto capitolo va a presentare tutte le tecnologie implementate a livello pratico, e per concludere nel sesto capitolo viene presentato il sistema reale, includendo la struttura, l'implementazione, il sistema di controllo ed i problemi riscontrati con relative soluzioni; nel settimo capitolo, infine, verranno esposte le conclusioni, grazie ad un confronto ottenuto dai risultati teorici e quelli pratici.
+Escludendo l'introduzione, il lavoro di tesi sarà articolato in sette capitoli: nel secondo capitolo verrà presentata l'analisi cinematica del manipolatore, in particolare verranno analizzate sia cinematica diretta che inversa, nel terzo capitolo si parlerà di dinamica, punti di singolarità e manipolabilità del robot; il quarto capitolo mostrerà la modellazione dell'\textit{end-effector}, nel nostro caso la vite; il quinto capitolo andrà a presentare tutte le tecnologie implementate a livello pratico, e per concludere nel sesto capitolo verrà presentato il sistema reale, includendo la struttura, le modalità di comunicazione, il software implementato, il sistema di controllo, l'interfaccia grafica ed i problemi riscontrati con le relative soluzioni. Infine, nel settimo capitolo, verranno esposte le conclusioni, grazie ad un confronto ottenuto tra risultati teorici e quelli pratici.
+\subsection{Ambiti applicativi}
+Grazie alle loro caratteristiche, i manipolatori a cinematica parallela vengono utilizzati in diversi ambiti, di seguito è riportato solo qualche esempio:
+\begin{itemize}
+	\item Simulatori di volo
+	\item Simulatori di guida
+	\item Allineamento e posizionamento della fibra ottica
+	\item Ambito medicale
+	\item Assemblamento \textit{PCB}
+	\item Operazioni di \textit{pick $\&$ place}
+\end{itemize}
+
 \subsection{Software modellazione teorica}
-Per la modellazione teorica del manipolatore, abbiamo bisogno di strumenti software, in particolare utilizzeremo Matlab e Adams, il primo ci consentirà di realizzare un modello software del manipolatore, il secondo, sempre a partire da un modello ci servirà a validare i dati ottenuti dal primo in modo da verificare la loro correttezza.
+Per la modellazione teorica del manipolatore, abbiamo bisogno di utilizzare strumenti software specifici; in particolare verranno utilizzati Matlab e Adams, il primo ci consentirà di realizzare un modello software del manipolatore, il secondo, sempre a partire da un modello ci servirà a validare i dati ottenuti dal primo in modo da verificare la loro correttezza.
 \subsubsection{Matlab}
 Matlab, abbreviazione di \textit{Matrix Laboratory}, è una piattaforma di calcolo ottimizzata nella risoluzione di problemi tecnici. 
 Matlab è un linguaggio ad alte prestazione per la computazione tecnica, comprende: computazione, visualizzazione e programmazione in un ambiente di facile utilizzo dove i problemi e le soluzioni vengono espressi mediante una notazione matematica, gli utilizzi tipici riguardano: matematica, sviluppo di algoritmi, modellazione, simulazione, prototipazione, analisi dei dati, intelligenza artificiale, verifiche di computazione. La base di matlab è un vettore che non ha bisogno di dimensioni, in questo modo permette la risoluzione di molti problemi di computazione, specialmente quelli in formulazione vettoriale e matriciale velocemente, senza dover ricorrere all'utilizzo di linguaggi come il C. Matlab inoltre possiede delle \textit{toolbox} ovvero moduli aggiuntivi che permettono di specializzarsi in un campo, in particolare sono insieme di funzioni MATLAB che estendono l'ambiente, permettendogli di risolvere particolari classi di problemi, esempi di moduli sono reti neurali, processamento di segnali, sistemi di controllo.

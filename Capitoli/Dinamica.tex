@@ -432,6 +432,7 @@ Il quarto e quinto caso sono casi di singolarità non realizzabili nella pratica
 		\label{fig:sing5}
 	\end{subfigure}
 	\caption{Caso 4 e 5 singolarità}
+	\label{Caso4Sing}
 \end{figure}
 Le soluzioni le possiamo trovare impostando che la lunghezza della x vale nel quarto caso d e nel quinto -d, andando quindi a trovare le soluzioni come:
 \begin{equation}
@@ -446,6 +447,7 @@ Andando ad unire tutti casi visti fino ad ora possiamo vederli visualmente nell'
 \begin{center}
     \includegraphics[scale=0.65]{Immagini/Singolarity/SingNew}
     \caption{Punti di singolarità}
+    \label{puntiSing}
 \end{center}
 \end{figure}
 \subsection{Manipolabilità}
@@ -473,29 +475,30 @@ Questo numero può variare tra 1 e $+\infty$, più è piccolo e meno si rischia 
 		\label{fig:nconds}
 	\end{subfigure}
 	\caption{Numero di condizionamento}
+	\label{NumCondiz}
 \end{figure}
-\\Nel primo grafico viene mostrato il piano x,y ed il numero di condizionamento è definito come una colormap, i punti di color blu sono quelli con un r piccolo ed in questi non siamo in condizioni di singolarità, invece quelli tendenti al verde/giallo sono i casi di singolarità che abbiamo visto prima. Nella seconda figura abbiamo la stessa rappresentazione però in tre dimensioni, utilizziamo l'asse z per rappresentare il numero di condizionamento; anche qua le zone di singolarità sono chiaramente visibili.
-In questo secondo grafico invece andiamo a concentrarci sulla zona di movimentazione ideale del manipolatore, più ci si avvicina allo zero, più il valore di r aumenta, questo per il fatto che stiamo raggiungendo una zona di singolarità.
+\\Nel primo grafico viene mostrato il piano x,y ed il numero di condizionamento è definito come una colormap, i punti di color blu sono quelli con un r piccolo ed in questi non siamo in condizioni di singolarità, invece quelli tendenti al verde/giallo sono i casi di singolarità che abbiamo visto prima. Nella seconda figura possiamo vedere la stessa rappresentazione però in tre dimensioni, utilizziamo l'asse z per rappresentare il numero di condizionamento; anche qua le zone di singolarità sono chiaramente visibili.
+In questo secondo grafico invece andiamo a concentrarci sulla zona di movimentazione ideale del manipolatore, più ci si avvicina allo zero, più il valore di r aumenta, questo per il fatto che stiamo raggiungendo una zona critica.
 \subsection{Workspace}
-Dalle analisi appena effettuate sui punti di singolarità e sul numero di condizionamento è stato possibile descrivere lo spazio di lavoro del manipolatore.
+Dalle analisi appena effettuate sui punti di singolarità e sul numero di condizionamento è stato possibile descrivere lo spazio di lavoro del manipolatore. In prima battuta ci si è concentrato sull'analizzare gli angoli di movimentazione dei giunti e i loro vincoli, in particolare il link sinistro con angolo $\theta_1$ avrà una movimentazione di $210^\circ$ al massimo, mentre il link destro con angolo $\theta_2$ ha una movimentazione di $180^\circ$. Questa limitata mobilità è data dai vincoli che ci sono tra le due braccia, infatti, se a livello teorico si possono ottenere configurazioni particolari come quella vista in figura \ref{Caso4Sing} nella pratica non è possibile muovere né manualmente né automaticamente i giunti per ottenere quei casi. Possiamo andare quindi a rappresentare gli angoli di movimentazione mediante la seguente immagine: 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.5]{Immagini/Singolarity/workangle}
+		\includegraphics[scale=0.7]{Immagini/Singolarity/workangle}
 		\caption{Angoli di movimentazione dei giunti motorizzati}
 	\end{center}
 \end{figure}
-Unendo poi gli angoli di movimentazione del manipolatore, è stato possibile descrivere lo spazio di lavoro mediante un rettangolo inscritto che non viola i punti di singolarità
+\\Andando ora ad unire gli angoli di movimentazione del manipolatore ed i punti di singolarità, è possibile descrivere lo spazio di lavoro mediante un rettangolo che non viola alcuna condizione
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.5]{Immagini/Singolarity/Worksing}
+		\includegraphics[scale=0.6]{Immagini/Singolarity/Worksing}
 		\caption{\textit{Workspace} 5R}
 	\end{center}
 \end{figure}
-\\In particolare è stata anche fatta un'analisi sul numero di condizionamento del \textit{workspace}:
+\\Successivamente, per verificare che lo spazio di lavoro fosse corretto e rispettasse tutte le condizioni è stata fatta un'analisi sul numero di condizionamento del \textit{workspace}:
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.5]{Immagini/Singolarity/ncondsl}
+		\includegraphics[scale=0.6]{Immagini/Singolarity/ncondsl}
 		\caption{Numero di condizionamento workspace}
 	\end{center}
 \end{figure}
-Su tutto il piano x,y si nota come il numero di condizionamento assume valori bassi, questo implica che non vi è singolarità, gli unici punti critici sono quelli esterni, nei quali il valore è vicino a 6, (comunque minore di $\infty$), questi punti vanno a rappresentare casi nei quali il manipolatore avrà più difficoltà a muoversi, ma non sono veri e propri casi di singolarità .
+\\Su tutto il piano x,y si nota come il numero di condizionamento assume valori bassi, questo implica che non vi è singolarità, gli unici punti critici sono quelli esterni, nei quali il valore è vicino a 6, (comunque minore di $\infty$), questi punti vanno a rappresentare casi nei quali il manipolatore avrà più difficoltà a muoversi, ma non sono veri e propri casi di singolarità.

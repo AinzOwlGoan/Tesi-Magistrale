@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.21)  26 NOV 2021 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.21)  30 NOV 2021 16:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -346,34 +346,38 @@ rs
 \f@nch@O@olf=\skip65
 \f@nch@O@orf=\skip66
 )
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
 (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-10-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count299
 \l__pdf_internal_box=\box101
-) (main.aux (begin.aux) (Capitoli/Contesto.aux)
-(Capitoli/StudiCorrelati.aux) (Capitoli/Introduzione.aux)
+) (main.aux (begin.aux) (Capitoli/Introduzione.aux)
 (Capitoli/Cinematica.aux) (Capitoli/Dinamica.aux) (Capitoli/Vite.aux)
 (Capitoli/Implementazione.aux) (Capitoli/SistemaReale.aux)
 (Capitoli/Conclusioni.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Info: Redefining \it@ocap on input line 41.
-LaTeX Info: Redefining \it@ccap on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Info: Redefining \it@ocap on input line 42.
+LaTeX Info: Redefining \it@ccap on input line 42.
 
 
 File italian.ldf warning: 
@@ -381,7 +385,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 41.
+italian.ldf    on input line 42.
 
 
 (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
@@ -476,60 +480,133 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[1] [2])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[1]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [3]
-\openout2 = `./Capitoli/Contesto.aux'.
 
 
-No file ./Capitoli/Contesto.tex.
-\openout2 = `./Capitoli/StudiCorrelati.aux'.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-No file ./Capitoli/StudiCorrelati.tex.
-[4
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-
-
-
-
-
-]
+[3] [4]
 \openout2 = `./Capitoli/Introduzione.aux'.
 
  (Capitoli/Introduzione.tex
 <Immagini/Robot1.png, id=25, 329.43076pt x 346.896pt>
 File: Immagini/Robot1.png Graphic file (type png)
 <use Immagini/Robot1.png>
-Package pdftex.def Info: Immagini/Robot1.png  used on input line 7.
+Package pdftex.def Info: Immagini/Robot1.png  used on input line 10.
 (pdftex.def)             Requested size: 230.59995pt x 242.82553pt.
- [5
 
- <./Immagini/Robot1.png>] [6]) [7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6 <./Immagini/Robot1.png>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8]
 \openout2 = `Capitoli/Cinematica.aux'.
 
-
-(Capitoli/Cinematica.tex
-<Immagini/Robot2.png, id=39, 531.78674pt x 434.8245pt>
+ (Capitoli/Cinematica.tex
+<Immagini/Robot2.png, id=43, 531.78674pt x 434.8245pt>
 File: Immagini/Robot2.png Graphic file (type png)
 <use Immagini/Robot2.png>
 Package pdftex.def Info: Immagini/Robot2.png  used on input line 23.
 (pdftex.def)             Requested size: 319.07451pt x 260.8967pt.
- [8
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9
 
 
 
  <./Immagini/Robot2.png>]
-<Immagini/EqCirc.png, id=47, 427.5975pt x 348.70274pt>
+<Immagini/EqCirc.png, id=51, 427.5975pt x 348.70274pt>
 File: Immagini/EqCirc.png Graphic file (type png)
 <use Immagini/EqCirc.png>
 Package pdftex.def Info: Immagini/EqCirc.png  used on input line 38.
 (pdftex.def)             Requested size: 277.93507pt x 226.65408pt.
- [9 <./Immagini/EqCirc.png>]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10 <./Immagini/EqCirc.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11]
 Overfull \hbox (25.47498pt too wide) detected at line 84
 [][]
  []
@@ -542,65 +619,144 @@ Overfull \hbox (34.80833pt too wide) detected at line 91
 
 Underfull \vbox (badness 5231) has occurred while \output is active []
 
- [11]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
 [12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
 Underfull \vbox (badness 5431) has occurred while \output is active []
 
- [13]
-[14]) [15]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
 \openout2 = `Capitoli/Dinamica.aux'.
 
- (Capitoli/Dinamica.tex [16
+ (Capitoli/Dinamica.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17
 
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
-<Immagini/Dinamica/confracct1.png, id=91, 462.0462pt x 371.9496pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20]
+<Immagini/Dinamica/confracct1.png, id=94, 462.0462pt x 371.9496pt>
 File: Immagini/Dinamica/confracct1.png Graphic file (type png)
 <use Immagini/Dinamica/confracct1.png>
 Package pdftex.def Info: Immagini/Dinamica/confracct1.png  used on input line 2
 15.
 (pdftex.def)             Requested size: 149.80249pt x 120.59273pt.
-<Immagini/Dinamica/confracct2.png, id=92, 462.0462pt x 371.9496pt>
+<Immagini/Dinamica/confracct2.png, id=95, 462.0462pt x 371.9496pt>
 File: Immagini/Dinamica/confracct2.png Graphic file (type png)
 <use Immagini/Dinamica/confracct2.png>
 Package pdftex.def Info: Immagini/Dinamica/confracct2.png  used on input line 2
 22.
 (pdftex.def)             Requested size: 149.80249pt x 120.59273pt.
-<Immagini/Dinamica/confrvelt1.png, id=93, 462.0462pt x 372.4314pt>
+<Immagini/Dinamica/confrvelt1.png, id=96, 462.0462pt x 372.4314pt>
 File: Immagini/Dinamica/confrvelt1.png Graphic file (type png)
 <use Immagini/Dinamica/confrvelt1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrvelt1.png  used on input line 2
 32.
 (pdftex.def)             Requested size: 149.80249pt x 120.74893pt.
-<Immagini/Dinamica/confrtvelt2.png, id=94, 457.71pt x 372.4314pt>
+<Immagini/Dinamica/confrtvelt2.png, id=97, 457.71pt x 372.4314pt>
 File: Immagini/Dinamica/confrtvelt2.png Graphic file (type png)
 <use Immagini/Dinamica/confrtvelt2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrtvelt2.png  used on input line 
 239.
 (pdftex.def)             Requested size: 149.80249pt x 121.89119pt.
-<Immagini/Dinamica/confrpost1.png, id=95, 457.71pt x 371.9496pt>
+<Immagini/Dinamica/confrpost1.png, id=98, 457.71pt x 371.9496pt>
 File: Immagini/Dinamica/confrpost1.png Graphic file (type png)
 <use Immagini/Dinamica/confrpost1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrpost1.png  used on input line 2
 49.
 (pdftex.def)             Requested size: 149.80249pt x 121.7335pt.
-<Immagini/Dinamica/confrpost2.png, id=96, 457.71pt x 371.9496pt>
+<Immagini/Dinamica/confrpost2.png, id=99, 457.71pt x 371.9496pt>
 File: Immagini/Dinamica/confrpost2.png Graphic file (type png)
 <use Immagini/Dinamica/confrpost2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrpost2.png  used on input line 2
 56.
 (pdftex.def)             Requested size: 149.80249pt x 121.7335pt.
-<Immagini/Dinamica/ModSimulink.png, id=97, 831.105pt x 292.84406pt>
+<Immagini/Dinamica/ModSimulink.png, id=100, 831.105pt x 292.84406pt>
 File: Immagini/Dinamica/ModSimulink.png Graphic file (type png)
 <use Immagini/Dinamica/ModSimulink.png>
 Package pdftex.def Info: Immagini/Dinamica/ModSimulink.png  used on input line 
@@ -611,16 +767,33 @@ Overfull \hbox (30.31781pt too wide) in paragraph at lines 265--266
  [] 
  []
 
-[20] [21 <./Immagini/Dinamica/confracct1.png (PNG copy)> <./Immagini/Dinamica/c
-onfracct2.png (PNG copy)> <./Immagini/Dinamica/confrvelt1.png (PNG copy)> <./Im
-magini/Dinamica/confrtvelt2.png (PNG copy)> <./Immagini/Dinamica/confrpost1.png
- (PNG copy)> <./Immagini/Dinamica/confrpost2.png (PNG copy)>]
-<Immagini/Dinamica/adams1.png, id=104, 561.89925pt x 386.04225pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22 <./Immagini/Dinamica/confracct1.png (PNG copy)> <./Immagini/Dinamica/confra
+cct2.png (PNG copy)> <./Immagini/Dinamica/confrvelt1.png (PNG copy)> <./Immagin
+i/Dinamica/confrtvelt2.png (PNG copy)> <./Immagini/Dinamica/confrpost1.png (PNG
+ copy)> <./Immagini/Dinamica/confrpost2.png (PNG copy)>]
+<Immagini/Dinamica/adams1.png, id=107, 561.89925pt x 386.04225pt>
 File: Immagini/Dinamica/adams1.png Graphic file (type png)
 <use Immagini/Dinamica/adams1.png>
 Package pdftex.def Info: Immagini/Dinamica/adams1.png  used on input line 276.
 (pdftex.def)             Requested size: 192.0548pt x 131.94771pt.
-<Immagini/Dinamica/adams2.png, id=105, 467.346pt x 410.7345pt>
+<Immagini/Dinamica/adams2.png, id=108, 467.346pt x 410.7345pt>
 File: Immagini/Dinamica/adams2.png Graphic file (type png)
 <use Immagini/Dinamica/adams2.png>
 Package pdftex.def Info: Immagini/Dinamica/adams2.png  used on input line 283.
@@ -630,13 +803,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 273--287
 []$[]$ $[]$ 
  []
 
-<Immagini/Dinamica/c1matlab.png, id=106, 292.6935pt x 248.127pt>
+<Immagini/Dinamica/c1matlab.png, id=109, 292.6935pt x 248.127pt>
 File: Immagini/Dinamica/c1matlab.png Graphic file (type png)
 <use Immagini/Dinamica/c1matlab.png>
 Package pdftex.def Info: Immagini/Dinamica/c1matlab.png  used on input line 311
 .
 (pdftex.def)             Requested size: 192.0548pt x 162.814pt.
-<Immagini/Dinamica/c2matlab.png, id=107, 296.307pt x 257.16075pt>
+<Immagini/Dinamica/c2matlab.png, id=110, 296.307pt x 257.16075pt>
 File: Immagini/Dinamica/c2matlab.png Graphic file (type png)
 <use Immagini/Dinamica/c2matlab.png>
 Package pdftex.def Info: Immagini/Dinamica/c2matlab.png  used on input line 318
@@ -647,13 +820,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 308--322
 []$[]$ $[]$ 
  []
 
-<Immagini/Dinamica/c1adams.png, id=108, 289.08pt x 252.945pt>
+<Immagini/Dinamica/c1adams.png, id=111, 289.08pt x 252.945pt>
 File: Immagini/Dinamica/c1adams.png Graphic file (type png)
 <use Immagini/Dinamica/c1adams.png>
 Package pdftex.def Info: Immagini/Dinamica/c1adams.png  used on input line 328.
 
 (pdftex.def)             Requested size: 192.0548pt x 168.04807pt.
-<Immagini/Dinamica/c2adams.png, id=109, 290.2845pt x 248.72925pt>
+<Immagini/Dinamica/c2adams.png, id=112, 290.2845pt x 248.72925pt>
 File: Immagini/Dinamica/c2adams.png Graphic file (type png)
 <use Immagini/Dinamica/c2adams.png>
 Package pdftex.def Info: Immagini/Dinamica/c2adams.png  used on input line 335.
@@ -664,13 +837,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 325--339
 []$[]$ $[]$ 
  []
 
-<Immagini/Dinamica/confrc1.png, id=110, 284.262pt x 255.95625pt>
+<Immagini/Dinamica/confrc1.png, id=113, 284.262pt x 255.95625pt>
 File: Immagini/Dinamica/confrc1.png Graphic file (type png)
 <use Immagini/Dinamica/confrc1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrc1.png  used on input line 346.
 
 (pdftex.def)             Requested size: 192.0548pt x 172.93484pt.
-<Immagini/Dinamica/confrc2.png, id=111, 292.09125pt x 249.93375pt>
+<Immagini/Dinamica/confrc2.png, id=114, 292.09125pt x 249.93375pt>
 File: Immagini/Dinamica/confrc2.png Graphic file (type png)
 <use Immagini/Dinamica/confrc2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrc2.png  used on input line 353.
@@ -681,11 +854,27 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 343--357
 []$[]$ $[]$ 
  []
 
-[22 <./Immagini/Dinamica/ModSimulink.png> <./Immagini/Dinamica/adams1.png> <./I
-mmagini/Dinamica/adams2.png>] [23 <./Immagini/Dinamica/c1matlab.png> <./Immagin
-i/Dinamica/c2matlab.png> <./Immagini/Dinamica/c1adams.png> <./Immagini/Dinamica
-/c2adams.png>]
-<Immagini/Singolarity/1.jpg, id=126, 770.88pt x 433.62pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23 <./Immagini/Dinamica/ModSimulink.png> <./Immagini/Dinamica/adams1.png> <./I
+mmagini/Dinamica/adams2.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24 <./Immagini/Dinamica/c1matlab.png> <./Immagini/Dinamica/c2matlab.png> <./Im
+magini/Dinamica/c1adams.png> <./Immagini/Dinamica/c2adams.png>]
+<Immagini/Singolarity/1.jpg, id=129, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/1.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/1.jpg>
 Package pdftex.def Info: Immagini/Singolarity/1.jpg  used on input line 367.
@@ -693,25 +882,52 @@ Package pdftex.def Info: Immagini/Singolarity/1.jpg  used on input line 367.
 
 Underfull \vbox (badness 1466) has occurred while \output is active []
 
- [24 <./Immagini/Dinamica/confrc1.png> <./Immagini/Dinamica/confrc2.png>]
-<Immagini/Singolarity/2.jpg, id=132, 770.88pt x 433.62pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25 <./Immagini/Dinamica/confrc1.png> <./Immagini/Dinamica/confrc2.png>]
+<Immagini/Singolarity/2.jpg, id=135, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/2.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/2.jpg>
 Package pdftex.def Info: Immagini/Singolarity/2.jpg  used on input line 378.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
- [25 <./Immagini/Singolarity/1.jpg> <./Immagini/Singolarity/2.jpg>]
-<Immagini/Singolarity/5.jpg, id=136, 770.88pt x 433.62pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26 <./Immagini/Singolarity/1.jpg> <./Immagini/Singolarity/2.jpg>]
+<Immagini/Singolarity/5.jpg, id=139, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/5.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/5.jpg>
 Package pdftex.def Info: Immagini/Singolarity/5.jpg  used on input line 392.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
- [26 <./Immagini/Singolarity/5.jpg>]
-<Immagini/Singolarity/3.jpg, id=140, 770.88pt x 433.62pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27 <./Immagini/Singolarity/5.jpg>]
+<Immagini/Singolarity/3.jpg, id=143, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/3.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/3.jpg>
 Package pdftex.def Info: Immagini/Singolarity/3.jpg  used on input line 425.
 (pdftex.def)             Requested size: 192.0548pt x 108.02759pt.
-<Immagini/Singolarity/4.jpg, id=141, 770.88pt x 433.62pt>
+<Immagini/Singolarity/4.jpg, id=144, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/4.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/4.jpg>
 Package pdftex.def Info: Immagini/Singolarity/4.jpg  used on input line 431.
@@ -721,299 +937,705 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 422--434
 []$[]$ $[]$ 
  []
 
-<Immagini/Singolarity/SingNew.png, id=142, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/SingNew.png, id=145, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/SingNew.png Graphic file (type png)
 <use Immagini/Singolarity/SingNew.png>
 Package pdftex.def Info: Immagini/Singolarity/SingNew.png  used on input line 4
-47.
+48.
 (pdftex.def)             Requested size: 342.52562pt x 256.89421pt.
-[27 <./Immagini/Singolarity/3.jpg> <./Immagini/Singolarity/4.jpg>]
-<Immagini/Singolarity/Ncond.png, id=146, 526.96875pt x 395.22656pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28 <./Immagini/Singolarity/3.jpg> <./Immagini/Singolarity/4.jpg>]
+<Immagini/Singolarity/Ncond.png, id=149, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Ncond.png Graphic file (type png)
 <use Immagini/Singolarity/Ncond.png>
-Package pdftex.def Info: Immagini/Singolarity/Ncond.png  used on input line 466
+Package pdftex.def Info: Immagini/Singolarity/Ncond.png  used on input line 468
 .
 (pdftex.def)             Requested size: 211.26144pt x 158.44966pt.
-<Immagini/Singolarity/Ncond_surf.png, id=147, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/Ncond_surf.png, id=150, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Ncond_surf.png Graphic file (type png)
 <use Immagini/Singolarity/Ncond_surf.png>
 Package pdftex.def Info: Immagini/Singolarity/Ncond_surf.png  used on input lin
-e 472.
+e 474.
 (pdftex.def)             Requested size: 211.26144pt x 158.44966pt.
 
-Overfull \hbox (45.29282pt too wide) in paragraph at lines 463--475
+Overfull \hbox (45.29282pt too wide) in paragraph at lines 465--477
 []$[]$ $[]$ 
  []
 
-[28 <./Immagini/Singolarity/SingNew.png (PNG copy)>]
-<Immagini/Singolarity/workangle.png, id=151, 462.22687pt x 270.25969pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29 <./Immagini/Singolarity/SingNew.png (PNG copy)>]
+<Immagini/Singolarity/workangle.png, id=155, 462.22687pt x 270.25969pt>
 File: Immagini/Singolarity/workangle.png Graphic file (type png)
 <use Immagini/Singolarity/workangle.png>
 Package pdftex.def Info: Immagini/Singolarity/workangle.png  used on input line
- 483.
-(pdftex.def)             Requested size: 231.11287pt x 135.1295pt.
-<Immagini/Singolarity/Worksing.png, id=152, 526.96875pt x 395.22656pt>
+ 486.
+(pdftex.def)             Requested size: 323.5566pt x 189.18048pt.
+<Immagini/Singolarity/Worksing.png, id=156, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Worksing.png Graphic file (type png)
 <use Immagini/Singolarity/Worksing.png>
 Package pdftex.def Info: Immagini/Singolarity/Worksing.png  used on input line 
-490.
-(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-<Immagini/Singolarity/ncondsl.png, id=153, 526.96875pt x 395.22656pt>
+493.
+(pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
+<Immagini/Singolarity/ncondsl.png, id=157, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/ncondsl.png Graphic file (type png)
 <use Immagini/Singolarity/ncondsl.png>
-Package pdftex.def Info: Immagini/Singolarity/ncondsl.png  used on input line 4
-97.
-(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-) [29 <./Immagini/Singolarity/Ncond.png (PNG copy)> <./Immagini/Singolarity/Nco
-nd_surf.png (PNG copy)> <./Immagini/Singolarity/workangle.png>] [30 <./Immagini
-/Singolarity/Worksing.png> <./Immagini/Singolarity/ncondsl.png (PNG copy)>] [31
-]
+Package pdftex.def Info: Immagini/Singolarity/ncondsl.png  used on input line 5
+00.
+(pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30 <./Immagini/Singolarity/Ncond.png (PNG copy)> <./Immagini/Singolarity/Ncond
+_surf.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31 <./Immagini/Singolarity/workangle.png> <./Immagini/Singolarity/Worksing.png
+>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32 <./Immagini/Singolarity/ncondsl.png (PNG copy)>]
 \openout2 = `Capitoli/Vite.aux'.
 
  (Capitoli/Vite.tex
-<Immagini/ViteRicircolo.jpg, id=166, 468.75125pt x 270.00874pt>
+<Immagini/ViteRicircolo.jpg, id=169, 468.75125pt x 270.00874pt>
 File: Immagini/ViteRicircolo.jpg Graphic file (type jpg)
 <use Immagini/ViteRicircolo.jpg>
 Package pdftex.def Info: Immagini/ViteRicircolo.jpg  used on input line 6.
 (pdftex.def)             Requested size: 234.37505pt x 135.00403pt.
-<Immagini/utensile.jpg, id=167, 355.92975pt x 770.88pt>
+<Immagini/utensile.jpg, id=170, 355.92975pt x 770.88pt>
 File: Immagini/utensile.jpg Graphic file (type jpg)
 <use Immagini/utensile.jpg>
 Package pdftex.def Info: Immagini/utensile.jpg  used on input line 13.
 (pdftex.def)             Requested size: 88.98221pt x 192.71953pt.
 
-[32
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33
 
 
 
  <./Immagini/ViteRicircolo.jpg> <./Immagini/utensile.jpg>]
 Underfull \vbox (badness 3590) has occurred while \output is active []
 
- [33]
-<Immagini/coppiaTeoricaVite.png, id=174, 508.90125pt x 389.455pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
+<Immagini/coppiaTeoricaVite.png, id=177, 508.90125pt x 389.455pt>
 File: Immagini/coppiaTeoricaVite.png Graphic file (type png)
 <use Immagini/coppiaTeoricaVite.png>
 Package pdftex.def Info: Immagini/coppiaTeoricaVite.png  used on input line 88.
 
 (pdftex.def)             Requested size: 330.78189pt x 253.14275pt.
 )
-[34 <./Immagini/coppiaTeoricaVite.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35 <./Immagini/coppiaTeoricaVite.png>]
 \openout2 = `Capitoli/Implementazione.aux'.
 
- (Capitoli/Implementazione.tex [35
+ (Capitoli/Implementazione.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36
 
 
 
 ]
-[36]
-<Immagini/Sperimentale/azionamenti.PNG, id=186, 442.0515pt x 215.6055pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+<Immagini/Sperimentale/azionamenti.PNG, id=189, 442.0515pt x 215.6055pt>
 File: Immagini/Sperimentale/azionamenti.PNG Graphic file (type png)
 <use Immagini/Sperimentale/azionamenti.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/azionamenti.PNG  used on input l
 ine 22.
 (pdftex.def)             Requested size: 353.64168pt x 172.48462pt.
-<Immagini/Sperimentale/registri.PNG, id=187, 632.96475pt x 77.088pt>
+<Immagini/Sperimentale/registri.PNG, id=190, 632.96475pt x 77.088pt>
 File: Immagini/Sperimentale/registri.PNG Graphic file (type png)
 <use Immagini/Sperimentale/registri.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/registri.PNG  used on input line
  30.
 (pdftex.def)             Requested size: 379.78177pt x 46.25314pt.
- [37]) [38 <./Immagini/Sperimentale/azionamenti.PNG> <./Immagini/Sperimentale/r
-egistri.PNG>] [39]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39 <./Immagini/Sperimentale/azionamenti.PNG> <./Immagini/Sperimentale/registri
+.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40]
 \openout2 = `Capitoli/SistemaReale.aux'.
 
  (Capitoli/SistemaReale.tex
-<Immagini/Sperimentale/banco.png, id=200, 540.0175pt x 399.4925pt>
+<Immagini/Sperimentale/banco.png, id=203, 540.0175pt x 399.4925pt>
 File: Immagini/Sperimentale/banco.png Graphic file (type png)
 <use Immagini/Sperimentale/banco.png>
 Package pdftex.def Info: Immagini/Sperimentale/banco.png  used on input line 8.
 
 (pdftex.def)             Requested size: 324.013pt x 239.69734pt.
- [40
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41
 
 
 
  <./Immagini/Sperimentale/banco.png>]
-<Immagini/Sperimentale/Beckoffschema.PNG, id=205, 221.628pt x 259.56975pt>
+<Immagini/Sperimentale/Beckoffschema.PNG, id=209, 221.628pt x 259.56975pt>
 File: Immagini/Sperimentale/Beckoffschema.PNG Graphic file (type png)
 <use Immagini/Sperimentale/Beckoffschema.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/Beckoffschema.PNG  used on input
- line 23.
+ line 24.
 (pdftex.def)             Requested size: 132.97781pt x 155.74304pt.
- [41]
-<Immagini/Sperimentale/Topology.PNG, id=210, 665.48625pt x 260.77425pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
+<Immagini/Sperimentale/Topology.PNG, id=213, 665.48625pt x 260.77425pt>
 File: Immagini/Sperimentale/Topology.PNG Graphic file (type png)
 <use Immagini/Sperimentale/Topology.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/Topology.PNG  used on input line
- 31.
+ 33.
 (pdftex.def)             Requested size: 332.74231pt x 130.3868pt.
-<Immagini/Sperimentale/ConfEthernet.png, id=211, 390.258pt x 97.5645pt>
+<Immagini/Sperimentale/ConfEthernet.png, id=214, 390.258pt x 97.5645pt>
 File: Immagini/Sperimentale/ConfEthernet.png Graphic file (type png)
 <use Immagini/Sperimentale/ConfEthernet.png>
 Package pdftex.def Info: Immagini/Sperimentale/ConfEthernet.png  used on input 
-line 38.
+line 41.
 (pdftex.def)             Requested size: 273.17873pt x 68.29466pt.
-<Immagini/Sperimentale/NetTopology.png, id=212, 159.59625pt x 211.38976pt>
+<Immagini/Sperimentale/NetTopology.png, id=215, 159.59625pt x 211.38976pt>
 File: Immagini/Sperimentale/NetTopology.png Graphic file (type png)
 <use Immagini/Sperimentale/NetTopology.png>
 Package pdftex.def Info: Immagini/Sperimentale/NetTopology.png  used on input l
-ine 45.
+ine 49.
 (pdftex.def)             Requested size: 111.7166pt x 147.9718pt.
- [42 <./Immagini/Sperimentale/Beckoffschema.PNG> <./Immagini/Sperimentale/Topol
-ogy.PNG>] [43 <./Immagini/Sperimentale/ConfEthernet.png> <./Immagini/Sperimenta
-le/NetTopology.png>]
-<Immagini/Sperimentale/pdo1in.png, id=223, 277.035pt x 113.223pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43 <./Immagini/Sperimentale/Beckoffschema.PNG> <./Immagini/Sperimentale/Topolo
+gy.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[44 <./Immagini/Sperimentale/ConfEthernet.png> <./Immagini/Sperimentale/NetTopo
+logy.png>]
+<Immagini/Sperimentale/pdo1in.png, id=226, 277.035pt x 113.223pt>
 File: Immagini/Sperimentale/pdo1in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo1in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo1in.png  used on input line 6
-0.
+5.
 (pdftex.def)             Requested size: 149.37631pt x 61.04967pt.
-<Immagini/Sperimentale/pdo2in.png, id=224, 275.22826pt x 115.02975pt>
+<Immagini/Sperimentale/pdo2in.png, id=227, 275.22826pt x 115.02975pt>
 File: Immagini/Sperimentale/pdo2in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo2in.png>
-Package pdftex.def Info: Immagini/Sperimentale/pdo2in.png  used on input line 6
-7.
+Package pdftex.def Info: Immagini/Sperimentale/pdo2in.png  used on input line 7
+2.
 (pdftex.def)             Requested size: 149.37631pt x 62.43108pt.
-<Immagini/Sperimentale/pdo3in.png, id=225, 275.8305pt x 96.96225pt>
+<Immagini/Sperimentale/pdo3in.png, id=228, 275.8305pt x 96.96225pt>
 File: Immagini/Sperimentale/pdo3in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo3in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo3in.png  used on input line 7
-4.
+9.
 (pdftex.def)             Requested size: 149.37631pt x 52.50974pt.
-<Immagini/Sperimentale/pdo4in.png, id=226, 274.02374pt x 118.041pt>
+<Immagini/Sperimentale/pdo4in.png, id=229, 274.02374pt x 118.041pt>
 File: Immagini/Sperimentale/pdo4in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo4in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo4in.png  used on input line 8
-1.
+6.
 (pdftex.def)             Requested size: 149.37631pt x 64.34816pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 57--85
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 62--90
 []$[]$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 57--85
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 62--90
 []$ $[]$ 
  []
 
-<Immagini/Sperimentale/pdo12out.png, id=227, 347.49825pt x 151.767pt>
+<Immagini/Sperimentale/pdo12out.png, id=230, 347.49825pt x 151.767pt>
 File: Immagini/Sperimentale/pdo12out.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo12out.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo12out.png  used on input line
- 94.
+ 100.
 (pdftex.def)             Requested size: 232.8226pt x 101.68335pt.
-[44 <./Immagini/Sperimentale/pdo1in.png> <./Immagini/Sperimentale/pdo2in.png> <
+<Immagini/Sperimentale/generalSchema.png, id=231, 877.47826pt x 187.902pt>
+File: Immagini/Sperimentale/generalSchema.png Graphic file (type png)
+<use Immagini/Sperimentale/generalSchema.png>
+Package pdftex.def Info: Immagini/Sperimentale/generalSchema.png  used on input
+ line 109.
+(pdftex.def)             Requested size: 438.73805pt x 93.95076pt.
+
+Overfull \hbox (11.9467pt too wide) in paragraph at lines 109--110
+ [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[45 <./Immagini/Sperimentale/pdo1in.png> <./Immagini/Sperimentale/pdo2in.png> <
 ./Immagini/Sperimentale/pdo3in.png> <./Immagini/Sperimentale/pdo4in.png> <./Imm
 agini/Sperimentale/pdo12out.png>]
-<Immagini/Sperimentale/state1.png, id=236, 740.7675pt x 458.9145pt>
-File: Immagini/Sperimentale/state1.png Graphic file (type png)
-<use Immagini/Sperimentale/state1.png>
-Package pdftex.def Info: Immagini/Sperimentale/state1.png  used on input line 1
-04.
-(pdftex.def)             Requested size: 407.42339pt x 252.40375pt.
- [45 <./Immagini/Sperimentale/state1.png>]
-<Immagini/Sperimentale/state2.png, id=241, 1344.222pt x 385.44pt>
+<Immagini/Sperimentale/Inizializzazione.png, id=240, 554.07pt x 440.847pt>
+File: Immagini/Sperimentale/Inizializzazione.png Graphic file (type png)
+<use Immagini/Sperimentale/Inizializzazione.png>
+Package pdftex.def Info: Immagini/Sperimentale/Inizializzazione.png  used on in
+put line 120.
+(pdftex.def)             Requested size: 349.06595pt x 277.73508pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46 <./Immagini/Sperimentale/generalSchema.png> <./Immagini/Sperimentale/Inizia
+lizzazione.png>]
+<Immagini/Sperimentale/Input.png, id=246, 184.89075pt x 440.24475pt>
+File: Immagini/Sperimentale/Input.png Graphic file (type png)
+<use Immagini/Sperimentale/Input.png>
+Package pdftex.def Info: Immagini/Sperimentale/Input.png  used on input line 14
+7.
+(pdftex.def)             Requested size: 120.17754pt x 286.1557pt.
+<Immagini/Sperimentale/convertS.png, id=247, 528.7755pt x 193.32225pt>
+File: Immagini/Sperimentale/convertS.png Graphic file (type png)
+<use Immagini/Sperimentale/convertS.png>
+Package pdftex.def Info: Immagini/Sperimentale/convertS.png  used on input line
+ 155.
+(pdftex.def)             Requested size: 370.14034pt x 135.32465pt.
+<Immagini/Sperimentale/sf0.png, id=248, 302.3295pt x 413.1435pt>
+File: Immagini/Sperimentale/sf0.png Graphic file (type png)
+<use Immagini/Sperimentale/sf0.png>
+Package pdftex.def Info: Immagini/Sperimentale/sf0.png  used on input line 165.
+
+(pdftex.def)             Requested size: 196.51184pt x 268.54007pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[47 <./Immagini/Sperimentale/Input.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[48 <./Immagini/Sperimentale/convertS.png> <./Immagini/Sperimentale/sf0.png>]
+<Immagini/Sperimentale/ControlloViteSchema.png, id=259, 301.72725pt x 434.8245p
+t>
+File: Immagini/Sperimentale/ControlloViteSchema.png Graphic file (type png)
+<use Immagini/Sperimentale/ControlloViteSchema.png>
+Package pdftex.def Info: Immagini/Sperimentale/ControlloViteSchema.png  used on
+ input line 176.
+(pdftex.def)             Requested size: 211.20763pt x 304.37505pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49 <./Immagini/Sperimentale/ControlloViteSchema.png>]
+<Immagini/Sperimentale/ControlloBraccia.png, id=264, 313.17pt x 432.4155pt>
+File: Immagini/Sperimentale/ControlloBraccia.png Graphic file (type png)
+<use Immagini/Sperimentale/ControlloBraccia.png>
+Package pdftex.def Info: Immagini/Sperimentale/ControlloBraccia.png  used on in
+put line 187.
+(pdftex.def)             Requested size: 234.8769pt x 324.31082pt.
+<Immagini/Sperimentale/Saturatore.png, id=265, 793.16325pt x 148.75575pt>
+File: Immagini/Sperimentale/Saturatore.png Graphic file (type png)
+<use Immagini/Sperimentale/Saturatore.png>
+Package pdftex.def Info: Immagini/Sperimentale/Saturatore.png  used on input li
+ne 197.
+(pdftex.def)             Requested size: 436.24115pt x 81.8159pt.
+
+Overfull \hbox (9.4498pt too wide) in paragraph at lines 197--198
+ [] 
+ []
+
+<Immagini/Sperimentale/CoppieOut.png, id=266, 319.1925pt x 431.211pt>
+File: Immagini/Sperimentale/CoppieOut.png Graphic file (type png)
+<use Immagini/Sperimentale/CoppieOut.png>
+Package pdftex.def Info: Immagini/Sperimentale/CoppieOut.png  used on input lin
+e 205.
+(pdftex.def)             Requested size: 191.51697pt x 258.72859pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[50 <./Immagini/Sperimentale/ControlloBraccia.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[51 <./Immagini/Sperimentale/Saturatore.png> <./Immagini/Sperimentale/CoppieOut
+.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[52]
+<Immagini/Sperimentale/state1new.png, id=279, 407.72325pt x 434.8245pt>
+File: Immagini/Sperimentale/state1new.png Graphic file (type png)
+<use Immagini/Sperimentale/state1new.png>
+Package pdftex.def Info: Immagini/Sperimentale/state1new.png  used on input lin
+e 224.
+(pdftex.def)             Requested size: 326.17903pt x 347.86005pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[53 <./Immagini/Sperimentale/state1new.png>]
+<Immagini/Sperimentale/state2.png, id=285, 1344.222pt x 385.44pt>
 File: Immagini/Sperimentale/state2.png Graphic file (type png)
 <use Immagini/Sperimentale/state2.png>
-Package pdftex.def Info: Immagini/Sperimentale/state2.png  used on input line 1
-13.
+Package pdftex.def Info: Immagini/Sperimentale/state2.png  used on input line 2
+34.
 (pdftex.def)             Requested size: 416.70451pt x 119.48515pt.
-<Immagini/Sperimentale/state3.png, id=242, 743.77875pt x 211.38976pt>
-File: Immagini/Sperimentale/state3.png Graphic file (type png)
-<use Immagini/Sperimentale/state3.png>
-Package pdftex.def Info: Immagini/Sperimentale/state3.png  used on input line 1
-22.
-(pdftex.def)             Requested size: 409.07957pt x 116.26471pt.
+<Immagini/Sperimentale/state3New.png, id=286, 678.1335pt x 328.8285pt>
+File: Immagini/Sperimentale/state3New.png Graphic file (type png)
+<use Immagini/Sperimentale/state3New.png>
+Package pdftex.def Info: Immagini/Sperimentale/state3New.png  used on input lin
+e 244.
+(pdftex.def)             Requested size: 406.88324pt x 197.29861pt.
 
-[46 <./Immagini/Sperimentale/state2.png>]
-Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [47 <./Immagini/Sperimentale/state3.png>]
-<Immagini/Sperimentale/Test_Kd=1.5.png, id=252, 526.96875pt x 395.22656pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[54]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[55 <./Immagini/Sperimentale/state2.png> <./Immagini/Sperimentale/state3New.png
+>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Immagini/Sperimentale/GUI2.0.png, id=295, 604.05675pt x 360.1455pt>
+File: Immagini/Sperimentale/GUI2.0.png Graphic file (type png)
+<use Immagini/Sperimentale/GUI2.0.png>
+Package pdftex.def Info: Immagini/Sperimentale/GUI2.0.png  used on input line 2
+97.
+(pdftex.def)             Requested size: 295.9904pt x 176.47282pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[56]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[57 <./Immagini/Sperimentale/GUI2.0.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[58]
+<Immagini/Sperimentale/Test_Kd=1.5.png, id=306, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=1.5.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=1.5.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=1.5.png  used on input l
-ine 176.
+ine 335.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=2.png, id=253, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=2.png, id=307, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=2.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=2.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=2.png  used on input lin
-e 183.
+e 342.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=3.png, id=254, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=3.png, id=308, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=3.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=3.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=3.png  used on input lin
-e 190.
+e 349.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
 File: Immagini/Sperimentale/Test_Kd=3.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=3.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=3.png  used on input lin
-e 197.
+e 356.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 173--201
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 332--360
 []$[]$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 173--201
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 332--360
 []$ $[]$ 
  []
 
-) [48] [49 <./Immagini/Sperimentale/Test_Kd=1.5.png (PNG copy)> <./Immagini/Spe
-rimentale/Test_Kd=2.png (PNG copy)> <./Immagini/Sperimentale/Test_Kd=3.png (PNG
- copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[59])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[60 <./Immagini/Sperimentale/Test_Kd=1.5.png (PNG copy)> <./Immagini/Sperimenta
+le/Test_Kd=2.png (PNG copy)> <./Immagini/Sperimentale/Test_Kd=3.png (PNG copy)>
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[61]
 \openout2 = `./Capitoli/Conclusioni.aux'.
 
- (Capitoli/Conclusioni.tex) [50
+ (Capitoli/Conclusioni.tex)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[62
 
 
 
-] (main.lof [51
+] (main.lof
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[63
 
 
 ])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- [52] (main.aux
-(begin.aux) (Capitoli/Contesto.aux) (Capitoli/StudiCorrelati.aux)
-(Capitoli/Introduzione.aux) (Capitoli/Cinematica.aux) (Capitoli/Dinamica.aux)
-(Capitoli/Vite.aux) (Capitoli/Implementazione.aux) (Capitoli/SistemaReale.aux)
-(Capitoli/Conclusioni.aux)) ) 
+ (main.lot)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[64] (main.aux (begin.aux) (Capitoli/Introduzione.aux) (Capitoli/Cinematica.aux
+) (Capitoli/Dinamica.aux) (Capitoli/Vite.aux) (Capitoli/Implementazione.aux)
+(Capitoli/SistemaReale.aux) (Capitoli/Conclusioni.aux)) ) 
 Here is how much of TeX's memory you used:
- 7786 strings out of 478927
- 131804 string characters out of 2852534
- 460558 words of memory out of 3000000
- 25411 multiletter control sequences out of 15000+600000
+ 7918 strings out of 478927
+ 136158 string characters out of 2852534
+ 460297 words of memory out of 3000000
+ 25538 multiletter control sequences out of 15000+600000
  414777 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,14n,77p,1754b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Danie\AppData\Local\MiKTeX\fonts/pk/ljf
-our/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Danie/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Danie/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Danie/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Danie/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
-rs/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pf
-b><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Danie/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Danie/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Danie/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Danie
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
-rs/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
-b><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmti12.pfb>
-Output written on main.pdf (54 pages, 2212848 bytes).
+ 67i,14n,77p,1771b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Danie\AppDa
+ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Danie/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Use
+rs/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.p
+fb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Danie/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Danie/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Danie/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Danie/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/
+Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.
+pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmti10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (66 pages, 2629651 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
+ 400 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
