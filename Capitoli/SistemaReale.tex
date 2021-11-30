@@ -294,7 +294,7 @@ Durante tutte le fasi è possibile vedere nello stateflow che due variabili si e
 Per gestire al meglio le varie impostazioni, e per essere sicuri del passaggio tra i vari stati è stata creata un'interfaccia grafica \textit{user-friendly} mediante \textit{instrument panel} fornito da \textit{Simulink real-time explorer}
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.49]{Immagini/Sperimentale/GUI2.0}
+		\includegraphics[scale=0.49]{Immagini/Sperimentale/GUI2}
 		\caption{Interfaccia grafica}
 		\label{fig:gui}
 	\end{center}
@@ -323,16 +323,91 @@ Adesso che abbiamo introdotto la logica di funzionamento a stati, proseguiamo la
 \subsection{Controllo braccia}
 Questa sottosezione si pone come obiettivo l'introduzione di approcci di controllo noti in letteratura e applicarli ai link motorizzati del manipolatore; in particolare andando ad analizzare il loro funzionamento a livello teorico, la loro implementazione pratica ed i risultati ottenuti, cercando quindi il controllore migliore. Tutte le tipologie di controllo introdotte saranno di tipo centralizzato, gli algoritmi di questa tipologia sfruttano una conoscenza più approfondita del modello dinamica del manipolatore in modo tale da compensare i termini di accoppiamento non lineari, verranno quindi introdotte coppie di compensazione per i termini NL, inoltre, qualsiasi incertezza della struttura e qualunque imprecisione nella misura della posizione daranno origine ad una perdita di accuratezza e quindi a problemi di controllo.
 \subsubsection{Controllo proporzionale derivativo}
-La prima tipologia di controllo applicata è stata quella proporzionale derivativa, 
+La prima tipologia di controllo applicata è stata quella proporzionale derivativa. L'obiettivo di questa tecnica è quello di risolvere il problema della regolazione, ovvero assegnare la posizione corretta all'end-effector rispetto ad un riferimento di equilibrio costante. Non viene risolto il problema della dinamica con la quale si raggiunge quella configurazione, però come obiettivo ci si pone di trovare la struttura del controllore che ci assicuri una stabilità asintotica in quella specifica posa desiderata. Definiamo lo stato come: 
+\begin{equation}
+\tilde{q} = q^0_m - q_m
+\end{equation}
+Con $q^0_m$ che rappresenta il \textit{set-point} (posizione desiderata) e $q_m$ la posizione attuale, per poter andare a risolvere il problema abbiamo bisogno di introdurre il metodo diretto di Lyapunov, il quale dice che: 
+\begin{center}
+\textit{L’analisi della stabilità di un punto di equilibrio viene fatta utilizzando, oltre alle equazioni di stato del sistema, opportune funzioni scalari, dette funzioni di Lyapunov, definite sullo spazio degli stati. }
+\end{center}
+Definiamo quindi la funzione come:
+\begin{equation}
+V(\dot{q:m},\tilde{q}) = \frac{1}{2} \dot{q_m}M(q_m)\dot{q_m} + \frac{1}{2} \tilde{q}K_p \tilde{q} >0
+\end{equation}
+Il termine $K_p$ rappresenta la rigidezza del sistema ed è una matrice $(n x n)$ simmetrica e definita positiva. Considerando che il \textit{set-point} è un termine costante possiamo  andare a derivare la funzione V rispetto al tempo ottenendo:
+\begin{equation*}
+\dot{V} = \ddot{q_m}M(q_m)\dot{q_m}+\frac{1}{2} \dot{q_m}\dot{M}(q_m)\dot{q_m}-\dot{q_m}K_p\tilde{q}
+\end{equation*}
+e sapendo che $\tau_m = M(q_m)\ddot{q_m} + C(q_m,\dot{q_m)})\dot{q_m}$\footnote{Nella trattazione di Lyapunov appare anche il termine di compensazione gravitazionale però nel manipolatore analizzato questo termine è costante e pari a zero.} possiamo riscrivere la funzione come 
+\begin{equation}
+\dot{V} = \dot{q_m} [\tau_m - K_p \tilde{q}]
+\label{eq:finLap}
+\end{equation}
+Se adesso consideriamo la legge di controllo PD definita come:
+\begin{equation}
+\tau_m = K_p\tilde{q} - K_d\dot{q_m}
+\end{equation}
+e andiamo a sostituirla nell'equazione \ref{eq:finLap} otteniamo
+\begin{equation*}
+\dot{V} = -\dot{q_m}K_d \dot{q_m} \le 0
+\end{equation*}
+Se $K_d$ è una matrice definita positiva allora $\dot{V}$ è semidefinita negativa, la dinamica del sistema è quindi:
+\begin{equation}
+M(q_m)\ddot{q_m} + C(q_m,\dot{q_m})\dot{q_m} = K_p\tilde{q}-K_d\dot{q_m}
+\end{equation}
+In particolare abbiamo che velocità ed accelerazioni sono nulla in corrispondenza di $\dot{V} = 0$. Possiamo andare ora a vedere lo schema di controllo:
+INSERISCI PARTE PRATICA
 \subsubsection{Controllo feed-forward con coppia pre-computata}
+Il passo successivo è stato quello di studiare ed implementare un controllore che opera in anello aperto; in particolare questo controllore calcola le coppie di disturbo basate sul modello matematico del sistema con parametri d'ingresso il \textit{set-point} in posizione e velocità e accelerazione. L'introduzione di questi termini riesce a risolvere in maniera corretta il problema del tracciamento della traiettoria desiderata, di conseguenza gli elementi introdotti riescono a compensare gli effetti di accoppiamento presenti nel modello dinamico del sistema. 
+\begin{equation}
+g_d = \Delta M(q^0_m)\ddot{q_m}^0 + C(q^0_m,\dot{q_m^0})\dot{q_m^0}
+\end{equation}
+L'idea è quindi che i termini vengono calcolati considerando i valori di posizione, velocità ed accelerazione del rifermento, in quanto mediante una legge di moto sono sempre ben noti. L'elemento $g_d$ compensa i termini di accoppiamento non lineari dovuti a forza d'inerzia, di Coriolis e centrifughe che dipendono dalla struttura e di conseguenza variano durante il movimento del manipolatore; in generale però calcolare questo termine è molto impegnativo, di conseguenza l'utilizzo di questo approccio su un sistema online può richiedere molto tempo, per questo solitamente vengono compensati solo i termini più importanti come quelli inerziali.
+INSERISCI SCHEMA ETC
 \subsubsection{Controllo in dinamica inversa}
-Il primo controllo per il robot è stato fatto mediante l'utilizzo di un proporzionale che comprendeva la somma di posizione e velocità, si è riscontrato che a causa del mancato contributo derivativo ed integrativo la traiettoria non veniva seguita in maniera del tutto corretta, ed alzano il valore di $K_p$ troppo le vibrazioni aumentavano, si è quindi cercato inizialmente di trovare un punto nel quale il manipolatore non vibrava e non oscillava. Successivamente si è andato ad applicare un controllo in dinamica inversa, la prima tipologia di controllo scelta è stata quella in anello aperto [inscerisci schema], dopo i test effettuati con questa tipologia di controllo si è riscontrato che le coppie risultati erano basse, all'incirca $0.5 C_m$, con $C_m$ la coppia per far muovere il manipolatore. L'approccio successivo è stato quello di continuare con la dinamica inversa ma chiudendo l'anello, [inserisci schema]
+Riprendendo le tecniche di controllo centralizzato caratteristiche della letteratura l'approccio successivo è stato quello del controllo in dinamica inversa. Il primo step è stato quello di prendere l'equazione della dinamica e ridefinirla come: 
+\begin{equation}
+M(q_m)\ddot{q_m} + n(q_m,\dot{q_m}) = \tau_m
+\label{eq:ControlloreID}
+\end{equation}
+Dove $n(q_m,\dot{q_m})$ raccoglie i termini centrifughi e di Coriolis (in letteratura raccoglie anche i termini gravitazionali, ma come anticipato precedentemente nel nostro caso equivalgono a zero). L'idea del controllo a dinamica inversa si basa sul trovare il vettore di coppie $\tau_m$ come funzione dello stato del sistema, cercando di creare una relazione ingresso-uscita di tipo lineare. Considerando che l'equazione della dinamica è lineare nel controllo e che la matrice d'inerzia è invertibile in ogni configurazione del manipolatore abbiamo la garanzia di trovare un controllore linearizzato di questo tipo. Possiamo andare a riscrivere il controllo come:
+\begin{equation}
+\tau_m = M(q_m)y + n(q_m,\dot{q_m})
+\end{equation}
+Dove $y = \ddot{q_m}$ rappresenta un vettore d'ingresso con espressione ancora da determinare. La legge di controllo è basata sul calcolo della dinamica inversa del manipolatore, il sistema è lineare e disaccoppiato rispetto al nuovo ingresso, questo implica che le componenti $y_k$ con $k = -\infty \dots m-1$ influenzano solo la variabile $q_m$ indipendentemente dal movimento degli altri giunti. In questo modo il problema del controllo è quello di trovare una legge \textbf{y} stabilizzante. Viene quindi scelta:
+\begin{equation}
+y = K_p\tilde{q} + K_d\tilde{\dot{q}}+\ddot{q}_m^0
+\label{eq:yID}
+\end{equation}
+Dove con i termini $\tilde{q}$ e $\tilde{\dot{q}}$ si indica la differenza tra il \textit{setpoint} e la misurazione attuale di posizione e velocità. 
+\begin{equation}
+\tilde{q} = q^0_m - q_m \ \ \  \tilde{\dot{q}}= \dot{q}^0_m-\dot{q}_m
+\label{eq:Tilde}
+\end{equation}
+Possiamo andare ora a sostituire le definizioni di \ref{eq:Tilde} in \ref{eq:yID} e troviamo l'espressione:
+\begin{equation}
+\tilde{\ddot{q}} + K_d + \tilde{\dot{q}} = 0
+\end{equation}
+Chiaramente l'errore si verifica quando uno o entrambi i termini sono diversi da zero.  Però, volendo assegnare la dinamica a ciascun giunto ci basta selezionare  i guadagni delle matrici $K_p$ e $K_d$ , inoltre, se le due matrici sono definite positive è possibile ottenere un sistema asintoticamente stabile. 
+Possiamo scegliere le matrici come:
+\begin{equation*}
+K_p = diag(\omega^2_{01}, \dots, \omega^2_{0n}) \overline{M} \ \ \  K_d = diag(2 \xi_1 \omega_{01}, \dots ,2 \xi_n \omega_{0n}) \overline{M} 
+\end{equation*}
+Grazie al controllo a dinamica inversa i termini di compensazioni vengono calcolati ad ogni iterazione, quindi a piccoli intervalli temporali, il loop interno serve per ottenere una relazione ingresso/uscita lineare e disaccoppiata mentre quello esterno grazie alla dinamica desiderata serve a stabilizzare il sistema.
+INSERISCI SCHEMA
+\par L'utilizzo di questo approccio è basato sull'ipotesi della cancellazione perfetta dei termini dinamici, quindi, i parametri dinamici del sistema devono essere accuratamente conosciuti e l'equazione del moto deve essere calcolata in real-time.
+\subsubsection*{Implementazione controllore}
+\addcontentsline{toc}{subsubsection}{Implementazione controllore}
+\subsubsection*{Test Kp e Kd}
+\addcontentsline{toc}{subsubsection}{Test Kp e Kd}
+L'approccio successivo è stato quello di continuare con la dinamica inversa ma chiudendo l'anello, [inserisci schema]
 Un test che è stato fatto per andare a ricercare i parametri è stato quello di far variare $K_p$, in un range di valori compreso tra 350 e 950 ad intervalli di 50, in base ad un valore fisso di $K_d$, andiamo ora a vedere un risultato di questo metodo.
 \begin{figure}[!ht]
 \begin{subfigure}{.5\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/Test_Kd=1.5.png}  
+  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/Test_Kd=15.png}  
   \caption{Test con $K_d$ = 1.5}
   \label{fig:sub-kd1.5}
 \end{subfigure}
@@ -361,7 +436,157 @@ Un test che è stato fatto per andare a ricercare i parametri è stato quello di
 \label{fig:KdTest}
 \end{figure}
 Si può chiaramente vedere come all'aumentare di $K_d$ i valori di $K_p$ iniziano ad vibrare sempre prima. Come valori finali per questo controllore sono stati scelti $K_d = \frac{3}{2}$ e $K_p = 720$
+\subsubsection*{Traiettorie testate}
+\addcontentsline{toc}{subsubsection}{Traiettorie testate}
 \subsubsection{Controllo robusto}
+ L'effetto di incertezze sul modello induce in errore il sistema di controllo, soprattutto nel caso reale bisogna supporre che la compensazione del modello dinamico risulti imperfetta magari a causa di approssimazioni oppure per semplificazioni.  Possiamo andare quindi a riscrivere l'equazione \ref{eq:ControlloreID} come:
+\begin{equation}
+\tau_m = \hat{M}(q_m)y + \hat{n}(q_m,\dot{q}_m)
+\end{equation}
+Dove $\hat{M}$ e $\hat{n}$ rappresentano i parametri stimati del modello dinamico, è possibile rappresentare l'incertezza come:
+\begin{equation*}
+\overline{M} = \hat{M}- M \ \ \overline{n} = \hat{n} - n
+\end{equation*}  
+Riprendendo la legge di controllo vista prima possiamo riscriverla come:
+\begin{equation}
+M(q_m)\ddot{q}_m + n(q_m,\dot{q_m}) = \hat{M}(q_m)y + \hat{n}(q_m,\dot{q_m})
+\end{equation}
+Essendo la matrice M invertibile in ogni configurazione possiamo ricavare $\ddot{q}_m$:
+\begin{equation*}
+\ddot{q}_m = y + (M^{-1}\hat{M}-I)y+M^{-1}\tilde{n} = y-\eta
+\end{equation*}
+Dove $\eta$ è una funzione non lineare definita come: \begin{equation}
+\eta = (I-M^{-1}\hat{M})y - M^{-1}\tilde{n} 
+\end{equation}
+Adottando la legge \ref{eq:Tilde} vista nel caso del controllore a dinamica inversa possiamo ottenere che l'errore dinamico è gestito dall'equazione:
+\begin{equation}
+\ddot{\tilde{q}} + K_d \dot{\tilde{q}} + K_p\tilde{q} = \eta
+\end{equation}
+Otteniamo quindi un sistema non lineare e accoppiato, di conseguenza implementare un semplice controllore PD non basta; per risolvere questo problema occorre inserire un termine non lineare, che sia funzione dell'errore e creato appositamente per fornire robustezza al controllo. Come per il controllore PD si ricerca una funzione grazie al metodo diretto di Lyapunov. 
+Andiamo a definire lo stato del sistema come:
+\begin{equation*}
+\xi = \begin{bmatrix}
+\tilde{q} \\ \dot{\tilde{q}}
+\end{bmatrix}
+\end{equation*}
+sostituendo poi lo stato nell'equazione $\ddot{q}_m = y-\eta$ si ottiene un'equazione differenziale del primo ordine
+\begin{equation}
+\dot{\xi} = H\xi + D(\ddot{q}_m^0 - y + \eta)
+\end{equation}
+Dove H e D sono definite come:$H = \begin{bmatrix}
+0 & I \\ 0 & 0
+\end{bmatrix} \in \mathbb{R}^{(2nx2n)}$ , $D = \begin{bmatrix}
+0 \\ I
+\end{bmatrix} \in \mathbb{R}^{(2nxn)}$
+\\Si può vedere il problema di inseguimento della traiettoria come la soluzione che va a stabilizzare il sistema non lineare di qui sopra. Nella letteratura del controllore robusto, anche se l'incertezza $\eta$ non è nota è comunque disponibile un suo intervallo di variazione. La legge \textbf{y} dovrebbe garantire stabilità di $\dot{\xi}$ per ogni $\eta$ nell'intervallo. Di conseguenza vengono formulate tre assunzioni:
+\begin{enumerate}
+\item $\sup_{t\ge 0} ||\ddot{q}^0_m || < Q_M < \infty \forall \ddot{q}_m^0$
+\item $||I-M^{-1}\hat{M}(q_m)|| \le \alpha \le 1 \forall q_m$
+\item $||\tilde{n}|| \le \Phi(||\xi||) < \infty \forall q_m, \dot{q}_m$
+\end{enumerate}
+Andando ad analizzare le assunzioni possiamo dire che:
+\begin{itemize}
+\item La prima assunzione è soddisfatta sempre, in quanto per ogni traiettoria definita le accelerazioni non possono essere infinite
+\item La seconda assunzione conferma che M  (e di conseguenza $M^{-1}$) sia superiormente e inferiormente limitata, infatti 
+\begin{equation}
+0 < M_m < ||M^{-1}(q_m)|| \le M_M < \infty \forall q_m
+\end{equation}
+\end{itemize}
+Quindi, esiste sempre una scelta di $\hat{M}$ che soddisfa la condizione, selezionando per esempio
+\begin{equation*}
+\hat{M} = \frac{2}{M_M+M_m}I
+\end{equation*} 
+otteniamo
+\begin{equation}
+||M^{-1}(q_m)\hat{M}(q_m)-I|\le \alpha = \frac{M_M-M_m}{M_M+M_m} <1
+\end{equation}
+Il limite inferiore si ha quando $\hat{M} = M$ in quanto $\alpha = 0$. Concentrandoci sull'assunzione 3, si può osservare che $\tilde{n}$ è funzione di $q_m,\dot{q_m}$, nel primo caso, in base alla tipologia di giunto (rotoidale o prismatico) abbiamo intervalli che sono limitati e quindi il contributo è limitato. Anche la velocità è limitata grazie all'effetto della saturazione (esistente sulle velocità massime dei motori). Di conseguenza, prendiamo per $\Phi$ una funzione calcolata nella norma dello stato come:
+\begin{equation}
+\Phi(||\xi||) = \alpha_0 + \alpha_1 ||\xi|| + \alpha_2 ||\xi||^2
+\end{equation}
+Andando a riprendere la legge di controllo\ref{eq:yID} ed ampliandola possiamo definirla come: 
+\begin{equation}
+y = \ddot{q}^0_m + K_p\tilde{q} + K_d\dot{\tilde{q}} + \omega
+\label{eq:yRob}
+\end{equation}
+Il termine PD ci assicura la stabilizzazione della dinamica della matrice dell'errore, $\ddot{q}^0_m$ fornisce un termine di previsione e $\omega$ è progettato in modo da combattere l'incertezza fornendo robustezza al sistema.
+\begin{equation}
+\dot{\xi} = \tilde{H}\xi + D(\eta-\omega)
+\end{equation}
+Dove:
+\begin{equation*}
+\tilde{H} = H-DK = \begin{bmatrix}
+0 & I \\ -K_p & -K_d
+\end{bmatrix} \in 
+\mathbb{R}^{(2nx2n)}
+\end{equation*}
+\begin{equation*}
+ \ K_p = diag(\omega^2_{01}, \dots, \omega^2_{0n})  \ \ \  K_d = diag(2 \xi_1 \omega^2_{01}, \dots ,2 \xi_n \omega^2_{0n}) 
+\end{equation*}
+Per andare a definire $omega$ si procede col metodo diretto di Lyapunov; consideriamo come funzione:
+\begin{equation}
+V(\xi) = \xi^TQ\xi >0 , \forall \xi \neq 0
+\end{equation}
+con Q matrice simmetrica definita positiva. Facendo la derivata lungo la traiettoria si trova che
+\begin{equation}
+\dot{V} = \xi^T P\xi + 2z^T(\eta-\omega)
+\label{eq:LyapDerivRob}
+\end{equation}
+Considerando che $\tilde{H}$ ha tutti gli autovalori con parte reale negativa, possiamo scegliere una qualunque P definita positiva che soddisfi:
+\begin{equation*}
+\tilde{H}^TQ+Q\tilde{H} = -P
+\end{equation*}
+Consideriamo ora l'equazione \ref{eq:LyapDerivRob} , $z = D^TQ\xi$, il primo termine sulla parte di destra è definito negativo, di conseguenza la soluzione converge solo se $\xi \in \mathbb{N}(D^TQ)$, se invece non appartiene, il controllo $\omega$ andrà scelto per rendere il secondo termine minore o uguale a zero utilizzando la legge di controllo:
+\begin{equation}
+\omega = \rho(||\xi||)\frac{z}{||z||}, \rho >0
+\end{equation}
+con $\rho$ funzione positiva da determinare. Scegliendo $\omega$ in questo modo otteniamo:
+\begin{equation*}
+z^T(\eta-\omega) = z^T\eta - \rho(||\xi||)\frac{zz^T}{||z||} \le ||z||\big[||\eta||.\rho(||\xi||)\big]
+\end{equation*}
+se poi garantiamo che: $||\xi||>||\eta||$ per ogni valore di posizione, velocità e velocità di riferimento, otteniamo che questo termine e $\dot{V}$ sono negativi lungo tutte le traiettorie dell'errore; per poter soddisfare la disuguaglianza, dalla definizione di $\eta$ troviamo:
+\begin{equation}
+\eta = (I-M^{-1}\hat{M})y-M^{-1}\tilde{n} \ e \ y = \ddot{q}^0_m + K\xi+\omega
+\end{equation}
+sapendo poi che $||\omega|| = \rho$ troviamo che:
+\begin{equation*}
+||\eta|| \le ||I-M^{-1}\hat{M}|| (||\ddot{q}_m^0 ||+||K||\  ||\xi||+||\omega||)+||M^{-1}|| \ ||\tilde{n}||
+\end{equation*}
+Andando a maggiorare questa quantità troviamo che:
+\begin{equation}
+||\eta|| \le \alpha Q_M + \alpha ||K|| || \xi || + \alpha\rho(||\xi||)+M_M\Phi(||\xi||) < \rho(||\xi||)
+\end{equation}
+è quindi possibile andare a selezionare un $rho$ in modo tale che:
+\begin{equation}
+\rho(||\xi||) \ge \frac{1}{1-\alpha} [\alpha Q_M+\alpha ||K|| ||\xi||+M_M\Phi(||\xi||)]
+\label{eq:HelpRho}
+\end{equation}
+Si può osservare che $\Phi(||\xi||) = \alpha_0+\alpha_1||\xi||+\alpha_2||\xi||^2$ per soddisfare \ref{eq:HelpRho} basta che si selezionino:
+\begin{equation*}
+\rho(||\xi||) = \beta_0 + \beta_1||\xi||+\beta_2||\xi||^2
+\end{equation*}
+Con i valori:
+\begin{equation*}
+\begin{cases}
+\beta_0 \ge \frac{\alpha Q_M+\alpha_0M_M}{1-\alpha}\\
+ \beta_1 \ge \frac{\alpha K +\alpha_1 M_M}{1-\alpha}\\
+ \beta_2 \ge \frac{\alpha_2M_M}{1-\alpha}
+\end{cases}
+\end{equation*}
+Andando poi a sostituire tutto nell'equazione \ref{eq:LyapDerivRob} troviamo:
+\begin{equation}
+\dot{V} = -\xi^T P \xi + 2z^T(\eta-\rho(||\xi||) \frac{z}{||z||}) <0 \ \forall
+\xi \neq 0
+\end{equation}
+Di conseguenza $\xi = 0$ è un equilibrio di stato asintoticamente e globalmente stabile. La legge di controllo è quindi formata da tre termini, un primo termine che compensa i termini non lineari e gli accoppiamenti tra i link, un secondo terine che stabilizza il sistema dinamico grazie ad una retroazione con previsione per l'errore e un terzo termine che fornisce robustezza contrastando le incertezze e calcolando i termini non lineari che dipendono dallo stato del manipolatore. 
+\par Ad alte frequenze però potrebbe esserci la commutazione della variabile di controllo, che potrebbe portare ad un'elevata presenza di "sali/scendi" a causa del terzo termine, per questo possiamo approssimarlo come:
+\begin{equation}
+\omega = \begin{cases}
+\rho(||\xi||) \frac{z}{||z||} \ for\ ||z||\ge \varepsilon \\
+\rho(||\xi||) \frac{z}{\varepsilon} \ \ \ for \ ||z|| < \varepsilon
+\end{cases}
+\end{equation}
+\\INSERISCI SCHEMA ETC
 \subsubsection*{1 gdl}
 \addcontentsline{toc}{subsubsection}{1 gdl}
 \subsubsection*{tt}
