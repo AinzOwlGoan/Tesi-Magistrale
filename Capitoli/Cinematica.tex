@@ -1,6 +1,6 @@
 \section{Cinematica Manipolatore}
 L'obiettivo di questa sezione è quello di andare ad illustrare le metodologie che ci hanno consentito di ottenere sia la cinematica diretta che quella inversa, entrambe per posizione, velocità ed accelerazione.
-\\Prima di proseguire nei paragrafi seguenti andiamo a definire una tabella con i principali parametri del robot:
+\par Prima di proseguire nei paragrafi seguenti andiamo a definire una tabella con i principali parametri del robot:
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c |c |c|} 
@@ -28,7 +28,7 @@ Tutti e quattro i link hanno lunghezza, massa, posizione del centro di massa e m
 La cinematica diretta si occupa di trovare il legame tra i parametri interni del robot e la posa che esso assume, per posa si intende la posizione e l'orientamento. In questa sezione andremo ad analizzare la cinematica diretta di posizione, velocità ed accelerazione.
 \subsubsection{Posizione}\label{sec:Cinematica-pos}
 Nella cinematica diretta di posizione, a partire dal robot e da $\theta_1$ e $\theta_2$, riusciamo a ricavare la posizione dei link non motorizzati, i loro angoli, che sono rispettivamente $\theta_3$ e $\theta_4$ e la posizione $[x,y]$ dell'\textit{end-effector}.
-\\L'approccio utilizzato per il calcolo della cinematica diretta è stato quello delle equazioni alle circonferenze, in particolare vengono definite due equazioni
+L'approccio utilizzato per il calcolo della cinematica diretta è stato quello delle equazioni alle circonferenze, in particolare vengono definite due equazioni
 \begin{itemize}
 	\item Circonferenza centrata in E1 che passa per l'end-effector e la base del primo link
 	\item Ciconferenza centrata in E2 che passa per l'end-effector e la base del secondo link
@@ -95,7 +95,7 @@ Di conseguenza, alla fine della cinematica diretta siamo riusciti ad ottenere i 
 \end{equation*}
 tutti espressi in funzione di $\theta_1$ e $\theta_2$.
 \subsubsection{Velocità}\label{sec:CalcoloVelCin}
-Una volta ottenute le posizioni possiamo passare alle velocità, mediante la cinematica diretta di velocità possiamo ricavare le velocità sulle coordinate x e y dell'\textit{end-effector}. Possiamo infine definire una jacobiana che ci permette di trovare il rapporto appena espresso.
+Una volta ottenute le posizioni possiamo passare alle velocità, mediante la cinematica diretta di velocità possiamo ricavare le velocità sulle coordinate x e y dell'\textit{end-effector}. Possiamo infine definire una jacobiana che ci permette di trovare il rapporto appena espresso. 
 \\Per semplicità di calcoli, andiamo a definire:
 \begin{equation*}
     N_{21} = -l\sin\theta_1 (x+d-l\cdot \cos\theta_1 + l\cdot \cos\theta_1 (y-l\sin\theta_1))
