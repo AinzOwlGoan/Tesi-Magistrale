@@ -1,3 +1,5 @@
+
+
 \section{Sistema reale}
 Avendo introdotto anche le tecnologie implementate, andiamo ora a discutere del sistema reale, in particolare concentrandoci sulla sua struttura, compresa la configurazione, le operazioni che hanno consentito la movimentazione e le tecniche di controllo
 \subsection{Struttura del robot}
@@ -162,7 +164,7 @@ I valori vengono presi mediante i messaggi dalle PDO ed hanno bisogno di essere 
 Lo stateflow è un blocco dove viene posta la logica fondamentale dell'applicazione, in particolare in input avremo tutti i dati come ad esempio il clock, lo stato dei finecorsa, le posizioni dei motori e degli input che serviranno per l'interfaccia grafica. 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.65]{Immagini/Sperimentale/sf0}
+		\includegraphics[scale=0.7]{Immagini/Sperimentale/sf0}
 		\caption{Fase 3: Stateflow}
 		\label{fig:Stateflow1}
 	\end{center}
@@ -236,8 +238,18 @@ La fase successiva è quella di posizionamento, per non lasciare il robot nella 
     \label{fig:Pos}
 \end{center}
 \end{figure}
-\\Riprendendo lo schema precedente, per passare allo stato \textbf{HomeDef} bisogna aver raggiunto tutti i finecorsa, non appena entriamo vengono salvati gli offset della posizione delle braccia, del tempo e la posizione desiderata di discesa della vite. Ad ogni ciclo, quindi ogni millisecondo viene eseguita la funzione \textbf{Posizionamento($\dots$)} la quale, mediante una legge di moto, ci consente di eseguire in maniera corretta il posizionamento.
-Andando ad analizzare nello specifico il blocco simulink del posizionamento, vengono costruite due leggi polinomiali, una per ogni motore che forniscono un \textit{setpoint} in posizione,
+\\Riprendendo lo schema precedente, per passare allo stato \textbf{HomeDef} bisogna aver raggiunto tutti i finecorsa; non appena entriamo vengono salvati gli offset della posizione delle braccia, del tempo e la posizione desiderata di discesa della vite. Ad ogni ciclo, quindi ogni millisecondo viene eseguita la funzione \textbf{Posizionamento($\dots$)} la quale, mediante una legge di moto, ci consente di eseguire in maniera corretta il posizionamento.
+Andando ad analizzare nello specifico il blocco simulink del posizionamento, vengono costruite due leggi polinomiali, una per ogni motore che forniscono un \textit{setpoint} in posizione in gradi, che verrà confrontato con la posizione attuale. Per ottenere poi una coppia, e garantire errore a transitorio esaurito viene introdotto un sistema di controllo proporzionale integrativo, con legge di controllo: 
+% check formula
+\begin{equation*}
+\tau = K \tilde{\theta} = \begin{bmatrix}
+K_p & K_p \\ K_i & K_i
+\end{bmatrix}
+\begin{bmatrix}
+\tilde{\theta_1} \\ \tilde{\theta_2}
+\end{bmatrix} = K_p\theta + K_i\theta
+\end{equation*}
+Le coppie di controllo uscenti andranno quindi al manipolatore e si occuperanno della movimentazione. Possiamo vedere lo schema della legge di moto implementato in figura \ref{fig:ImpPos}.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.6]{Immagini/Sperimentale/LdmPosizionamento}
@@ -245,9 +257,9 @@ Andando ad analizzare nello specifico il blocco simulink del posizionamento, ven
 		\label{fig:ImpPos}
 	\end{center}
 \end{figure}
-Una volta eseguito il posizionamento, lo stato successivo riguarderà la discesa della vite, per passarci le coppie dei bracci dovranno essere pari a zero e sull'interfaccia grafica dovrà essere premuto il bottone relativo alla discesa. In particolare per la discesa verrà utilizzata la variabile \textbf{dv} salvata precedentemente che indica di quanti centimetri la vite deve scendere; per farla scendere verrà fornita una coppia al motore di traslazione che si occuperà di arrivare alla posizione desiderata.
+\par Una volta eseguito il posizionamento, lo stato successivo riguarderà la discesa della vite, per passarci le coppie dei bracci dovranno essere pari a zero e sull'interfaccia grafica dovrà essere premuto il bottone relativo alla discesa. In particolare per la discesa verrà utilizzata la variabile \textbf{dv} salvata precedentemente che indica di quanti centimetri la vite deve scendere; per farla scendere verrà fornita una coppia al motore di traslazione che si occuperà di arrivare alla posizione desiderata.
 \subsubsection{Fase di controllo}
-L'ultima fase è quella di controllo ed esecuzione della traiettoria, in questa fase andiamo a settare l'offset dei motori della vite, del tempo e dei motori delle braccia, serve resettare l'offset della vita in quanto il posizionamento (nel caso di discesa) è stato appena concluso; l'offset del tempo ci permette di far partire virtualmente il tempo da zero negli schemi di controllo dopo che siamo arrivati alla configurazione di \textit{Homing}.
+L'ultima fase è quella di controllo ed esecuzione della traiettoria, in questa fase andiamo a settare l'offset dei motori della vite, del tempo e dei motori delle braccia, serve resettare l'offset della vite in quanto il posizionamento (nel caso di discesa) è stato appena concluso; l'offset del tempo ci permette di far partire virtualmente il tempo da zero negli schemi di controllo dopo che siamo arrivati alla configurazione di \textit{Homing}.
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.6]{Immagini/Sperimentale/state3New.png}
@@ -303,7 +315,7 @@ Durante tutte le fasi è possibile vedere nello stateflow che due variabili si e
 Per gestire al meglio le varie impostazioni, e per essere sicuri del passaggio tra i vari stati è stata creata un'interfaccia grafica \textit{user-friendly} mediante \textit{instrument panel} fornito da \textit{Simulink real-time explorer}
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.49]{Immagini/Sperimentale/GUI2}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/GUI2}
 		\caption{Interfaccia grafica}
 		\label{fig:gui}
 	\end{center}
@@ -325,12 +337,63 @@ Sotto questi led abbiamo un indicatore che va a specificare le fasi di lavoro co
 	\item Solo asse Z
 \end{enumerate}
 Adesso che abbiamo introdotto la logica di funzionamento a stati, proseguiamo la nostra trattazione andando a vedere le tipologie di controllo che sono state implementate, in particolare inizieremo col guardare il controllo applicato alla vite e successivamente quello per le braccia.
-\subsection{Controllo vite}
-
+\subsection{Controllo vite}%CHECK
+Lo scopo di questa sottosezione è quello di introdurre le due tipologie di controllo per la vite, da un punto di vista teorico e andare ad analizzare il comportamento pratico. Il sistema, essendo formato da due parti, e potendo fare solo due movimenti è ad un solo grado di libertà non risulta essere quindi molto complesso. Gli approcci di controllo utilizzati sono di tipo centralizzato, l'analisi di questi controllori verrà fatta mediante funzioni di trasferimento, proseguire con andiamo quindi ad introdurre la legge di controllo di un controllore PID generico:
+\begin{equation}
+\tau_v (t) = K_p \bigg(q_v(t) + \frac{1}{T_I} \int_0^t q_v(\tau) d\tau + T_D \frac{d q_v(t)}{dt}\bigg)
+\label{eq:PID}
+\end{equation}
 \subsubsection{Controllo proporzionale}
+Il primo controllo implementato è quello proporzionale, questa tipologia di controllo si basa sull'idea che ingresso ed uscita siano legati in modo algebrico da un coefficiente $K_p$ chiamato anche guadagno proporzionale. La legge di controllo è quindi definita come
+\begin{equation}
+\tau_v = K_p q_v
+\end{equation}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Controllori/Pschema}
+		\caption{Schema teorico controllore proporzionale}
+		\label{fig:Pschema}
+	\end{center}
+\end{figure}
+L'azione proporzionale è utile in quanto più grande è l'errore all'ingresso del controllore e maggiore sarà l'azione svolta da esso. Il regolatore, riprendendo l'equazione \ref{eq:PID} si può notare che solo con il contributo proporzionale la velocità di risposta del sistema aumenta, però con guadagno elevato diminuisce la stabilità e quindi aumentano le oscillazioni\footnote{Il parametro proporzionale viene definito ed analizzato molto in letteratura, nella pratica però è solo un parametro teorico, infatti solitamente ci si riferisce alla banda proporzionale, definita come la variazione minima dell'ingresso che porta l'uscita al valore minimo percentuale.}.
+Andiamo ora a vedere l'implementazione del controllore:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.37]{Immagini/Controllori/Vite}
+		\caption{CAMBIARE}
+		\label{fig:PVite}
+	\end{center}
+\end{figure}
+INSERIRE DESCRIZIONE E ALTRO
 \subsubsection{Controllo proporzionale derivativo}
+A partire dal controllore precedente andiamo ad aggiungere una parte: l'azione derivativa. In uscita fornisce la derivata rispetto al tempo dell'errore, se dovessimo analizzarla singolarmente potremmo definire una legge del tipo:
+\begin{equation}
+\tau_v = K_D\dot{q}_v
+\end{equation}
+Abbiamo la presenza della velocità, infatti il controllore derivativo viene anche chiamato controllore di velocità, il suo comportamento è sostanzialmente diverso da quello proporzionale in quanto l'uscita dipende dalla velocità con la quale varia l'errore e riesce a fornire un anticipo di fase. Riprendendo l'equazione \ref{eq:PID} il parametro che controlla questo anticipo è $T_D$ infatti nel caso in cui $K_P=K_I=0$ andando ad analizzare solo il suo comportamento si nota che la stabilità del sistema peggiora sia aumentando che diminuendo il valore. Andando ora ad unire i due contributi otteniamo un controllore PD.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{Immagini/Controllori/PDSchema}
+		\caption{Schema teorico controllore PD }
+		\label{fig:PDSchema}
+	\end{center}
+\end{figure}
+Possiamo scrivere l'azione combinata dei due controllori considerando il rapporto ingresso uscita e ottenendo:
+\begin{equation}
+\tau_v = K_P(1+sT_D)
+\end{equation}
+con $T_D = \frac{K_D}{K_P})$. In caso di ingresso definito come uno scalino, la presenza del termine derivativo va ad introdurre uno zero e ad aumentare il coefficiente di s, andando a ridurre le oscillazioni e di conseguenza stabilizzando il sistema. Andiamo ora a vedere l'implementazione sul manipolatore del controllore PD:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{Immagini/Controllori/Vite}
+		\caption{Controllore PD Vite}
+		\label{fig:PDVite}
+	\end{center}
+\end{figure}
+A partire da una legge di moto per entrambi i motori che fornisce quattro set point, abbiamo: una prima fase di raccolta dei dati nei quali si prendono le posizioni e velocità dei motori della vite, essendo i motori connessi a riduttori, ed operando sui giunti abbiamo un blocco che si occupa di fare la conversione; una volta fatta la conversione vi è la necessità di effettuare la cinematica diretta per poter passare dagli angoli alle coordinate dell'asse z. In seguito verrà fatta una differenza tra le posizioni e velocità ottenute con la cinematica e quelle del \textit{set-point}; gli errori verranno poi moltiplicati per $K_P$ (posizione) e $K_D$ (velocità) per ottenere i valori della legge di controllo da assegnare ai motori.
+\\INSCERISCI CONFRONTI ETC
 \subsection{Controllo braccia}
-Questa sottosezione si pone come obiettivo l'introduzione di approcci di controllo noti in letteratura e applicarli ai link motorizzati del manipolatore; in particolare andando ad analizzare il loro funzionamento a livello teorico, la loro implementazione pratica ed i risultati ottenuti, cercando quindi il controllore migliore. Tutte le tipologie di controllo introdotte saranno di tipo centralizzato, gli algoritmi di questa tipologia sfruttano una conoscenza più approfondita del modello dinamica del manipolatore in modo tale da compensare i termini di accoppiamento non lineari, verranno quindi introdotte coppie di compensazione per i termini NL, inoltre, qualsiasi incertezza della struttura e qualunque imprecisione nella misura della posizione daranno origine ad una perdita di accuratezza e quindi a problemi di controllo.
+Questa sottosezione si pone come obiettivo l'introduzione di approcci di controllo noti in letteratura e applicarli ai link motorizzati del manipolatore; in particolare andando ad analizzare il loro funzionamento a livello teorico, la loro implementazione pratica ed i risultati ottenuti, cercando quindi il controllore migliore. Tutte le tipologie di controllo introdotte saranno di tipo centralizzato, gli algoritmi di questa tipologia sfruttano una conoscenza più approfondita del modello dinamica del manipolatore in modo tale da compensare i termini di accoppiamento non lineari, verranno quindi introdotte coppie di compensazione per i termini NL, inoltre, qualsiasi incertezza della struttura e qualunque imprecisione nella misura della posizione daranno origine ad una perdita di accuratezza e quindi a problemi di controllo. %A differenza dei controllori della vite, la metodologia utilizzata per la spiegazione teorica in questo caso non includerà le funzioni di trasferimento, verterà però su metodi di Lyapunov e sui concetti di equilibrio.
 \subsubsection{Controllo proporzionale derivativo}
 La prima tipologia di controllo applicata è stata quella proporzionale derivativa. L'obiettivo di questa tecnica è quello di risolvere il problema della regolazione, ovvero assegnare la posizione corretta all'end-effector rispetto ad un riferimento di equilibrio costante. Non viene risolto il problema della dinamica con la quale si raggiunge quella configurazione, però come obiettivo ci si pone di trovare la struttura del controllore che ci assicuri una stabilità asintotica in quella specifica posa desiderata. Definiamo lo stato come: 
 \begin{equation}
@@ -365,15 +428,116 @@ Se $K_d$ è una matrice definita positiva allora $\dot{V}$ è semidefinita negat
 \begin{equation}
 M(q_m)\ddot{q_m} + C(q_m,\dot{q_m})\dot{q_m} = K_p\tilde{q}-K_d\dot{q_m}
 \end{equation}
-In particolare abbiamo che velocità ed accelerazioni sono nulla in corrispondenza di $\dot{V} = 0$. Possiamo andare ora a vedere lo schema di controllo:
-INSERISCI PARTE PRATICA
+In particolare abbiamo che velocità ed accelerazioni sono nulla in corrispondenza di $\dot{V} = 0$. Lo schema teorico di controllo è uguale a quello visto in figura \ref{fig:PDSchema} nella sezione della vite.
+\\ Possiamo vedere lo schema di controllo implementato sul manipolatore:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.37]{Immagini/Controllori/PDBraccia}
+		\caption{Controllore PD braccia}
+		\label{fig:PDBraccia}
+	\end{center}
+\end{figure}
+Avendo la possibilità di scegliere tra più traiettorie, a partire dal tempo attuale e dalla traiettoria desiderata andiamo a definire una legge di moto che fornirà i \textit{set-point} in posizione, velocità all'end-effector. Per andare a convertire questi in coordinate ai giunti vi è un blocco che si occupa di fare la cinematica inversa. Vengono poi lette le posizioni e velocità attuali dei motori e verranno successivamente convertite ai giunti; adesso che abbiamo tutto a livello di giunti possiamo fare la differenza tra riferimento e reale ottenendo un errore in posizione e uno in velocità\footnote{gli errori sono dei vettori $[2x1]$ contenenti le due componenti relative ai due angoli $\theta_1, \theta_2$.}. Gli errori verranno moltiplicati per $K_p$ e $K_d$ per ottenere la legge di controllo che verrà assegnata ai motori.
+\par Per poter andare a testare il controllore è stata assegnata una legge di moto che disegna un cerchio di raggio $5cm$ in 5 secondi. Andiamo ora a vedere le coppie assegnate ai giunti $\theta_1$ e $\theta_2$:
+\begin{figure}[!ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT1PD}  
+  \caption{Coppia $\theta_1$ controllore PD}
+  \label{fig:sub-coppiaPD1}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT2PD}  
+  \caption{Coppia $\theta_2$ controllore PD}
+  \label{fig:sub-coppiaPD2}
+\end{subfigure}
+\caption{Coppie controllore PD braccia}
+\end{figure}
+Possiamo poi andare ad analizzare la posizione ottenuta con quelle coppie rispetto al riferimento, e di conseguenza possiamo guardare anche l'errore:
+\begin{figure}[!ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta1PD}  
+  \caption{$\theta_1$ reale vs setpoint}
+  \label{fig:sub-pd1}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta2PD}  
+  \caption{$\theta_2$ reale vs setpoint}
+  \label{fig:sub-pd2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta1PD}  
+  \caption{Errore su $\theta_1$}
+  \label{fig:sub-pd3}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta2PD}  
+  \caption{Errore su $\theta_2$}
+  \label{fig:sub-pd4}
+\end{subfigure}
+\caption{Andamenti posizione ed errori controllore PD}
+\label{fig:AndamentiPD}
+\end{figure}
+Osservando i grafici si può notare che la posizione segue bene il setpoint andiamo poi a rappresentare la traiettoria reale e il riferimento anche sull'asse [X,Y] ottenendo: 
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.5]{Immagini/Traiettorie/Cerchio}
+		\caption{Cerchio assi  [x,y] controllore PD}
+		\label{fig:PDBracciaC}
+	\end{center}
+\end{figure}
+[AGGIUNGI]
 \subsubsection{Controllo feed-forward con coppia pre-computata}
 Il passo successivo è stato quello di studiare ed implementare un controllore che opera in anello aperto; in particolare questo controllore calcola le coppie di disturbo basate sul modello matematico del sistema con parametri d'ingresso il \textit{set-point} in posizione e velocità e accelerazione. L'introduzione di questi termini riesce a risolvere in maniera corretta il problema del tracciamento della traiettoria desiderata, di conseguenza gli elementi introdotti riescono a compensare gli effetti di accoppiamento presenti nel modello dinamico del sistema. 
 \begin{equation}
 g_d = \Delta M(q^0_m)\ddot{q_m}^0 + C(q^0_m,\dot{q_m^0})\dot{q_m^0}
 \end{equation}
 L'idea è quindi che i termini vengono calcolati considerando i valori di posizione, velocità ed accelerazione del rifermento, in quanto mediante una legge di moto sono sempre ben noti. L'elemento $g_d$ compensa i termini di accoppiamento non lineari dovuti a forza d'inerzia, di Coriolis e centrifughe che dipendono dalla struttura e di conseguenza variano durante il movimento del manipolatore; in generale però calcolare questo termine è molto impegnativo, di conseguenza l'utilizzo di questo approccio su un sistema online può richiedere molto tempo, per questo solitamente vengono compensati solo i termini più importanti come quelli inerziali.
-INSERISCI SCHEMA ETC
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.5]{Immagini/Controllori/FFschema}
+		\caption{Schema teorico controllo feedforward}
+		\label{fig:FFschema}
+	\end{center}
+\end{figure}
+A livello implementativo possiamo vederlo come:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.37]{Immagini/Controllori/feedForward}
+		\caption{Controllore feedforward}
+		\label{fig:FF}
+	\end{center}
+\end{figure}
+\\A partire dalla legge di moto selezionata si ottengono i \textit{set-point} all'end-effector, che grazie alla cinematica inversa vengono convertiti in riferimento ai giunti.  Una volta ottenuti i riferimenti di posizione, velocità ed accelerazione si va ad applicare la funzione di dinamica inversa per calcolare le coppie di cui abbiamo bisogno. Le coppie sono quindi calcolate esclusivamente mediante dai riferimenti, è possibile vedere questo controllore come una versione di quello a dinamica inversa in anello aperto.
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT1FF}  
+  \caption{Coppia $\theta_1$}
+  \label{fig:sub-ff1}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT2FF}  
+  \caption{Coppia $\theta_2$}
+  \label{fig:sub-ff2}
+\end{subfigure}
+\caption{Coppie motori controllo fast-forward}
+\label{fig:FFcoppie}
+\end{figure}
 \subsubsection{Controllo in dinamica inversa}
 Riprendendo le tecniche di controllo centralizzato caratteristiche della letteratura l'approccio successivo è stato quello del controllo in dinamica inversa. Il primo step è stato quello di prendere l'equazione della dinamica e ridefinirla come: 
 \begin{equation}
@@ -404,14 +568,25 @@ Possiamo scegliere le matrici come:
 K_p = diag(\omega^2_{01}, \dots, \omega^2_{0n}) \overline{M} \ \ \  K_d = diag(2 \xi_1 \omega_{01}, \dots ,2 \xi_n \omega_{0n}) \overline{M} 
 \end{equation*}
 Grazie al controllo a dinamica inversa i termini di compensazioni vengono calcolati ad ogni iterazione, quindi a piccoli intervalli temporali, il loop interno serve per ottenere una relazione ingresso/uscita lineare e disaccoppiata mentre quello esterno grazie alla dinamica desiderata serve a stabilizzare il sistema.
-INSERISCI SCHEMA
-\par L'utilizzo di questo approccio è basato sull'ipotesi della cancellazione perfetta dei termini dinamici, quindi, i parametri dinamici del sistema devono essere accuratamente conosciuti e l'equazione del moto deve essere calcolata in real-time.
-\subsubsection*{Implementazione controllore}
-\addcontentsline{toc}{subsubsection}{Implementazione controllore}
-\subsubsection*{Test Kp e Kd}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.9]{Immagini/Controllori/IDTeoria}
+		\caption{Schema controllore dinamica inversa}
+		\label{fig:IDBraccia}
+	\end{center}
+\end{figure}
+L'utilizzo di questo approccio è basato sull'ipotesi della cancellazione perfetta dei termini dinamici, quindi, i parametri dinamici del sistema devono essere accuratamente conosciuti e l'equazione del moto deve essere calcolata in real-time. Possiamo andare a vedere lo schema implementato sul controllore come:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.32]{Immagini/Controllori/SchemaID}
+		\caption{Controllore dinamica inversa}
+		\label{fig:IDRBraccia}
+	\end{center}
+\end{figure}
+Come per tutti i controllori visti fino ad ora a partire da selettore e dal tempo ed applicando la cinematica inversa  andiamo ad ottenere i riferimenti di posizione,  velocità ed accelerazione; andiamo poi a prendere le posizioni e le velocità attuali dei motori e le convertiamo da motori ai giunti. Successivamente andiamo per posizione e velocità a trovare gli errori che verranno moltiplicati rispettivamente per $K_p$ e $K_d$. Per ottenere la y dobbiamo sommare questi due componenti insieme all'accelerazione del riferimento. Una volta ottenuto questo andiamo ad applicare la funzione di dinamica inversa con ingressi pari a $ID(y,q,\dot{q})$, da questa otteniamo la legge di controllo e le relative coppie che andranno assegnate ai link del manipolatore. 
+\subsubsection*{Test Kp e Kd SISTEMARE}
 \addcontentsline{toc}{subsubsection}{Test Kp e Kd}
-L'approccio successivo è stato quello di continuare con la dinamica inversa ma chiudendo l'anello, [inserisci schema]
-Un test che è stato fatto per andare a ricercare i parametri è stato quello di far variare $K_p$, in un range di valori compreso tra 350 e 950 ad intervalli di 50, in base ad un valore fisso di $K_d$, andiamo ora a vedere un risultato di questo metodo.
+Per andare a scegliere $K_p$ e $K_d$ in modo preciso è stato adottato un approccio sperimentale, ovvero far variare $K_p$, in un range di valori compreso tra 350 e 950 ad intervalli di 50, in base ad un valore fisso di $K_d$, il tutto facendo fare una traiettoria circolare ed andando ad analizzare quando il controllo iniziava a dar origine a vibrazione. Andiamo ora a vedere un risultato di questo metodo.
 \begin{figure}[!ht]
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -444,9 +619,69 @@ Un test che è stato fatto per andare a ricercare i parametri è stato quello di
 \caption{Test su $K_d$}
 \label{fig:KdTest}
 \end{figure}
-Si può chiaramente vedere come all'aumentare di $K_d$ i valori di $K_p$ iniziano ad vibrare sempre prima. Come valori finali per questo controllore sono stati scelti $K_d = \frac{3}{2}$ e $K_p = 720$
-\subsubsection*{Traiettorie testate}
-\addcontentsline{toc}{subsubsection}{Traiettorie testate}
+\subsubsection*{Analisi}
+Anche in questo caso, come nei precedenti la traiettoria principale testata è stata quella del cerchio raggio 5cm in 5 secondi, possiamo andare a vedere le coppie fornite ai giunti:
+\begin{figure}
+\begin{subfigure}{.53\textwidth}
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT1ID}  
+  \caption{Coppia $\theta_1$}
+  \label{fig:sub-ikd1}
+\end{subfigure}
+\begin{subfigure}{.53\textwidth}
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT2ID}  
+  \caption{Coppia $\theta_2$}
+  \label{fig:sub-ikd2}
+\end{subfigure}
+\caption{Coppie giunti controllo dinamica inversa}
+\label{fig:CoppieID}
+\end{figure}
+Come per il controllore PD possiamo andare a vedere e comparare la posizione attuale rispetto al riferimento e di conseguenza l'errore:
+\begin{figure}[!ht]
+\begin{subfigure}{.53\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta1ID}  
+  \caption{$\theta_1$ reale vs setpoint}
+  \label{fig:sub-id1}
+\end{subfigure}
+\begin{subfigure}{.53\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta2ID}  
+  \caption{$\theta_2$ reale vs setpoint}
+  \label{fig:sub-pd2}
+\end{subfigure}
+\caption{Posizione vs riferimento controllore ID}
+\end{figure}
+\begin{figure}
+\begin{subfigure}{.53\textwidth}
+  \centering
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta1ID}  
+  \caption{Errore su $\theta_1$}
+  \label{fig:sub-pd3}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include third image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta2ID}  
+  \caption{Errore su $\theta_2$}
+  \label{fig:sub-pd4}
+\end{subfigure}
+\caption{Errori controllore ID}
+\label{fig:AndamentiID}
+\end{figure}
+Come per il controllore PD anche qua possiamo andare a rappresentare la traiettoria nel piano cartesiano, ottenendo:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.5]{Immagini/Traiettorie/CerchioDinamicaInversa}
+		\caption{Cerchio [X,Y] controllo ID}
+		\label{fig:IDbracciaC}
+	\end{center}
+\end{figure}
+AGGIUNGI COMMENTI
 \subsubsection{Controllo robusto}
  L'effetto di incertezze sul modello induce in errore il sistema di controllo, soprattutto nel caso reale bisogna supporre che la compensazione del modello dinamico risulti imperfetta magari a causa di approssimazioni oppure per semplificazioni.  Possiamo andare quindi a riscrivere l'equazione \ref{eq:ControlloreID} come:
 \begin{equation}
@@ -595,10 +830,58 @@ Di conseguenza $\xi = 0$ è un equilibrio di stato asintoticamente e globalmente
 \rho(||\xi||) \frac{z}{\varepsilon} \ \ \ for \ ||z|| < \varepsilon
 \end{cases}
 \end{equation}
-\\INSERISCI SCHEMA ETC
-\subsubsection*{1 gdl}
-\addcontentsline{toc}{subsubsection}{1 gdl}
-\subsubsection*{tt}
-\addcontentsline{toc}{subsubsection}{tt}
-\subsection{Traiettorie eseguite}
-In questa sezione andremo a vedere ed analizzare tutte le traiettorie che sono state create, le traiettorie variano da bidimensionali a tridimensionali, andando anche ad includere due pattern.
+Possiamo andare quindi a rappresentare lo schema del controllo robusto teorico nel seguente modo:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.8]{Immagini/Controllori/RobustTeoria}
+		\caption{Schema controllore robusto}
+		\label{fig:RobustSchema}
+	\end{center}
+\end{figure}
+Data la difficoltà implementativa del controllore robusto sul modello reale sono state condotte due tipologie di analisi: la prima è stata un'analisi del comportamento del controllore grazie alla modellazione di un sistema più semplice, in particolare il sistema ad un grado di libertà del manovellismo; la seconda invece è stata la simulazione del controllore sul modello simulink del manipolatore.
+\subsubsection*{Analisi manovellismo}
+\addcontentsline{toc}{subsubsection}{Analisi manovellismo}
+Come è stato anticipato precedentemente è stata fatta un'analisi mediante il sistema ad un grado di libertà biella manovella, 
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/BiellaManovella}
+		\caption{Sistema biella manovella}
+		\label{fig:BiellaManovella}
+	\end{center}
+\end{figure}
+[PRESENTA RISULTATI]
+\subsection{Confronto approcci controllori}
+Avendo introdotto e verificato le principali tipologie di controllo centralizzato è venuto il momento di fare un confronto andando a vedere quale tra gli approcci visti è il migliore. In particolare, sulla traiettoria effettuata andiamo a confrontare gli errori tra il controllore PD e quello ID:
+\begin{figure}[!ht]
+\begin{subfigure}{.53\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ConfontoErroriTheta1}  
+  \caption{Confronto errore $\theta_1$ }
+  \label{fig:sub-tid1}
+\end{subfigure}
+\begin{subfigure}{.53\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ConfontoErroriTheta2}  
+  \caption{Confronto errore $\theta_2$}
+  \label{fig:sub-tid2}
+\end{subfigure}
+\caption{Confronto controllore PD e ID}
+\end{figure}
+Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a prevalere. Di conseguenza si è scelto questo come controllore definitivo e sono stati analizzati altri andamenti con leggi di moto diverse per valutare il comportamento del controllore.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.4]{Immagini/Traiettorie/QuadratoDinamicaInversa}
+		\caption{Quadrato controllo dinamica inversa}
+		\label{fig:quadID}
+	\end{center}
+\end{figure}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.4]{Immagini/Traiettorie/PatternDinamicaInversa}
+		\caption{Pattern controllo dinamica inversa}
+		\label{fig:patternID}
+	\end{center}
+\end{figure}
+\subsubsection{Filtro di Kalman}
