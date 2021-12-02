@@ -35,44 +35,44 @@
 \contentsline {section}{\numberline {4}Modellazione end-effector}{33}% 
 \contentsline {subsection}{\numberline {4.1}Cinematica end-effector}{34}% 
 \contentsline {subsection}{\numberline {4.2}Dinamica della vite}{35}% 
-\contentsline {section}{\numberline {5}Tecnologie implementate}{36}% 
-\contentsline {subsection}{\numberline {5.1}Simulink Real time}{36}% 
-\contentsline {subsection}{\numberline {5.2}EtherCAT}{36}% 
-\contentsline {subsubsection}{\numberline {5.2.1}Propriet\IeC {\`a}}{37}% 
-\contentsline {subsubsection}{\numberline {5.2.2}Gestione della rete}{37}% 
-\contentsline {subsubsection}{\numberline {5.2.3}Implementazione interfacce}{38}% 
-\contentsline {subsection}{\numberline {5.3}CME2}{38}% 
-\contentsline {subsection}{\numberline {5.4}EC-Engineer}{40}% 
-\contentsline {section}{\numberline {6}Sistema reale}{41}% 
-\contentsline {subsection}{\numberline {6.1}Struttura del robot}{41}% 
-\contentsline {subsubsection}{\numberline {6.1.1}Azionamenti}{42}% 
-\contentsline {subsubsection}{\numberline {6.1.2}Beckhoff EK1814}{42}% 
-\contentsline {subsubsection}{\numberline {6.1.3}Configurazione della rete}{43}% 
-\contentsline {subsection}{\numberline {6.2}Implementazione nel sistema reale}{46}% 
-\contentsline {subsubsection}{Inizializzazione}{46}% 
-\contentsline {subsubsection}{Input}{47}% 
-\contentsline {subsubsection}{Stateflow}{48}% 
-\contentsline {subsubsection}{Controllo vite}{49}% 
-\contentsline {subsubsection}{Controllo braccia}{50}% 
-\contentsline {subsubsection}{Coppie uscita}{50}% 
-\contentsline {subsection}{\numberline {6.3}Stateflow}{52}% 
-\contentsline {subsubsection}{\numberline {6.3.1}Fase di Homing}{52}% 
-\contentsline {subsubsection}{\numberline {6.3.2}Fase di posizionamento}{54}% 
-\contentsline {subsubsection}{\numberline {6.3.3}Fase di controllo}{56}% 
-\contentsline {subsubsection}{Gestione variabile di stato e luci}{58}% 
-\contentsline {subsubsection}{\numberline {6.3.4}Interfaccia grafica}{58}% 
-\contentsline {subsection}{\numberline {6.4}Controllo vite}{60}% 
-\contentsline {subsubsection}{\numberline {6.4.1}Controllo proporzionale}{60}% 
-\contentsline {subsubsection}{\numberline {6.4.2}Controllo proporzionale derivativo}{61}% 
-\contentsline {subsection}{\numberline {6.5}Controllo braccia}{63}% 
-\contentsline {subsubsection}{\numberline {6.5.1}Controllo proporzionale derivativo}{63}% 
-\contentsline {subsubsection}{\numberline {6.5.2}Controllo feed-forward con coppia pre-computata}{67}% 
-\contentsline {subsubsection}{\numberline {6.5.3}Controllo in dinamica inversa}{68}% 
-\contentsline {subsubsection}{Test Kp e Kd}{71}% 
-\contentsline {subsubsection}{\numberline {6.5.4}Controllo robusto}{72}% 
-\contentsline {subsubsection}{Analisi manovellismo}{79}% 
-\contentsline {subsection}{\numberline {6.6}Confronto approcci controllori}{80}% 
-\contentsline {subsubsection}{\numberline {6.6.1}Filtro di Kalman}{80}% 
-\contentsline {section}{\numberline {7}Conclusioni}{82}% 
-\contentsline {subsection}{\numberline {7.1}Confronto modellazione teorica-pratica}{82}% 
-\contentsline {subsection}{\numberline {7.2}Sviluppi futuri}{82}% 
+\contentsline {section}{\numberline {5}Tecnologie implementate}{37}% 
+\contentsline {subsection}{\numberline {5.1}Simulink Real time}{37}% 
+\contentsline {subsection}{\numberline {5.2}EtherCAT}{37}% 
+\contentsline {subsubsection}{\numberline {5.2.1}Propriet\IeC {\`a}}{38}% 
+\contentsline {subsubsection}{\numberline {5.2.2}Gestione della rete}{38}% 
+\contentsline {subsubsection}{\numberline {5.2.3}Implementazione interfacce}{39}% 
+\contentsline {subsection}{\numberline {5.3}CME2}{39}% 
+\contentsline {subsection}{\numberline {5.4}EC-Engineer}{41}% 
+\contentsline {section}{\numberline {6}Sistema reale}{43}% 
+\contentsline {subsection}{\numberline {6.1}Struttura del robot}{43}% 
+\contentsline {subsubsection}{\numberline {6.1.1}Azionamenti}{44}% 
+\contentsline {subsubsection}{\numberline {6.1.2}Beckhoff EK1814}{44}% 
+\contentsline {subsubsection}{\numberline {6.1.3}Configurazione della rete}{45}% 
+\contentsline {subsection}{\numberline {6.2}Implementazione nel sistema reale}{48}% 
+\contentsline {subsubsection}{Inizializzazione}{48}% 
+\contentsline {subsubsection}{Input}{49}% 
+\contentsline {subsubsection}{Stateflow}{50}% 
+\contentsline {subsubsection}{Controllo vite}{51}% 
+\contentsline {subsubsection}{Controllo braccia}{52}% 
+\contentsline {subsubsection}{Coppie uscita}{52}% 
+\contentsline {subsection}{\numberline {6.3}Stateflow}{54}% 
+\contentsline {subsubsection}{\numberline {6.3.1}Fase di Homing}{54}% 
+\contentsline {subsubsection}{\numberline {6.3.2}Fase di posizionamento}{56}% 
+\contentsline {subsubsection}{\numberline {6.3.3}Fase di controllo}{58}% 
+\contentsline {subsubsection}{Gestione variabile di stato e luci}{60}% 
+\contentsline {subsubsection}{\numberline {6.3.4}Interfaccia grafica}{60}% 
+\contentsline {subsection}{\numberline {6.4}Controllo vite}{62}% 
+\contentsline {subsubsection}{\numberline {6.4.1}Controllo proporzionale}{62}% 
+\contentsline {subsubsection}{\numberline {6.4.2}Controllo proporzionale derivativo}{63}% 
+\contentsline {subsection}{\numberline {6.5}Controllo braccia}{65}% 
+\contentsline {subsubsection}{\numberline {6.5.1}Controllo proporzionale derivativo}{65}% 
+\contentsline {subsubsection}{\numberline {6.5.2}Controllo feed-forward con coppia pre-computata}{69}% 
+\contentsline {subsubsection}{\numberline {6.5.3}Controllo in dinamica inversa}{70}% 
+\contentsline {subsubsection}{Test Kp e Kd}{73}% 
+\contentsline {subsubsection}{\numberline {6.5.4}Controllo robusto}{74}% 
+\contentsline {subsubsection}{Analisi manovellismo}{81}% 
+\contentsline {subsection}{\numberline {6.6}Confronto approcci controllori}{82}% 
+\contentsline {subsubsection}{\numberline {6.6.1}Filtro di Kalman}{82}% 
+\contentsline {section}{\numberline {7}Conclusioni}{85}% 
+\contentsline {subsection}{\numberline {7.1}Confronto modellazione teorica-pratica}{85}% 
+\contentsline {subsection}{\numberline {7.2}Sviluppi futuri}{85}% 
