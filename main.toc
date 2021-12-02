@@ -72,6 +72,7 @@
 \contentsline {subsubsection}{\numberline {6.5.4}Controllo robusto}{72}% 
 \contentsline {subsubsection}{Analisi manovellismo}{79}% 
 \contentsline {subsection}{\numberline {6.6}Confronto approcci controllori}{80}% 
+\contentsline {subsubsection}{\numberline {6.6.1}Filtro di Kalman}{80}% 
 \contentsline {section}{\numberline {7}Conclusioni}{82}% 
 \contentsline {subsection}{\numberline {7.1}Confronto modellazione teorica-pratica}{82}% 
 \contentsline {subsection}{\numberline {7.2}Sviluppi futuri}{82}% 

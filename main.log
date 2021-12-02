@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  2 DEC 2021 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  2 DEC 2021 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -330,38 +330,8 @@ Package chngcntr Info: \counterwithout already defined.
 )
 (./main.aux (./begin.aux) (./Capitoli/Introduzione.aux)
 (./Capitoli/Cinematica.aux) (./Capitoli/Dinamica.aux) (./Capitoli/Vite.aux)
-(./Capitoli/Implementazione.aux) (./Capitoli/SistemaReale.aux
-
-LaTeX Warning: Label `fig:sub-pd2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub-pd2' multiply defined.
-
-
-LaTeX Warning: Label `fig:sub-pd3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub-pd3' multiply defined.
-
-
-LaTeX Warning: Label `fig:sub-pd4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub-pd4' multiply defined.
-
-
-LaTeX Warning: Label `fig:sub-id1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub-id1' multiply defined.
-
-
-LaTeX Warning: Label `fig:sub-pd2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub-pd2' multiply defined.
-
-) (./Capitoli/Conclusioni.aux))
+(./Capitoli/Implementazione.aux) (./Capitoli/SistemaReale.aux)
+(./Capitoli/Conclusioni.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -1371,11 +1341,11 @@ File: Immagini/Traiettorie/PatternDinamicaInversa.png Graphic file (type png)
 Package pdftex.def Info: Immagini/Traiettorie/PatternDinamicaInversa.png  used 
 on input line 882.
 (pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
-) [79 <./Immagini/Controllori/RobustTeoria.png> <./Immagini/Sperimentale/Biella
-Manovella.png>] [80 <./Immagini/Traiettorie/ConfontoErroriTheta1.png (PNG copy)
-> <./Immagini/Traiettorie/ConfontoErroriTheta2.png (PNG copy)> <./Immagini/Trai
-ettorie/QuadratoDinamicaInversa.png (PNG copy)>] [81 <./Immagini/Traiettorie/Pa
-tternDinamicaInversa.png (PNG copy)>]
+[79 <./Immagini/Controllori/RobustTeoria.png> <./Immagini/Sperimentale/BiellaMa
+novella.png>]) [80 <./Immagini/Traiettorie/ConfontoErroriTheta1.png (PNG copy)>
+ <./Immagini/Traiettorie/ConfontoErroriTheta2.png (PNG copy)> <./Immagini/Traie
+ttorie/QuadratoDinamicaInversa.png (PNG copy)>] [81 <./Immagini/Traiettorie/Pat
+ternDinamicaInversa.png (PNG copy)>]
 \openout2 = `./Capitoli/Conclusioni.aux'.
 
  (./Capitoli/Conclusioni.tex) [82
@@ -1397,14 +1367,14 @@ tternDinamicaInversa.png (PNG copy)>]
 (./Capitoli/Dinamica.aux) (./Capitoli/Vite.aux) (./Capitoli/Implementazione.aux
 ) (./Capitoli/SistemaReale.aux) (./Capitoli/Conclusioni.aux))
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7090 strings out of 492616
- 113669 string characters out of 6129482
- 204359 words of memory out of 5000000
- 10718 multiletter control sequences out of 15000+600000
+ 7100 strings out of 492616
+ 113831 string characters out of 6129482
+ 204430 words of memory out of 5000000
+ 10728 multiletter control sequences out of 15000+600000
  14650 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,43p,1757b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1425,7 +1395,7 @@ ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 19/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
 9/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (87 pages, 4454374 bytes).
+Output written on main.pdf (87 pages, 4454431 bytes).
 PDF statistics:
  495 PDF objects out of 1000 (max. 8388607)
  246 compressed objects within 3 object streams
