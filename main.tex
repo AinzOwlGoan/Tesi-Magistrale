@@ -15,6 +15,9 @@
 \usepackage{amssymb}
 \usepackage{subcaption}
 \usepackage{multicol}
+\usepackage[titletoc]{appendix}
+\usepackage{biblatex}
+\addbibresource{Bibliografia}
 
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 %%%%% NUMERO PAGINE BEGIN
@@ -66,6 +69,7 @@
 \include{./Capitoli/Introduzione}
 \include{Capitoli/Cinematica}
 \include{Capitoli/Dinamica}
+\include{Capitoli/Cinetostatica}
 \include{Capitoli/Vite}
 \newpage
 \thispagestyle{plain} % empty
@@ -75,11 +79,16 @@
 \thispagestyle{plain} % empty
 \mbox{}
 \include{Capitoli/SistemaReale}
+
+\include{./Capitoli/Conclusioni}
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}
-\include{./Capitoli/Conclusioni}
-%\include{./Capitoli/SviluppiFuturi}
+\begin{appendices}
+\include{./Capitoli/AppendiceDinamica}
+\include{./Capitoli/AppendiceSistemi}
+\end{appendices}
+\printbibliography
 \listoffigures
 \listoftables
 \end{document}

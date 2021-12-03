@@ -1,0 +1,50 @@
+\section{Formule estese}
+In riferimento al capitolo della dinamica andiamo ora a vedere le formule per esteso:
+\subsection{Formule cinematica diretta accelerazione}
+\begin{equation}
+\frac{(l\cos\theta_1(y - l\sin\theta_1) - l\sin\theta_1(d + x - l\cos\theta_1))(\dot{y} - l\cos\theta_2\dot{\theta_2})}{S-FINISCI}
+\end{equation}
+\begin{equation*}
+S = \frac{(d - x + l\cos\theta_2)(y - l\sin\theta_1 + (y - l\sin\theta_2)(d + x - l\cos\theta_1)}{d - x + l\cos\theta_2}
+\end{equation*}
+\subsection{Prerequisiti dinamica}\label{appendice:t34punto}
+Le matrici importati sono $\dot{J}_3$ e $\dot{J}_4$ che andiamo a riprendere ora come:
+\begin{equation}
+\dot{J_3} =
+\begin{bmatrix}
+ 	\dot{J}_{31} & \dot{J}_{32} \\ 
+ 	\dot{J}_{33} & \dot{J}_{34}
+ \end{bmatrix}
+\end{equation}
+Con i relativi parametri pari a:
+\begin{equation*}
+\dot{J}_{31} = -l\cos\theta_1\dot{\theta_1}+\frac{1}{2}\cos\theta_3\dot{\theta_3}J_{34}+\frac{1}{2}\sin\theta_3\dot{J_{34}}
+\end{equation*}
+\begin{equation*}
+\dot{J}_{32} =   -l\frac{1}{2}\cos\theta_3\dot{\theta_3}J34+\frac{1}{2}\sin\theta_3\dot{J_{34}} 
+\end{equation*}
+\begin{equation*}
+\dot{J}_{33} =  -l\sin\theta_1\dot{\theta_1}-\frac{1}{2}\sin\theta_3\dot{\theta_3}J_{34}+\frac{1}{2}\cos\theta_3\dot{J_{34}}
+\end{equation*}
+\begin{equation*}
+\dot{J}_{34} = -\frac{1}{2}l\sin\theta_3\dot{\theta_3}J_{34}+\frac{1}{2}\cos\theta_3\dot{J_{34}}
+\end{equation*}
+Invece, definiamo $\dot{J}_4$ in modo analogo come:
+\begin{equation}
+\begin{bmatrix}
+\dot{J}_{41}  & \dot{J_{42}} \\ \dot{J_{43}} & \dot{J_{44}}
+\end{bmatrix}
+\end{equation}
+Con parametri:
+\begin{equation*}
+\dot{J_{41}}= -l﻿\frac{1}{2}\cos\theta_4\dot{\theta_4}J_{34}+﻿\frac{1}{2}\sin\theta_4\dot{J_{34}}
+\end{equation*}
+\begin{equation*}
+\dot{J_{42}}= -l\cos\theta_2\dot{\theta_2}+﻿\frac{1}{2}\cos\theta_4\dot{\theta_4}J_{34}+﻿\frac{1}{2}\sin\theta_4\dot{J_{34}}
+\end{equation*}
+\begin{equation*}
+\dot{J_{43}}=  -l\frac{1}{2}\sin\theta_4\dot{\theta_4}J_{34}+﻿\frac{1}{2}\cos\theta_4\dot{J_{34}}          
+\end{equation*}
+\begin{equation*}
+\dot{J_{44}}= -l\sin\theta_2\dot{\theta_2}-﻿\frac{1}{2}\sin\theta_4\dot{\theta_4}J_{34}+﻿\frac{1}{2}\cos\theta_4\dot{J_{34}}
+\end{equation*}
