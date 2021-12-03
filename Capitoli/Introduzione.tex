@@ -1,10 +1,10 @@
 \section{Introduzione}
 
 \subsection{Obiettivo}
-L'obiettivo di questa tesi riguarda lo studio teorico e l'implementazione pratica di approcci di controllo centralizzato ad un manipolatore a cinematica parallela (5 gradi di libertà) con l'obiettivo di andare a trovare il migliore. In primis verrà eseguita una modellazione fisica e teorica del manipolatore, successivamente mediante un'attività sperimentale che comprende l'implementazione degli schemi di controllo analizzati e la generazione di traiettorie bidimensionali e tridimensionali, si andranno ad analizzare i risultati ottenuti.
+L'obiettivo di questa tesi riguarda lo studio teorico e l'implementazione pratica di approcci di controllo centralizzato ad un manipolatore a cinematica parallela (4 gradi di libertà) con l'obiettivo di andare a trovare il migliore. In primis verrà eseguita una modellazione fisica e teorica, successivamente mediante un'attività sperimentale che comprende l'implementazione degli schemi di controllo analizzati e la generazione di traiettorie bidimensionali e tridimensionali, si andranno ad analizzare i risultati ottenuti.
 \subsection{Stato dell'arte}
 Il lavoro di tesi è stato svolto in collaborazione con il laboratorio di meccatronica dell'università degli studi di Bergamo. Alla base di questa tesi vi è il manipolatore PKM (\textit{parallel kinematic manipulator}) costruito nel 2013. Un manipolatore parallelo è un sistema meccanico che utilizza "catene" seriali per supportare un \textit{end-effector}, ogni catena solitamente è corta, semplice e di conseguenza può essere rigida rispetto a movimenti non voluti rispetto ad un manipolatore seriali. La movimentazione e la flessibilità di un \textit{joint} è vincolata dall'effetto delle altre catene, questo rende il manipolatore rigido rispetto alle sue componenti. 
-\par In particolare, nel nostro caso il manipolatore è composto da quattro link, due distali ovvero motorizzati e due prossimali, all'estermità è connessa una vite che consente traslazione e rotazione nell'asse Z, in questa configurazione il robot arriva ad avere 5 gradi di libertà.
+\par In particolare, nel nostro caso il manipolatore è composto da cinque giunti rotoidali, quattro link, di cui due motorizzati e all'estermità è connessa una vite che consente traslazione e rotazione nell'asse Z, in questa configurazione il robot arriva ad avere 4 gradi di libertà.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.7]{Immagini/Robot1.png}

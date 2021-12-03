@@ -3,7 +3,26 @@ Il modello dinamico del manipolatore ci fornisce una descrizione matematica dell
 \subsection{Prerequisiti per il calcolo della dinamica}\label{sec:prerequisiti-dinamica}
 Prima di andare ad analizzare i metodi utilizzati, è importante andare a ricavare tutte le matrici delle quali avremo bisogno, in particolare è necessario andare a definire delle matrici che ci permettano di ottenere $\theta_3$ e $\theta_4$ in funzione di $\theta_1$ e $\theta_2$.
 \subsubsection{Jacobiana $J_{34}$ e calcolo $\dot{\theta_3},\dot{\theta_4}$}
-A partire da $\theta_1, \theta_2$ possiamo, mediante la cinematica diretta ottenere $\theta_3$ e $\theta_4$, unendo queste quattro componenti e considerando anche le velocità $\dot{\theta_1}$ e $\dot{\theta_2}$ possiamo andare a ricavare la matrice $J_{34}$ che esprime $\theta_3$ e $\theta_4$ in funzione di $\theta_1, \theta_2$ e possiamo ricavare anche $\dot{\theta_3}, \dot{\theta_4}$, per far questo andiamo a definire le seguenti quantità:
+A partire da $\theta_1, \theta_2$ possiamo, mediante la cinematica diretta ottenere $\theta_3$ e $\theta_4$. Dall'equazione dei loop vettoriali \ref{eq:loopVettoriali} derivandola otteniamo: 
+\begin{equation}
+	\begin{cases}
+		-\sin\theta_1 \dot{\theta_1} -\sin\theta_3\dot{\theta_3}+\sin\theta_2\dot{\theta_2}+\sin\theta_4\dot{\theta_4} = 0
+		\\ \cos\theta_1\dot{\theta_1} + \cos\theta_3\dot{\theta_3}-\cos\theta_2\dot{\theta_2}-\cos\theta_4\dot{\theta_4} = 0
+	\end{cases}
+\end{equation}
+Considerando anche le velocità $\dot{\theta_1}$ e $\dot{\theta_2}$ possiamo dobbiamo ricavare $\dot{\theta_3}, \dot{\theta_4}$, per far questo dalla seconda equazione ricaviamo $\dot{\theta_4}$ in funzione di $\dot{\theta_3}$:
+\begin{equation*}
+	\dot{\theta_4} = \frac{\cos\theta_1\dot{\theta_1} + \cos\theta_3\dot{\theta_3}-\cos\theta_2\dot{\theta_2}}{\cos\theta_4}
+\end{equation*}
+Sostituendo $\dot{\theta_4}$ nella prima equazione otteniamo:
+\begin{equation*}
+	\cos\theta_4(-\sin\theta_1\dot{\theta_1}-\sin\theta_3\dot{\theta_3}+\sin\theta_2\dot{\theta_2})+\tan\theta_4(\cos\theta_1\dot{\theta_1}+\cos\theta_3\dot{\theta_3}-\cos\theta_2\dot{\theta_2}) = 0
+\end{equation*}
+Da questa possiamo ricavare $\dot{\theta_3}$ come:
+\begin{equation}
+	\dot{\theta_3} = \frac{N_{13}}{D_{13}}\dot{\theta_1}+\frac{N_{23}}{D_{13}}\dot{\theta_2}
+\end{equation}
+dove:
 \begin{equation*}
     N_{13} = \frac{\cos\theta_4}{\sin\theta_4}\sin\theta_1-\cos\theta_1
 \end{equation*}
@@ -13,11 +32,11 @@ A partire da $\theta_1, \theta_2$ possiamo, mediante la cinematica diretta otten
 \begin{equation*}
     D_{13} = \cos\theta_3-\frac{\cos\theta_4}{\sin\theta_4}\sin\theta_3
 \end{equation*}
-Da queste tre formule possiamo andare a ricavare $\dot{\theta_3}$ nel seguente modo:
+Avendo ottenuto questo valore possiamo anche esprimere $\dot{\theta_4}$ come:
 \begin{equation}
-    \dot{\theta_3} = \frac{\dot{\theta_1}N_{13}}{D_{13}}+\frac{\dot{\theta_2}N_{23}}{D_{13}}
-\end{equation}
-Proseguiamo ora definendo le equazioni che ci serviranno per calcolare $\dot{\theta_4}$:
+	\dot{\theta_4} = \frac{N_{14}}{D_{14}}\dot{\theta_1}+\frac{N_{24}}{D_{14}}\dot{\theta_2}
+\end{equation} 
+dove:
 \begin{equation*}
     N_{14} = \frac{\sin\theta_1\cos\theta_3}{\sin\theta_3}-\frac{\cos\theta_4}{\sin\theta_4}+\frac{\cos\theta_4}{\sin\theta_4}\sin\theta_1 - \cos\theta_1
 \end{equation*}
@@ -27,10 +46,6 @@ Proseguiamo ora definendo le equazioni che ci serviranno per calcolare $\dot{\th
 \begin{equation*}
     D_{14} = \frac{\sin\theta_4\cos\theta_3}{\sin\theta_3}-\frac{\cos\theta_4}{\sin\theta_4}
 \end{equation*}
-Otteniamo quindi:
-\begin{equation}
-    \dot{\theta_4} = \dot{\theta_1}\frac{N_{14}}{D_{14}}+\dot{\theta_2}\frac{N_{24}}{D_{14}}
-\end{equation}
 Il passo finale è quello di andare a rappresentare la matrice jacobiana che lega le velocità $\dot{\theta_3}$ e $\dot{\theta_4}$ con le velocità in ingresso al manipolatore:
 \begin{equation}
     J_{34} = \begin{bmatrix}
@@ -47,7 +62,7 @@ Il passo finale è quello di andare a rappresentare la matrice jacobiana che leg
 %\end{bmatrix}
 %\end{equation*}
 \subsubsection{Jacobiana $\dot{J_{34}}$ e calcolo di $\ddot{\theta_3}, \ddot{\theta_4}$}
-Per andar ad ottenere la jacobiana finale, ed i valori delle accelerazioni sui link distali occorre derivare tutti gli elementi visti in precedenza, in particolare:
+Per andar ad ottenere la jacobiana finale, ed i valori delle accelerazioni sui giunti non motorizzati occorre derivare tutti gli elementi visti in precedenza, in particolare:
 \begin{equation*} %  N11p =  N13p
     \dot{N_{13}} = \frac{-1}{\sin^2\theta_4\cdot\dot{\theta_4}\sin\theta_1}+\frac{\cos\theta_4}{\sin\theta_4}\cos\theta_1\dot{\theta_1}+\sin\theta_1\dot{\theta_1}
 \end{equation*}
@@ -106,8 +121,8 @@ Per trovare la soluzione all'equazione del PLV introduciamo le matrici che hanno
 \end{equation*}
 \begin{equation*}
     J_2 = \begin{bmatrix}
-           0 & -0.5*l*\sin\theta_2 \\
-           0 & 0.5*l*\cos\theta_2 
+           0 & -0.5l\sin\theta_2 \\
+           0 & 0.5l\cos\theta_2 
            \end{bmatrix}
            \Rightarrow
    \dot{J_2} = \begin{bmatrix} 0 & -0.5l\cos\theta_2\dot{\theta_2} \\
@@ -116,29 +131,78 @@ Per trovare la soluzione all'equazione del PLV introduciamo le matrici che hanno
 \end{equation*}
 \begin{equation*}
     J_3 = \begin{bmatrix}
-    -l\sin\theta_1+0.5\sin\theta_3\cdot J_{34}(1,1) & 
-    -0.5l\sin\theta_3\cdot J_{34}(1,2) \\
-    l\cos\theta_1+0.5\cos\theta_3\cdot J_{34}(1,1) & 
-    0.5l\cos\theta_3\cdot J_{34}(1,2)
+    -l\sin\theta_1+0.5\sin\theta_3 \frac{N_{13}}{D_{13}} & 
+    -0.5l\sin\theta_3 \frac{N_{23}}{D_{13}} \\
+    l\cos\theta_1+0.5\cos\theta_3 \frac{N_{13}}{D_{13}} & 
+    0.5l\cos\theta_3 \frac{N_{13}}{D_{23}}
     \end{bmatrix}
 \end{equation*}
 \begin{equation*}
     J_4 = \begin{bmatrix}
-    -0.5l\sin\theta_4\cdot J_{34}(2,1) &
-    -l\sin\theta_2+0.5\sin\theta_4\cdot J_{34}(2,2) \\
-    0.5l\cos\theta_4\cdot J_{34}(2,1) &
-    l\cos\theta_2+0.5\cos\theta_4\cdot J_{34}(2,2)
+    -0.5l\sin\theta_4 \frac{N_{14}}{D_{14}} &
+    -l\sin\theta_2+0.5\sin\theta_4\frac{N_{24}}{D_{14}} \\
+    0.5l\cos\theta_4\frac{N_{14}}{D_{14}} &
+    l\cos\theta_2+0.5\cos\theta_4 \frac{N_{24}}{D_{14}}
     \end{bmatrix}
 \end{equation*}
+In particolare, le matrici assumo il significato di jacobiano che consente il passaggio dalle coordinate dei giunti alle coordinate baricentriche dei quattro link. 
 \begin{equation*}
-    J_E = \begin{bmatrix}
-    -l(\sin\theta_1+\sin\theta_3\cdot J_{34}(1,1)) & 
-    -l\sin\theta_3 \cdot J_{34}(1,2) \\
-    l(\cos\theta_1+\cos\theta_3\cdot J_{34}(1,1)) &
-    l\cos\theta_3 \cdot J_{34}(1,2)
-    \end{bmatrix}
-\end{equation*} 
-Importanti nel calcolo della dinamica saranno anche le derivate delle matrici che abbiamo appena visto, ovvero $\dot{J_3}, \dot{J_4}, \dot{J_E}$. 
+	\begin{bmatrix}
+		\dot{x}_{g1} \\ \dot{y}_{g1}
+	\end{bmatrix} = J_1 \begin{bmatrix}
+	\dot{\theta_1} \\ \dot{\theta_2}
+\end{bmatrix} , \ \ 
+	\begin{bmatrix}
+	\ddot{x}_{g1} \\ \ddot{y}_{g1}
+\end{bmatrix} = J_1 \begin{bmatrix}
+	\ddot{\theta_1} \\ \ddot{\theta_2}
+\end{bmatrix} + \dot{J_1} \begin{bmatrix}
+\dot{\theta_1} \\ \dot{\theta_2}
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+	\begin{bmatrix}
+		\dot{x}_{g2} \\ \dot{y}_{g2}
+	\end{bmatrix} = J_2 \begin{bmatrix}
+		\dot{\theta_1} \\ \dot{\theta_2}
+	\end{bmatrix} , \ \ 
+	\begin{bmatrix}
+		\ddot{x}_{g2} \\ \ddot{y}_{g2}
+	\end{bmatrix} = J_2 \begin{bmatrix}
+		\ddot{\theta_1} \\ \ddot{\theta_2}
+	\end{bmatrix} + \dot{J_2} \begin{bmatrix}
+		\dot{\theta_1} \\ \dot{\theta_2}
+	\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+	\begin{bmatrix}
+		\dot{x}_{g3} \\ \dot{y}_{g3}
+	\end{bmatrix} = J_3 \begin{bmatrix}
+		\dot{\theta_1} \\ \dot{\theta_2}
+	\end{bmatrix} , \ \ 
+	\begin{bmatrix}
+		\ddot{x}_{g3} \\ \ddot{y}_{g3}
+	\end{bmatrix} = J_3 \begin{bmatrix}
+		\ddot{\theta_1} \\ \ddot{\theta_2}
+	\end{bmatrix} + \dot{J_3} \begin{bmatrix}
+		\dot{\theta_1} \\ \dot{\theta_2}
+	\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+	\begin{bmatrix}
+		\dot{x}_{g4} \\ \dot{y}_{g4}
+	\end{bmatrix} = J_4 \begin{bmatrix}
+		\dot{\theta_1} \\ \dot{\theta_2}
+	\end{bmatrix} , \ \ 
+	\begin{bmatrix}
+		\ddot{x}_{g4} \\ \ddot{y}_{g4}
+	\end{bmatrix} = J_4 \begin{bmatrix}
+		\ddot{\theta_1} \\ \ddot{\theta_2}
+	\end{bmatrix} + \dot{J_4} \begin{bmatrix}
+		\dot{\theta_1} \\ \dot{\theta_2}
+	\end{bmatrix}
+\end{equation*}
+Importanti nel calcolo della dinamica saranno anche le derivate delle matrici che abbiamo appena visto, ovvero $\dot{J_3}, \dot{J_4}$ che verranno riportate in appendice. 
 \subsection{Principio dei lavori virtuali}
 Il lavoro virtuale è il lavoro svolto da una forza reale che agisce attraverso uno spostamento virtuale o da una forza virtuale che agisce attraverso uno spostamento reale.
 Uno spostamento virtuale è uno spostamento coerente con i vincoli della struttura, cioè che soddisfano le condizioni al contorno in corrispondenza degli appoggi.
@@ -164,6 +228,7 @@ Il problema della dinamica inversa consiste nel determinare le coppie ai giunti 
     \end{bmatrix}(\dot{J_{34}}\dot{\theta}+J_{34}\ddot{\theta})\bigg)
     \end{aligned}
 \end{equation*}
+
 Semplificando e raccogliendo possiamo esprimere l'equazione come:
 \begin{equation}
     \tau = M \ddot{\theta} + K \dot{\theta}
@@ -193,21 +258,48 @@ Sostituendo, possiamo andare ad esprimere l'equazione \ref{eq:dinamicaInv} nel s
 % CONTROLLA
 Per tutti i calcoli svolti fino ad adesso le coppie devono considerarsi prese all'end-effector
 \subsection{Dinamica diretta}
-Il problema della dinamica diretta invece consiste nel determinare le accelerazioni ai giunti a partire dalle coppie, dalla posizione e velocità iniziali di entrambi i link.
-\\Identifichiamo quindi $\Theta$ come vettore delle condizioni iniziali, in particolare possiamo definirlo come segue:
-\begin{equation*}
-    \Theta = \begin{bmatrix}
-    \theta_1(t_0) \\ \theta_2(t_0) \\ \dot{\theta_1(t_0)} \\ \dot{\theta_2(t_0)}
-    \end{bmatrix}
-\end{equation*}
-Possiamo andare a calcolare $\theta_3$ e $\theta_4$ come abbiamo visto in precedenza nella sezione \ref{sec:Cinematica-pos}, e di conseguenza anche tutte le matrici viste nella sezione \ref{sec:prerequisiti-dinamica}. Con tutti questi dati possiamo andare a ricalcolare le equazioni \ref{eq:M} e \ref{eq:K}. 
+Il problema della dinamica diretta invece consiste nel determinare le accelerazioni ai giunti a partire dalle coppie, dalla posizione e velocità iniziali di entrambi i link motorizzati.
 \\Andiamo ora a definire l'equazione della dinamica diretta andando ad invertire l'equazione \ref{eq:dinamicaInv} in questo modo:
 \begin{equation}
-    \ddot{\theta} = M^{-1}(-K\dot{\theta}+\tau)
-    \label{eq:dinamicaDiretta}
+	\ddot{\theta} = M^{-1}(-K\dot{\theta}+\tau)
+	\label{eq:dinamicaDiretta}
 \end{equation}
-Infine, da questa possiamo andare anche a calcolare velocità e posizioni integrando l'equazione.
-\\Avendo sia il grafico della legge di moto iniziale relativa a posizione, velocità ed accelerazione assegnata agli angoli $\theta_1$ e $\theta_2$, che le coppie, possiamo andare a calcolare la dinamica con le coppie e le condizioni iniziali e \textit{plottare} il confronto tra queste due curve. In particolare andiamo a vedere il confronto su accelerazioni, velocità e posizioni sia per $\theta_1$ che per $\theta_2$: 
+La dinamica del sistema non è lineare, per risolvere l'equazione differenziale del secondo ordine è necessario procedere mediante integrazione numerica. Note le condizioni iniziali identificate dal vettore $\Theta_0$ e definite come segue:
+\begin{equation*}
+    \Theta_0 = \begin{bmatrix}
+    \theta_1(t_0) \\ \theta_2(t_0) \\ \dot{\theta}_1(t_0) \\ \dot{\theta}_2(t_0)
+    \end{bmatrix}
+\end{equation*}
+Possiamo andare a calcolare $\theta_3$ e $\theta_4$ come abbiamo visto in precedenza nella sezione \ref{sec:Cinematica-pos}, e di conseguenza anche tutte le matrici viste nella sezione \ref{sec:prerequisiti-dinamica}. Con tutti questi dati possiamo  ricalcolare le equazioni \ref{eq:M} e \ref{eq:K} riferite ad M e K nell'istante di tempo iniziale. Viene poi implementato un algoritmo che note posizioni e velocità in un istante calcola quelle dell'istante successivo.
+\begin{equation*}
+	\begin{bmatrix}
+		\ddot{\theta}_1(n) \\ \ddot{\theta}_2(n)
+	\end{bmatrix} = 
+ M^{-1}(n)\Bigg( -K(n)\begin{bmatrix}
+ 	\dot{\theta}_1(n) \\ \dot{\theta}_2(n)
+ \end{bmatrix}+\tau(n)\Bigg)
+\end{equation*} 
+ricaviamo la velocità all'istante successivo come:
+\begin{equation*}
+	\begin{bmatrix}
+		\dot{\theta}_1 (n+1) \\ \dot{\theta}_2(n+1)
+	\end{bmatrix} = \begin{bmatrix}
+	\dot{\theta}_1 (n) \\ \dot{\theta}_2(n)
+\end{bmatrix} + \begin{bmatrix}
+\ddot{\theta}_1 (n) \\ \ddot{\theta}_2(n)
+\end{bmatrix}dt
+\end{equation*} 
+e la posizione come:
+\begin{equation*}
+	\begin{bmatrix}
+		{\theta}_1 (n+1) \\ {\theta}_2(n+1)
+	\end{bmatrix} = \begin{bmatrix}
+		{\theta}_1 (n) \\ {\theta}_2(n)
+	\end{bmatrix} + \begin{bmatrix}
+		\dot{\theta}_1 (n) \\ \dot{\theta}_2(n)
+	\end{bmatrix}dt
+\end{equation*}
+\\Facciamo ora il confronto fra posizione, velocità ed accelerazione dei \textit{setpoint} rispetto a quelle ottenute tramite integrazione numerica:
 \begin{figure}[!ht]
 \begin{subfigure}{.45\textwidth}
   \centering
@@ -259,7 +351,8 @@ Infine, da questa possiamo andare anche a calcolare velocità e posizioni integr
 \end{subfigure}
 \caption{Confronto dinamica leggi di moto su posizioni}
 \end{figure}
-Una volta calcolati tutti i parametri di nostro interesse andiamo a costruire il modello simulink che sarà utile per una visione d'insieme:
+Si può notare un errore tra le due curve dovuto al metodo di integrazione utilizzato.
+\\Una volta calcolati tutti i parametri di nostro interesse andiamo a costruire il modello simulink che sarà utile per una visione d'insieme:
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.55]{Immagini/Dinamica/ModSimulink}

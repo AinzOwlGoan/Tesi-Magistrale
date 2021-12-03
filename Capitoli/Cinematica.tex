@@ -17,7 +17,7 @@ L'obiettivo di questa sezione è quello di andare ad illustrare le metodologie c
 \caption{Parametri manipolatore}
 \label{table:1}
 \end{table}
-Tutti e quattro i link hanno lunghezza, massa, posizione del centro di massa e momento di inerzia uguali, per questo si è deciso di rappresentare i dati una sola volta.
+\\Tutti e quattro i link hanno lunghezza, massa, posizione del centro di massa e momento di inerzia uguali, per questo si è deciso di rappresentare i dati una sola volta.
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.6]{Immagini/Robot2.png}
@@ -45,8 +45,29 @@ Dalla combinazione di queste due equazioni otteniamo il seguente sistema:
     (x-\frac{l}{2}-l\cos\theta_1)^2+(y-l\sin\theta_1)^2 = l^2 \\
     (x+\frac{l}{2}-l\cos\theta_2)^2+(y-l\sin\theta_2)^2 = l^2
     \end{cases}
+\label{eq:CinCirc}
 \end{equation}
-Da queste, andando a sviluppare i calcoli possiamo definire i parametri:
+Da queste, andando a sviluppare i calcoli otteniamo:
+\begin{equation}
+	\begin{cases}
+		x^2+x(-2d-2l\cos\theta_2) +y^2+y(-2d\sin\theta_2) + d(d+2l\cos\theta_2) = 0 \\
+		x^2+x(2d-2l\cos\theta_1) +y^2+y(-2d\sin\theta_1) + d(d-2l\cos\theta_1) = 0
+	\end{cases}
+\label{eq:CinCirc2}
+\end{equation}
+Andando a sottrarre le equazioni:
+\begin{equation*}
+	x(-4d-2l(\cos\theta_2-\cos\theta_1)) + y(-2l(\sin\theta_2-\sin\theta_1))+2ld(\cos\theta_2+\cos\theta_1) = 0
+\end{equation*}
+Una volta risolto è possibile ricavare x in funzione di y come:
+\begin{equation}
+	x = \frac{y\cdot l(\sin\theta_2 - \sin\theta_1)-l\cdot d(\cos\theta_2+\cos\theta_1)}{-2d-l(\cos\theta_2-\cos\theta_1)}
+\end{equation}
+Sostituendo la x nelll'eqazione \ref{eq:CinCirc} possiamo ricavare y come: 
+\begin{equation*}
+	y_{1,2}\footnote{$\Delta = \sqrt{B^2-4AC}$} = \frac{-B \pm \Delta}{2A} 
+\end{equation*}
+Dove i parametri A,B e C sono:
 \begin{equation*}
     A = l^2 (\sin\theta_2- \sin\theta_1)^2 + (-2 d-l (\cos\theta_2 - \cos\theta_1))^2
 \end{equation*}
@@ -60,14 +81,8 @@ Da queste, andando a sviluppare i calcoli possiamo definire i parametri:
     C = l^2 d^2 (\cos\theta_2+\cos\theta_1)^2-l d (\cos\theta_2+\cos\theta_1)(-2d-l(\cos\theta_2-\cos\theta_1) ) \\ (-2d-2l\cos\theta_2)+(d^2+2dl\cos\theta_2)(-2dl(\cos\theta_2-\cos\theta_1))^2
 \end{aligned}
 \end{equation*}
-Il passo successivo è quello di ricavare la posizione $P=[x,y]$ dell'end-effector; si può procedere grazie alla formula risolutiva delle equazioni di secondo grado \begin{equation*}
-	s_{1,2}\footnote{$\Delta = \sqrt{b^2-4ac}$} = \frac{-b \pm \Delta}{2a}
-\end{equation*}
- Si può notare facilmente che la formula fornisce due risultati diversi, in una caso quando si utilizza $+\Delta$ e l'altro quando si usa $-\Delta$, è normale perché secondo il teorema fondamentale dell'algebra possono esserci fino a due soluzioni, in questo caso una coincidente con la posizione dell'end-effector e l'altra proiettata sulla base del semi-telaio. 
-\begin{equation}
-x = \frac{y\cdot l(\sin\theta_2 - \sin\theta_1)-l\cdot d(\cos\theta_2+\cos\theta_1)}{-2d-l(\cos\theta_2-\cos\theta_1)}, y = \frac{-B + \sqrt{B^2-4AC}}{2A} 
-\end{equation}
-Possiamo poi andare a trovare le posizioni dei link distali mediante relazioni geometriche nel seguente modo: 
+Il passo successivo è quello di ricavare la posizione $P=[x,y]$ dell'end-effector. La formula della y fornisce due risultati diversi, in una caso quando si utilizza $+\Delta$ e l'altro quando si usa $-\Delta$. Per come è modellato il manipolatore, l'unica soluzione fisicamente raggiungibile è quella con delta positivo. 
+Possiamo poi andare a trovare le posizioni dei giunti non motorizzati mediante relazioni geometriche nel seguente modo: 
 \begin{equation*}
     E_{1X} = -d+l\cdot \cos\theta_1 \ \ \  E_{1Y}=l\cdot \sin\theta_1
 \end{equation*}
@@ -75,17 +90,41 @@ e
 \begin{equation*}
     E_{2X} = d+ l\cdot \cos\theta_2 \ \ \  E_{2Y} = l\cdot \sin\theta_2
 \end{equation*}
-Adesso che abbiamo $E_1$ ed $E_2$ possiamo andare a trovare gli angoli $\theta_3 , \theta_4$ in funzione di $\theta_1$ e $\theta_2$
-\\$\theta_3 =$
+Possiamo andare a trovare poi gli angoli $\theta_3 , \theta_4$ in funzione di $\theta_1$ e $\theta_2$ partendo dall'equazioni dei \textit{loop vettoriali}:
+\begin{equation}
+	\begin{cases}
+		l\cos\theta_1 + l\cos\theta_3 - l\cos\theta_2 -l\cos\theta_4 -2d = 0 \\
+		l\sin\theta_1 +l\sin\theta_3 - l\sin\theta_2 -l\sin\theta_4 = 0
+	\end{cases}
+\label{eq:loopVettoriali}
+\end{equation}
+Elevando al quadrato:
+\begin{equation*}
+	\begin{cases}
+	\cos^2\theta_4 = (\cos\theta_1-\cos\theta_2-2\frac{d}{l})^2 + 2\cos\theta_3(\cos\theta_1-\cos\theta_2-2\frac{d}{l}) +\cos^2\theta_3 \\
+			\sin^2\theta_4 = (\sin\theta_1-\sin\theta_2)^2 + 2\sin\theta_3(\sin\theta_1-\sin\theta_2) +\sin^2\theta_3 
+	\end{cases}
+\end{equation*}
+Andando poi a sommare le equazioni troviamo:
+\begin{equation*}
+	(\cos\theta_1-\cos\theta_2-2\frac{d}{l})^2+ (\sin\theta_1-\sin\theta_2)^2+ 2\cos\theta_3(\cos\theta_1-\cos\theta_2-2\frac{d}{l})+ 2\sin\theta_3(\sin\theta_1-\sin\theta_2) = 0
+\end{equation*}
+Sono state introdotte equazioni parametriche in sostituzione di seno e coseno:
+\begin{equation*}
+	\cos\theta_3 = \frac{1-t^2}{1+t^2},\ \ \ \sin\theta_3 = \frac{2t}{1+t^2}, \ \ \ \  t =\tan\frac{\theta_3}{2}
+\end{equation*}
+Da questi possiamo ricavare un'equazione di secondo grado con incognita \textbf{t} dalla quale risolvendo con il delta positivo possiamo ricavare $\theta_3$ in funzione di $\theta_1,\theta_2$
+\\$\theta_3 =-2\cdot tg^{-1}$
 \begin{equation*}
     \begin{aligned}
-    2\cdot tg^{-1}\frac{\sqrt{ (\sin\theta_2 - \sin\theta_1) + \frac{1}{2}((\cos\theta_2 - \cos\theta_1 + \frac{18}{25})^2+(\frac{(\sin\theta_1-\sin\theta_2)^2}{2})^2+(\sin\theta_1-\sin\theta_2)^2)}}{(\cos\theta_2-\cos\theta_1)+\frac{(\cos\theta_2-\cos\theta_1+\frac{18}{25})^2}{2}+\frac{(\sin\theta_1-\sin\theta_2)^2}{2}+\frac{18}{25}}
+   \frac{\sqrt{ (\sin\theta_2 - \sin\theta_1) + \frac{1}{2}((\cos\theta_2 - \cos\theta_1 + \frac{18}{25})^2+(\frac{(\sin\theta_1-\sin\theta_2)^2}{2})^2+(\sin\theta_1-\sin\theta_2)^2)}}{(\cos\theta_2-\cos\theta_1)+\frac{(\cos\theta_2-\cos\theta_1+\frac{18}{25})^2}{2}+\frac{(\sin\theta_1-\sin\theta_2)^2}{2}+\frac{18}{25}}
     \end{aligned}
 \end{equation*}
-$\theta_4 =$
+Il ragionamento usato per ricavare $\theta_3$ si può applicare in maniera analoga per ottenere $\theta_4$ in funzione di $\theta_1, \theta_2$ come:
+\\$\theta_4 = -2\cdot tg^{-1}$
 \begin{equation*}
     \begin{aligned}
-    -2\cdot tg^{-1}\frac{\sqrt{(\sin\theta_2-\sin\theta_1)+(\frac{1}{2}(\cos\theta_2-\cos\theta_1+\frac{18}{25})^2+(\frac{(\sin\theta_1-\sin\theta_2)^2}{2})^2+(\sin\theta_1-\sin\theta_2)^2)}}
+\frac{\sqrt{(\sin\theta_2-\sin\theta_1)+(\frac{1}{2}(\cos\theta_2-\cos\theta_1+\frac{18}{25})^2+(\frac{(\sin\theta_1-\sin\theta_2)^2}{2})^2+(\sin\theta_1-\sin\theta_2)^2)}}
     {(\cos\theta_1 -\cos\theta_2)+\frac{(\cos\theta_2-\cos\theta_1+\frac{18}{25})^2}{2}+\frac{(\sin\theta_1-\sin\theta_2)^2}{2}+\frac{18}{25}}
     \end{aligned}
 \end{equation*}
@@ -95,8 +134,22 @@ Di conseguenza, alla fine della cinematica diretta siamo riusciti ad ottenere i 
 \end{equation*}
 tutti espressi in funzione di $\theta_1$ e $\theta_2$.
 \subsubsection{Velocità}\label{sec:CalcoloVelCin}
-Una volta ottenute le posizioni possiamo passare alle velocità, mediante la cinematica diretta di velocità possiamo ricavare le velocità sulle coordinate x e y dell'\textit{end-effector}. Possiamo infine definire una jacobiana che ci permette di trovare il rapporto appena espresso. 
-\\Per semplicità di calcoli, andiamo a definire:
+Una volta ottenute le posizioni possiamo passare al calcolo delle velocità, mediante la cinematica diretta possiamo ricavare le velocità sulle coordinate x e y dell'\textit{end-effector}. A partire dall'equazione \ref{eq:CinCirc} ed facendo la derivata rispetto al tempo troviamo:
+\begin{equation*}
+	\begin{cases}
+	\dot{x}(2x-2d-2l\cos\theta_2) +\dot{y}(2y-2l\sin\theta_2) + \dot{\theta}_2(2lx\sin\theta_2-2ly\cos\theta_2-2dl\sin\theta_2)= 0 \\
+	\dot{x}(2x+2d-2l\cos\theta_1) +\dot{y}(2y-2l\sin\theta_1) + \dot{\theta}_2(2lx\sin\theta_1-2ly\cos\theta_1+2dl\sin\theta_1)= 0
+	\end{cases}
+\end{equation*}
+ Possiamo infine definire una jacobiana che ci permette di trovare il rapporto appena espresso. Dalla prima equazione ricaviamo $\dot{x}$ come:
+ \begin{equation*}
+ 	\dot{x} = \frac{-\dot{y}(2y-2l\sin\theta_2) -\dot{\theta}_2(2lx\sin\theta_2-2ly\cos\theta_2-2dl\sin\theta_2)}{2x-2d-2l\cos\theta_2}
+ \end{equation*}
+Sostituendo $\dot{x}$ nella seconda equazione possiamo ricavare $\dot{y}$.
+\begin{equation*}
+	\dot{y} = \frac{N_{21}}{D_2}\dot{\theta_1} + \frac{N_{22}}{D_2}\dot{\theta_2}
+\end{equation*}
+\\Dove:
 \begin{equation*}
     N_{21} = -l\sin\theta_1 (x+d-l\cdot \cos\theta_1 + l\cdot \cos\theta_1 (y-l\sin\theta_1))
 \end{equation*}
@@ -106,12 +159,26 @@ Una volta ottenute le posizioni possiamo passare alle velocità, mediante la cin
 \begin{equation*}
  D_2 = \frac{y-l\sin\theta_2 (x+d-l\cos\theta_1)}{x-d-l\cos\theta_2}
 \end{equation*}
-Una volta definiti e calcolati questi valori possiamo andare a costruire i termini della jacobiana:  
+Sostituendo $\dot{y}$ nella prima equazione otteniamo 
 \begin{equation*}
-    J_{11} = -\frac{y-l\sin\theta_2}{x-d-l\cos\theta_2}\cdot J_{21}
+	\dot{x} = \frac{N_{11}}{D_1} \dot{\theta_1} + \frac{N_{12}}{D_1}\dot{\theta_2}
+\end{equation*}
+Dove:
+\begin{equation*}
+	N_{11} = y-l\sin\theta_2 \cdot N_{21}
 \end{equation*}
 \begin{equation*}
-    J_{12} = -\frac{y-l\sin\theta_2}{x-d-l\cos\theta_2}\cdot J_{22} - l\sin\theta_2 + \frac{y-l\sin\theta_2}{x-d-l\cos\theta_2}\cdot l\cos\theta_2
+	N_{12} = -y+l\sin\theta_2 \cdot N_{22} -l\sin\theta_2(x-d-l\cos\theta_2) + l\cos\theta_2(y-l\sin\theta_2)
+\end{equation*}
+\begin{equation*}
+	D_1 = (x-d-l\cos\theta_2)D_2
+\end{equation*}
+Una volta definiti e calcolati questi valori possiamo andare a costruire i termini della jacobiana:   
+\begin{equation*}
+    J_{11} = \frac{N_{11}}{D_1}
+\end{equation*}
+\begin{equation*}
+    J_{12} = \frac{N_{12}}{D_1}
 \end{equation*}
 \begin{equation*}
     J_{21} = \frac{N_{21}}{D_2}
@@ -152,7 +219,15 @@ Anche per quanto riguarda l'accelerazione il processo  simile a quanto visto nei
 \ddot{\theta_1} \\ \ddot{\theta_2}
 \end{bmatrix}
 \end{equation}
-Andando a svolgere le derivate ed i calcoli prima di poter trovare le accelerazioni definiamo: 
+In questa equazione l'unico elemento non noto è $\dot{J}$ che è la derivata rispetto al tempo dello jacobiano J.
+\begin{equation*}
+	\dot{J} = \begin{bmatrix}
+		\dot{J}_{11} & \dot{J}_{12} \\
+	\dot{J}_{21} & \dot{J}_{22}
+	\end{bmatrix}
+\end{equation*}
+Analiticamente essendo le derivate troppo lunghe ed onerose sono state trovate mediante il calcolo simbolico fornito da matlab, successivamente state confrontate con le derivate numeriche per verificarne la correttezza. 
+\\Presentiamo ora i risultati semplificati relativi alle equazioni delle accelerazioni, introducendo i parametri:
 \begin{equation*}
 \begin{aligned}
     A_{acc} = \dot{x}^2 + 2l\sin\theta_2\dot{x}\dot{\theta_2}+(l\sin\theta_2\dot{\theta_2})^2 + (x-d-l\cos\theta_2)(l\cos\theta_2\dot{\theta_2}+l\sin\theta_2\ddot{\theta_2}) +\\ \dot{y}^2-2l\cos\theta_2\dot{y}\dot{\theta_2}+(l\cos\theta_2\dot{\theta_2})^2+(y-l\sin\theta_2)(l\sin\theta_2\dot{\theta_2}^2-l\cos\theta_2\ddot{\theta_2})
@@ -164,19 +239,27 @@ Andando a svolgere le derivate ed i calcoli prima di poter trovare le accelerazi
     \\ \dot{y}^2 -2l\cos\theta_1 \dot{y}\dot{\theta_1}+(l\cos\theta_1\dot{\theta_1})^2+(y-l\sin\theta_1)(l\sin\theta_1\dot{\theta_1}^2-l\cos\theta_1\ddot{\theta_1})
     \end{aligned}
 \end{equation*}
-Infine, andiamo a trovare $\ddot{P} = [\ddot{x},\ddot{y}]$, nel seguente modo:
+Infine, troviamo $\ddot{P} = [\ddot{x},\ddot{y}]$, nel seguente modo:
 \begin{equation}
 	\ddot{x} = - \frac{\ddot{y}(y-l\sin\theta_1)}{x+d-l\cos\theta_1}
 \end{equation}
 
 \begin{equation}
+	\large
      \ddot{y} = \frac{\frac{B_{acc}\cdot(x-d-l\cos\theta_2)}{x+dl\cos\theta_1-A_{acc}}}{y-l\sin\theta_2-\frac{x-d-l\cos\theta_2}{(x+d-l\cos\theta_1)\cdot(y-l\sin\theta_1)}}
 \end{equation}
 Alla fine della cinematica diretta, a partire dai vettori delle posizioni, velocità ed accelerazioni ($\theta_1$,$\theta_2$, $\dot{\theta_1}$, $\dot{\theta_2}$, $\ddot{\theta_1}$,$\ddot{\theta_2}$) siamo riusciti ad ottenere le posizioni, velocità ed accelerazioni riferite all'\textit{end-effector}.
 \subsection{Cinematica inversa}
 Il problema della cinematica inversa consiste nel ricavare i valori degli angoli da assegnare ai parametri del robot per riuscire a seguire una determinata legge di moto o traiettoria a partire dalla posizione alle estremità, in questo caso l'end-effector. Anche l'analisi della cinematica inversa è stata fatta per posizione, velocità ed accelerazione.
 \subsubsection{Posizione}
-Nella cinematica inversa di posizione, a partire dalla posizione dell'end-effector $P = [x,y]$ andiamo a ricavare $\theta_1$ e $\theta_2$. Definiamo i seguenti parametri:
+A partire dall'equazione \ref{eq:CinCirc2}, raccogliendo i termini rispetto a $\theta_1$ e $\theta_2$ troviamo:
+\begin{equation*}
+	\begin{bmatrix}
+	p\cos\theta_1 +e\sin\theta_1 = f \\
+	a\cos\theta_2 +b\sin\theta_2 = c
+	\end{bmatrix}
+\end{equation*}
+Dove:
 \begin{equation*}
     p = 2dl + 2xl
 \end{equation*}
@@ -197,15 +280,23 @@ che serviranno per il calcolo di $\theta_1$, e:
 	c = x^2+d^2+y^2-2xd
 \end{equation*}
 che serviranno per il calcolo di $\theta_2$. 
-\\Procediamo quindi con i calcoli, andando a trovare le soluzioni: 
+\\Introducendo le equazioni parametriche per $\theta_1$:
+\begin{equation*}
+	\cos\theta_1 = \frac{1-t^2}{1+t^2}, \ \ \ \sin\theta_1 = \frac{2t}{1+t^2}, \ \ \ t =\tan \frac{\theta_1}{2}
+\end{equation*}
+ricaviamo la seguente equazione di secondo grado:
+\begin{equation*}
+	t^2(p+f) - 2et+f-p = 0\rightarrow t_{1,2} = \frac{e \pm \sqrt{p^2+e^2-f^2}}{p+f}
+\end{equation*}
+ritornando alla variabile originale $t\rightarrow \theta_1$ troviamo:
 \begin{equation}
     \theta_1 = 2\arctan\frac{e+\sqrt{p^2+e^2-f^2}}{p+f}
 \end{equation}
-e
+in modo analogo si può applicare lo stesso ragionamento per $\theta_2$                         
 \begin{equation}
     \theta_2 = 2\arctan\frac{b-\sqrt{a^2+b^2-c^2}}{a+c}
 \end{equation}
-Si può notare che sia per $\theta_1$ che per $\theta_2$ la somma di termini sotto la radice quadrata può dare un risultato reale o un risultato complesso, in caso che esca un risultato reale non c'è alcun problema, ma nel caso in cui $p^2 + e^2 -f^2 \le 0$ oppure $a^2 + b^2 -c^2 \le 0$ potrebbe verificarsi un caso di singolarità\footnote{I punti di singolarità sono punti nei quali il manipolatore non si comporta in modo standard, potrebbero causarsi anche rotture, verranno descritti in modo approfondito nel capitolo riguardante la dinamica}.
+Si può notare che sia per $\theta_1$ che per $\theta_2$ la somma di termini sotto la radice quadrata può dare un risultato reale o un risultato complesso, in caso che esca un risultato reale non c'è alcun problema, ma nel caso in cui $p^2 + e^2 -f^2 \le 0$ oppure $a^2 + b^2 -c^2 \le 0$ potrebbe verificarsi un caso di posizionamento non raggiungibile fisicamente.
 \subsubsection{Velocità}
 Per quanto riguarda il calcolo della cinematica inversa in velocità abbiamo bisogno delle velocità $\dot{P} = [\dot{x},\dot{y}]^T$ e della Jacobiana che lega $\theta_1$ e $\theta_2$. Prendiamo l'equazione \ref{eq:J12} andiamo poi ad invertirla e ricaviamo le velocità $\dot{\theta_1}$ e $\dot{\theta_2}$ nel seguente modo:
 \begin{equation}
@@ -216,15 +307,21 @@ Con
 \begin{equation}
 	J^{-1} = \frac{1}{J_{11}J_{22}-J_{12}J_{22}
 	}\begin{bmatrix}
-		J_{22} & -J_{12} \\ J_{21} & J_{11}
+		J_{22} & -J_{12} \\ -J_{21} & J_{11}
 \end{bmatrix}
 \end{equation} 
+In particolare nel caso in cui il determinante si annulla lo jacobiano non è invertibile, di conseguenza siamo in presenza di un caso singolare\footnote{I punti di singolarità sono punti nei quali il manipolatore non si comporta in modo standard, potrebbero originarsi rotture, verranno descritti in modo approfondito nel capitolo riguardante l'analisi cinetostatica}.
 Siamo quindi riusciti ad ottenere le velocità degli angoli a partire dalle velocità all'end-effector.
 \subsubsection{Accelerazione}
-Anche per le accelerazioni la logica di funzionamento è la medesima, volendo trovare $\ddot{\theta_1}$ e $\ddot{\theta_2}$ a partire da $\ddot{P} = [\ddot{x},\ddot{y}]^T$ implica che dobbiamo trovare la soluzione a:
+Anche per le accelerazioni la logica di funzionamento è la medesima, volendo trovare $\ddot{\theta_1}$ e $\ddot{\theta_2}$ a partire da $\ddot{P} = [\ddot{x},\ddot{y}]^T$ implica che dobbiamo invertire l'equazione:
+\begin{equation*}
+	\ddot{P} = J\ddot{\Theta} + \dot{J}\dot{\Theta}
+\end{equation*}
+ottenendo quindi:
 \begin{equation}
 	\begin{bmatrix}
 		\ddot{\theta_1} \\ \ddot{\theta_2}
-	\end{bmatrix} = 
-	\dot{J^{-1}}\dot{P} + J^{-1}\ddot{P} = J^{-1}(\ddot{P}-\dot{J}\dot{\Theta})
+	\end{bmatrix} =  J^{-1}\bigg(\begin{bmatrix} \ddot{x} \\ \ddot{y} \end{bmatrix}-\dot{J}\begin{bmatrix}
+	\dot{\theta_1} \\ \dot{\theta_2}
+\end{bmatrix}\bigg)
 \end{equation}

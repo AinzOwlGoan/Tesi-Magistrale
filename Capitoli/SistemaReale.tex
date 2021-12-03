@@ -382,7 +382,7 @@ Possiamo scrivere l'azione combinata dei due controllori considerando il rapport
 \begin{equation}
 \tau_v = K_P(1+sT_D)
 \end{equation}
-con $T_D = \frac{K_D}{K_P})$. In caso di ingresso definito come uno scalino, la presenza del termine derivativo va ad introdurre uno zero e ad aumentare il coefficiente di s, andando a ridurre le oscillazioni e di conseguenza stabilizzando il sistema. Andiamo ora a vedere l'implementazione sul manipolatore del controllore PD:
+con $T_D = \frac{K_D}{K_P}$. In caso di ingresso definito come uno scalino, la presenza del termine derivativo va ad introdurre uno zero e ad aumentare il coefficiente di s, andando a ridurre le oscillazioni e di conseguenza stabilizzando il sistema.\\ Andiamo ora a vedere l'implementazione sul manipolatore del controllore PD:
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.35]{Immagini/Controllori/Vite}
@@ -390,8 +390,37 @@ con $T_D = \frac{K_D}{K_P})$. In caso di ingresso definito come uno scalino, la 
 		\label{fig:PDVite}
 	\end{center}
 \end{figure}
-A partire da una legge di moto per entrambi i motori che fornisce quattro set point, abbiamo: una prima fase di raccolta dei dati nei quali si prendono le posizioni e velocità dei motori della vite, essendo i motori connessi a riduttori, ed operando sui giunti abbiamo un blocco che si occupa di fare la conversione; una volta fatta la conversione vi è la necessità di effettuare la cinematica diretta per poter passare dagli angoli alle coordinate dell'asse z. In seguito verrà fatta una differenza tra le posizioni e velocità ottenute con la cinematica e quelle del \textit{set-point}; gli errori verranno poi moltiplicati per $K_P$ (posizione) e $K_D$ (velocità) per ottenere i valori della legge di controllo da assegnare ai motori.
-\\INSCERISCI CONFRONTI ETC
+\\A partire da una legge di moto per entrambi i motori che fornisce quattro set point, abbiamo: una prima fase di raccolta dei dati nei quali si prendono le posizioni e velocità dei motori della vite, essendo i motori connessi a riduttori, ed operando sui giunti abbiamo un blocco che si occupa di fare la conversione; una volta fatta la conversione vi è la necessità di effettuare la cinematica diretta per poter passare dagli angoli alle coordinate dell'asse z. In seguito verrà fatta una differenza tra le posizioni e velocità ottenute con la cinematica e quelle del \textit{set-point}; gli errori verranno poi moltiplicati per $K_P$ (posizione) e $K_D$ (velocità) per ottenere i valori della legge di controllo da assegnare ai motori.
+Andiamo ora a presentare il risultato di una simulazione effettuata implementando il controllore PD, la traiettoria eseguita comprendeva la discesa della vite in 5 secondi di 5 centimetri ed un successiva rotazione [SISTEMA]
+\begin{figure}
+	\begin{subfigure}{.45\textwidth}
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/TrasVitePD}  
+		\caption{Traslazione vs riferimento}
+		\label{fig:sub-v1}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/RotVitePD}  
+		\caption{Rotazione vs riferimento}
+		\label{fig:sub-v2}
+	\end{subfigure}
+	\caption{Andamento vite rispetto a riferimento}
+	\label{fig:ViteMovimenti}
+\end{figure}
+Possiamo da queste due curve andare a valutare gli errori tra riferimento e posizione attuale:
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTrasVite}  
+		\caption{Errore traslazione}
+		\label{fig:sub-ert}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreRotVite}  
+		\caption{Errore rotazione}
+		\label{fig:sub-err}
+	\end{subfigure}
+	\caption{Errori vite controllo PD}
+	\label{fig:ErrVite}
+\end{figure}
 \subsection{Controllo braccia}
 Questa sottosezione si pone come obiettivo l'introduzione di approcci di controllo noti in letteratura e applicarli ai link motorizzati del manipolatore; in particolare andando ad analizzare il loro funzionamento a livello teorico, la loro implementazione pratica ed i risultati ottenuti, cercando quindi il controllore migliore. Tutte le tipologie di controllo introdotte saranno di tipo centralizzato, gli algoritmi di questa tipologia sfruttano una conoscenza più approfondita del modello dinamica del manipolatore in modo tale da compensare i termini di accoppiamento non lineari, verranno quindi introdotte coppie di compensazione per i termini NL, inoltre, qualsiasi incertezza della struttura e qualunque imprecisione nella misura della posizione daranno origine ad una perdita di accuratezza e quindi a problemi di controllo. %A differenza dei controllori della vite, la metodologia utilizzata per la spiegazione teorica in questo caso non includerà le funzioni di trasferimento, verterà però su metodi di Lyapunov e sui concetti di equilibrio.
 \subsubsection{Controllo proporzionale derivativo}
@@ -872,16 +901,30 @@ Avendo introdotto e verificato le principali tipologie di controllo centralizzat
 Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a prevalere. Di conseguenza si è scelto questo come controllore definitivo e sono stati analizzati altri andamenti con leggi di moto diverse per valutare il comportamento del controllore.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.4]{Immagini/Traiettorie/QuadratoDinamicaInversa}
+		\includegraphics[scale=0.45]{Immagini/Traiettorie/QuadratoDinamicaInversa}
 		\caption{Quadrato controllo dinamica inversa}
 		\label{fig:quadID}
 	\end{center}
 \end{figure}
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.4]{Immagini/Traiettorie/PatternDinamicaInversa}
+		\includegraphics[scale=0.45]{Immagini/Traiettorie/PatternDinamicaInversa}
 		\caption{Pattern controllo dinamica inversa}
 		\label{fig:patternID}
 	\end{center}
 \end{figure}
-\subsubsection{Filtro di Kalman}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.45]{Immagini/Traiettorie/SpiraleID}
+		\caption{Spirale controllo dinamica inversa}
+		\label{fig:SpiraleID}
+	\end{center}
+\end{figure}
+\subsection{Problema della velocità}
+Implementando e studiando le tecniche di controllo centralizzato, si può vedere chiaramente come in tutte queste abbiamo bisogno della velocità $\dot{q}$. Ci si è quindi concentrati in particolare su di essa, notando che la velocità ricavata dagli encoder soffriva di rumore, questa situazione poteva essere critica in quanto un parametro "rumoroso" da origine ad una legge di moto piena di vibrazioni e di conseguenza non è possibile alzare il contributo $K_d$ in maniera adeguata. Proprio per questo si è scelto di ricercare un metodo che potesse filtrare la velocità o predirla in modo da avere un risultato migliore da poter dare in ingresso al manipolatore.
+\subsubsection*{Filtro primo ordine}
+\addcontentsline{toc}{subsubsection}{Filtro primo ordine}
+\subsubsection*{Filtro secondo ordine}
+\addcontentsline{toc}{subsubsection}{Filtro secondo ordine}
+\subsubsection*{Filtro di Kalman}
+\addcontentsline{toc}{subsubsection}{Filtro di Kalman}
