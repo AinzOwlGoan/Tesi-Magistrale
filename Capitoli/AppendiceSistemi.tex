@@ -1,1 +1,48 @@
-\section{Sistemi dinamici}
+\section{Cenni sistemi dinamici}
+In questa sezione dell'appendice  andremo a considerare un sistema non lineare come quello del manipolatore e analizzeremo la stabilità dell'equilibrio a tempo discreto.
+\\Dato un sistema dinamico, a dimensione finita, stazionario, di tipologia MIMO (\textit{multiple input multiple output}), non lineare e a tempo discreto possiamo descriverlo mediante l'equazione:
+\begin{equation}
+\xi(k+1) = f(\xi(k),u(k))
+\end{equation}
+Il sistema può andare ad evolversi in due stati:
+\begin{itemize}
+\item Movimento d'equilibrio, chiamato anche movimento nominale: $\tilde{\xi}(k) = \overline{\xi}(k)$, si ottiene applicando l'ingresso nominale di equilibrio $\tilde{u}(k) = \overline{u}(k)$ al sistema posto nello stato iniziale $\tilde{\xi}(k_0 = 0)=\overline{\xi}$ in questo modo il movimento soddisfa
+\begin{equation}
+\tilde{\xi}(k+1) = \overline{\xi} = f(\overline{\xi},\overline{u})
+\end{equation}
+\item Ingresso perturbato $\xi(k)$ ottenuto applicando la stessa tipologia di ingresso nominale però in uno stato differente $\xi_0 \neq \overline{\xi}$, allora il movimento soddisfa il seguente sistema di equazioni:
+\begin{equation}
+\begin{cases}
+\xi(k+1) = f(\xi(k),u(k)) \\
+\xi(k_0=0) = \xi_0
+\end{cases}
+\end{equation}
+\end{itemize}
+Possiamo andare a definire la perturbazione sullo stato del sistema come la differenza fra i due movimenti in particolare possiamo esprimerla come:
+\begin{equation}
+\delta \xi(k) = \xi(k)-\overline{\xi} \in \mathbb{R}^n 
+\end{equation}
+procedendo in maniera incrementale troviamo:
+\begin{equation}
+\delta \xi(k+1) = \xi(k+1)+\overline{\xi} = f(\xi(k),\overline{u})-\overline{\xi} = f(\overline{\xi}+\delta\xi(k),\overline{u})-\overline{\xi}
+\end{equation}
+risulta essere non lineare, e possiamo trovare la condizione iniziale come:
+\begin{equation*} 
+\delta \xi(k_0 = 0) = \xi_0 -\overline{\xi} \rightarrow \delta \xi \neq 0
+\end{equation*}
+\\La soluzione all'equazione non è facile da trovare in quanto dipende da un punto preciso chiamato punto di equilibrio, identificato da $(\overline{\xi},\overline{u})$; in caso di sistemi non lineari stazionari, la proprietà di stabilità riguarda esclusivamente un intorno dello stato di equilibrio considerato e non l'intero sistema.
+\subsection{Stabilità asintotica}
+A partire dallo stato di equilibrio $\xi$ del sistema dinamico a tempo discreto visto precedentemente, la condizione sufficiente perché risulti asintoticamente stabile è che 
+\begin{equation}
+\forall i : |\lambda_i(A)| < 1
+\end{equation}
+Con $A = \frac{\partial f(\xi,\overline{u})}{\partial \xi}\bigg|_{\xi = \overline{\xi}}$
+\\In questo caso esiste un intorno dell'equilibrio ($\Psi_{\overline{\xi}}$) tale per cui, data qualunque perturbazione iniziale $\delta \xi (k) \in \Psi_{\overline{\xi}}$ la perturbazione sullo stato $\delta \xi (k)$ rimane limitata nel tempo ed asintoticamente tende a zero. 
+\begin{equation}
+\delta \xi (k+1) = f(\overline{\xi}+\delta \xi (k),\overline{u}) = A\delta\xi(k)+h(\delta\xi(k))
+\end{equation}
+Da tutto questo possiamo derivare anche la condizione di instabilità, esprimibile come:
+\begin{equation}
+\exists i : |\lambda_i(A)|>1
+\end{equation}
+con A definita come prima. In questo caso, non esiste alcun introno dell'equilibrio che fa rimanere la perturbazione dello stato limitata a partire da una perturbazione iniziale $\delta \xi_0 \in \Psi_{\overline{\xi}}$. 

@@ -58,13 +58,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Punti di singolarit\IeC {\`a}}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Primo e secondo caso}{29}% 
+\contentsline {subsubsection}{Primo e secondo caso}{30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Terzo caso}{30}% 
+\contentsline {subsubsection}{Terzo caso}{31}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Terzo e quarto caso}{32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Manipolabilit\IeC {\`a}}{32}% 
+\contentsline {subsection}{\numberline {4.2}Manipolabilit\IeC {\`a}}{33}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3}Workspace}{34}% 
 \defcounter {refsection}{0}\relax 
@@ -168,4 +168,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.2}Prerequisiti dinamica}{91}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendice \numberline {B}Sistemi dinamici}{93}% 
+\contentsline {section}{Appendice \numberline {B}Cenni sistemi dinamici}{93}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.1}Stabilit\IeC {\`a} asintotica}{94}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Appendice \numberline {C}Quadro elettrico}{95}% 

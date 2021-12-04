@@ -17,6 +17,7 @@
 \usepackage{multicol}
 \usepackage[titletoc]{appendix}
 \usepackage{biblatex}
+\usepackage{pdfpages}
 \addbibresource{Bibliografia}
 
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
@@ -66,7 +67,7 @@
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}
-\include{./Capitoli/Introduzione}
+\include{Capitoli/Introduzione}
 \include{Capitoli/Cinematica}
 \include{Capitoli/Dinamica}
 \include{Capitoli/Cinetostatica}
@@ -85,8 +86,9 @@
 \thispagestyle{plain} % empty
 \mbox{}
 \begin{appendices}
-\include{./Capitoli/AppendiceDinamica}
-\include{./Capitoli/AppendiceSistemi}
+\include{Capitoli/AppendiceDinamica}
+\include{Capitoli/AppendiceSistemi}
+\include{Capitoli/AppendiceQuadro}
 \end{appendices}
 \printbibliography
 \listoffigures
