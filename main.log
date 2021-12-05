@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  4 DEC 2021 09:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  5 DEC 2021 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1757,13 +1757,16 @@ agini/Traiettorie/SpiraleID.png (PNG copy)>]
 ]
 \openout2 = `Capitoli/AppendiceDinamica.aux'.
 
- (./Capitoli/AppendiceDinamica.tex [91
+ (./Capitoli/AppendiceDinamica.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]) [92]
+ [91
+
+])
+[92]
 \openout2 = `Capitoli/AppendiceSistemi.aux'.
 
-
-(./Capitoli/AppendiceSistemi.tex
+ (./Capitoli/AppendiceSistemi.tex
 Underfull \vbox (badness 3229) has occurred while \output is active []
 
  [93
@@ -2030,18 +2033,15 @@ LaTeX Warning: Empty bibliography on input line 93.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14526 strings out of 492616
- 251591 string characters out of 6129482
- 709348 words of memory out of 5000000
- 18042 multiletter control sequences out of 15000+600000
+ 14527 strings out of 492616
+ 251612 string characters out of 6129482
+ 709359 words of memory out of 5000000
+ 18043 multiletter control sequences out of 15000+600000
  17832 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,19n,51p,1762b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2063,7 +2063,7 @@ e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (113 pages, 4933660 bytes).
+Output written on main.pdf (113 pages, 4936228 bytes).
 PDF statistics:
  625 PDF objects out of 1000 (max. 8388607)
  316 compressed objects within 4 object streams

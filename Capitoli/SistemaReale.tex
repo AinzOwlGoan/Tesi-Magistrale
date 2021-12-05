@@ -921,10 +921,16 @@ Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a pr
 	\end{center}
 \end{figure}
 \subsection{Problema della velocità}
-Implementando e studiando le tecniche di controllo centralizzato, si può vedere chiaramente come in tutte queste abbiamo bisogno della velocità $\dot{q}$. Ci si è quindi concentrati in particolare su di essa, notando che la velocità ricavata dagli encoder soffriva di rumore, questa situazione poteva essere critica in quanto un parametro "rumoroso" da origine ad una legge di moto piena di vibrazioni e di conseguenza non è possibile alzare il contributo $K_d$ in maniera adeguata. Proprio per questo si è scelto di ricercare un metodo che potesse filtrare la velocità o predirla in modo da avere un risultato migliore da poter dare in ingresso al manipolatore.
+Implementando e studiando le tecniche di controllo centralizzato, si può vedere chiaramente come in tutte queste abbiamo bisogno della velocità $\dot{q}$. Ci si è quindi concentrati in particolare su di essa, notando che la velocità ricavata dagli encoder soffriva di rumore, questa situazione poteva essere critica in quanto un parametro "rumoroso" da origine ad una legge di moto vibrante e di conseguenza non è possibile alzare il contributo $K_d$ in maniera adeguata in quanto andrebbero ad aumentare le vibrazioni. Proprio per questo si è scelto di ricercare un metodo che potesse filtrare la velocità o predirla in modo da avere un risultato migliore da poter dare in ingresso al manipolatore.
 \subsubsection*{Filtro primo ordine}
 \addcontentsline{toc}{subsubsection}{Filtro primo ordine}
+L'idea iniziale è stata quella di implementare un filtro del primo ordine passa basso, con funzione di trasferimento:
+\begin{equation}
+T(s) = \frac{a_0}{s+\frac{b_0}{b_1}} = G_0 \frac{P_0}{s+P_0}
+\end{equation}
+In questa tipologia di filtri ci sarà un polo che deve essere reale e negativo per garantire la stabilità (possiamo vedere questa condizione nell'appendice \ref{Appendice:stabilita}. Andando ad analizzare in frequenza l'andamento del filtro $s=j\omega$ si trova che a basse frequenze l'input viene fatto passare completamente, mentre ad alte frequenze viene tagliato. INSERISCI FOTO E COMMENTI
 \subsubsection*{Filtro secondo ordine}
 \addcontentsline{toc}{subsubsection}{Filtro secondo ordine}
+
 \subsubsection*{Filtro di Kalman}
 \addcontentsline{toc}{subsubsection}{Filtro di Kalman}

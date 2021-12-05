@@ -1,12 +1,37 @@
 \section{Formule estese}
-In riferimento al capitolo della dinamica andiamo ora a vedere le formule per esteso:
+In riferimento al capitolo della cinematica e della dinamica andiamo ora a vedere le formule per esteso:
 \subsection{Formule cinematica diretta accelerazione}
+Andiamo a concentrarci sulle formule viste nel capitolo della cinematica diretta di accelerazione. [metti riferimento]
 \begin{equation}
-\frac{(l\cos\theta_1(y - l\sin\theta_1) - l\sin\theta_1(d + x - l\cos\theta_1))(\dot{y} - l\cos\theta_2\dot{\theta_2})}{S-FINISCI}
+\dot{J}_{11} = A_{11} - B_{11} - C_{11} - D_{11}
 \end{equation}
+Andiamo ora a definire i parametri: 
 \begin{equation*}
-S = \frac{(d - x + l\cos\theta_2)(y - l\sin\theta_1 + (y - l\sin\theta_2)(d + x - l\cos\theta_1)}{d - x + l\cos\theta_2}
+A_{11} = \frac{l(y-l\sin\theta_{2})(d\sin\theta_{1}-y\cos\theta _{1}+x\sin\theta _{1})\cdot (\dot{y}-l\dot{\theta_1}\cos\theta _{1}+A_{1.1.2})}{(d-x+l\cos\theta_{2})(y-l\sin\theta_{1}+\frac{(y-l\sin\theta _{2})(d+x-l\cos\theta _{1})}{d-x+l\cos\theta _{2}})^2}
 \end{equation*}
+\begin{equation*}
+\begin{split}
+A_{1.1.2} = \frac{(y-l\sin\theta_{2})(\dot{x}+l\dot{\theta_1}\sin\theta_{1})}{d-x+l\cos\theta_{2}}+\frac{\dot{y}-l\dot{\theta_2}\cos\theta_{2}(d+x-l\cos\theta_{1})}{d-x+l\cos\theta_{2}}+  \\
++ \frac{(y-l\sin\theta_{2})(\dot{x}+l\dot{\theta}_{2}\sin\theta_{2})(d+x-l\cos\theta_{1})}{{(d-x+l\cos\theta_{2})}^2}
+\end{split}
+\end{equation*}
+\begin{equation*}
+B_{11} =\frac{l(y-l\sin\theta_{2})(\dot{x}\sin\theta_{1}-\dot{y}\cos\theta_{1}+d\dot{\theta_1}\cos\theta_{1}+\dot{\theta_1}x\cos\theta_{1}+\dot{\theta_{1}}y\sin\theta _{1})}{(d-x+l\cos\theta_{2})\cdot(y-l\sin\theta_{1}+\frac{(y-l\sin\theta_{2})(d+x-l\cos\theta_{1})}{d-x+l\cos\theta_{2}})}
+\end{equation*}
+\begin{equation*}
+C_{11} = \frac{l(\dot{y}-l\dot{\theta_{2}}\cos\theta_{2})(d\sin\theta_{1}
+    -y\cos\theta_{1}+x\sin\theta_{1})}{(d-x+l\cos\theta_{2})(y-l\sin\theta_{1}+\frac{(y-l\sin\theta_{2})
+    (d+x-l\cos\theta_{1})}{d-x+l\cos\theta_{2}})}
+\end{equation*}
+\begin{equation*}
+D_{11} = \frac{l(y-l\sin\theta_{2})(\dot{x}+l\dot{\theta_2}\sin\theta_{2})
+    (d\sin\theta_{1}-y\cos\theta_{1}+x\sin\theta_{1})}{(d-x+l\cos\theta_{2})^2(y-l\sin\theta_{1}+\frac{(y-l\sin\theta_{2})
+    (d+x-l\cos\theta_{1})}{d-x+l\cos\theta _{2}})}
+\end{equation*}
+\begin{equation}
+\dot{J}_{21} =\frac{l(d\sin\theta_{1}-y\cos\theta_{1}+x\sin\theta_{1})(\dot{y}-
+ l\dot{\theta_1}\cos\theta_{1}+A_{1.1.2}}{sa}
+\end{equation}
 \subsection{Prerequisiti dinamica}\label{appendice:t34punto}
 Le matrici importati sono $\dot{J}_3$ e $\dot{J}_4$ che andiamo a riprendere ora come:
 \begin{equation}
