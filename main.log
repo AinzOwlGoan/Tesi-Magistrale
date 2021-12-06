@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  5 DEC 2021 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  6 DEC 2021 07:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1757,27 +1757,32 @@ agini/Traiettorie/SpiraleID.png (PNG copy)>]
 ]
 \openout2 = `Capitoli/AppendiceDinamica.aux'.
 
- (./Capitoli/AppendiceDinamica.tex
+ (./Capitoli/AppendiceDinamica.tex [91
+
+]
+Overfull \hbox (27.07233pt too wide) detected at line 57
+[]
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [91
-
-])
-[92]
+ [92])
+[93]
 \openout2 = `Capitoli/AppendiceSistemi.aux'.
 
  (./Capitoli/AppendiceSistemi.tex
 Underfull \vbox (badness 3229) has occurred while \output is active []
 
- [93
+ [94
 
 
 ])
-[94]
+[95]
 \openout2 = `Capitoli/AppendiceQuadro.aux'.
 
  (./Capitoli/AppendiceQuadro.tex
-<quadro.pdf, id=474, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=478, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 1.
@@ -1786,7 +1791,7 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 1.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<quadro.pdf, id=477, page=1, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=481, page=1, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 1>
 Package pdftex.def Info: quadro.pdf , page1 used on input line 1.
@@ -1807,7 +1812,7 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 1>
 Package pdftex.def Info: quadro.pdf , page1 used on input line 1.
 (pdftex.def)             Requested size: 447.92233pt x 633.86658pt.
- [95
+ [96
 
 
  <./quadro.pdf, page is rotated 180 degrees>]
@@ -1819,7 +1824,7 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 2.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<quadro.pdf, id=496, page=2, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=499, page=2, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 2>
 Package pdftex.def Info: quadro.pdf , page2 used on input line 2.
@@ -1840,36 +1845,36 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 2>
 Package pdftex.def Info: quadro.pdf , page2 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [96 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=500, page=3, 597.23125pt x 845.1575pt>
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 3>
-Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 3>
-Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 3>
-Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [97 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=508, page=4, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=503, page=3, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 4>
-Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
+<use quadro.pdf, page 3>
+Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 4>
-Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
+<use quadro.pdf, page 3>
+Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 4>
-Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
+<use quadro.pdf, page 3>
+Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [98 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=512, page=5, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=511, page=4, 597.23125pt x 845.1575pt>
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 4>
+Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 4>
+Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 4>
+Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+ [99 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=515, page=5, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 5>
 Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
@@ -1883,8 +1888,8 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 
-[99 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=516, page=6, 597.23125pt x 845.1575pt>
+[100 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=519, page=6, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 6>
 Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
@@ -1896,107 +1901,107 @@ Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 6>
 Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [100 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=520, page=7, 597.23125pt x 845.1575pt>
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 7>
-Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 7>
-Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 7>
-Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [101 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=525, page=8, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=524, page=7, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 8>
-Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
+<use quadro.pdf, page 7>
+Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 8>
-Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
+<use quadro.pdf, page 7>
+Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 8>
-Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
+<use quadro.pdf, page 7>
+Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [102 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=529, page=9, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=528, page=8, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 9>
-Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
+<use quadro.pdf, page 8>
+Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 9>
-Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
+<use quadro.pdf, page 8>
+Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 9>
-Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
+<use quadro.pdf, page 8>
+Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [103 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=533, page=10, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=532, page=9, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 10>
-Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+<use quadro.pdf, page 9>
+Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 10>
-Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+<use quadro.pdf, page 9>
+Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 10>
-Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+<use quadro.pdf, page 9>
+Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [104 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=537, page=11, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=536, page=10, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 11>
-Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+<use quadro.pdf, page 10>
+Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 11>
-Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+<use quadro.pdf, page 10>
+Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 11>
-Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+<use quadro.pdf, page 10>
+Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [105 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=541, page=12, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=540, page=11, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 12>
-Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+<use quadro.pdf, page 11>
+Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 12>
-Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+<use quadro.pdf, page 11>
+Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 12>
-Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+<use quadro.pdf, page 11>
+Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [106 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=545, page=13, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=544, page=12, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 13>
-Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+<use quadro.pdf, page 12>
+Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 13>
-Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+<use quadro.pdf, page 12>
+Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 13>
-Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+<use quadro.pdf, page 12>
+Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [107 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=550, page=14, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=549, page=13, 597.23125pt x 845.1575pt>
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 13>
+Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 13>
+Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 13>
+Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+ [108 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=553, page=14, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 14>
 Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
@@ -2009,13 +2014,13 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 14>
 Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [108 <./quadro.pdf, page is rotated 180 degrees>])
+ [109 <./quadro.pdf, page is rotated 180 degrees>])
 
 LaTeX Warning: Empty bibliography on input line 93.
 
-(./main.lof [109
+(./main.lof [110
 
-] [110])
+] [111])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -2023,7 +2028,7 @@ LaTeX Warning: Empty bibliography on input line 93.
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [111] (./main.aux (./begin.aux)
+ [112] (./main.aux (./begin.aux)
 (./Capitoli/Introduzione.aux) (./Capitoli/Cinematica.aux)
 (./Capitoli/Dinamica.aux) (./Capitoli/Cinetostatica.aux) (./Capitoli/Vite.aux)
 (./Capitoli/Implementazione.aux) (./Capitoli/SistemaReale.aux)
@@ -2063,10 +2068,10 @@ e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (113 pages, 4936228 bytes).
+Output written on main.pdf (114 pages, 4938214 bytes).
 PDF statistics:
- 625 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
+ 628 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  581 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -28,10 +28,49 @@ D_{11} = \frac{l(y-l\sin\theta_{2})(\dot{x}+l\dot{\theta_2}\sin\theta_{2})
     (d\sin\theta_{1}-y\cos\theta_{1}+x\sin\theta_{1})}{(d-x+l\cos\theta_{2})^2(y-l\sin\theta_{1}+\frac{(y-l\sin\theta_{2})
     (d+x-l\cos\theta_{1})}{d-x+l\cos\theta _{2}})}
 \end{equation*}
+%\begin{equation}
+s12 = \frac{(y-l\sin\theta_2)(l\sin\theta_2(\dot{x}+l\dot{\theta_1}\sin\theta_1)+l\dot{\theta_2}\cos\theta_2(d+x-l\cos\theta_1)+\frac{l\cos\theta_2(\dot{y}-l\dot{\theta_2}\cos\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}+\frac{l\cos\theta_2(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_1}\sin\theta_1)}{d-x+l\cos\theta_2}-\frac{l\dot{\theta_2}\sin\theta_2(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}+\frac{l\cos\theta_2(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_2}\sin\theta_2)(d+x-l\cos\theta_1)}{{(d-x+l\cos\theta_2)}^2})}
+{(d-x+l\cos\theta_2)(y-l\sin\theta_1+\frac{(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2})}
+-\frac{l\cos\theta_2(\dot{y}-l\dot{\theta_2}\cos\theta_2)}{d-x+l\cos\theta_2}
+-l\dot{\theta_2}\cos\theta_2
++\frac{l\dot{\theta_2}\sin\theta_2(y-l\sin\theta_2)}{d-x+l\cos\theta_2}
+-\frac{l\cos\theta_2(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_2}\sin\theta_2)}
+{{(d-x+l\cos\theta_2)}^2}
++\frac{l(\dot{y}-l\dot{\theta_2}\cos\theta_2)(d\sin\theta_2+y\cos\theta_2-x\sin\theta_2)(d+x-l\cos\theta_1)}
+{{(d-x+l\cos\theta_2)}^2(y-l\sin\theta_1+\frac{(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2})}
+-\frac{l(y-l\sin\theta_2)(d\sin\theta_2+y\cos\theta_2-x\sin\theta_2)(d+x-l\cos\theta_1)(\dot{y}-l\dot{\theta_1}\cos\theta_1+\frac{(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_1}\sin\theta_1)}{d-x+l\cos\theta_2}+\frac{(\dot{y}-l\dot{\theta_2}\cos\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}+\frac{(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_2}\sin\theta_2)(d+x-l\cos\theta_1)}{{(d-x+l\cos\theta_2)}^2})}
+{{(d-x+l\cos\theta_2)}^2{(y-l\sin\theta_1+\frac{(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2})}^2}+
+
+\frac{l(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_2}\sin\theta_2)(d\sin\theta_2+y\cos\theta_2-x\sin\theta_2)(d+x-l\cos\theta_1)}
+{{(d-x+l\cos\theta_2)}^3(y-l\sin\theta_1+\frac{(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2})}'
+\end{equation}
 \begin{equation}
 \dot{J}_{21} =\frac{l(d\sin\theta_{1}-y\cos\theta_{1}+x\sin\theta_{1})(\dot{y}-
- l\dot{\theta_1}\cos\theta_{1}+A_{1.1.2}}{sa}
+ l\dot{\theta_1}\cos\theta_{1}+A_{1.1.2}}{(y-l\sin\theta_1+\frac{(y-l\sin\theta_{2})(d+x-l\cos\theta_1)}{(d-x+l\cos\theta_2})^2}+B_{2.1.1}
 \end{equation}
+\begin{equation*}
+B_{2.1.1} =  -\frac{l(\dot{x}\sin\theta_1)-\dot{y}\cos\theta_1+d\dot{\theta_1} \cos\theta_1+\dot{\theta_1}x\cos\theta_1+\dot{\theta_1}y\sin\theta_1}{y-l\sin\theta_1+\frac{(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}}
+\end{equation*}
+\begin{equation}
+\dot{J}_{22} = \frac{l\sin\theta_2(\dot{x}+l\dot{\theta_1}\sin\theta_1)+l\dot{\theta_2}\cos\theta_2(d+x-l\cos\theta_1)+A_{2.2.1}+A_{2.2.2}+A_{2.2.3}}{ {y-l\sin\theta_1+\frac{(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}}}
+\end{equation}
+\begin{equation*}
+A_{2.2.1} = \frac{l\cos\theta_2(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_1}\sin\theta_1)}{d-x+l\cos\theta_2}-\frac{l\dot{\theta_2}\sin\theta_2(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}
+\end{equation*}
+\begin{equation*}
+A_{2.2.2} = \frac{l\cos\theta_2(\dot{y}-l\dot{\theta_2}\cos\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}
+\end{equation*}
+\begin{equation*}
+A_{2.2.3} = \frac{l\cos\theta_2(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_2}\sin\theta_2)(d+x-l\cos\theta_1)}{(d-x+l\cos\theta_2)^2}
+\end{equation*}
+\begin{equation*}
+B_{2.2.1} =  -\frac{l(d\sin\theta_2+y\cos\theta_2-x\sin\theta_2)(d+x-l\cos\theta_1)+B_{2.2.2}}{(d-x+l\cos\theta_2)(y-l\sin\theta_1+\frac{(y-l\sin\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2})^2}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+B_{2.2.2} =\Bigg (\dot{y}-l\dot{\theta_1}\cos\theta_1+\frac{(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_1}\sin\theta_1)}{d-x+l\cos\theta_2}+\frac{(\dot{y}-l\dot{\theta_2}\cos\theta_2)(d+x-l\cos\theta_1)}{d-x+l\cos\theta_2}+ \\\frac{(y-l\sin\theta_2)(\dot{x}+l\dot{\theta_2}\sin\theta_2)(d+x-l\cos\theta_1)}{(d-x+l\cos\theta_2)^2}\Bigg)
+\end{split}
+\end{equation*}
 \subsection{Prerequisiti dinamica}\label{appendice:t34punto}
 Le matrici importati sono $\dot{J}_3$ e $\dot{J}_4$ che andiamo a riprendere ora come:
 \begin{equation}
