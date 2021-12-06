@@ -214,6 +214,86 @@ Per problemi nei quali i corpo sono composti da membri interconnessi che si poss
 \subsection{Dinamica inversa}
 Il problema della dinamica inversa consiste nel determinare le coppie ai giunti necessarie per generare il movimento a partire da posizione, velocità ed accelerazione.
 \\Andando a sviluppare l'equazione dei principi virtuali troviamo le coppie dei link motorizzati nel seguente modo:
+\begin{equation}
+\begin{split}
+\begin{bmatrix}
+\partial \theta_1 & \partial \theta_2
+\end{bmatrix}
+\begin{bmatrix}
+C_1 \\ C_2
+\end{bmatrix} 
+= \begin{bmatrix}
+\partial \theta_1 & \partial \theta_2
+\end{bmatrix} I_n \begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta}_2
+\end{bmatrix}+ \begin{bmatrix}
+\partial x_{g1} & \partial y_{g1}
+\end{bmatrix}m\begin{bmatrix}
+\ddot{x}_{g1} \\ \ddot{x}_{g1}
+\end{bmatrix} +
+\\ \begin{bmatrix} \partial x_{g2} & \partial y_{g2}
+\end{bmatrix}m\begin{bmatrix}
+\ddot{x}_{g2} \\ \ddot{x}_{g2}
+\end{bmatrix} +
+\begin{bmatrix}
+\partial \theta_3 & \partial \theta_4
+\end{bmatrix}I_m \begin{bmatrix}
+\partial \ddot{\theta_3} \\ \partial\ddot{\theta_4}
+\end{bmatrix}+\begin{bmatrix}
+\partial x_{g2} & \partial y_{g2}
+\end{bmatrix} m \begin{bmatrix}
+\ddot{x}_{g3} \\ \ddot{y}_{g3}
+\end{bmatrix}+\\+\begin{bmatrix}
+\partial x_{g4} & \partial y_{g4}
+\end{bmatrix}m\begin{bmatrix}
+\partial \ddot{x}_{g4} \\ \partial \ddot{y}_{g4} \end{bmatrix} + \begin{bmatrix}
+\partial x & \partial y
+\end{bmatrix}m_e \begin{bmatrix}
+\ddot{x} \\ \ddot{y}
+\end{bmatrix}
+\end{split}
+\label{eq:DinamicaGrande}
+\end{equation}
+Andando ora ad introdurre le matrici $J_1, J_2, J_3, J_4, J_{34}$ e $J$ possiamo andare a sviluppare i calcoli ottenendo:
+\begin{equation*}
+\begin{split}
+\begin{bmatrix}
+\partial \theta_1 & \partial \theta_2
+\end{bmatrix}\begin{bmatrix}
+C_1 \\ C_2
+\end{bmatrix} =\begin{bmatrix}
+\partial \theta_1 & \partial \theta_2
+\end{bmatrix} \Bigg[ I_n\begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta}_2
+\end{bmatrix}+ J_1^T \bigg( mJ_1\begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta_2}
+\end{bmatrix}+m\dot{J}_1 \begin{bmatrix}
+\dot{\theta}_1 \\\dot{\theta_2}
+\end{bmatrix}\bigg) +
+ \\J_2^T \bigg( mJ_2\begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta_2}
+\end{bmatrix}+m\dot{J}_2 \begin{bmatrix}
+\dot{\theta}_1 \\ \dot{\theta_2}
+\end{bmatrix} \bigg)  +J_{34}^T \bigg( I_mJ_{34}\begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta_2}
+\end{bmatrix}+I_m\dot{J}_{34} \begin{bmatrix}
+\dot{\theta}_1 \\ \dot{\theta_2}
+\end{bmatrix} \bigg) \\ J_3^T \bigg( mJ_3\begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta_2}
+\end{bmatrix}+m\dot{J}_3 \begin{bmatrix}
+\dot{\theta}_1 \\ \dot{\theta_2}
+\end{bmatrix} \bigg) J_4^T \bigg( mJ_4\begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta_2}
+\end{bmatrix}+m\dot{J}_4 \begin{bmatrix}
+\dot{\theta}_1 \\ \dot{\theta_2}
+\end{bmatrix} \bigg) \\ J^T \bigg( mJ\begin{bmatrix}
+\ddot{\theta}_1 \\ \ddot{\theta_2}
+\end{bmatrix}+m_e\dot{J} \begin{bmatrix}
+\dot{\theta}_1 \\ \dot{\theta_2}
+\end{bmatrix} \bigg)\Bigg]
+\end{split} 
+\end{equation*}
+Esplicitando i parametri e sostituendo i valori costanti troviamo:
 \begin{equation*}
 \begin{aligned}
     \delta \theta^T C = \delta \theta^T I_2 \ddot{\theta} + \delta \theta^T J_{34}^T I_2(J_{34}\ddot{\theta}+\dot{J_{34}}\dot{\theta})+ \delta \theta^T \frac{25}{4}ml^2\\\bigg(\begin{bmatrix}
@@ -228,22 +308,12 @@ Il problema della dinamica inversa consiste nel determinare le coppie ai giunti 
     \end{bmatrix}(\dot{J_{34}}\dot{\theta}+J_{34}\ddot{\theta})\bigg)
     \end{aligned}
 \end{equation*}
-
 Semplificando e raccogliendo possiamo esprimere l'equazione come:
 \begin{equation}
     \tau = M \ddot{\theta} + K \dot{\theta}
     \label{eq:dinamicaInv}
 \end{equation}
-Dove:
-\begin{equation}
-    M = J_r I_2 + m(J_1^T J_1 + J_2^TJ_2+J_3^TJ_3+J_4^TJ_4)+J_rJ_{34}^TJ_{34} + m_vJ_E^TJ_E
-    \label{eq:M}
-\end{equation}
-\begin{equation}
-    K = m(J_1^T\dot{J_1}+J_2^T\dot{J_2}+J_3^T\dot{J_3}+J_4^T\dot{J_4})+J_rJ_{34}^T\dot{J_{34}}+m_vJ_E^T\dot{J_E}
-    \label{eq:K}
-\end{equation}
-Sostituendo, possiamo andare ad esprimere l'equazione \ref{eq:dinamicaInv} nel seguente modo:
+Possiamo espandere l'equazione \ref{eq:dinamicaInv} e vederla come:
 \begin{equation}
     \begin{bmatrix}
     \tau_1 \\ \tau_2
@@ -255,7 +325,16 @@ Sostituendo, possiamo andare ad esprimere l'equazione \ref{eq:dinamicaInv} nel s
     \dot{\theta_1} \\ \dot{\theta_2}
     \end{bmatrix}
 \end{equation}
-% CONTROLLA
+Dove:
+\begin{equation}
+    M = J_r I_2 + m(J_1^T J_1 + J_2^TJ_2+J_3^TJ_3+J_4^TJ_4)+J_rJ_{34}^TJ_{34} + m_vJ_E^TJ_E
+    \label{eq:M}
+\end{equation}
+\begin{equation}
+    K = m(J_1^T\dot{J_1}+J_2^T\dot{J_2}+J_3^T\dot{J_3}+J_4^T\dot{J_4})+J_rJ_{34}^T\dot{J_{34}}+m_vJ_E^T\dot{J_E}
+    \label{eq:K}
+\end{equation}
+% check
 Per tutti i calcoli svolti fino ad adesso le coppie devono considerarsi prese all'end-effector
 \subsection{Dinamica diretta}
 Il problema della dinamica diretta invece consiste nel determinare le accelerazioni ai giunti a partire dalle coppie, dalla posizione e velocità iniziali di entrambi i link motorizzati.
@@ -351,14 +430,15 @@ e la posizione come:
 \end{subfigure}
 \caption{Confronto dinamica leggi di moto su posizioni}
 \end{figure}
-Si può notare un errore tra le due curve dovuto al metodo di integrazione utilizzato.
-\\Una volta calcolati tutti i parametri di nostro interesse andiamo a costruire il modello simulink che sarà utile per una visione d'insieme:
+\\Si può notare un errore tra le due curve dovuto al metodo di integrazione utilizzato.
+\\Una volta calcolati tutti i parametri di nostro interesse andiamo a costruire il modello simulink che sarà utile per una visione d'insieme e per effettuare la validazione:
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.55]{Immagini/Dinamica/ModSimulink}
 		\caption{Modello simulink manipolatore}
 	\end{center}
 \end{figure}
+Il modello implementa l'equazione della dinamica diretta \ref{eq:dinamicaDiretta}, infatti riusciamo ad ottenere l'accelerazione a partire dalla moltiplicazione fra la matrice d'inerzia e la somma delle coppie con la matrice dei termini di Coriolis. Andando poi ad integrare otteniamo velocità e posizione che ci serviranno per trovare le accelerazioni negli step successivi.
 \subsubsection*{Modellazione su Adams}
 \addcontentsline{toc}{subsubsection}{Modellazione su Adams}
 Per quanto riguarda la modellazione su adams, è stato realizzato un prototipo del manipolatore composto da aste rigide, i due link motorizzati sono fissati mediante delle cerniere ed abbiamo anche la presenza dell'end-effector.
