@@ -1,175 +1,175 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {italian}{}
-\babel@toc {italian}{}
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduzione}{5}% 
+\contentsline {section}{\numberline {1}Introduzione}{5}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Obiettivo}{5}% 
+\contentsline {subsection}{\numberline {1.1}Obiettivo}{5}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Stato dell'arte}{5}% 
+\contentsline {subsection}{\numberline {1.2}Stato dell'arte}{5}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Ambiti applicativi}{6}% 
+\contentsline {subsection}{\numberline {1.3}Ambiti applicativi}{6}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4}Software modellazione teorica}{7}% 
+\contentsline {subsection}{\numberline {1.4}Software modellazione teorica}{7}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.1}Matlab}{7}% 
+\contentsline {subsubsection}{\numberline {1.4.1}Matlab}{7}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.2}Adams}{7}% 
+\contentsline {subsubsection}{\numberline {1.4.2}Adams}{7}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Cinematica Manipolatore}{9}% 
+\contentsline {section}{\numberline {2}Cinematica Manipolatore}{9}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Cinematica Diretta}{10}% 
+\contentsline {subsection}{\numberline {2.1}Cinematica Diretta}{10}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Posizione}{10}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Posizione}{10}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Velocit\IeC {\`a}}{13}% 
+\contentsline {subsubsection}{\numberline {2.1.2}Velocità}{13}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.3}Accelerazione}{15}% 
+\contentsline {subsubsection}{\numberline {2.1.3}Accelerazione}{15}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Cinematica inversa}{16}% 
+\contentsline {subsection}{\numberline {2.2}Cinematica inversa}{16}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Posizione}{16}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Posizione}{16}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Velocit\IeC {\`a}}{17}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Velocità}{17}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Accelerazione}{18}% 
+\contentsline {subsubsection}{\numberline {2.2.3}Accelerazione}{18}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Dinamica Manipolatore}{19}% 
+\contentsline {section}{\numberline {3}Dinamica Manipolatore}{19}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Prerequisiti per il calcolo della dinamica}{19}% 
+\contentsline {subsection}{\numberline {3.1}Prerequisiti per il calcolo della dinamica}{19}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Jacobiana $J_{34}$ e calcolo $\mathaccentV {dot}05F{\theta _3},\mathaccentV {dot}05F{\theta _4}$}{19}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Jacobiana $J_{34}$ e calcolo $\dot {\theta _3},\dot {\theta _4}$}{19}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}Jacobiana $\mathaccentV {dot}05F{J_{34}}$ e calcolo di $\mathaccentV {ddot}07F{\theta _3}, \mathaccentV {ddot}07F{\theta _4}$}{20}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Jacobiana $\dot {J_{34}}$ e calcolo di $\ddot {\theta _3}, \ddot {\theta _4}$}{20}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.3}Matrici di inerzia}{21}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Matrici di inerzia}{21}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Principio dei lavori virtuali}{22}% 
+\contentsline {subsection}{\numberline {3.2}Principio dei lavori virtuali}{22}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Dinamica inversa}{23}% 
+\contentsline {subsection}{\numberline {3.3}Dinamica inversa}{23}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Dinamica diretta}{24}% 
+\contentsline {subsection}{\numberline {3.4}Dinamica diretta}{24}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Modellazione su Adams}{25}% 
+\contentsline {subsubsection}{Modellazione su Adams}{25}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Validazione e confronto}{27}% 
+\contentsline {subsubsection}{Validazione e confronto}{27}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Analisi cinetostatica}{29}% 
+\contentsline {section}{\numberline {4}Analisi cinetostatica}{29}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Punti di singolarit\IeC {\`a}}{29}% 
+\contentsline {subsection}{\numberline {4.1}Punti di singolarità}{29}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Primo e secondo caso}{30}% 
+\contentsline {subsubsection}{Primo e secondo caso}{30}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Terzo caso}{31}% 
+\contentsline {subsubsection}{Terzo caso}{31}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Terzo e quarto caso}{32}% 
+\contentsline {subsubsection}{Terzo e quarto caso}{32}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Manipolabilit\IeC {\`a}}{33}% 
+\contentsline {subsection}{\numberline {4.2}Manipolabilità}{33}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Workspace}{34}% 
+\contentsline {subsection}{\numberline {4.3}Workspace}{34}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Modellazione end-effector}{37}% 
+\contentsline {section}{\numberline {5}Modellazione end-effector}{37}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Cinematica end-effector}{38}% 
+\contentsline {subsection}{\numberline {5.1}Cinematica end-effector}{38}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Dinamica della vite}{39}% 
+\contentsline {subsection}{\numberline {5.2}Dinamica della vite}{39}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Tecnologie implementate}{41}% 
+\contentsline {section}{\numberline {6}Tecnologie implementate}{41}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Simulink Real time}{41}% 
+\contentsline {subsection}{\numberline {6.1}Simulink Real time}{41}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}EtherCAT}{41}% 
+\contentsline {subsection}{\numberline {6.2}EtherCAT}{41}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1}Propriet\IeC {\`a}}{42}% 
+\contentsline {subsubsection}{\numberline {6.2.1}Proprietà}{42}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.2}Gestione della rete}{42}% 
+\contentsline {subsubsection}{\numberline {6.2.2}Gestione della rete}{42}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.3}Implementazione interfacce}{43}% 
+\contentsline {subsubsection}{\numberline {6.2.3}Implementazione interfacce}{43}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}CME2}{43}% 
+\contentsline {subsection}{\numberline {6.3}CME2}{43}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}EC-Engineer}{45}% 
+\contentsline {subsection}{\numberline {6.4}EC-Engineer}{45}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Sistema reale}{47}% 
+\contentsline {section}{\numberline {7}Sistema reale}{47}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Struttura del robot}{47}% 
+\contentsline {subsection}{\numberline {7.1}Struttura del robot}{47}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Azionamenti}{48}% 
+\contentsline {subsubsection}{\numberline {7.1.1}Azionamenti}{48}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.2}Beckhoff EK1814}{48}% 
+\contentsline {subsubsection}{\numberline {7.1.2}Beckhoff EK1814}{48}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.3}Configurazione della rete}{49}% 
+\contentsline {subsubsection}{\numberline {7.1.3}Configurazione della rete}{49}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Implementazione nel sistema reale}{52}% 
+\contentsline {subsection}{\numberline {7.2}Implementazione nel sistema reale}{52}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Inizializzazione}{52}% 
+\contentsline {subsubsection}{Inizializzazione}{52}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Input}{53}% 
+\contentsline {subsubsection}{Input}{53}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Stateflow}{54}% 
+\contentsline {subsubsection}{Stateflow}{54}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Controllo vite}{55}% 
+\contentsline {subsubsection}{Controllo vite}{55}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Controllo braccia}{56}% 
+\contentsline {subsubsection}{Controllo braccia}{56}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Coppie uscita}{56}% 
+\contentsline {subsubsection}{Coppie uscita}{56}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Stateflow}{58}% 
+\contentsline {subsection}{\numberline {7.3}Stateflow}{58}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.1}Fase di Homing}{58}% 
+\contentsline {subsubsection}{\numberline {7.3.1}Fase di Homing}{58}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.2}Fase di posizionamento}{60}% 
+\contentsline {subsubsection}{\numberline {7.3.2}Fase di posizionamento}{60}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.3}Fase di controllo}{62}% 
+\contentsline {subsubsection}{\numberline {7.3.3}Fase di controllo}{62}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Gestione variabile di stato e luci}{64}% 
+\contentsline {subsubsection}{Gestione variabile di stato e luci}{64}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.4}Interfaccia grafica}{64}% 
+\contentsline {subsubsection}{\numberline {7.3.4}Interfaccia grafica}{64}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Controllo vite}{66}% 
+\contentsline {subsection}{\numberline {7.4}Controllo vite}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.4.1}Controllo proporzionale}{66}% 
+\contentsline {subsubsection}{\numberline {7.4.1}Controllo proporzionale}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.4.2}Controllo proporzionale derivativo}{67}% 
+\contentsline {subsubsection}{\numberline {7.4.2}Controllo proporzionale derivativo}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5}Controllo braccia}{70}% 
+\contentsline {subsection}{\numberline {7.5}Controllo braccia}{70}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.5.1}Controllo proporzionale derivativo}{70}% 
+\contentsline {subsubsection}{\numberline {7.5.1}Controllo proporzionale derivativo}{70}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.5.2}Controllo feed-forward con coppia pre-computata}{73}% 
+\contentsline {subsubsection}{\numberline {7.5.2}Controllo feed-forward con coppia pre-computata}{73}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.5.3}Controllo in dinamica inversa}{75}% 
+\contentsline {subsubsection}{\numberline {7.5.3}Controllo in dinamica inversa}{75}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Test Kp e Kd}{78}% 
+\contentsline {subsubsection}{Test Kp e Kd}{78}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.5.4}Controllo robusto}{79}% 
+\contentsline {subsubsection}{\numberline {7.5.4}Controllo robusto}{79}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Analisi manovellismo}{86}% 
+\contentsline {subsubsection}{Analisi manovellismo}{86}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6}Confronto approcci controllori}{86}% 
+\contentsline {subsection}{\numberline {7.6}Confronto approcci controllori}{86}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7}Problema della velocit\IeC {\`a}}{87}% 
+\contentsline {subsection}{\numberline {7.7}Problema della velocità}{87}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Filtro primo ordine}{88}% 
+\contentsline {subsubsection}{Filtro primo ordine}{88}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Filtro secondo ordine}{88}% 
+\contentsline {subsubsection}{Filtro secondo ordine}{88}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Filtro di Kalman}{88}% 
+\contentsline {subsubsection}{Filtro di Kalman}{88}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Conclusioni}{89}% 
+\contentsline {section}{\numberline {8}Conclusioni}{89}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Confronto modellazione teorica-pratica}{89}% 
+\contentsline {subsection}{\numberline {8.1}Confronto modellazione teorica-pratica}{89}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Sviluppi futuri}{89}% 
+\contentsline {subsection}{\numberline {8.2}Sviluppi futuri}{89}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendice \numberline {A}Formule estese}{91}% 
+\contentsline {section}{Appendice \numberline {A}Formule estese}{91}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1}Formule cinematica diretta accelerazione}{91}% 
+\contentsline {subsection}{\numberline {A.1}Formule cinematica diretta accelerazione}{91}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2}Prerequisiti dinamica}{92}% 
+\contentsline {subsection}{\numberline {A.2}Prerequisiti dinamica}{93}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendice \numberline {B}Cenni sistemi dinamici}{94}% 
+\contentsline {section}{Appendice \numberline {B}Cenni sistemi dinamici}{94}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1}Stabilit\IeC {\`a} asintotica}{95}% 
+\contentsline {subsection}{\numberline {B.1}Stabilità asintotica}{95}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendice \numberline {C}Quadro elettrico}{96}% 
+\contentsline {section}{Appendice \numberline {C}Quadro elettrico}{96}{}%
