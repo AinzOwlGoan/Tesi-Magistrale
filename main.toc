@@ -173,3 +173,9 @@
 \contentsline {subsection}{\numberline {B.1}Stabilit\IeC {\`a} asintotica}{97}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Appendice \numberline {C}Quadro elettrico}{98}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Bibliografia}{112}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Elenco delle figure}{113}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Elenco delle tabelle}{115}% 

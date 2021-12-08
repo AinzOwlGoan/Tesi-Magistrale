@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  6 DEC 2021 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  8 DEC 2021 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -594,7 +594,14 @@ File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count321
 \AM@templatesizebox=\box58
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has section divisions on input line 50.
+
+
+Package tocbibind Note: Using section or other style headings.
+
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip74
@@ -624,7 +631,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count322
 \@quotereset=\count323
-(./main.aux (./begin.aux) (./Capitoli/Introduzione.aux)
+(./main.aux (./begin.aux) (./Capitoli/Dedica.aux) (./Capitoli/Introduzione.aux)
 (./Capitoli/Cinematica.aux) (./Capitoli/Dinamica.aux)
 (./Capitoli/Cinetostatica.aux) (./Capitoli/Vite.aux)
 (./Capitoli/Implementazione.aux) (./Capitoli/SistemaReale.aux)
@@ -632,20 +639,20 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./Capitoli/AppendiceSistemi.aux) (./Capitoli/AppendiceQuadro.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Info: Redefining \it@ocap on input line 46.
-LaTeX Info: Redefining \it@ccap on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Info: Redefining \it@ocap on input line 47.
+LaTeX Info: Redefining \it@ccap on input line 47.
 
 
 File italian.ldf warning: 
@@ -653,7 +660,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 46.
+italian.ldf    on input line 47.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -730,11 +737,12 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 46.
-Package biblatex Info: Reference segment=0 on input line 46.
+Package biblatex Info: ... file 'main.bbl' found.
+(./main.bbl)
+Package biblatex Info: Reference section=0 on input line 47.
+Package biblatex Info: Reference segment=0 on input line 47.
 \AtBeginShipoutBox=\box60
+
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
@@ -760,8 +768,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-[1
+[2
 
+
+]
+\openout2 = `./Capitoli/Dedica.aux'.
+
+ (./Capitoli/Dedica.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 14.49998pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[3
 
 ] (./main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 7.
@@ -771,14 +791,10 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [0
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 14.49998pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
-[1] [2])
+] [1]
+[2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -786,7 +802,7 @@ This may cause the page layout to be inconsistent, however.
 \openout2 = `Capitoli/Introduzione.aux'.
 
  (./Capitoli/Introduzione.tex
-<Immagini/Robot1.png, id=26, 329.43076pt x 346.896pt>
+<Immagini/Robot1.png, id=34, 329.43076pt x 346.896pt>
 File: Immagini/Robot1.png Graphic file (type png)
 <use Immagini/Robot1.png>
 Package pdftex.def Info: Immagini/Robot1.png  used on input line 10.
@@ -805,7 +821,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 \openout2 = `Capitoli/Cinematica.aux'.
 
  (./Capitoli/Cinematica.tex
-<Immagini/Robot2.png, id=44, 531.78674pt x 434.8245pt>
+<Immagini/Robot2.png, id=50, 531.78674pt x 434.8245pt>
 File: Immagini/Robot2.png Graphic file (type png)
 <use Immagini/Robot2.png>
 Package pdftex.def Info: Immagini/Robot2.png  used on input line 23.
@@ -814,7 +830,7 @@ Package pdftex.def Info: Immagini/Robot2.png  used on input line 23.
 
 
  <./Immagini/Robot2.png>]
-<Immagini/EqCirc.png, id=51, 427.5975pt x 348.70274pt>
+<Immagini/EqCirc.png, id=58, 427.5975pt x 348.70274pt>
 File: Immagini/EqCirc.png Graphic file (type png)
 <use Immagini/EqCirc.png>
 Package pdftex.def Info: Immagini/EqCirc.png  used on input line 38.
@@ -918,43 +934,43 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-<Immagini/Dinamica/confracct1.png, id=107, 462.0462pt x 371.9496pt>
+<Immagini/Dinamica/confracct1.png, id=113, 462.0462pt x 371.9496pt>
 File: Immagini/Dinamica/confracct1.png Graphic file (type png)
 <use Immagini/Dinamica/confracct1.png>
 Package pdftex.def Info: Immagini/Dinamica/confracct1.png  used on input line 3
 86.
 (pdftex.def)             Requested size: 149.80249pt x 120.59273pt.
-<Immagini/Dinamica/confracct2.png, id=108, 462.0462pt x 371.9496pt>
+<Immagini/Dinamica/confracct2.png, id=114, 462.0462pt x 371.9496pt>
 File: Immagini/Dinamica/confracct2.png Graphic file (type png)
 <use Immagini/Dinamica/confracct2.png>
 Package pdftex.def Info: Immagini/Dinamica/confracct2.png  used on input line 3
 93.
 (pdftex.def)             Requested size: 149.80249pt x 120.59273pt.
-<Immagini/Dinamica/confrvelt1.png, id=109, 462.0462pt x 372.4314pt>
+<Immagini/Dinamica/confrvelt1.png, id=115, 462.0462pt x 372.4314pt>
 File: Immagini/Dinamica/confrvelt1.png Graphic file (type png)
 <use Immagini/Dinamica/confrvelt1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrvelt1.png  used on input line 4
 03.
 (pdftex.def)             Requested size: 149.80249pt x 120.74893pt.
-<Immagini/Dinamica/confrtvelt2.png, id=110, 457.71pt x 372.4314pt>
+<Immagini/Dinamica/confrtvelt2.png, id=116, 457.71pt x 372.4314pt>
 File: Immagini/Dinamica/confrtvelt2.png Graphic file (type png)
 <use Immagini/Dinamica/confrtvelt2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrtvelt2.png  used on input line 
 410.
 (pdftex.def)             Requested size: 149.80249pt x 121.89119pt.
-<Immagini/Dinamica/confrpost1.png, id=111, 457.71pt x 371.9496pt>
+<Immagini/Dinamica/confrpost1.png, id=117, 457.71pt x 371.9496pt>
 File: Immagini/Dinamica/confrpost1.png Graphic file (type png)
 <use Immagini/Dinamica/confrpost1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrpost1.png  used on input line 4
 20.
 (pdftex.def)             Requested size: 149.80249pt x 121.7335pt.
-<Immagini/Dinamica/confrpost2.png, id=112, 457.71pt x 371.9496pt>
+<Immagini/Dinamica/confrpost2.png, id=118, 457.71pt x 371.9496pt>
 File: Immagini/Dinamica/confrpost2.png Graphic file (type png)
 <use Immagini/Dinamica/confrpost2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrpost2.png  used on input line 4
 27.
 (pdftex.def)             Requested size: 149.80249pt x 121.7335pt.
-<Immagini/Dinamica/ModSimulink.png, id=113, 831.105pt x 292.84406pt>
+<Immagini/Dinamica/ModSimulink.png, id=119, 831.105pt x 292.84406pt>
 File: Immagini/Dinamica/ModSimulink.png Graphic file (type png)
 <use Immagini/Dinamica/ModSimulink.png>
 Package pdftex.def Info: Immagini/Dinamica/ModSimulink.png  used on input line 
@@ -975,12 +991,12 @@ Underfull \vbox (badness 1028) has occurred while \output is active []
 acct2.png (PNG copy)> <./Immagini/Dinamica/confrvelt1.png (PNG copy)> <./Immagi
 ni/Dinamica/confrtvelt2.png (PNG copy)> <./Immagini/Dinamica/confrpost1.png (PN
 G copy)> <./Immagini/Dinamica/confrpost2.png (PNG copy)>]
-<Immagini/Dinamica/adams1.png, id=120, 561.89925pt x 386.04225pt>
+<Immagini/Dinamica/adams1.png, id=126, 561.89925pt x 386.04225pt>
 File: Immagini/Dinamica/adams1.png Graphic file (type png)
 <use Immagini/Dinamica/adams1.png>
 Package pdftex.def Info: Immagini/Dinamica/adams1.png  used on input line 449.
 (pdftex.def)             Requested size: 192.0548pt x 131.94771pt.
-<Immagini/Dinamica/adams2.png, id=121, 467.346pt x 410.7345pt>
+<Immagini/Dinamica/adams2.png, id=127, 467.346pt x 410.7345pt>
 File: Immagini/Dinamica/adams2.png Graphic file (type png)
 <use Immagini/Dinamica/adams2.png>
 Package pdftex.def Info: Immagini/Dinamica/adams2.png  used on input line 456.
@@ -990,13 +1006,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 446--460
 []$[]$ $[]$ 
  []
 
-<Immagini/Dinamica/c1matlab.png, id=122, 292.6935pt x 248.127pt>
+<Immagini/Dinamica/c1matlab.png, id=128, 292.6935pt x 248.127pt>
 File: Immagini/Dinamica/c1matlab.png Graphic file (type png)
 <use Immagini/Dinamica/c1matlab.png>
 Package pdftex.def Info: Immagini/Dinamica/c1matlab.png  used on input line 484
 .
 (pdftex.def)             Requested size: 192.0548pt x 162.814pt.
-<Immagini/Dinamica/c2matlab.png, id=123, 296.307pt x 257.16075pt>
+<Immagini/Dinamica/c2matlab.png, id=129, 296.307pt x 257.16075pt>
 File: Immagini/Dinamica/c2matlab.png Graphic file (type png)
 <use Immagini/Dinamica/c2matlab.png>
 Package pdftex.def Info: Immagini/Dinamica/c2matlab.png  used on input line 491
@@ -1007,13 +1023,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 481--495
 []$[]$ $[]$ 
  []
 
-<Immagini/Dinamica/c1adams.png, id=124, 289.08pt x 252.945pt>
+<Immagini/Dinamica/c1adams.png, id=130, 289.08pt x 252.945pt>
 File: Immagini/Dinamica/c1adams.png Graphic file (type png)
 <use Immagini/Dinamica/c1adams.png>
 Package pdftex.def Info: Immagini/Dinamica/c1adams.png  used on input line 501.
 
 (pdftex.def)             Requested size: 192.0548pt x 168.04807pt.
-<Immagini/Dinamica/c2adams.png, id=125, 290.2845pt x 248.72925pt>
+<Immagini/Dinamica/c2adams.png, id=131, 290.2845pt x 248.72925pt>
 File: Immagini/Dinamica/c2adams.png Graphic file (type png)
 <use Immagini/Dinamica/c2adams.png>
 Package pdftex.def Info: Immagini/Dinamica/c2adams.png  used on input line 508.
@@ -1024,13 +1040,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 498--512
 []$[]$ $[]$ 
  []
 
-<Immagini/Dinamica/confrc1.png, id=126, 284.262pt x 255.95625pt>
+<Immagini/Dinamica/confrc1.png, id=132, 284.262pt x 255.95625pt>
 File: Immagini/Dinamica/confrc1.png Graphic file (type png)
 <use Immagini/Dinamica/confrc1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrc1.png  used on input line 519.
 
 (pdftex.def)             Requested size: 192.0548pt x 172.93484pt.
-<Immagini/Dinamica/confrc2.png, id=127, 292.09125pt x 249.93375pt>
+<Immagini/Dinamica/confrc2.png, id=133, 292.09125pt x 249.93375pt>
 File: Immagini/Dinamica/confrc2.png Graphic file (type png)
 <use Immagini/Dinamica/confrc2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrc2.png  used on input line 526.
@@ -1051,12 +1067,12 @@ frc2.png>] [30
 \openout2 = `Capitoli/Cinetostatica.aux'.
 
  (./Capitoli/Cinetostatica.tex
-<Immagini/Singolarity/0.jpg, id=150, 770.88pt x 433.62pt>
+<Immagini/Singolarity/0.jpg, id=156, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/0.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/0.jpg>
 Package pdftex.def Info: Immagini/Singolarity/0.jpg  used on input line 5.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
-<Immagini/Singolarity/1.jpg, id=151, 770.88pt x 433.62pt>
+<Immagini/Singolarity/1.jpg, id=157, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/1.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/1.jpg>
 Package pdftex.def Info: Immagini/Singolarity/1.jpg  used on input line 16.
@@ -1064,24 +1080,24 @@ Package pdftex.def Info: Immagini/Singolarity/1.jpg  used on input line 16.
  [31
 
  <./Immagini/Singolarity/0.jpg>]
-<Immagini/Singolarity/2.jpg, id=155, 770.88pt x 433.62pt>
+<Immagini/Singolarity/2.jpg, id=161, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/2.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/2.jpg>
 Package pdftex.def Info: Immagini/Singolarity/2.jpg  used on input line 27.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
  [32 <./Immagini/Singolarity/1.jpg> <./Immagini/Singolarity/2.jpg>]
-<Immagini/Singolarity/5.jpg, id=159, 770.88pt x 433.62pt>
+<Immagini/Singolarity/5.jpg, id=165, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/5.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/5.jpg>
 Package pdftex.def Info: Immagini/Singolarity/5.jpg  used on input line 41.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
  [33 <./Immagini/Singolarity/5.jpg>]
-<Immagini/Singolarity/3.jpg, id=163, 770.88pt x 433.62pt>
+<Immagini/Singolarity/3.jpg, id=170, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/3.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/3.jpg>
 Package pdftex.def Info: Immagini/Singolarity/3.jpg  used on input line 74.
 (pdftex.def)             Requested size: 192.0548pt x 108.02759pt.
-<Immagini/Singolarity/4.jpg, id=164, 770.88pt x 433.62pt>
+<Immagini/Singolarity/4.jpg, id=171, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/4.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/4.jpg>
 Package pdftex.def Info: Immagini/Singolarity/4.jpg  used on input line 80.
@@ -1091,20 +1107,20 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 71--83
 []$[]$ $[]$ 
  []
 
-<Immagini/Singolarity/SingNew.png, id=165, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/SingNew.png, id=172, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/SingNew.png Graphic file (type png)
 <use Immagini/Singolarity/SingNew.png>
 Package pdftex.def Info: Immagini/Singolarity/SingNew.png  used on input line 9
 7.
 (pdftex.def)             Requested size: 342.52562pt x 256.89421pt.
 [34 <./Immagini/Singolarity/3.jpg> <./Immagini/Singolarity/4.jpg>]
-<Immagini/Singolarity/Ncond.png, id=169, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/Ncond.png, id=176, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Ncond.png Graphic file (type png)
 <use Immagini/Singolarity/Ncond.png>
 Package pdftex.def Info: Immagini/Singolarity/Ncond.png  used on input line 117
 .
 (pdftex.def)             Requested size: 211.26144pt x 158.44966pt.
-<Immagini/Singolarity/Ncond_surf.png, id=170, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/Ncond_surf.png, id=177, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Ncond_surf.png Graphic file (type png)
 <use Immagini/Singolarity/Ncond_surf.png>
 Package pdftex.def Info: Immagini/Singolarity/Ncond_surf.png  used on input lin
@@ -1116,19 +1132,19 @@ Overfull \hbox (45.29282pt too wide) in paragraph at lines 114--126
  []
 
 [35 <./Immagini/Singolarity/SingNew.png (PNG copy)>]
-<Immagini/Singolarity/workangle.png, id=175, 462.22687pt x 270.25969pt>
+<Immagini/Singolarity/workangle.png, id=181, 462.22687pt x 270.25969pt>
 File: Immagini/Singolarity/workangle.png Graphic file (type png)
 <use Immagini/Singolarity/workangle.png>
 Package pdftex.def Info: Immagini/Singolarity/workangle.png  used on input line
  135.
 (pdftex.def)             Requested size: 323.5566pt x 189.18048pt.
-<Immagini/Singolarity/Worksing.png, id=176, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/Worksing.png, id=182, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Worksing.png Graphic file (type png)
 <use Immagini/Singolarity/Worksing.png>
 Package pdftex.def Info: Immagini/Singolarity/Worksing.png  used on input line 
 142.
 (pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
-<Immagini/Singolarity/ncondsl.png, id=177, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/ncondsl.png, id=183, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/ncondsl.png Graphic file (type png)
 <use Immagini/Singolarity/ncondsl.png>
 Package pdftex.def Info: Immagini/Singolarity/ncondsl.png  used on input line 1
@@ -1141,12 +1157,12 @@ nd_surf.png (PNG copy)>]
 \openout2 = `Capitoli/Vite.aux'.
 
  (./Capitoli/Vite.tex
-<Immagini/ViteRicircolo.jpg, id=189, 468.75125pt x 270.00874pt>
+<Immagini/ViteRicircolo.jpg, id=195, 468.75125pt x 270.00874pt>
 File: Immagini/ViteRicircolo.jpg Graphic file (type jpg)
 <use Immagini/ViteRicircolo.jpg>
 Package pdftex.def Info: Immagini/ViteRicircolo.jpg  used on input line 6.
 (pdftex.def)             Requested size: 234.37505pt x 135.00403pt.
-<Immagini/utensile.jpg, id=190, 355.92975pt x 770.88pt>
+<Immagini/utensile.jpg, id=196, 355.92975pt x 770.88pt>
 File: Immagini/utensile.jpg Graphic file (type jpg)
 <use Immagini/utensile.jpg>
 Package pdftex.def Info: Immagini/utensile.jpg  used on input line 13.
@@ -1159,7 +1175,7 @@ Package pdftex.def Info: Immagini/utensile.jpg  used on input line 13.
 Underfull \vbox (badness 3590) has occurred while \output is active []
 
  [40]
-<Immagini/coppiaTeoricaVite.png, id=198, 508.90125pt x 389.455pt>
+<Immagini/coppiaTeoricaVite.png, id=205, 508.90125pt x 389.455pt>
 File: Immagini/coppiaTeoricaVite.png Graphic file (type png)
 <use Immagini/coppiaTeoricaVite.png>
 Package pdftex.def Info: Immagini/coppiaTeoricaVite.png  used on input line 88.
@@ -1175,13 +1191,13 @@ Package pdftex.def Info: Immagini/coppiaTeoricaVite.png  used on input line 88.
 [43
 
 ] [44]
-<Immagini/Sperimentale/azionamenti.PNG, id=213, 442.0515pt x 215.6055pt>
+<Immagini/Sperimentale/azionamenti.PNG, id=219, 442.0515pt x 215.6055pt>
 File: Immagini/Sperimentale/azionamenti.PNG Graphic file (type png)
 <use Immagini/Sperimentale/azionamenti.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/azionamenti.PNG  used on input l
 ine 22.
 (pdftex.def)             Requested size: 353.64168pt x 172.48462pt.
-<Immagini/Sperimentale/registri.PNG, id=214, 632.96475pt x 77.088pt>
+<Immagini/Sperimentale/registri.PNG, id=220, 632.96475pt x 77.088pt>
 File: Immagini/Sperimentale/registri.PNG Graphic file (type png)
 <use Immagini/Sperimentale/registri.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/registri.PNG  used on input line
@@ -1194,7 +1210,7 @@ egistri.PNG>] [47] [48
 \openout2 = `Capitoli/SistemaReale.aux'.
 
  (./Capitoli/SistemaReale.tex
-<Immagini/Sperimentale/banco.png, id=232, 540.0175pt x 399.4925pt>
+<Immagini/Sperimentale/banco.png, id=238, 540.0175pt x 399.4925pt>
 File: Immagini/Sperimentale/banco.png Graphic file (type png)
 <use Immagini/Sperimentale/banco.png>
 Package pdftex.def Info: Immagini/Sperimentale/banco.png  used on input line 10
@@ -1203,26 +1219,26 @@ Package pdftex.def Info: Immagini/Sperimentale/banco.png  used on input line 10
  [49
 
  <./Immagini/Sperimentale/banco.png>]
-<Immagini/Sperimentale/Beckoffschema.PNG, id=237, 221.628pt x 259.56975pt>
+<Immagini/Sperimentale/Beckoffschema.PNG, id=243, 221.628pt x 259.56975pt>
 File: Immagini/Sperimentale/Beckoffschema.PNG Graphic file (type png)
 <use Immagini/Sperimentale/Beckoffschema.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/Beckoffschema.PNG  used on input
  line 26.
 (pdftex.def)             Requested size: 132.97781pt x 155.74304pt.
  [50]
-<Immagini/Sperimentale/Topology.PNG, id=241, 665.48625pt x 260.77425pt>
+<Immagini/Sperimentale/Topology.PNG, id=247, 665.48625pt x 260.77425pt>
 File: Immagini/Sperimentale/Topology.PNG Graphic file (type png)
 <use Immagini/Sperimentale/Topology.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/Topology.PNG  used on input line
  35.
 (pdftex.def)             Requested size: 332.74231pt x 130.3868pt.
-<Immagini/Sperimentale/ConfEthernet.png, id=242, 390.258pt x 97.5645pt>
+<Immagini/Sperimentale/ConfEthernet.png, id=248, 390.258pt x 97.5645pt>
 File: Immagini/Sperimentale/ConfEthernet.png Graphic file (type png)
 <use Immagini/Sperimentale/ConfEthernet.png>
 Package pdftex.def Info: Immagini/Sperimentale/ConfEthernet.png  used on input 
 line 43.
 (pdftex.def)             Requested size: 273.17873pt x 68.29466pt.
-<Immagini/Sperimentale/NetTopology.png, id=243, 159.59625pt x 211.38976pt>
+<Immagini/Sperimentale/NetTopology.png, id=249, 159.59625pt x 211.38976pt>
 File: Immagini/Sperimentale/NetTopology.png Graphic file (type png)
 <use Immagini/Sperimentale/NetTopology.png>
 Package pdftex.def Info: Immagini/Sperimentale/NetTopology.png  used on input l
@@ -1231,25 +1247,25 @@ ine 51.
  [51 <./Immagini/Sperimentale/Beckoffschema.PNG> <./Immagini/Sperimentale/Topol
 ogy.PNG>] [52 <./Immagini/Sperimentale/ConfEthernet.png> <./Immagini/Sperimenta
 le/NetTopology.png>]
-<Immagini/Sperimentale/pdo1in.png, id=254, 277.035pt x 113.223pt>
+<Immagini/Sperimentale/pdo1in.png, id=261, 277.035pt x 113.223pt>
 File: Immagini/Sperimentale/pdo1in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo1in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo1in.png  used on input line 6
 7.
 (pdftex.def)             Requested size: 149.37631pt x 61.04967pt.
-<Immagini/Sperimentale/pdo2in.png, id=255, 275.22826pt x 115.02975pt>
+<Immagini/Sperimentale/pdo2in.png, id=262, 275.22826pt x 115.02975pt>
 File: Immagini/Sperimentale/pdo2in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo2in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo2in.png  used on input line 7
 4.
 (pdftex.def)             Requested size: 149.37631pt x 62.43108pt.
-<Immagini/Sperimentale/pdo3in.png, id=256, 275.8305pt x 96.96225pt>
+<Immagini/Sperimentale/pdo3in.png, id=263, 275.8305pt x 96.96225pt>
 File: Immagini/Sperimentale/pdo3in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo3in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo3in.png  used on input line 8
 1.
 (pdftex.def)             Requested size: 149.37631pt x 52.50974pt.
-<Immagini/Sperimentale/pdo4in.png, id=257, 274.02374pt x 118.041pt>
+<Immagini/Sperimentale/pdo4in.png, id=264, 274.02374pt x 118.041pt>
 File: Immagini/Sperimentale/pdo4in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo4in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo4in.png  used on input line 8
@@ -1265,13 +1281,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 64--92
 []$ $[]$ 
  []
 
-<Immagini/Sperimentale/pdo12out.png, id=258, 347.49825pt x 151.767pt>
+<Immagini/Sperimentale/pdo12out.png, id=265, 347.49825pt x 151.767pt>
 File: Immagini/Sperimentale/pdo12out.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo12out.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo12out.png  used on input line
  102.
 (pdftex.def)             Requested size: 232.8226pt x 101.68335pt.
-<Immagini/Sperimentale/generalSchema.png, id=259, 877.47826pt x 187.902pt>
+<Immagini/Sperimentale/generalSchema.png, id=266, 877.47826pt x 187.902pt>
 File: Immagini/Sperimentale/generalSchema.png Graphic file (type png)
 <use Immagini/Sperimentale/generalSchema.png>
 Package pdftex.def Info: Immagini/Sperimentale/generalSchema.png  used on input
@@ -1285,7 +1301,7 @@ Overfull \hbox (11.9467pt too wide) in paragraph at lines 111--112
 [53 <./Immagini/Sperimentale/pdo1in.png> <./Immagini/Sperimentale/pdo2in.png> <
 ./Immagini/Sperimentale/pdo3in.png> <./Immagini/Sperimentale/pdo4in.png> <./Imm
 agini/Sperimentale/pdo12out.png>]
-<Immagini/Sperimentale/Inizializzazione.png, id=269, 554.07pt x 440.847pt>
+<Immagini/Sperimentale/Inizializzazione.png, id=275, 554.07pt x 440.847pt>
 File: Immagini/Sperimentale/Inizializzazione.png Graphic file (type png)
 <use Immagini/Sperimentale/Inizializzazione.png>
 Package pdftex.def Info: Immagini/Sperimentale/Inizializzazione.png  used on in
@@ -1293,19 +1309,19 @@ put line 122.
 (pdftex.def)             Requested size: 349.06595pt x 277.73508pt.
  [54 <./Immagini/Sperimentale/generalSchema.png> <./Immagini/Sperimentale/Inizi
 alizzazione.png>]
-<Immagini/Sperimentale/Input.png, id=275, 184.89075pt x 440.24475pt>
+<Immagini/Sperimentale/Input.png, id=281, 184.89075pt x 440.24475pt>
 File: Immagini/Sperimentale/Input.png Graphic file (type png)
 <use Immagini/Sperimentale/Input.png>
 Package pdftex.def Info: Immagini/Sperimentale/Input.png  used on input line 14
 9.
 (pdftex.def)             Requested size: 120.17754pt x 286.1557pt.
-<Immagini/Sperimentale/convertS.png, id=276, 528.7755pt x 193.32225pt>
+<Immagini/Sperimentale/convertS.png, id=282, 528.7755pt x 193.32225pt>
 File: Immagini/Sperimentale/convertS.png Graphic file (type png)
 <use Immagini/Sperimentale/convertS.png>
 Package pdftex.def Info: Immagini/Sperimentale/convertS.png  used on input line
  157.
 (pdftex.def)             Requested size: 370.14034pt x 135.32465pt.
-<Immagini/Sperimentale/sf0.png, id=277, 302.3295pt x 413.1435pt>
+<Immagini/Sperimentale/sf0.png, id=283, 302.3295pt x 413.1435pt>
 File: Immagini/Sperimentale/sf0.png Graphic file (type png)
 <use Immagini/Sperimentale/sf0.png>
 Package pdftex.def Info: Immagini/Sperimentale/sf0.png  used on input line 167.
@@ -1313,7 +1329,7 @@ Package pdftex.def Info: Immagini/Sperimentale/sf0.png  used on input line 167.
 (pdftex.def)             Requested size: 211.6292pt x 289.19846pt.
  [55 <./Immagini/Sperimentale/Input.png>] [56 <./Immagini/Sperimentale/convertS
 .png> <./Immagini/Sperimentale/sf0.png>]
-<Immagini/Sperimentale/ControlloViteSchema.png, id=287, 301.72725pt x 434.8245p
+<Immagini/Sperimentale/ControlloViteSchema.png, id=293, 301.72725pt x 434.8245p
 t>
 File: Immagini/Sperimentale/ControlloViteSchema.png Graphic file (type png)
 <use Immagini/Sperimentale/ControlloViteSchema.png>
@@ -1321,13 +1337,13 @@ Package pdftex.def Info: Immagini/Sperimentale/ControlloViteSchema.png  used on
  input line 178.
 (pdftex.def)             Requested size: 211.20763pt x 304.37505pt.
  [57 <./Immagini/Sperimentale/ControlloViteSchema.png>]
-<Immagini/Sperimentale/ControlloBraccia.png, id=292, 313.17pt x 432.4155pt>
+<Immagini/Sperimentale/ControlloBraccia.png, id=299, 313.17pt x 432.4155pt>
 File: Immagini/Sperimentale/ControlloBraccia.png Graphic file (type png)
 <use Immagini/Sperimentale/ControlloBraccia.png>
 Package pdftex.def Info: Immagini/Sperimentale/ControlloBraccia.png  used on in
 put line 189.
 (pdftex.def)             Requested size: 234.8769pt x 324.31082pt.
-<Immagini/Sperimentale/Saturatore.png, id=293, 793.16325pt x 148.75575pt>
+<Immagini/Sperimentale/Saturatore.png, id=300, 793.16325pt x 148.75575pt>
 File: Immagini/Sperimentale/Saturatore.png Graphic file (type png)
 <use Immagini/Sperimentale/Saturatore.png>
 Package pdftex.def Info: Immagini/Sperimentale/Saturatore.png  used on input li
@@ -1338,7 +1354,7 @@ Overfull \hbox (9.4498pt too wide) in paragraph at lines 199--200
  [] 
  []
 
-<Immagini/Sperimentale/CoppieOut.png, id=294, 319.1925pt x 431.211pt>
+<Immagini/Sperimentale/CoppieOut.png, id=301, 319.1925pt x 431.211pt>
 File: Immagini/Sperimentale/CoppieOut.png Graphic file (type png)
 <use Immagini/Sperimentale/CoppieOut.png>
 Package pdftex.def Info: Immagini/Sperimentale/CoppieOut.png  used on input lin
@@ -1346,21 +1362,21 @@ e 207.
 (pdftex.def)             Requested size: 191.51697pt x 258.72859pt.
 [58 <./Immagini/Sperimentale/ControlloBraccia.png>] [59 <./Immagini/Sperimental
 e/Saturatore.png> <./Immagini/Sperimentale/CoppieOut.png>] [60]
-<Immagini/Sperimentale/state1new.png, id=308, 407.72325pt x 434.8245pt>
+<Immagini/Sperimentale/state1new.png, id=314, 407.72325pt x 434.8245pt>
 File: Immagini/Sperimentale/state1new.png Graphic file (type png)
 <use Immagini/Sperimentale/state1new.png>
 Package pdftex.def Info: Immagini/Sperimentale/state1new.png  used on input lin
 e 226.
 (pdftex.def)             Requested size: 326.17903pt x 347.86005pt.
  [61 <./Immagini/Sperimentale/state1new.png>]
-<Immagini/Sperimentale/state2New.png, id=313, 596.2275pt x 256.5585pt>
+<Immagini/Sperimentale/state2New.png, id=319, 596.2275pt x 256.5585pt>
 File: Immagini/Sperimentale/state2New.png Graphic file (type png)
 <use Immagini/Sperimentale/state2New.png>
 Package pdftex.def Info: Immagini/Sperimentale/state2New.png  used on input lin
 e 236.
 (pdftex.def)             Requested size: 417.3564pt x 179.58972pt.
  [62]
-<Immagini/Sperimentale/LdmPosizionamento.png, id=317, 731.73375pt x 370.38374pt
+<Immagini/Sperimentale/LdmPosizionamento.png, id=323, 731.73375pt x 370.38374pt
 >
 File: Immagini/Sperimentale/LdmPosizionamento.png Graphic file (type png)
 <use Immagini/Sperimentale/LdmPosizionamento.png>
@@ -1376,7 +1392,7 @@ Overfull \hbox (12.25229pt too wide) in paragraph at lines 255--256
 Underfull \vbox (badness 1173) has occurred while \output is active []
 
  [63 <./Immagini/Sperimentale/state2New.png>]
-<Immagini/Sperimentale/state3New.png, id=322, 678.1335pt x 328.8285pt>
+<Immagini/Sperimentale/state3New.png, id=329, 678.1335pt x 328.8285pt>
 File: Immagini/Sperimentale/state3New.png Graphic file (type png)
 <use Immagini/Sperimentale/state3New.png>
 Package pdftex.def Info: Immagini/Sperimentale/state3New.png  used on input lin
@@ -1384,20 +1400,20 @@ e 265.
 (pdftex.def)             Requested size: 406.88324pt x 197.29861pt.
  [64 <./Immagini/Sperimentale/LdmPosizionamento.png>] [65 <./Immagini/Speriment
 ale/state3New.png>]
-<Immagini/Sperimentale/GUI2.png, id=332, 604.05675pt x 360.1455pt>
+<Immagini/Sperimentale/GUI2.png, id=338, 604.05675pt x 360.1455pt>
 File: Immagini/Sperimentale/GUI2.png Graphic file (type png)
 <use Immagini/Sperimentale/GUI2.png>
 Package pdftex.def Info: Immagini/Sperimentale/GUI2.png  used on input line 318
 .
 (pdftex.def)             Requested size: 362.43684pt x 216.08896pt.
  [66] [67 <./Immagini/Sperimentale/GUI2.png>]
-<Immagini/Controllori/Pschema.jpg, id=340, 451.6875pt x 146.04562pt>
+<Immagini/Controllori/Pschema.jpg, id=346, 451.6875pt x 146.04562pt>
 File: Immagini/Controllori/Pschema.jpg Graphic file (type jpg)
 <use Immagini/Controllori/Pschema.jpg>
 Package pdftex.def Info: Immagini/Controllori/Pschema.jpg  used on input line 3
 53.
 (pdftex.def)             Requested size: 271.01459pt x 87.62804pt.
-<Immagini/Controllori/Vite.png, id=341, 1197.47375pt x 466.74374pt>
+<Immagini/Controllori/Vite.png, id=347, 1197.47375pt x 466.74374pt>
 File: Immagini/Controllori/Vite.png Graphic file (type png)
 <use Immagini/Controllori/Vite.png>
 Package pdftex.def Info: Immagini/Controllori/Vite.png  used on input line 362.
@@ -1409,7 +1425,7 @@ Overfull \hbox (16.267pt too wide) in paragraph at lines 362--363
  []
 
 [68]
-<Immagini/Controllori/PDSchema.png, id=345, 693.59125pt x 204.765pt>
+<Immagini/Controllori/PDSchema.png, id=351, 693.59125pt x 204.765pt>
 File: Immagini/Controllori/PDSchema.png Graphic file (type png)
 <use Immagini/Controllori/PDSchema.png>
 Package pdftex.def Info: Immagini/Controllori/PDSchema.png  used on input line 
@@ -1421,25 +1437,25 @@ File: Immagini/Controllori/Vite.png Graphic file (type png)
 Package pdftex.def Info: Immagini/Controllori/Vite.png  used on input line 388.
 
 (pdftex.def)             Requested size: 419.12209pt x 163.36275pt.
-<Immagini/Traiettorie/TrasVitePD.png, id=350, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/TrasVitePD.png, id=357, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/TrasVitePD.png Graphic file (type png)
 <use Immagini/Traiettorie/TrasVitePD.png>
 Package pdftex.def Info: Immagini/Traiettorie/TrasVitePD.png  used on input lin
 e 397.
 (pdftex.def)             Requested size: 153.64441pt x 115.23392pt.
-<Immagini/Traiettorie/RotVitePD.png, id=351, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/RotVitePD.png, id=358, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/RotVitePD.png Graphic file (type png)
 <use Immagini/Traiettorie/RotVitePD.png>
 Package pdftex.def Info: Immagini/Traiettorie/RotVitePD.png  used on input line
  402.
 (pdftex.def)             Requested size: 153.64441pt x 115.23392pt.
-<Immagini/Traiettorie/ErroreTrasVite.png, id=352, 438.8897pt x 328.97906pt>
+<Immagini/Traiettorie/ErroreTrasVite.png, id=359, 438.8897pt x 328.97906pt>
 File: Immagini/Traiettorie/ErroreTrasVite.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTrasVite.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTrasVite.png  used on input
  line 412.
 (pdftex.def)             Requested size: 170.71718pt x 127.96498pt.
-<Immagini/Traiettorie/ErroreRotVite.png, id=353, 438.8897pt x 328.97906pt>
+<Immagini/Traiettorie/ErroreRotVite.png, id=360, 438.8897pt x 328.97906pt>
 File: Immagini/Traiettorie/ErroreRotVite.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreRotVite.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreRotVite.png  used on input 
@@ -1456,7 +1472,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [71 <./Immagini/Traiettorie/TrasVitePD.png (PNG copy)> <./Immagini/Traiettorie
 /RotVitePD.png (PNG copy)> <./Immagini/Traiettorie/ErroreTrasVite.png> <./Immag
 ini/Traiettorie/ErroreRotVite.png>] [72]
-<Immagini/Controllori/PDBraccia.png, id=367, 1069.9975pt x 452.69125pt>
+<Immagini/Controllori/PDBraccia.png, id=373, 1069.9975pt x 452.69125pt>
 File: Immagini/Controllori/PDBraccia.png Graphic file (type png)
 <use Immagini/Controllori/PDBraccia.png>
 Package pdftex.def Info: Immagini/Controllori/PDBraccia.png  used on input line
@@ -1466,13 +1482,13 @@ Package pdftex.def Info: Immagini/Controllori/PDBraccia.png  used on input line
 Underfull \vbox (badness 4096) has occurred while \output is active []
 
  [73]
-<Immagini/Traiettorie/CoppiaT1PD.png, id=371, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT1PD.png, id=377, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT1PD.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT1PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT1PD.png  used on input lin
 e 475.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/CoppiaT2PD.png, id=372, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT2PD.png, id=378, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT2PD.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT2PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT2PD.png  used on input lin
@@ -1483,25 +1499,25 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 472--486
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/Theta1PD.png, id=373, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta1PD.png, id=379, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta1PD.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta1PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta1PD.png  used on input line 
 493.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/Theta2PD.png, id=374, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta2PD.png, id=380, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta2PD.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta2PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta2PD.png  used on input line 
 500.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/ErroreTheta1PD.png, id=375, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta1PD.png, id=381, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta1PD.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta1PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta1PD.png  used on input
  line 507.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/ErroreTheta2PD.png, id=376, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta2PD.png, id=382, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta2PD.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta2PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta2PD.png  used on input
@@ -1517,7 +1533,7 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 490--518
 []$ $[]$ 
  []
 
-<Immagini/Traiettorie/Cerchio.png, id=377, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Cerchio.png, id=383, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Cerchio.png Graphic file (type png)
 <use Immagini/Traiettorie/Cerchio.png>
 Package pdftex.def Info: Immagini/Traiettorie/Cerchio.png  used on input line 5
@@ -1525,25 +1541,25 @@ Package pdftex.def Info: Immagini/Traiettorie/Cerchio.png  used on input line 5
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 [74 <./Immagini/Controllori/PDBraccia.png> <./Immagini/Traiettorie/CoppiaT1PD.p
 ng (PNG copy)> <./Immagini/Traiettorie/CoppiaT2PD.png (PNG copy)>]
-<Immagini/Controllori/FFschema.png, id=382, 599.23875pt x 336.25626pt>
+<Immagini/Controllori/FFschema.png, id=388, 599.23875pt x 336.25626pt>
 File: Immagini/Controllori/FFschema.png Graphic file (type png)
 <use Immagini/Controllori/FFschema.png>
 Package pdftex.def Info: Immagini/Controllori/FFschema.png  used on input line 
 538.
 (pdftex.def)             Requested size: 299.61864pt x 168.12772pt.
-<Immagini/Controllori/feedForward.png, id=383, 1017.8025pt x 262.9825pt>
+<Immagini/Controllori/feedForward.png, id=389, 1017.8025pt x 262.9825pt>
 File: Immagini/Controllori/feedForward.png Graphic file (type png)
 <use Immagini/Controllori/feedForward.png>
 Package pdftex.def Info: Immagini/Controllori/feedForward.png  used on input li
 ne 546.
 (pdftex.def)             Requested size: 376.58104pt x 97.30199pt.
-<Immagini/Traiettorie/CoppiaT1FF.png, id=384, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT1FF.png, id=390, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT1FF.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT1FF.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT1FF.png  used on input lin
 e 556.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/CoppiaT2FF.png, id=385, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT2FF.png, id=391, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT2FF.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT2FF.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT2FF.png  used on input lin
@@ -1560,13 +1576,13 @@ eta2PD.png (PNG copy)> <./Immagini/Traiettorie/ErroreTheta1PD.png (PNG copy)> <
 rie/Cerchio.png (PNG copy)> <./Immagini/Controllori/FFschema.png>] [77 <./Immag
 ini/Controllori/feedForward.png> <./Immagini/Traiettorie/CoppiaT1FF.png (PNG co
 py)> <./Immagini/Traiettorie/CoppiaT2FF.png (PNG copy)>]
-<Immagini/Controllori/IDTeoria.png, id=398, 398.48875pt x 218.8175pt>
+<Immagini/Controllori/IDTeoria.png, id=404, 398.48875pt x 218.8175pt>
 File: Immagini/Controllori/IDTeoria.png Graphic file (type png)
 <use Immagini/Controllori/IDTeoria.png>
 Package pdftex.def Info: Immagini/Controllori/IDTeoria.png  used on input line 
 602.
 (pdftex.def)             Requested size: 358.63657pt x 196.93391pt.
-<Immagini/Controllori/SchemaID.png, id=399, 1288.815pt x 512.91624pt>
+<Immagini/Controllori/SchemaID.png, id=405, 1288.815pt x 512.91624pt>
 File: Immagini/Controllori/SchemaID.png Graphic file (type png)
 <use Immagini/Controllori/SchemaID.png>
 Package pdftex.def Info: Immagini/Controllori/SchemaID.png  used on input line 
@@ -1578,19 +1594,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [78]
 [79 <./Immagini/Controllori/IDTeoria.png> <./Immagini/Controllori/SchemaID.png>
 ]
-<Immagini/Sperimentale/Test_Kd=15.png, id=408, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=15.png, id=414, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=15.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=15.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=15.png  used on input li
 ne 623.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=2.png, id=409, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=2.png, id=415, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=2.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=2.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=2.png  used on input lin
 e 630.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=3.png, id=410, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=3.png, id=416, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=3.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=3.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=3.png  used on input lin
@@ -1611,13 +1627,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 620--648
 []$ $[]$ 
  []
 
-<Immagini/Traiettorie/CoppiaT1ID.png, id=411, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT1ID.png, id=417, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT1ID.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT1ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT1ID.png  used on input lin
 e 656.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/CoppiaT2ID.png, id=412, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT2ID.png, id=418, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT2ID.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT2ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT2ID.png  used on input lin
@@ -1628,13 +1644,13 @@ Overfull \hbox (28.2175pt too wide) in paragraph at lines 654--666
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/Theta1ID.png, id=413, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta1ID.png, id=419, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta1ID.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta1ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta1ID.png  used on input line 
 674.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/Theta2ID.png, id=414, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta2ID.png, id=420, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta2ID.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta2ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta2ID.png  used on input line 
@@ -1645,13 +1661,13 @@ Overfull \hbox (28.2175pt too wide) in paragraph at lines 671--685
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/ErroreTheta1ID.png, id=415, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta1ID.png, id=421, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta1ID.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta1ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta1ID.png  used on input
  line 691.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/ErroreTheta2ID.png, id=416, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta2ID.png, id=422, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta2ID.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta2ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta2ID.png  used on input
@@ -1662,7 +1678,7 @@ Overfull \hbox (15.41429pt too wide) in paragraph at lines 688--702
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/CerchioDinamicaInversa.png, id=417, 526.96875pt x 395.226
+<Immagini/Traiettorie/CerchioDinamicaInversa.png, id=423, 526.96875pt x 395.226
 56pt>
 File: Immagini/Traiettorie/CerchioDinamicaInversa.png Graphic file (type png)
 <use Immagini/Traiettorie/CerchioDinamicaInversa.png>
@@ -1689,13 +1705,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86]
-<Immagini/Controllori/RobustTeoria.png, id=441, 389.455pt x 248.93pt>
+<Immagini/Controllori/RobustTeoria.png, id=447, 389.455pt x 248.93pt>
 File: Immagini/Controllori/RobustTeoria.png Graphic file (type png)
 <use Immagini/Controllori/RobustTeoria.png>
 Package pdftex.def Info: Immagini/Controllori/RobustTeoria.png  used on input l
 ine 865.
 (pdftex.def)             Requested size: 311.5644pt x 199.14426pt.
-<Immagini/Sperimentale/BiellaManovella.png, id=442, 725.71124pt x 275.0275pt>
+<Immagini/Sperimentale/BiellaManovella.png, id=448, 725.71124pt x 275.0275pt>
 File: Immagini/Sperimentale/BiellaManovella.png Graphic file (type png)
 <use Immagini/Sperimentale/BiellaManovella.png>
 Package pdftex.def Info: Immagini/Sperimentale/BiellaManovella.png  used on inp
@@ -1707,14 +1723,14 @@ Overfull \hbox (8.63875pt too wide) in paragraph at lines 876--877
  []
 
 [87 <./Immagini/Controllori/RobustTeoria.png>]
-<Immagini/Traiettorie/ConfontoErroriTheta1.png, id=447, 526.96875pt x 395.22656
+<Immagini/Traiettorie/ConfontoErroriTheta1.png, id=454, 526.96875pt x 395.22656
 pt>
 File: Immagini/Traiettorie/ConfontoErroriTheta1.png Graphic file (type png)
 <use Immagini/Traiettorie/ConfontoErroriTheta1.png>
 Package pdftex.def Info: Immagini/Traiettorie/ConfontoErroriTheta1.png  used on
  input line 888.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/ConfontoErroriTheta2.png, id=448, 526.96875pt x 395.22656
+<Immagini/Traiettorie/ConfontoErroriTheta2.png, id=455, 526.96875pt x 395.22656
 pt>
 File: Immagini/Traiettorie/ConfontoErroriTheta2.png Graphic file (type png)
 <use Immagini/Traiettorie/ConfontoErroriTheta2.png>
@@ -1726,21 +1742,21 @@ Overfull \hbox (28.2175pt too wide) in paragraph at lines 885--899
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/QuadratoDinamicaInversa.png, id=449, 526.96875pt x 395.22
+<Immagini/Traiettorie/QuadratoDinamicaInversa.png, id=456, 526.96875pt x 395.22
 656pt>
 File: Immagini/Traiettorie/QuadratoDinamicaInversa.png Graphic file (type png)
 <use Immagini/Traiettorie/QuadratoDinamicaInversa.png>
 Package pdftex.def Info: Immagini/Traiettorie/QuadratoDinamicaInversa.png  used
  on input line 904.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
-<Immagini/Traiettorie/PatternDinamicaInversa.png, id=450, 526.96875pt x 395.226
+<Immagini/Traiettorie/PatternDinamicaInversa.png, id=457, 526.96875pt x 395.226
 56pt>
 File: Immagini/Traiettorie/PatternDinamicaInversa.png Graphic file (type png)
 <use Immagini/Traiettorie/PatternDinamicaInversa.png>
 Package pdftex.def Info: Immagini/Traiettorie/PatternDinamicaInversa.png  used 
 on input line 911.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
-<Immagini/Traiettorie/SpiraleID.png, id=451, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/SpiraleID.png, id=458, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/SpiraleID.png Graphic file (type png)
 <use Immagini/Traiettorie/SpiraleID.png>
 Package pdftex.def Info: Immagini/Traiettorie/SpiraleID.png  used on input line
@@ -1799,7 +1815,7 @@ Underfull \vbox (badness 3229) has occurred while \output is active []
 \openout2 = `Capitoli/AppendiceQuadro.aux'.
 
  (./Capitoli/AppendiceQuadro.tex
-<quadro.pdf, id=484, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=491, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 1.
@@ -1808,7 +1824,7 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 1.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<quadro.pdf, id=487, page=1, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=494, page=1, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 1>
 Package pdftex.def Info: quadro.pdf , page1 used on input line 1.
@@ -1841,7 +1857,7 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 2.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<quadro.pdf, id=505, page=2, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=511, page=2, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 2>
 Package pdftex.def Info: quadro.pdf , page2 used on input line 2.
@@ -1863,7 +1879,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page2 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [99 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=509, page=3, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=516, page=3, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 3>
 Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
@@ -1877,7 +1893,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [100 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=517, page=4, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=524, page=4, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 4>
 Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
@@ -1891,7 +1907,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [101 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=522, page=5, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=528, page=5, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 5>
 Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
@@ -1906,7 +1922,7 @@ Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 
 [102 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=526, page=6, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=532, page=6, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 6>
 Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
@@ -1920,7 +1936,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [103 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=530, page=7, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=536, page=7, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 7>
 Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
@@ -1934,7 +1950,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [104 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=534, page=8, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=540, page=8, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 8>
 Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
@@ -1948,7 +1964,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [105 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=538, page=9, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=545, page=9, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 9>
 Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
@@ -1962,7 +1978,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [106 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=542, page=10, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=549, page=10, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 10>
 Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
@@ -1976,7 +1992,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [107 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=547, page=11, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=553, page=11, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 11>
 Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
@@ -1990,7 +2006,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [108 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=551, page=12, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=557, page=12, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 12>
 Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
@@ -2004,7 +2020,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [109 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=555, page=13, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=561, page=13, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 13>
 Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
@@ -2018,7 +2034,7 @@ File: quadro.pdf Graphic file (type pdf)
 Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [110 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=559, page=14, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=565, page=14, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 14>
 Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
@@ -2031,13 +2047,9 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 14>
 Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [111 <./quadro.pdf, page is rotated 180 degrees>])
+ [111 <./quadro.pdf, page is rotated 180 degrees>]) [112
 
-LaTeX Warning: Empty bibliography on input line 96.
-
-(./main.lof [112
-
-] [113])
+] (./main.lof [113] [114])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -2045,9 +2057,10 @@ LaTeX Warning: Empty bibliography on input line 96.
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [114] (./main.aux (./begin.aux)
-(./Capitoli/Introduzione.aux) (./Capitoli/Cinematica.aux)
-(./Capitoli/Dinamica.aux) (./Capitoli/Cinetostatica.aux) (./Capitoli/Vite.aux)
+ [115]
+(./main.aux (./begin.aux) (./Capitoli/Dedica.aux) (./Capitoli/Introduzione.aux)
+(./Capitoli/Cinematica.aux) (./Capitoli/Dinamica.aux)
+(./Capitoli/Cinetostatica.aux) (./Capitoli/Vite.aux)
 (./Capitoli/Implementazione.aux) (./Capitoli/SistemaReale.aux)
 (./Capitoli/Conclusioni.aux) (./Capitoli/AppendiceDinamica.aux)
 (./Capitoli/AppendiceSistemi.aux) (./Capitoli/AppendiceQuadro.aux))
@@ -2063,11 +2076,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14527 strings out of 492616
- 251645 string characters out of 6129482
- 714420 words of memory out of 5000000
- 18045 multiletter control sequences out of 15000+600000
- 17832 words of font info for 70 fonts, out of 8000000 for 9000
+ 14826 strings out of 492616
+ 257272 string characters out of 6129482
+ 717873 words of memory out of 5000000
+ 18330 multiletter control sequences out of 15000+600000
+ 18001 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,22n,51p,1762b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -2087,11 +2100,12 @@ e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 19/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (116 pages, 4942534 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (119 pages, 4955324 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
+ 648 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  581 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -18,6 +18,7 @@
 \usepackage[titletoc]{appendix}
 \usepackage[backend=biber]{biblatex}
 \usepackage{pdfpages}
+\usepackage[nottoc,numbib]{tocbibind}
 \addbibresource{Bibliografia.bib}
 
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
@@ -46,19 +47,21 @@
 \begin{document}
 
 \include{./begin}
-
-\pagenumbering{gobble}
-
-\pagenumbering{arabic}
 \newpage
 \thispagestyle{empty} % empty
 \mbox{}
+
+\include{./Capitoli/Dedica}
+\pagenumbering{gobble}
+
+\pagenumbering{arabic}
+
 
 %\afterpage{\blankpage}
  
 \newpage
 \addtocounter{page}{-1}
-
+\nocite{*}
 \renewcommand{\baselinestretch}{1.5} 
 \newpage
 % Tavola dei contenuti
@@ -93,7 +96,12 @@
 \include{Capitoli/AppendiceSistemi}
 \include{Capitoli/AppendiceQuadro}
 \end{appendices}
+\addcontentsline{toc}{section}{Bibliografia}
 \printbibliography
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
 \listoffigures
 \listoftables
+
 \end{document}
