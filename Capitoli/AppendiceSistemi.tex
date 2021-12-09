@@ -46,3 +46,24 @@ Da tutto questo possiamo derivare anche la condizione di instabilità, esprimibi
 \exists i : |\lambda_i(A)|>1
 \end{equation}
 con A definita come prima. In questo caso, non esiste alcun introno dell'equilibrio che fa rimanere la perturbazione dello stato limitata a partire da una perturbazione iniziale $\delta \xi_0 \in \Psi_{\overline{\xi}}$. 
+\subsection{Metodo delle differenze finite}\label{appendix:diff}
+In caso di equazioni differenziali ordinarie l'interesse è quello di risolvere in un preciso dominio, in particolare, per poterle risolvere numericamente dobbiamo imporre la condizione che il dominio sia limitato. Le differenze finite vengono utilizzate per risolvere equazioni differenziali che descrivono fenomeni stazionari, ovvero quando le quantità di riferimento variano nello spazio (ipotizzando che non varino nel tempo). La trattazione seguente utilizzerà come esempio l'equazione di Poisson
+\begin{equation}
+- \frac{d^2 u(\gamma)}{d\gamma^2}  =f(\gamma)
+\end{equation}
+con $\gamma\in[0,R]$ e $f:\mathbb{R}\rightarrow \mathbb{R}$ una funzione con condizioni $u(0)=a, u(R)=b$; per poterla risolvere dobbiamo garantire un minimo di regolarità per la funzione f. La prima idea che applichiamo è la discretizzazione del dominio, ovvero dividiamo l'intervallo $[0,R]$ in intervalli sufficientemente piccoli la cui unione restituisce il dominio iniziale. Definiamo quindi la discretizzazione come:
+\begin{equation}
+\Gamma = \{\gamma_1 = 0 < \gamma_2 < \dots < \gamma_{N-1} < \gamma_N = R\}
+\end{equation}
+tale che $\cup_{i=1}^{N-1} [\gamma_i,\gamma_{i+1}] = [0,R]$. Essendo la discretizzazione costruita con distanze uguali chiamiamo $\Delta \gamma_k = \gamma_{k+1} -\gamma_k$. Ricordandoci il concetto di rapporto incrementale per la definizione della derivata prima, sapendo che la derivata di una funzione è definita come il limite del rapporto incrementale in caso che sia finito, ne consegue che possiamo definire la derivata seconda come:
+\begin{equation*}
+u''(\gamma) = \lim_{\Delta\gamma \to 0} \frac{u'(\gamma+\Delta\gamma) -u'(\gamma)}{\Delta \gamma}
+\end{equation*}
+Introduciamo quindi $u(\gamma_k) \approx u_k$, cioè, quello che noi andiamo a calcolare è l'approssimazione della soluzione calcolata in $\gamma_k$. Per fornire un'approssimazione alle differenze finite di queste derivate utilizziamo l'idea di trovare un intervallo di discretizzazione piccolo tale per cui prendendo due elementi $\gamma_k$ e $\gamma_{k+1}$ distano sufficientemente poco. Possiamo quindi approssimare la derivata come:
+\begin{equation}
+u'(\gamma_k) \approx \frac{u_{k+1}+u_k}{\Delta \gamma}
+\end{equation}
+L'approssimazione ottenuta però non è molto raffinata, si può ottenere un'espressione migliore, del secondo ordine effettuando una differenza finita centrata ottenendo quindi:
+\begin{equation}
+u'(\gamma_k) \approx \frac{u_{k+1}-u_{k-1}}{2\Delta \gamma}
+\end{equation}

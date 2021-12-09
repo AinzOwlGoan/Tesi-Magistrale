@@ -1,5 +1,3 @@
-
-
 \section{Sistema reale}
 Avendo introdotto anche le tecnologie implementate, andiamo ora a discutere il sistema reale, in particolare concentrandoci sulla sua struttura, compresa la configurazione, le operazioni che hanno consentito la movimentazione e le tecniche di controllo.
 \subsection{Struttura del robot}
@@ -143,7 +141,7 @@ Oltre al file ENI viene anche specificata la porta di comunicazione ed il bus ch
 \end{table}
 \subsubsection*{Input}
 \addcontentsline{toc}{subsubsection}{Input}
-La seconda fase è quella di input, in questa fase andiamo a prendere tutti i valori di posizione dei motori sia della vite che delle braccia. I valori vengono presi mediante i messaggi dalle PDO ed hanno bisogno di essere convertiti, proprio per questo la struttura di ricezione di un messaggio è la seguente: 
+La seconda fase è quella di input, in questa fase andiamo a prendere tutti i valori di posizione dei motori sia della vite che delle braccia. I valori vengono presi mediante lo scambio di PDO ed hanno bisogno di essere convertiti, proprio per questo la struttura di ricezione di un messaggio è la seguente: 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.6]{Immagini/Sperimentale/convertS}
@@ -151,38 +149,38 @@ La seconda fase è quella di input, in questa fase andiamo a prendere tutti i va
 		\label{fig:MotorConversion}
 	\end{center}
 \end{figure}
+\\Vediamo invece nella figura successiva la struttura del blocco di ricezione degli input, tutti i valori dopo una conversione entrano in blocchi \textit{goto} e verranno ripescati negli stati successivi da blocchi \textit{from}.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.65]{Immagini/Sperimentale/Input}
+		\includegraphics[scale=0.7]{Immagini/Sperimentale/Input}
 		\caption{Fase 2: Input}
 		\label{fig:Input}
 	\end{center}
 \end{figure}
 \subsubsection*{Stateflow}
 \addcontentsline{toc}{subsubsection}{Stateflow}
-Lo stateflow è un blocco dove viene posta la logica fondamentale dell'applicazione, in particolare in input avremo tutti i dati come ad esempio il clock, lo stato dei finecorsa, le posizioni dei motori e degli input che serviranno per l'interfaccia grafica. 
+Il blocco stateflow è un blocco è posta la logica fondamentale dell'applicazione, in ingresso abbiamo dati che servono per il controllo delle traiettorie e degli stati del manipolatore, in particolare il clock, lo stato dei finecorsa, le posizioni dei motori e delle variabili di input che serviranno per gestire interamente l'interfaccia grafica. In uscita invece abbiamo gli offset, utili per avere un riferimento spaziale di posizione e temporale, in quanto ci aiutano a capire di quanto ci siamo mossi e in quanto tempo, le coppie di \textit{homing} dei motori, un blocco per la gestione delle luci e variabili di output che serviranno per l'accensione e lo spegnimento dei led nell'interfaccia grafica.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.6]{Immagini/Sperimentale/sf0}
+		\includegraphics[scale=1]{Immagini/Sperimentale/sf0}
 		\caption{Fase 3: Stateflow}
 		\label{fig:Stateflow1}
 	\end{center}
 \end{figure}
-In output invece abbiamo gli offset, che ci serviranno per capire di quanto ci siamo mossi nelle varie fasi, e quindi avere un riferimento sia di posizione che temporale, le coppie di homing dei motori e della vite, e un blocco relativo alla gestione delle luci. Lo schema dello stateflow è visibile in figura \ref{fig:Stateflow1}.
 \subsubsection*{Controllo vite}
 \addcontentsline{toc}{subsubsection}{Controllo vite}
 Il blocco Controllo Vite, contiene lo schema del controllore implementato per controllare la vite, in ingresso abbiamo il clock, le posizioni dei motori con relativi offset e la movimentazione da far eseguire ad entrambi i motori con il tempo di esecuzione.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.6]{Immagini/Sperimentale/ControlloViteSchema}
+		\includegraphics[scale=0.7]{Immagini/Sperimentale/ControlloViteSchema}
 		\caption{Fase 4: Schema di controllo della vite}
 		\label{fig:ControlloVite}
 	\end{center}
 \end{figure}
-Grazie a tutti questi parametri potremo definire le leggi di moto che ci permetteranno il movimento nell'asse Z. Importante è sapere che il movimento eseguito dalla vite a ricircolo di sfere è dipendente anche dal movimento eseguito dalla guida lineare, infatti la rotazione provoca anche un abbassamento della vite, per risolvere questo problema il motore della guida dovrà essere sempre pronto a rispondere e correggere questa situazione; in caso che i due motori vadano alla stessa velocità si avrà una rotazione senza traslazione. Possiamo vedere lo schema in figura \ref{fig:ControlloVite}.
+Grazie a tutti questi parametri possiamo definire le leggi di moto che ci permettono di eseguire il movimento nell'asse Z. Importante è sapere che il movimento eseguito dalla vite a ricircolo di sfere è dipendente anche da quello della guida lineare, infatti la rotazione provoca anche un abbassamento della vite, per risolvere questo problema il motore della guida dovrà essere sempre pronto a rispondere e correggere questa situazione; in caso che i due motori vadano alla stessa velocità si avrà una rotazione senza traslazione.
 \subsubsection*{Controllo braccia}
 \addcontentsline{toc}{subsubsection}{Controllo braccia}
-Il blocco Controllo Braccia è quello responsabile della movimentazione dei link motorizzati, come per il blocco della vite prende in ingresso le posizioni, il \textit{clock} con i relativi offset e dentro vengono svolte le operazioni di generazione della legge di moto e di controllo. In uscita avremo le coppie che saranno assegnate ai due assi.
+Il blocco Controllo Braccia è quello responsabile della movimentazione dei link motorizzati, come per il blocco della vite prende in ingresso le posizioni, il \textit{clock} con i relativi offset ed internamente vengono svolte le operazioni di selezione della traiettoria, generazione della legge di moto con conseguente creazione degli angoli di riferimento (grazie alle relazioni di cinematica e dinamica) ed implementazione dello schema di controllo. In uscita abbiamo le coppie da assegnare ai due motori delle braccia.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.75]{Immagini/Sperimentale/ControlloBraccia}
@@ -190,7 +188,7 @@ Il blocco Controllo Braccia è quello responsabile della movimentazione dei link
 		\label{fig:controlloBraccia}
 	\end{center}
 \end{figure}
-Possiamo vedere lo schema in figura: \ref{fig:controlloBraccia}
+La scelta di dividere il controllo delle braccia e quello della vite in due blocchi diversi è stata fatta in quanto i due sono indipendenti l'uno dall'altro. Inizialmente ci si è concentrati sul controllo della vite, per poi passare a quello delle braccia ed infine dopo vari test i due controlli sono stati implementati contemporaneamente.
 \subsubsection*{Coppie uscita}
 \addcontentsline{toc}{subsubsection}{Coppie uscita}
 Dopo aver ottenuto le coppie di homing dallo stateflow e le coppie dei motori dagli schemi di controllo è venuto il momento di inviare le coppie agli azionamenti e di conseguenza ai motori; per far questo usiamo un bloco per ogni motore, oltre alle coppie in entrata avremo anche una variabile di controllo. 
@@ -220,7 +218,7 @@ Per controllare questa rampa è stato fatto un controllo proporzionale e integra
 \begin{equation*}
 	PI = \frac{K_p s + K_i}{s}
 \end{equation*}
-Nella figura successiva andiamo a vedere lo schema effettivamente implementato per questa prima fase:
+Nella figura \ref{fig:Zero} possiamo vedere lo schema effettivamente implementato per questa prima fase:
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.8]{Immagini/Sperimentale/state1new.png}
@@ -230,10 +228,10 @@ Nella figura successiva andiamo a vedere lo schema effettivamente implementato p
 \end{figure}
 \\Il primo stato è quello di begin, appena il programma si avvia ci entriamo in automatico, per passare allo stato successivo, ovvero attivazione abbiamo bisogno di due condizioni, la prima si verifica quando la \textit{Status Word} è uguale a 1079, ovvero quando gli azionamenti sono usciti dalla fase \textit{pre-operational} e sono quindi pronti all'uso, la seconda condizione invece è quando il segnale avvio è vero, nello stato attivazione i motori sono ancora fermi però viene abilitato il loro utilizzo, passare quindi in questo stato è obbligatorio. Per passare allo stato successivo il segnale \textit{ZeroSignal} deve essere vero, questo è un segnale gestito mediante un bottone da interfaccia grafica, appena viene premuto entriamo nello stato \textbf{Home}. In questo stato vengono definite variabili per la conversione dei valori\footnote{I valori presi dai motori sono espressi tutti in conti, per quello è stata necessaria una fase di analisi dei motori per capire come convertirli, successivamente c'è stato un passaggio da counts a radianti e da radianti a gradi.}, viene poi salvata la posizione di riferimento dell'asse A e B dei motori delle braccia. La fase successiva è quella del \textit{during}, rimanendo in quello stato quella fase viene eseguita ad ogni ciclo (1ms), in questa abbiamo la rampa che decresce di 0.015 gradi al millisecondo (15 gradi al secondo) e abbiamo una funzione simulink che è quella che si occupa del controllo PI. Una volta raggiunta la posizione del finecorsa le coppie vengono settate a 0, impedendo quindi un'ulteriore movimentazione. Per passare alla fase successiva abbiamo bisogno che tutti gli elementi siano arrivati a finecorsa.
 \subsubsection{Fase di posizionamento}
-La fase successiva è quella di posizionamento, per non lasciare il robot nella configurazione di zero si è scelto di spostarlo in una configurazione standard lontana dai punti di singolarità e che sarà comoda per le movimentazioni e traiettorie successive. La configurazione scelta prevede che i giunti siano messi a $100^\circ$ e $80^\circ$, anche qua come prima il primo approccio è stato quello di utilizzare una coppia costante per il movimento; la fase di zero lasciava i link a $60^\circ$ e $-30^\circ$, vi era quindi la necessità di fare $+40^\circ$ per il motore a sinistra e $+110^\circ$ per il motore a destra, la coppia costante veniva erogata finché non si arrivava a quelle condizioni, dopodiché eravamo sicuri che il posizionamento era stato fatto in maniera corretta. La vite invece ha due modalità di configurazione, è possibile farla abbassare o lasciarla alta in finecorsa, si è scelto di proseguire in questo modo in quanto alla vite come abbiamo visto precedentemente è possibile collegare degli utensili e quindi l'abbassamento la predisponeva al disegno per traiettorie bidimensionali. L'approccio di controllo finale però non è stato quello della coppia costante, anche in questo caso per motivi di sicurezza ma, sapendo le posizioni finali che si volevano raggiungere, si è optato per definire una legge di moto che si occupa di portarci nella condizione di posizionamento desiderata
+La fase successiva è quella di posizionamento, per non lasciare il robot nella configurazione di zero si è scelto di spostarlo in una configurazione standard lontana dai punti di singolarità e che sarà comoda per le movimentazioni e traiettorie successive. La configurazione scelta prevede che i giunti siano messi a $100^\circ$ e $80^\circ$, anche qua come prima il primo approccio è stato quello di utilizzare una coppia costante per il movimento; la fase di zero lasciava i link a $60^\circ$ e $-30^\circ$, vi era quindi la necessità di fare $+40^\circ$ per il motore a sinistra e $+110^\circ$ per il motore a destra, la coppia costante veniva erogata finché non si arrivava a quelle condizioni, dopodiché eravamo sicuri che il posizionamento era stato fatto in maniera corretta. La vite invece ha due modalità di configurazione, è possibile farla abbassare o lasciarla alta in finecorsa, si è scelto di proseguire in questo modo in quanto alla vite come abbiamo visto precedentemente è possibile collegare degli utensili e quindi l'abbassamento la predisponeva al disegno per traiettorie bidimensionali. L'approccio di controllo finale però non è stato quello della coppia costante, anche in questo caso per motivi di sicurezza ma, sapendo le posizioni finali che si volevano raggiungere, si è optato per definire una legge di moto che si occupa di portarci nella condizione di posizionamento desiderata.
 \begin{figure}[ht]
 \begin{center}
-    \includegraphics[scale=0.7]{Immagini/Sperimentale/state2New.png}
+    \includegraphics[scale=0.58]{Immagini/Sperimentale/state2New.png}
     \caption{Fase di posizionamento}
     \label{fig:Pos}
 \end{center}
@@ -273,10 +271,10 @@ Come abbiamo anticipato precedentemente nello stato \textbf{OffSet} c'è il sett
 	\item la traiettoria da problemi
 \end{itemize}
 Nel primo caso abbiamo 40 secondi per eseguire la traiettoria (il tempo può essere personalizzato in base alla tipologia di traiettorie), alla fine di questo tempo passiamo allo stato \textbf{FineLavorazione} dove il manipolatore è fermo ed ha concluso la sua traiettoria, da questo mediante il bottone di reset è possibile ritornare alla fase di zero, oppure in automatico dopo un determinato periodo di tempo se il tasto di homing è stato lasciato attivo il manipolatore torna all'homing. Nel secondo caso ci si accorge che la traiettoria sta dando problemi, magari vibrazioni o si vede che il manipolatore rischia di entrare in singolarità, per prevenire questo vi è un bottone denominato \textbf{STOP} che permette l'arresto immediato del manipolatore, azzerando tutte le coppie. A differenza della pressione del fungo, che dopo lo sbloccaggio richiede il riavvio del dispositivo, nel caso in cui si entri nella fase di stop mediante il bottone di reset è possibile far tornare il manipolatore nella fase di attivazione, da questa poi sarà possibile far partire di nuovo la fase di zero e successivamente quella di homing.
-
 \subsubsection*{Gestione variabile di stato e luci}
 \addcontentsline{toc}{subsubsection}{Gestione variabile di stato e luci}
-Durante tutte le fasi è possibile vedere nello stateflow che due variabili si evolvono costantemente: bool e luci; la prima serve per indicare lo stato nel quale si trova il manipolatore, in particolare è state definita la seguente tabella degli stati.
+Durante tutte le fasi è possibile vedere nello stateflow che due variabili si evolvono costantemente: bool e luci.
+\\La prima serve per indicare lo stato di lavoro nel quale si trova il manipolatore, in particolare l'evoluzione segue la tabella degli stati \ref{table:3}.
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c |c |} 
@@ -288,13 +286,13 @@ Durante tutte le fasi è possibile vedere nello stateflow che due variabili si e
   1 & Homing \\
   2 & Manipolatore posizionato\\
   3 & Traiettoria\\
-  4 & Manipolatore fermo\\
+  4 & Fine lavorazione \\
  \hline
 \end{tabular}
 \caption{Valori variabile \textit{bool}}
 \label{table:3}
 \end{table}
-\\La seconda invece serve a pilotare le luci in modo tale da avere un feedback visuale che indica fase in cui è il manipolatore.
+\\Il valore di luci, serve esattamente a pilotare le luci presenti nel manipolatore\footnote{Inizialmente le luci erano solo fisiche, montate nella parte posteriore del manipolatore, per comodità visiva sono state anche implementate nell'interfaccia grafica.}  secondo la tabella \ref{table:luci}, in modo tale da avere un feedback visuale che indica fase in cui è il manipolatore.
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c |c|c|} 
@@ -312,7 +310,7 @@ Durante tutte le fasi è possibile vedere nello stateflow che due variabili si e
 \label{table:luci}
 \end{table}
 \subsubsection{Interfaccia grafica}
-Per gestire al meglio le varie impostazioni, e per essere sicuri del passaggio tra i vari stati è stata creata un'interfaccia grafica \textit{user-friendly} mediante \textit{instrument panel} fornito da \textit{Simulink real-time explorer}
+Per gestire al meglio le varie impostazioni, e per essere sicuri del passaggio tra i vari stati è stata creata un'interfaccia grafica \textit{user-friendly} mediante \textit{instrument panel} fornito da \textit{Simulink real-time explorer}, possiamo vederla in figura \ref{fig:gui}.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.6]{Immagini/Sperimentale/GUI2}
@@ -327,7 +325,7 @@ Per gestire al meglio le varie impostazioni, e per essere sicuri del passaggio t
 	\item Fine lavoro: appena la traiettoria assegnata finisce questo si accende
 	\item Luci: sono i led visti nella tabella \ref{table:luci}, che vanno ad indicare in che fase di lavoro è il manipolatore, per comodità visiva il led bianco nell'interfaccia è stato sostituito da uno ocra
 \end{itemize} 
-Sotto questi led abbiamo un indicatore che va a specificare le fasi di lavoro come viste nella tabella \ref{table:3}. Al centro abbiamo i bottoni che permettono di passare tra le varie fasi dello stateflow e di fare tutte le operazioni quindi avvio, zero, homing, lavoro stop e reset. In particolare i bottoni funzionano tramite il collegamento ad una variabile, e quelle di riferimento sono le ultime costanti collegate in input allo stateflow visto in figura \ref{fig:Stateflow1}. A destra abbiamo invece una parte di visualizzazione dove vediamo tutti i parametri di interesse del manipolatore, in particolare le coppie fornite e le posizioni sia nel piano $[x,y,z]$ che quelle ai link motorizzati quindi $\theta_1,\theta_2$. Infine, abbiamo il selettore di traiettoria, il quale permette la scelta fra le sei opzioni possibili (di default viene eseguito il cerchio).
+Sotto questi led abbiamo un indicatore che va a specificare le fasi di lavoro come viste nella tabella \ref{table:3}. Al centro abbiamo i bottoni che permettono di passare tra le varie fasi dello stateflow e di fare tutte le operazioni quindi avvio, homing, posizionamento, lavoro stop e reset. In particolare i bottoni funzionano tramite il collegamento a determinate variabili; quelle di riferimento sono le ultime costanti collegate in input allo stateflow visto in figura \ref{fig:Stateflow1}. A destra abbiamo invece una parte di visualizzazione dove vediamo tutti i parametri di interesse del manipolatore, in particolare le coppie fornite e le posizioni sia nel piano $[x,y,z]$ che quelle ai link motorizzati quindi $\theta_1,\theta_2$. Infine, abbiamo il selettore di traiettoria, il quale permette la scelta fra le sei opzioni possibili (di default viene eseguito il cerchio).
 \begin{enumerate}
 	\item Quadrato
 	\item Cerchio
@@ -359,8 +357,8 @@ L'azione proporzionale è utile in quanto più grande è l'errore all'ingresso d
 Andiamo ora a vedere l'implementazione del controllore:
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.37]{Immagini/Controllori/Vite}
-		\caption{CAMBIARE}
+		\includegraphics[scale=0.37]{Immagini/Controllori/ViteP}
+		\caption{Controllore proporzionale vite}
 		\label{fig:PVite}
 	\end{center}
 \end{figure}
@@ -971,4 +969,42 @@ Un filtro del secondo ordine si differenzia dal primo aggiungendo un polo, perme
 \addcontentsline{toc}{subsubsection}{Filtro di Kalman}
 [INSERISCI SPIEGAZIONE TEORICA KALMAN]
 Gli approcci implementativi del filtro sono stati due, il primo metodo consisteva nell'approccio al problema mediante tecniche di \textit{sensor fusion}, andando a ricercare i valori delle matrici di covarianza in modo sperimentale e valutare il comportamento del filtro rispetto alla velocità originale; il secondo approccio è stata un'implementazione del filtro in maniera più teorica facendo riferimento alla teoria automatica.
-[valuta se inserire spiegazione prima o dopo]
+\\Per definire il filtro di Kalman partiamo dalla definizione dello stato come
+\begin{equation}
+\xi = \begin{bmatrix}
+\dot{\theta} \\ \theta
+\end{bmatrix}
+\end{equation}
+Definiamo ora la derivata dello stato come:
+\begin{equation}
+\dot{\xi} = \begin{bmatrix}
+\ddot{\theta} \\ \dot{\theta}
+\end{bmatrix} =\begin{bmatrix}
+0 & I \\ 0 & -M^{-1}C
+\end{bmatrix} + \begin{bmatrix}
+0 \\ M^{-1}
+\end{bmatrix}\tau_m
+\end{equation}
+Possiamo esprimere questa equazione come:
+\begin{equation*}
+\dot{\xi} = \varphi(\xi,u)
+\end{equation*}
+Con u ingresso corrispondente alle coppie. Il filtro, a partire dal valore attuale ci consente di predire il valore successivo come:
+\begin{equation}
+\xi_{k+1} - \xi_{k} = \varphi(\xi_k,u_k)\Delta t \rightarrow \xi_{k+1} = \xi_k + \varphi(\xi_k,u_k)\Delta t = f(\xi_k,u_k)
+\end{equation}
+L'uscita $y_k$ sarà data da: 
+\begin{equation}
+y_k = \mathbb{F}\xi_k
+\end{equation}
+Dove:
+\begin{equation*}
+\mathbb{F} = \frac{\partial f}{\partial \xi} \Bigg|_{\hat{\xi_k},u_k} = \begin{bmatrix}
+\frac{\partial f}{\partial \xi_1} & \frac{\partial f}{\partial \xi_2} & \frac{\partial f}{\partial \xi_3} & \frac{\partial f}{\partial \xi_4}
+\end{bmatrix}
+\end{equation*}
+Sfruttando il metodo delle differenze finite(\ref{appendix:diff} possiamo trovare:
+\begin{equation}
+\frac{\partial}{\partial \xi_d} f(\xi,u) \approx \frac{f(\xi+\Delta\xi\delta_d)-f(\xi-\Delta\xi\delta_d)}{2\Delta\xi}
+\end{equation}
+Con $\delta_d$ definito come la colonna della matrice identità calcolata col metodo di Sarrus.

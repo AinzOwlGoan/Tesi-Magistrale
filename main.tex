@@ -18,7 +18,7 @@
 \usepackage[titletoc]{appendix}
 \usepackage[backend=biber]{biblatex}
 \usepackage{pdfpages}
-%\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[nottoc,numbib]{tocbibind}
 \addbibresource{Bibliografia.bib}
 
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
@@ -64,13 +64,10 @@
 \addtocounter{page}{-1}
 \nocite{*}
 \renewcommand{\baselinestretch}{1.5} 
-\newpage
 % Tavola dei contenuti
 \tableofcontents
 \newpage
-\newpage
-\thispagestyle{plain} % empty
-\mbox{}
+
 \include{Capitoli/Introduzione}
 \include{Capitoli/Cinematica}
 \include{Capitoli/Dinamica}
@@ -78,6 +75,9 @@
 \thispagestyle{plain} % empty
 \mbox{}
 \include{Capitoli/Cinetostatica}
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
 \include{Capitoli/Vite}
 \newpage
 \thispagestyle{plain} % empty

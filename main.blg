@@ -1,15 +1,15 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'main.blg'
-[177] biber-MSWIN64:340> INFO - === 
-[253] Biber.pm:415> INFO - Reading 'main.bcf'
-[437] Biber.pm:949> INFO - Using all citekeys in bib section 0
-[459] Biber.pm:4340> INFO - Processing section 0
-[474] Biber.pm:4531> INFO - Looking for bibtex format file 'Bibliografia.bib' for section 0
-[565] bibtex.pm:1689> INFO - LaTeX decoding ...
-[585] bibtex.pm:1494> INFO - Found BibTeX data source 'Bibliografia.bib'
-[662] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[662] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[662] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'it-IT'
-[662] Biber.pm:4174> INFO - No sort tailoring available for locale 'it-IT'
-[668] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[671] bbl.pm:757> INFO - Output to main.bbl
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'main.blg'
+[33] biber-darwin:315> INFO - === Thu Dec  9, 2021, 17:22:04
+[53] Biber.pm:371> INFO - Reading 'main.bcf'
+[126] Biber.pm:886> INFO - Using all citekeys in bib section 0
+[138] Biber.pm:4093> INFO - Processing section 0
+[148] Biber.pm:4254> INFO - Looking for bibtex format file 'Bibliografia.bib' for section 0
+[149] bibtex.pm:1523> INFO - LaTeX decoding ...
+[162] bibtex.pm:1340> INFO - Found BibTeX data source 'Bibliografia.bib'
+[198] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[198] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[198] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'it-IT'
+[198] Biber.pm:3927> INFO - No sort tailoring available for locale 'it-IT'
+[203] bbl.pm:636> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[205] bbl.pm:739> INFO - Output to main.bbl
