@@ -1,10 +1,10 @@
 
 
 \section{Sistema reale}
-Avendo introdotto anche le tecnologie implementate, andiamo ora a discutere del sistema reale, in particolare concentrandoci sulla sua struttura, compresa la configurazione, le operazioni che hanno consentito la movimentazione e le tecniche di controllo
+Avendo introdotto anche le tecnologie implementate, andiamo ora a discutere il sistema reale, in particolare concentrandoci sulla sua struttura, compresa la configurazione, le operazioni che hanno consentito la movimentazione e le tecniche di controllo.
 \subsection{Struttura del robot}
-Il manipolatore PKM è un manipolatore a cinematica parallela, composto da due braccia ed un end-effector. Alle braccia sono collegati due motori, uno per il link motorizzato sinistro e l'altro per il link motorizzato destro, i link distali si muovono in conseguenza al movimento di quelli motorizzati. Anche l'end-effector è composto da due motori, il primo motore permette di far salire/scendere la vite, il secondo invece genera un moto elicoidale che permette la rotazione della vite con conseguente salita/discesa. 
-Per quanto riguarda la parte elettronica abbiamo la presenza di due azionamenti che sono collegati uno ai motori delle braccia e l'altro ai motori della vite ed un modulo beckhoff che si occupa della gestione degli input digitali.
+Il manipolatore PKM è un manipolatore a cinematica parallela, composto da due braccia e un end-effector. Alle braccia sono collegati due motori, uno per il link motorizzato sinistro e l'altro per quello destro, i link distali si muovono in conseguenza al movimento di quelli motorizzati. Anche l'end-effector è composto da due motori, il primo motore permette di far salire/scendere la vite, il secondo invece genera un moto elicoidale che permette la rotazione della vite con conseguente salita/discesa. 
+\par Per quanto riguarda la parte elettronica abbiamo la presenza di due azionamenti che sono collegati uno ai motori delle braccia e l'altro a quelli della vite e un modulo beckhoff che si occupa della gestione degli input/output digitali.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.6]{Immagini/Sperimentale/banco}
@@ -12,15 +12,15 @@ Per quanto riguarda la parte elettronica abbiamo la presenza di due azionamenti 
 		\label{fig:BancoProva}
 	\end{center}
 \end{figure}
-Per funzionare il sistema ha bisogno di due alimentatori, uno che serve ad alimentare la logica,alimentato a 24 Volt e un altro che serve ad alimentare i quattro motori, 80 Volt.
+\\Per poter utilizzare il sistema sono necessarie due fonti di alimentazione, una che serve ad alimentare la logica con tensione pari a 24 Volt, e l'altra che alimenta i motori con tensione pari a  80 Volt.
 \subsubsection{Azionamenti}
 Gli azionamenti utilizzati sono gli accelnet plus a 2 assi BE2, sono progettati appositamente per EtherCAT, operano con tensioni da 14 a 90 volt, riescono a fornire in uscita fino a 30A.
-\\Sono predisposti per controllo in posizione, velocità e coppia di motori brushless, per la configurazione utilizzano il software CME 2 e la comunicazione avviene mediante l'interfaccia seriale RS-232. Il BE2 opera come ethercat slave, utilizzando il layer applicativo CAN su ethercat CoE. Inoltre, viene fornito un input AuxHV che permette in casi critici di tener vivo l'azionamento anche quando non c'è alimentazione senza perdere le informazioni sulla posizione o le comunicazioni con il sistema di controllo.
-Per la comunicazione con ethercat invece sono predisposti due cavi RJ-45, la porta d'ingresso IN permette la connessione ad un master o alla porta d'uscita OUT di un dispositivo che nella gerarchia è interposto tra il master e l'azionamento. Inoltre, se l'accelnet è l'ultimo nodo della rete non vi è bisogno di un terminatore sulla porta d'uscita.
+\par Sono predisposti per controllo in posizione, velocità e coppia di motori brushless; per la configurazione utilizzano il software CME2 e la comunicazione avviene mediante l'interfaccia seriale RS-232. Il BE2 opera come ethercat slave, utilizzando il layer applicativo CAN su ethercat CoE. Inoltre, viene fornito un input AuxHV che permette in casi critici di tener vivo l'azionamento anche quando non c'è alimentazione senza perdere le informazioni sulla posizione o le comunicazioni con il sistema di controllo.
+Per la comunicazione con ethercat invece sono predisposti due cavi RJ-45, la porta d'ingresso \textbf{IN} permette la connessione ad un master o alla porta d'uscita OUT di un dispositivo che nella gerarchia è interposto tra il master e l'azionamento. Inoltre, se l'accelnet è l'ultimo nodo della rete non vi è bisogno di un terminatore sulla porta d'uscita.
  
 \subsubsection{Beckhoff EK1814}
-Il beckhoff EK1814 è un accoppiatore EtherCAT che fa da \textit{link} tra il protocollo EtherCAT a livello di bus di campo e il terminali EtherCAT. Inoltre, su questo modello sono anche integrati quattro input digitali e quattro output digitali. La sua struttura lo rende ideale per applicazioni con pochi input/output. L'accoppiatore converte i telegrammi che passano da Ethernet \textit{100BASE-TX} a rappresentazioni di segnali \textit{E-bus}. Una stazione EtherCAT è formata da un accoppiatore e da un numero N di terminali che vengono identificati automaticamente.
-\\Inoltre, l'EK1814 ha due connessioni RJ45, l'interfaccia Ethernet superiore è utilizzata per collegare l'accoppiatore alla rete, mentre quella posteriore serve per il collegamento di altri dispositivi EtherCAT nello stesso commento. Nel nostro progetto è stato usato come master, a questo sono stati connessi gli slave (ovvero gli azionamenti), inoltre gli input e output digitali sono stati usati per controllare la pressione del fungo di emergenza e le luci di segnalazione delle fasi del manipolatore.
+Il beckhoff EK1814 è un accoppiatore EtherCAT che fa da \textit{link} tra il protocollo EtherCAT a livello di bus di campo e i terminali EtherCAT.Inoltre, su questo modello sono integrati quattro input digitali e quattro output digitali. La sua struttura lo rende ideale per applicazioni con pochi input/output. L'accoppiatore converte i telegrammi che passano da Ethernet \textit{100BASE-TX} a rappresentazioni di segnali \textit{E-bus}. Una stazione EtherCAT è formata da un accoppiatore e da un numero N di terminali che vengono identificati automaticamente.
+\\Inoltre, l'EK1814 ha due connessioni RJ45, l'interfaccia Ethernet superiore è utilizzata per collegare l'accoppiatore alla rete, mentre quella posteriore serve per il collegamento di altri dispositivi EtherCAT nello stesso commento. Nel nostro progetto è stato usato come slave, a questo sono stati connessi gli azionamenti (come slave in cascata), e il PC Target (come master). Gli input e output digitali sono stati usati per controllare la pressione del fungo di emergenza e le luci di segnalazione per le fasi del manipolatore.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.6]{Immagini/Sperimentale/Beckoffschema.PNG}
@@ -29,7 +29,7 @@ Il beckhoff EK1814 è un accoppiatore EtherCAT che fa da \textit{link} tra il pr
 	\end{center}
 \end{figure}
 \subsubsection{Configurazione della rete}
-La configurazione della rete prevede alla base il PC Target, in questo vi è una chiavetta USB che fa \textit{runnare} sul pc un sistema operativo simulink real time. Il target è il master della rete, ha due uscite ethernet, la prima è collegata direttamente al modulo bechkoff, il quale prende l'identità di primo slave, e come abbiamo visto precedentemente, al bechkoff sono attaccati e i due azionamenti che si comportano come slave aggiuntivi slave.
+La configurazione della rete prevede alla base il PC Target, in questo vi è una chiavetta USB che fa \textit{runnare} sul pc un sistema operativo simulink real time. Il target è il master della rete, ha due uscite ethernet, la prima è collegata direttamente al modulo bechkoff, il quale prende l'identità di primo slave, e come abbiamo visto precedentemente, al bechkoff sono attaccati e i due azionamenti che si comportano come slave aggiuntivi.
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.5]{Immagini/Sperimentale/Topology.PNG}
@@ -37,7 +37,7 @@ La configurazione della rete prevede alla base il PC Target, in questo vi è una
     \label{fig:NetTopology1}
 \end{center}
 \end{figure}
-Invece, alla seconda porta ethernet, vi è collegato il PC dell'utente, il quale provvede a generare, compilare, e caricare ed  i programmi sul PC target. Da User-PC è anche possibile vedere i grafici e fare delle analisi sui movimenti e le traiettorie eseguite dal manipolatore. La connessione avviene tramite una rete ethernet, l'indirizzo del target è 192.168.4.200, invece per User-PC:
+\\Alla seconda porta ethernet, vi è collegato il PC dell'utente, il quale provvede a generare, compilare, e caricare i programmi sul PC target. Da User-PC è anche possibile vedere i grafici e fare delle analisi sulle movimentazioni e le traiettorie eseguite dal manipolatore. La connessione avviene tramite una rete ethernet, l'indirizzo del target è 192.168.4.200, invece per User-PC:
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.7]{Immagini/Sperimentale/ConfEthernet.png}
@@ -45,7 +45,7 @@ Invece, alla seconda porta ethernet, vi è collegato il PC dell'utente, il quale
     \label{fig:ConfEthernet}
 \end{center}
 \end{figure}
-Va precisato che il pc dell'utente non fa parte della rete ethercat, ma la rete inizia soltanto dal pc target in poi, infatti, ad esclusione delle operazioni viste prima il manipolatore non ha bisogno del pc utente per funzionare.
+\\Va precisato che il pc dell'utente non fa parte della rete ethercat, ma la rete inizia soltanto dal pc target in poi, infatti, ad esclusione delle operazioni viste precedentemente il manipolatore non ha bisogno del pc utente per funzionare.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.7]{Immagini/Sperimentale/NetTopology.png}
@@ -53,7 +53,7 @@ Va precisato che il pc dell'utente non fa parte della rete ethercat, ma la rete 
 		\label{fig:NetTopology2}
 	\end{center}
 \end{figure}
-Una volta configurata la rete, il passo successivo è stato quello della configurazione dei messaggi, come è stato anticipato nel capitolo precedente il metodo di comunicazione sono le PDO. Le PDO possono essere in input o in output, la differenza sta nel fatto che le primo sono PDO che gli azionamenti trasmettono al master, di conseguenza il master le riceve, quelle di output invece sono PDO che il master trasmette e che gli azionamenti ricevono. 
+\\Una volta configurata la rete, il passo successivo è stato quello della configurazione dei messaggi, come è stato anticipato nel capitolo precedente il metodo di comunicazione sono le PDO. Le PDO possono essere in input o in output, la differenza sta nel fatto che le prime sono trasmesse al master dagli azionamenti, di conseguenza il master le riceve, quelle in output invece sono PDO che il master trasmette e che gli azionamenti ricevono. 
 \\Nelle immagini seguenti sono elencate le PDO di input, in particolare:
 \begin{itemize}
  	\item PDO1 e PDO2 contengono i parametri di posizione, velocità coppia effettiva e modalità operativa che vengono trasmesse dagli azionamenti
@@ -92,18 +92,18 @@ Una volta configurata la rete, il passo successivo è stato quello della configu
 \caption{PDO in input}
 \label{fig:PDOIn}
 \end{figure}
-Per quanto riguarda le PDO che riceve l'azionamento sono solo due, ed i parametri ricevuti sono:
+Per quanto riguarda le PDO in output che riceve l'azionamento sono solo due, ed i parametri ricevuti sono:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/pdo12out.png}
+		\caption{PDO Output 1 e 2}
+		\label{fig:PDOOut}
+	\end{center}
+\end{figure}
 \begin{itemize}
-	\item \textit{Modes of operation}, è un registro che specifica la modalità con la verrà controllato l'azionamento, per esempio coppia, posizione, velocità o ciclica
+	\item \textit{Modes of operation}, è un registro che specifica la modalità con la quale verrà controllato l'azionamento, per esempio coppia, posizione, velocità o ciclica
 	\item \textit{Target torque}, specifica il valore di coppia che l'azionamento dovrà fornire al motore
 \end{itemize}
-\begin{figure}[ht]
-\begin{center}
-    \includegraphics[scale=0.67]{Immagini/Sperimentale/pdo12out.png}
-    \caption{PDO Output 1 e 2}
-    \label{fig:PDOOut}
-\end{center}
-\end{figure}
 \subsection{Implementazione nel sistema reale}
 Una volta ottenuto il file ENI contenente la topologia della rete è stato utilizzato simulink real-time per implementare la logica di controllo del manipolatore
 \begin{figure}[ht]
@@ -113,7 +113,7 @@ Una volta ottenuto il file ENI contenente la topologia della rete è stato utili
 		\label{fig:SimulinkSchema}
 	\end{center}
 \end{figure}
-Il programma è stato diviso in sei stati diversi, andiamo ad analizzare ora i vari stati.
+\\Il programma è stato diviso in sei stati diversi, andiamo ad analizzare ora i vari stati.
 \subsubsection*{Inizializzazione}
 \addcontentsline{toc}{subsubsection}{Inizializzazione}
 La prima fase è quella di inizializzazione, in questa fase viene inserito il file ENI e viene specificata la modalità operativa degli azionamenti.
@@ -124,7 +124,7 @@ La prima fase è quella di inizializzazione, in questa fase viene inserito il fi
 		\label{fig:Init}
 	\end{center}
 \end{figure}
-Oltre al file ENI viene anche specificata la porta di comunicazione ed il bus che verranno utilizzati per lo scambio di dati. Ogni azionamento ha poi una determinata modalità operativa, come abbiamo visto nelle sezioni precedenti il controllo è effettuato in coppia. 
+Oltre al file ENI viene anche specificata la porta di comunicazione ed il bus che verranno utilizzati per lo scambio di dati. Ogni azionamento ha poi una determinata modalità operativa, come abbiamo visto nelle sezioni precedenti il controllo è effettuato in coppia (mod. 4). 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|c |c|} 
@@ -143,7 +143,14 @@ Oltre al file ENI viene anche specificata la porta di comunicazione ed il bus ch
 \end{table}
 \subsubsection*{Input}
 \addcontentsline{toc}{subsubsection}{Input}
-La seconda fase è quella di input, in questa fase andiamo a prendere tutti i valori di posizione dei motori sia della vite che delle braccia
+La seconda fase è quella di input, in questa fase andiamo a prendere tutti i valori di posizione dei motori sia della vite che delle braccia. I valori vengono presi mediante i messaggi dalle PDO ed hanno bisogno di essere convertiti, proprio per questo la struttura di ricezione di un messaggio è la seguente: 
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/convertS}
+		\caption{Conversione e lettura motori}
+		\label{fig:MotorConversion}
+	\end{center}
+\end{figure}
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.65]{Immagini/Sperimentale/Input}
@@ -151,36 +158,28 @@ La seconda fase è quella di input, in questa fase andiamo a prendere tutti i va
 		\label{fig:Input}
 	\end{center}
 \end{figure}
-I valori vengono presi mediante i messaggi dalle PDO ed hanno bisogno di essere convertiti, proprio per questo la struttura di ricezione di un messaggio è la seguente: 
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[scale=0.7]{Immagini/Sperimentale/convertS}
-		\caption{Conversione e lettura motori}
-		\label{fig:MotorConversion}
-	\end{center}
-\end{figure}
 \subsubsection*{Stateflow}
 \addcontentsline{toc}{subsubsection}{Stateflow}
 Lo stateflow è un blocco dove viene posta la logica fondamentale dell'applicazione, in particolare in input avremo tutti i dati come ad esempio il clock, lo stato dei finecorsa, le posizioni dei motori e degli input che serviranno per l'interfaccia grafica. 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.7]{Immagini/Sperimentale/sf0}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/sf0}
 		\caption{Fase 3: Stateflow}
 		\label{fig:Stateflow1}
 	\end{center}
 \end{figure}
-In output invece abbiamo gli offset, che ci serviranno per capire di quanto ci siamo mossi nelle varie fasi, e quindi avere un riferimento sia di posizione che temporale, le coppie di homing dei motori e della vite, e un blocco relativo alla gestione delle luci\footnote{abbiamo la presenza di tre luci: rosso, bianco e verde, nei paragrafi successivi verrà introdotto il loro comportamento}.
+In output invece abbiamo gli offset, che ci serviranno per capire di quanto ci siamo mossi nelle varie fasi, e quindi avere un riferimento sia di posizione che temporale, le coppie di homing dei motori e della vite, e un blocco relativo alla gestione delle luci. Lo schema dello stateflow è visibile in figura \ref{fig:Stateflow1}.
 \subsubsection*{Controllo vite}
 \addcontentsline{toc}{subsubsection}{Controllo vite}
-Il blocco Controllo Vite, contiene lo schema del controllore implementato per controllare la vite, in ingresso abbiamo il clock, le posizioni dei motori con relativi offset e la movimentazione da far eseguire ad entrambi i motori della vite con il tempo di esecuzione.
+Il blocco Controllo Vite, contiene lo schema del controllore implementato per controllare la vite, in ingresso abbiamo il clock, le posizioni dei motori con relativi offset e la movimentazione da far eseguire ad entrambi i motori con il tempo di esecuzione.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.7]{Immagini/Sperimentale/ControlloViteSchema}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/ControlloViteSchema}
 		\caption{Fase 4: Schema di controllo della vite}
 		\label{fig:ControlloVite}
 	\end{center}
 \end{figure}
-Grazie a tutti questi parametri potremo definire le leggi di moto che ci permetteranno il movimento nell'asse Z. Importante è sapere che il movimento eseguito dalla vite a ricircolo di sfere è dipendente anche dal movimento eseguito dalla guida lineare, infatti la rotazione provoca anche un abbassamento della vite, per risolvere questo problema il motore della guida dovrà essere sempre pronto a rispondere e correggere questa situazione; in caso che i due motori vadano alla stessa velocità si avrà una rotazione senza traslazione.
+Grazie a tutti questi parametri potremo definire le leggi di moto che ci permetteranno il movimento nell'asse Z. Importante è sapere che il movimento eseguito dalla vite a ricircolo di sfere è dipendente anche dal movimento eseguito dalla guida lineare, infatti la rotazione provoca anche un abbassamento della vite, per risolvere questo problema il motore della guida dovrà essere sempre pronto a rispondere e correggere questa situazione; in caso che i due motori vadano alla stessa velocità si avrà una rotazione senza traslazione. Possiamo vedere lo schema in figura \ref{fig:ControlloVite}.
 \subsubsection*{Controllo braccia}
 \addcontentsline{toc}{subsubsection}{Controllo braccia}
 Il blocco Controllo Braccia è quello responsabile della movimentazione dei link motorizzati, come per il blocco della vite prende in ingresso le posizioni, il \textit{clock} con i relativi offset e dentro vengono svolte le operazioni di generazione della legge di moto e di controllo. In uscita avremo le coppie che saranno assegnate ai due assi.
@@ -191,6 +190,7 @@ Il blocco Controllo Braccia è quello responsabile della movimentazione dei link
 		\label{fig:controlloBraccia}
 	\end{center}
 \end{figure}
+Possiamo vedere lo schema in figura: \ref{fig:controlloBraccia}
 \subsubsection*{Coppie uscita}
 \addcontentsline{toc}{subsubsection}{Coppie uscita}
 Dopo aver ottenuto le coppie di homing dallo stateflow e le coppie dei motori dagli schemi di controllo è venuto il momento di inviare le coppie agli azionamenti e di conseguenza ai motori; per far questo usiamo un bloco per ogni motore, oltre alle coppie in entrata avremo anche una variabile di controllo. 
@@ -858,6 +858,7 @@ Di conseguenza $\xi = 0$ è un equilibrio di stato asintoticamente e globalmente
 \rho(||\xi||) \frac{z}{||z||} \ for\ ||z||\ge \varepsilon \\
 \rho(||\xi||) \frac{z}{\varepsilon} \ \ \ for \ ||z|| < \varepsilon
 \end{cases}
+\label{eq:epsilon}
 \end{equation}
 Possiamo andare quindi a rappresentare lo schema del controllo robusto teorico nel seguente modo:
 \begin{figure}[ht]
@@ -870,15 +871,27 @@ Possiamo andare quindi a rappresentare lo schema del controllo robusto teorico n
 Data la difficoltà implementativa del controllore robusto sul modello reale sono state condotte due tipologie di analisi: la prima è stata un'analisi del comportamento del controllore grazie alla modellazione di un sistema più semplice, in particolare il sistema ad un grado di libertà del manovellismo; la seconda invece è stata la simulazione del controllore sul modello simulink del manipolatore.
 \subsubsection*{Analisi manovellismo}
 \addcontentsline{toc}{subsubsection}{Analisi manovellismo}
-Come è stato anticipato precedentemente è stata fatta un'analisi mediante il sistema ad un grado di libertà biella manovella, 
+Come è stato anticipato precedentemente è stata fatta un'analisi mediante il sistema ad un grado di libertà biella manovella, per valutare il comportamento del controllore robusto.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.6]{Immagini/Sperimentale/BiellaManovella}
+		\includegraphics[scale=0.5]{Immagini/Sperimentale/BiellaManovella}
 		\caption{Sistema biella manovella}
 		\label{fig:BiellaManovella}
 	\end{center}
 \end{figure}
-[PRESENTA RISULTATI]
+In figura possiamo vedere la rappresentazione teorica del sistema, per andare ad analizzare meglio il controllore in primis è stata fatta una cosimulazione Simulink-Adams per poter valutare se la cinematica e dinamica del manovellismo fossero state implementate correttamente, successivamente è stato implementato il controllore robusto su simulink e si è potuto osservare che: [continua]
+\subsubsection*{Implementazione controllore robusto}
+\addcontentsline{toc}{subsubsection}{Implementazione controllore robusto}
+L'implementazione su simulink del controllore robusto consiste nel seguente schema: 
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.5]{Immagini/Controllori/RobustSchema}
+		\caption{Controllore robusto}
+		\label{fig:robustSchema}
+	\end{center}
+\end{figure}
+Anche per questo approccio è stata condotta un'analisi su una traiettoria circolare di raggio 5 cm da eseguire in 3 secondi. Di rilevanza in tutti questi test è stato il parametro $\varepsilon$, visto nell'equazione \ref{eq:epsilon} presentiamo ora i risultati al variare del parametro.
+Si può vedere che per valori di $\varepsilon$ relativamente [Grandi/piccoli] presenta alti fenomeni vibratori causati dalla commutazione ad alta frequenza della variabile di controllo.
 \subsection{Confronto approcci controllori}
 Avendo introdotto e verificato le principali tipologie di controllo centralizzato è venuto il momento di fare un confronto andando a vedere quale tra gli approcci visti è il migliore. In particolare, sulla traiettoria effettuata andiamo a confrontare gli errori tra il controllore PD e quello ID:
 \begin{figure}[!ht]
@@ -898,7 +911,10 @@ Avendo introdotto e verificato le principali tipologie di controllo centralizzat
 \end{subfigure}
 \caption{Confronto controllore PD e ID}
 \end{figure}
-Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a prevalere. Di conseguenza si è scelto questo come controllore definitivo e sono stati analizzati altri andamenti con leggi di moto diverse per valutare il comportamento del controllore.
+\\Gli errori sono espressi in radianti, facendo una conversione 
+\begin{equation*}
+	0.004 rad = 0.22^{\circ}
+\end{equation*} Il picco di errore è quindi circa due decimi di grado, andando però ad analizzare tutta la traiettoria dell'errore e facendo una media il valore tende a zero. Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a prevalere. Di conseguenza si è scelto questo come controllore definitivo e sono stati analizzati altri andamenti con leggi di moto diverse al fine di valutarne il comportamento.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Immagini/Traiettorie/QuadratoDinamicaInversa}
@@ -906,6 +922,7 @@ Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a pr
 		\label{fig:quadID}
 	\end{center}
 \end{figure}
+La prima traiettoria eseguita è stata quella del quadrato, nei lati orizzontali \textit{setpoint} e curva reale sono pressoché uguali, in quelli verticali invece il manipolatore segue ma non alla perfezione. 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Immagini/Traiettorie/PatternDinamicaInversa}
@@ -913,6 +930,7 @@ Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a pr
 		\label{fig:patternID}
 	\end{center}
 \end{figure}
+La seconda figura è ancora una traiettoria in 2D ed è un pattern di quadrati nei quali il manipolatore non passa mai più di una volta per lo stesso punto, anche qua si può notare, come abbiamo visto in precedenza per il quadrato che i lati orizzontali sono eseguiti correttamente mentre in quelli verticali possono originarsi vibrazioni.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Immagini/Traiettorie/SpiraleID}
@@ -920,6 +938,7 @@ Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a pr
 		\label{fig:SpiraleID}
 	\end{center}
 \end{figure}
+Come ultima traiettoria si è scelto di eseguirne una tridimensionale: la spirale, in questa è compresa la movimentazione sia delle braccia che della vite, è possibile selezionare quanti cerchi fare e di quanto far scendere la vite; si può vedere che il \textit{setpoint} e la traiettoria reale sono molto simili.
 \subsection{Problema della velocità}
 Implementando e studiando le tecniche di controllo centralizzato, si può vedere chiaramente come in tutte queste abbiamo bisogno della velocità $\dot{q}$. Ci si è quindi concentrati in particolare su di essa, notando che la velocità ricavata dagli encoder soffriva di rumore, questa situazione poteva essere critica in quanto un parametro "rumoroso" da origine ad una legge di moto vibrante e di conseguenza non è possibile alzare il contributo $K_d$ in maniera adeguata in quanto andrebbero ad aumentare le vibrazioni. Proprio per questo si è scelto di ricercare un metodo che potesse filtrare la velocità o predirla in modo da avere un risultato migliore da poter dare in ingresso al manipolatore.
 \subsubsection*{Filtro primo ordine}
@@ -928,9 +947,28 @@ L'idea iniziale è stata quella di implementare un filtro del primo ordine passa
 \begin{equation}
 T(s) = \frac{a_0}{s+\frac{b_0}{b_1}} = G_0 \frac{P_0}{s+P_0}
 \end{equation}
-In questa tipologia di filtri ci sarà un polo che deve essere reale e negativo per garantire la stabilità (possiamo vedere questa condizione nell'appendice \ref{Appendice:stabilita}. Andando ad analizzare in frequenza l'andamento del filtro $s=j\omega$ si trova che a basse frequenze l'input viene fatto passare completamente, mentre ad alte frequenze viene tagliato. INSERISCI FOTO E COMMENTI
+In questa tipologia di filtri ci sarà un polo che deve essere reale e negativo per garantire la stabilità (possiamo vedere questa condizione nell'appendice \ref{Appendice:stabilita}. Andando ad analizzare in frequenza l'andamento del filtro $s=j\omega$ si trova che a basse frequenze l'input viene fatto passare completamente, mentre ad alte frequenze viene tagliato.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Traiettorie/FiltroIOrdine}
+		\caption{Filtro primo ordine}
+		\label{fig:filtroIOrd}
+	\end{center}
+\end{figure}
+ INSERISCI FOTO E COMMENTI
 \subsubsection*{Filtro secondo ordine}
 \addcontentsline{toc}{subsubsection}{Filtro secondo ordine}
+Un filtro del secondo ordine si differenzia dal primo aggiungendo un polo, permette quindi di arrivare ad avere una pendenza del diagramma di Bode del modulo fino a 40$\frac{dB}{dec}$ nella banda attenuata, mentre in banda passante a seconda dell'approssimazione applicata possono verificarsi vari casi. Dal punto di vista pratico si realizzano mettendo più filtri del primo ordine in serie tra di loro. 
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Traiettorie/FiltroIIOrdine}
+		\caption{Filtro secondo ordine}
+		\label{fig:filtroIIOrd}
+	\end{center}
+\end{figure}
 
 \subsubsection*{Filtro di Kalman}
 \addcontentsline{toc}{subsubsection}{Filtro di Kalman}
+[INSERISCI SPIEGAZIONE TEORICA KALMAN]
+Gli approcci implementativi del filtro sono stati due, il primo metodo consisteva nell'approccio al problema mediante tecniche di \textit{sensor fusion}, andando a ricercare i valori delle matrici di covarianza in modo sperimentale e valutare il comportamento del filtro rispetto alla velocità originale; il secondo approccio è stata un'implementazione del filtro in maniera più teorica facendo riferimento alla teoria automatica.
+[valuta se inserire spiegazione prima o dopo]

@@ -1,543 +1,570 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  8 DEC 2021 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.21)  9 DEC 2021 15:49
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**main.tex
-(./main.tex
-LaTeX2e <2018-12-01>
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+**./main.tex
+(main.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-10-12>
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+\c@part=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks14
-\inpenc@posthook=\toks15
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/05/04 3.31 The Babel package
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/10/13 3.64 The Babel package
+\babel@savecnt=\count190
+\U@D=\dimen139
+\l@unhyphenated=\language79
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/05/04 3.31 Babel switching mechanism
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel-italian/italian.ldf
-Language: italian 2019/01/05 v.1.4.01 Italian support for the babel system
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count191
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/05/04 3.31 Babel common definitions
-\babel@savecnt=\count88
-\U@D=\dimen103
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count89
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
 )
-\it@lettering=\count90
-\it@doublequoteactive=\count91
-\it@ISOcompliance=\count92
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/babel-italian\italian.l
+df
+Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
+\it@lettering=\count192
+\it@doublequoteactive=\count193
+\it@ISOcompliance=\count194
+)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/babel-italian\italian.l
+df
+Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count93
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count195
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2018/12/01 v2.17b AMS math features
-\@mathmargin=\skip43
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen104
+\@emptytoks=\toks18
+\ex@=\dimen140
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen105
+\pmbraise@=\dimen141
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count94
-LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count95
-\leftroot@=\count96
-LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count97
-\DOTSCASE@=\count98
-LaTeX Info: Redefining \ldots on input line 482.
-LaTeX Info: Redefining \dots on input line 485.
-LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
-\big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count99
-\c@MaxMatrixCols=\count100
-\dotsspace@=\muskip10
-\c@parentequation=\count101
-\dspbrk@lvl=\count102
-\tag@help=\toks17
-\row@=\count103
-\column@=\count104
-\maxfields@=\count105
-\andhelp@=\toks18
-\eqnshift@=\dimen107
-\alignsep@=\dimen108
-\tagshift@=\dimen109
-\tagwidth@=\dimen110
-\totwidth@=\dimen111
-\lineht@=\dimen112
-\@envbody=\toks19
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2844.
-LaTeX Info: Redefining \] on input line 2845.
+\inf@bad=\count196
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count197
+\leftroot@=\count198
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count199
+\DOTSCASE@=\count266
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen142
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count267
+\c@MaxMatrixCols=\count268
+\dotsspace@=\muskip16
+\c@parentequation=\count269
+\dspbrk@lvl=\count270
+\tag@help=\toks19
+\row@=\count271
+\column@=\count272
+\maxfields@=\count273
+\andhelp@=\toks20
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/bigints/bigints.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/bigints\bigints.sty
 Package: bigints 2010/02/15 Writing big integrals
 Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks21
+\KV@toks@=\toks23
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2018/04/16 v5.8 Page Geometry
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-\Gm@cnth=\count106
-\Gm@cntv=\count107
-\c@Gm@tempcnt=\count108
-\Gm@bindingoffset=\dimen115
-\Gm@wd@mp=\dimen116
-\Gm@odd@mp=\dimen117
-\Gm@even@mp=\dimen118
-\Gm@layoutwidth=\dimen119
-\Gm@layoutheight=\dimen120
-\Gm@layouthoffset=\dimen121
-\Gm@layoutvoffset=\dimen122
-\Gm@dimlist=\toks22
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count274
+\Gm@cntv=\count275
+\c@Gm@tempcnt=\count276
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks24
+
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count109
-\float@exts=\toks23
-\float@box=\box29
-\@float@everytoks=\toks24
-\@floatcapt=\box30
+\c@float@type=\count277
+\float@exts=\toks25
+\float@box=\box52
+\@float@everytoks=\toks26
+\@floatcapt=\box53
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip11
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/systeme/systeme.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count110
-\decimalpart=\count111
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/systeme\systeme.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count278
+\decimalpart=\count279
 )
-Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/systeme\systeme.tex
+\SYS_systemecode=\toks27
+\SYS_systempreamble=\toks28
+\SYSeqnum=\count280
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/systeme/systeme.tex
-\SYS_systemecode=\toks25
-\SYS_systempreamble=\toks26
-\SYSeqnum=\count112
+Package: systeme 2020/05/03 v0.34 Mise en forme de systemes d'equations (CT)
 )
-Package: systeme 2019/01/13 v0.32 Mise en forme de systemes d'equations (CT)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count113
-\calc@Bcount=\count114
-\calc@Adimen=\dimen123
-\calc@Bdimen=\dimen124
-\calc@Askip=\skip46
-\calc@Bskip=\skip47
+\calc@Acount=\count281
+\calc@Bcount=\count282
+\calc@Adimen=\dimen159
+\calc@Bdimen=\dimen160
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count115
-\calc@Cskip=\skip48
+\calc@Ccount=\count283
+\calc@Cskip=\skip54
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count116
-\l_MT_multwidth_dim=\dimen125
-\origjot=\skip49
-\l_MT_shortvdotswithinadjustabove_dim=\dimen126
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen127
-\l_MT_above_intertext_sep=\dimen128
-\l_MT_below_intertext_sep=\dimen129
-\l_MT_above_shortintertext_sep=\dimen130
-\l_MT_below_shortintertext_sep=\dimen131
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count284
+\l_MT_multwidth_dim=\dimen161
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen162
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen163
+\l_MT_above_intertext_sep=\dimen164
+\l_MT_below_intertext_sep=\dimen165
+\l_MT_above_shortintertext_sep=\dimen166
+\l_MT_below_shortintertext_sep=\dimen167
+\xmathstrut@box=\box54
+\xmathstrut@dim=\dimen168
+) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+)) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.s
+ty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen132
-\captionmargin@=\dimen133
-\captionwidth=\dimen134
-\caption@tempdima=\dimen135
-\caption@indent=\dimen136
-\caption@parindent=\dimen137
-\caption@hangindent=\dimen138
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen169
+\captionmargin@=\dimen170
+\captionwidth=\dimen171
+\caption@tempdima=\dimen172
+\caption@indent=\dimen173
+\caption@parindent=\dimen174
+\caption@hangindent=\dimen175
+Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count117
-\c@ContinuedFloat=\count118
+\c@caption@flags=\count285
+\c@continuedfloat=\count286
 Package caption Info: float package is loaded.
 )
-\c@subfigure=\count119
-\c@subtable=\count120
+\c@subfigure=\count287
+\c@subtable=\count288
+) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count289
+\mult@box=\box55
+\multicol@leftmargin=\dimen176
+\c@unbalance=\count290
+\c@collectmore=\count291
+\doublecol@number=\count292
+\multicoltolerance=\count293
+\multicolpretolerance=\count294
+\full@width=\dimen177
+\page@free=\dimen178
+\premulticols=\dimen179
+\postmulticols=\dimen180
+\multicolsep=\skip56
+\multicolbaselineskip=\skip57
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen181
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@gfirstbox=\box60
+\mult@firstbox=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\c@minrows=\count295
+\c@columnbadness=\count296
+\c@finalcolumnbadness=\count297
+\last@try=\dimen182
+\multicolovershoot=\dimen183
+\multicolundershoot=\dimen184
+\mult@nat@firstbox=\box99
+\colbreak@box=\box100
+\mc@col@check@num=\count298
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
-\c@tracingmulticols=\count121
-\mult@box=\box31
-\multicol@leftmargin=\dimen139
-\c@unbalance=\count122
-\c@collectmore=\count123
-\doublecol@number=\count124
-\multicoltolerance=\count125
-\multicolpretolerance=\count126
-\full@width=\dimen140
-\page@free=\dimen141
-\premulticols=\dimen142
-\postmulticols=\dimen143
-\multicolsep=\skip50
-\multicolbaselineskip=\skip51
-\partial@page=\box32
-\last@line=\box33
-\maxbalancingoverflow=\dimen144
-\mult@rightbox=\box34
-\mult@grightbox=\box35
-\mult@gfirstbox=\box36
-\mult@firstbox=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\@tempa=\box51
-\@tempa=\box52
-\@tempa=\box53
-\@tempa=\box54
-\c@columnbadness=\count127
-\c@finalcolumnbadness=\count128
-\last@try=\dimen145
-\multicolovershoot=\dimen146
-\multicolundershoot=\dimen147
-\mult@nat@firstbox=\box55
-\colbreak@box=\box56
-\mc@col@check@num=\count129
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count299
+\c@@ppsavesec=\count300
+\c@@ppsaveapp=\count301
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/appendix/appendix.sty
-Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count130
-\c@@ppsavesec=\count131
-\c@@ppsaveapp=\count132
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-)))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count133
+\lrq@indent=\count302
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.def
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count134
-\c@listtotal=\count135
-\c@listcount=\count136
-\c@liststart=\count137
-\c@liststop=\count138
-\c@citecount=\count139
-\c@citetotal=\count140
-\c@multicitecount=\count141
-\c@multicitetotal=\count142
-\c@instcount=\count143
-\c@maxnames=\count144
-\c@minnames=\count145
-\c@maxitems=\count146
-\c@minitems=\count147
-\c@citecounter=\count148
-\c@maxcitecounter=\count149
-\c@savedcitecounter=\count150
-\c@uniquelist=\count151
-\c@uniquename=\count152
-\c@refsection=\count153
-\c@refsegment=\count154
-\c@maxextratitle=\count155
-\c@maxextratitleyear=\count156
-\c@maxextraname=\count157
-\c@maxextradate=\count158
-\c@maxextraalpha=\count159
-\c@abbrvpenalty=\count160
-\c@highnamepenalty=\count161
-\c@lownamepenalty=\count162
-\c@maxparens=\count163
-\c@parenlevel=\count164
-\blx@tempcnta=\count165
-\blx@tempcntb=\count166
-\blx@tempcntc=\count167
-\blx@maxsection=\count168
-\blx@maxsegment@0=\count169
-\blx@notetype=\count170
-\blx@parenlevel@text=\count171
-\blx@parenlevel@foot=\count172
-\blx@sectionciteorder@0=\count173
-\blx@entrysetcounter=\count174
-\labelnumberwidth=\skip52
-\labelalphawidth=\skip53
-\biblabelsep=\skip54
-\bibitemsep=\skip55
-\bibnamesep=\skip56
-\bibinitsep=\skip57
-\bibparsep=\skip58
-\bibhang=\skip59
-\blx@bcfin=\read1
+\c@tabx@nest=\count303
+\c@listtotal=\count304
+\c@listcount=\count305
+\c@liststart=\count306
+\c@liststop=\count307
+\c@citecount=\count308
+\c@citetotal=\count309
+\c@multicitecount=\count310
+\c@multicitetotal=\count311
+\c@instcount=\count312
+\c@maxnames=\count313
+\c@minnames=\count314
+\c@maxitems=\count315
+\c@minitems=\count316
+\c@citecounter=\count317
+\c@maxcitecounter=\count318
+\c@savedcitecounter=\count319
+\c@uniquelist=\count320
+\c@uniquename=\count321
+\c@refsection=\count322
+\c@refsegment=\count323
+\c@maxextratitle=\count324
+\c@maxextratitleyear=\count325
+\c@maxextraname=\count326
+\c@maxextradate=\count327
+\c@maxextraalpha=\count328
+\c@abbrvpenalty=\count329
+\c@highnamepenalty=\count330
+\c@lownamepenalty=\count331
+\c@maxparens=\count332
+\c@parenlevel=\count333
+\blx@tempcnta=\count334
+\blx@tempcntb=\count335
+\blx@tempcntc=\count336
+\blx@maxsection=\count337
+\blx@maxsegment@0=\count338
+\blx@notetype=\count339
+\blx@parenlevel@text=\count340
+\blx@parenlevel@foot=\count341
+\blx@sectionciteorder@0=\count342
+\blx@entrysetcounter=\count343
+\blx@biblioinstance=\count344
+\labelnumberwidth=\skip58
+\labelalphawidth=\skip59
+\biblabelsep=\skip60
+\bibitemsep=\skip61
+\bibnamesep=\skip62
+\bibinitsep=\skip63
+\bibparsep=\skip64
+\bibhang=\skip65
+\blx@bcfin=\read3
 \blx@bcfout=\write3
-\c@mincomprange=\count175
-\c@maxcomprange=\count176
-\c@mincompwidth=\count177
+\blx@langwohyphens=\language80
+\c@mincomprange=\count345
+\c@maxcomprange=\count346
+\c@mincompwidth=\count347
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count178
-\c@savedafterword=\count179
-\c@annotator=\count180
-\c@savedannotator=\count181
-\c@author=\count182
-\c@savedauthor=\count183
-\c@bookauthor=\count184
-\c@savedbookauthor=\count185
-\c@commentator=\count186
-\c@savedcommentator=\count187
-\c@editor=\count188
-\c@savededitor=\count189
-\c@editora=\count190
-\c@savededitora=\count191
-\c@editorb=\count192
-\c@savededitorb=\count193
-\c@editorc=\count194
-\c@savededitorc=\count195
-\c@foreword=\count196
-\c@savedforeword=\count197
-\c@holder=\count198
-\c@savedholder=\count199
-\c@introduction=\count266
-\c@savedintroduction=\count267
-\c@namea=\count268
-\c@savednamea=\count269
-\c@nameb=\count270
-\c@savednameb=\count271
-\c@namec=\count272
-\c@savednamec=\count273
-\c@translator=\count274
-\c@savedtranslator=\count275
-\c@shortauthor=\count276
-\c@savedshortauthor=\count277
-\c@shorteditor=\count278
-\c@savedshorteditor=\count279
-\c@labelname=\count280
-\c@savedlabelname=\count281
-\c@institution=\count282
-\c@savedinstitution=\count283
-\c@lista=\count284
-\c@savedlista=\count285
-\c@listb=\count286
-\c@savedlistb=\count287
-\c@listc=\count288
-\c@savedlistc=\count289
-\c@listd=\count290
-\c@savedlistd=\count291
-\c@liste=\count292
-\c@savedliste=\count293
-\c@listf=\count294
-\c@savedlistf=\count295
-\c@location=\count296
-\c@savedlocation=\count297
-\c@organization=\count298
-\c@savedorganization=\count299
-\c@origlocation=\count300
-\c@savedoriglocation=\count301
-\c@origpublisher=\count302
-\c@savedorigpublisher=\count303
-\c@publisher=\count304
-\c@savedpublisher=\count305
-\c@language=\count306
-\c@savedlanguage=\count307
-\c@origlanguage=\count308
-\c@savedoriglanguage=\count309
-\c@pageref=\count310
-\c@savedpageref=\count311
-\shorthandwidth=\skip60
-\shortjournalwidth=\skip61
-\shortserieswidth=\skip62
-\shorttitlewidth=\skip63
-\shortauthorwidth=\skip64
-\shorteditorwidth=\skip65
-\locallabelnumberwidth=\skip66
-\locallabelalphawidth=\skip67
-\localshorthandwidth=\skip68
-\localshortjournalwidth=\skip69
-\localshortserieswidth=\skip70
-\localshorttitlewidth=\skip71
-\localshortauthorwidth=\skip72
-\localshorteditorwidth=\skip73
+\c@afterword=\count348
+\c@savedafterword=\count349
+\c@annotator=\count350
+\c@savedannotator=\count351
+\c@author=\count352
+\c@savedauthor=\count353
+\c@bookauthor=\count354
+\c@savedbookauthor=\count355
+\c@commentator=\count356
+\c@savedcommentator=\count357
+\c@editor=\count358
+\c@savededitor=\count359
+\c@editora=\count360
+\c@savededitora=\count361
+\c@editorb=\count362
+\c@savededitorb=\count363
+\c@editorc=\count364
+\c@savededitorc=\count365
+\c@foreword=\count366
+\c@savedforeword=\count367
+\c@holder=\count368
+\c@savedholder=\count369
+\c@introduction=\count370
+\c@savedintroduction=\count371
+\c@namea=\count372
+\c@savednamea=\count373
+\c@nameb=\count374
+\c@savednameb=\count375
+\c@namec=\count376
+\c@savednamec=\count377
+\c@translator=\count378
+\c@savedtranslator=\count379
+\c@shortauthor=\count380
+\c@savedshortauthor=\count381
+\c@shorteditor=\count382
+\c@savedshorteditor=\count383
+\c@labelname=\count384
+\c@savedlabelname=\count385
+\c@institution=\count386
+\c@savedinstitution=\count387
+\c@lista=\count388
+\c@savedlista=\count389
+\c@listb=\count390
+\c@savedlistb=\count391
+\c@listc=\count392
+\c@savedlistc=\count393
+\c@listd=\count394
+\c@savedlistd=\count395
+\c@liste=\count396
+\c@savedliste=\count397
+\c@listf=\count398
+\c@savedlistf=\count399
+\c@location=\count400
+\c@savedlocation=\count401
+\c@organization=\count402
+\c@savedorganization=\count403
+\c@origlocation=\count404
+\c@savedoriglocation=\count405
+\c@origpublisher=\count406
+\c@savedorigpublisher=\count407
+\c@publisher=\count408
+\c@savedpublisher=\count409
+\c@language=\count410
+\c@savedlanguage=\count411
+\c@origlanguage=\count412
+\c@savedoriglanguage=\count413
+\c@pageref=\count414
+\c@savedpageref=\count415
+\shorthandwidth=\skip66
+\shortjournalwidth=\skip67
+\shortserieswidth=\skip68
+\shorttitlewidth=\skip69
+\shortauthorwidth=\skip70
+\shorteditorwidth=\skip71
+\locallabelnumberwidth=\skip72
+\locallabelalphawidth=\skip73
+\localshorthandwidth=\skip74
+\localshortjournalwidth=\skip75
+\localshortserieswidth=\skip76
+\localshorttitlewidth=\skip77
+\localshortauthorwidth=\skip78
+\localshorteditorwidth=\skip79
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count312
-\c@textcitetotal=\count313
-\c@textcitemaxnames=\count314
-\c@biburlnumpenalty=\count315
-\c@biburlucpenalty=\count316
-\c@biburllcpenalty=\count317
-\c@smartand=\count318
+ (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+\c@textcitecount=\count416
+\c@textcitetotal=\count417
+\c@textcitemaxnames=\count418
+\c@biburlbigbreakpenalty=\count419
+\c@biburlbreakpenalty=\count420
+\c@biburlnumpenalty=\count421
+\c@biburlucpenalty=\count422
+\c@biburllcpenalty=\count423
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count424
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
+x
+File: numeric.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count319
-\c@bbx:relatedtotal=\count320
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx
+File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count425
+\c@bbx:relatedtotal=\count426
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cb
+x
+File: numeric.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -553,22 +580,21 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.cfg
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
 File: biblatex.cfg 
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+)) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.st
+y
+Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen185
+\ESO@tempdimb=\dimen186
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -582,70 +608,65 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-\AM@pagewidth=\dimen148
-\AM@pageheight=\dimen149
+\AM@pagewidth=\dimen187
+\AM@pageheight=\dimen188
+\AM@fboxrule=\dimen189
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2021/03/06 v0.5t Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box57
-\AM@global@opts=\toks27
-\AM@toc@title=\toks28
-\c@AM@survey=\count321
-\AM@templatesizebox=\box58
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tocbibind/tocbibind.sty
-Package: tocbibind 2010/10/13 v1.5k extra ToC listings
-Package tocbibind Info: The document has section divisions on input line 50.
-
-
-Package tocbibind Note: Using section or other style headings.
-
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
-s
-\f@nch@headwidth=\skip74
-\f@nch@O@elh=\skip75
-\f@nch@O@erh=\skip76
-\f@nch@O@olh=\skip77
-\f@nch@O@orh=\skip78
-\f@nch@O@elf=\skip79
-\f@nch@O@erf=\skip80
-\f@nch@O@olf=\skip81
-\f@nch@O@orf=\skip82
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+\pdfpages@includegraphics@status=\count427
+\AM@pagebox=\box101
+\AM@global@opts=\toks29
+\AM@pagecnt=\count428
+\AM@toc@title=\toks30
+\c@AM@survey=\count429
+\AM@templatesizebox=\box102
+) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip80
+\f@nch@O@elh=\skip81
+\f@nch@O@erh=\skip82
+\f@nch@O@olh=\skip83
+\f@nch@O@orh=\skip84
+\f@nch@O@elf=\skip85
+\f@nch@O@erf=\skip86
+\f@nch@O@olf=\skip87
+\f@nch@O@orf=\skip88
+) (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
-)
-Package biblatex Info: Trying to load language 'italian'...
-Package biblatex Info: ... file 'italian.lbx' found.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
-File: italian.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count322
-\@quotereset=\count323
-(./main.aux (./begin.aux) (./Capitoli/Dedica.aux) (./Capitoli/Introduzione.aux)
-(./Capitoli/Cinematica.aux) (./Capitoli/Dinamica.aux)
-(./Capitoli/Cinetostatica.aux) (./Capitoli/Vite.aux)
-(./Capitoli/Implementazione.aux) (./Capitoli/SistemaReale.aux)
-(./Capitoli/Conclusioni.aux) (./Capitoli/AppendiceDinamica.aux)
-(./Capitoli/AppendiceSistemi.aux) (./Capitoli/AppendiceQuadro.aux))
+\@quotelevel=\count430
+\@quotereset=\count431
+
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-10-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count432
+\l__pdf_internal_box=\box103
+) (main.aux (Capitoli/Introduzione.aux) (Capitoli/Cinematica.aux)
+(Capitoli/Dinamica.aux) (Capitoli/Cinetostatica.aux) (Capitoli/Vite.aux)
+(Capitoli/Implementazione.aux) (Capitoli/SistemaReale.aux)
+(Capitoli/Conclusioni.aux) (Capitoli/AppendiceDinamica.aux)
+(Capitoli/AppendiceSistemi.aux) (Capitoli/AppendiceQuadro.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
@@ -662,38 +683,31 @@ italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
 italian.ldf    on input line 47.
 
-(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen150
-\scratchbox=\box59
-\nofMPsegments=\count325
-\nofMParguments=\count326
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen151
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
-\everyMPtoPDFconversion=\toks30
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
+\scratchcounter=\count433
+\scratchdimen=\dimen190
+\scratchbox=\box104
+\nofMPsegments=\count434
+\nofMParguments=\count435
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count436
+\MPscratchDim=\dimen191
+\MPnumerator=\count437
+\makeMPintoPDFobject=\count438
+\everyMPtoPDFconversion=\toks32
+)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+85.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -731,129 +745,265 @@ e
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'italian'...
+Package biblatex Info: ... file 'italian.lbx' found.
+
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\italian.lb
+x
+File: italian.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+ (C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-10-12 L3 programming layer (loader) 
+)
+Package biblatex Info: ... and expl3
+(biblatex)             2021-10-12 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+.sty
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+Package: xparse 2021-08-27 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
+)
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
-(./main.bbl)
+ (main.bbl)
 Package biblatex Info: Reference section=0 on input line 47.
 Package biblatex Info: Reference segment=0 on input line 47.
-\AtBeginShipoutBox=\box60
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/pdflscape.sty
-Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\openout2 = `./begin.aux'.
+
+pdfTeX warning: pdflatex.exe (file ./FronteInfo.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+<FronteInfo.pdf, id=1, 597.55246pt x 845.07718pt>
+File: FronteInfo.pdf Graphic file (type pdf)
+<use FronteInfo.pdf>
+Package pdftex.def Info: FronteInfo.pdf  used on input line 50.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 
-(./begin.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--14
+pdfTeX warning: pdflatex.exe (file ./FronteInfo.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+File: FronteInfo.pdf Graphic file (type pdf)
+<use FronteInfo.pdf>
+Package pdftex.def Info: FronteInfo.pdf  used on input line 50.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
- []
+
+pdfTeX warning: pdflatex.exe (file ./FronteInfo.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-
- []
-
+pdfTeX warning: pdflatex.exe (file ./FronteInfo.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+<FronteInfo.pdf, id=4, page=1, 597.55246pt x 845.07718pt>
+File: FronteInfo.pdf Graphic file (type pdf)
+<use FronteInfo.pdf, page 1>
+Package pdftex.def Info: FronteInfo.pdf , page1 used on input line 50.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: FronteInfo.pdf Graphic file (type pdf)
+<use FronteInfo.pdf, page 1>
+Package pdftex.def Info: FronteInfo.pdf , page1 used on input line 50.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: FronteInfo.pdf Graphic file (type pdf)
+<use FronteInfo.pdf, page 1>
+Package pdftex.def Info: FronteInfo.pdf , page1 used on input line 50.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: FronteInfo.pdf Graphic file (type pdf)
+<use FronteInfo.pdf, page 1>
+Package pdftex.def Info: FronteInfo.pdf , page1 used on input line 50.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: FronteInfo.pdf Graphic file (type pdf)
+<use FronteInfo.pdf, page 1>
+Package pdftex.def Info: FronteInfo.pdf , page1 used on input line 50.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 [1
 
+ <./FronteInfo.pdf>] [1] (main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-[2
-
-
-]
-\openout2 = `./Capitoli/Dedica.aux'.
-
- (./Capitoli/Dedica.tex)
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 14.49998pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
-[3
-
-] (./main.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 7.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 7.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [0
+LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
 
-] [1]
+(C:\Users\Danie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[1{C:/Users/Danie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
 [2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3] [4]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4] [5]
 \openout2 = `Capitoli/Introduzione.aux'.
 
- (./Capitoli/Introduzione.tex
-<Immagini/Robot1.png, id=34, 329.43076pt x 346.896pt>
+ (Capitoli/Introduzione.tex
+<Immagini/Robot1.png, id=42, 329.43076pt x 346.896pt>
 File: Immagini/Robot1.png Graphic file (type png)
 <use Immagini/Robot1.png>
 Package pdftex.def Info: Immagini/Robot1.png  used on input line 10.
 (pdftex.def)             Requested size: 230.59995pt x 242.82553pt.
- [5
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
- [6 <./Immagini/Robot1.png>] [7]) [8]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7 <./Immagini/Robot1.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9]
 \openout2 = `Capitoli/Cinematica.aux'.
 
- (./Capitoli/Cinematica.tex
-<Immagini/Robot2.png, id=50, 531.78674pt x 434.8245pt>
+ (Capitoli/Cinematica.tex
+<Immagini/Robot2.png, id=59, 531.78674pt x 434.8245pt>
 File: Immagini/Robot2.png Graphic file (type png)
 <use Immagini/Robot2.png>
 Package pdftex.def Info: Immagini/Robot2.png  used on input line 23.
 (pdftex.def)             Requested size: 319.07451pt x 260.8967pt.
- [9
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10
+
 
 
  <./Immagini/Robot2.png>]
-<Immagini/EqCirc.png, id=58, 427.5975pt x 348.70274pt>
+<Immagini/EqCirc.png, id=67, 427.5975pt x 348.70274pt>
 File: Immagini/EqCirc.png Graphic file (type png)
 <use Immagini/EqCirc.png>
 Package pdftex.def Info: Immagini/EqCirc.png  used on input line 38.
 (pdftex.def)             Requested size: 277.93507pt x 226.65408pt.
 
-[10 <./Immagini/EqCirc.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11 <./Immagini/EqCirc.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12]
 Overfull \hbox (41.91818pt too wide) detected at line 111
-\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 ^^R[] \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/i
-t/12 ^^R[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2[])[] + ([] \OML/cmm/m/it/12 ^
-^R[] \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 ^^R[]\OT1/cmr/m/n/12 )[] + 2 [] \
-OML/cmm/m/it/12 ^^R[]\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 ^^R[] \OMS/cmsy/m/n/1
-2 ^^@ [] \OML/cmm/m/it/12 ^^R[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2[]) + 2 [
-] \OML/cmm/m/it/12 ^^R[]\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 ^^R[] \OMS/cmsy/m/
-n/12 ^^@ [] \OML/cmm/m/it/12 ^^R[]\OT1/cmr/m/n/12 ) = 0
+\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 [] \OMS/cmsy/m/n/12   [] \OML/cmm/m/it/12
+ [] \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 2[])[] + ([] \OML/cmm/m/it/12 [] \OMS/
+cmsy/m/n/12   [] \OML/cmm/m/it/12 []\OT1/cmr/m/n/12 )[] + 2 [] \OML/cmm/m/it/1
+2 []\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 [] \OMS/cmsy/m/n/12   [] \OML/cmm/m/
+it/12 [] \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 2[]) + 2 [] \OML/cmm/m/it/12 []\O
+T1/cmr/m/n/12 ([] \OML/cmm/m/it/12 [] \OMS/cmsy/m/n/12   [] \OML/cmm/m/it/12 
+[]\OT1/cmr/m/n/12 ) = 0
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
 Overfull \hbox (20.83508pt too wide) detected at line 143
 []
  []
@@ -861,13 +1011,40 @@ Overfull \hbox (20.83508pt too wide) detected at line 143
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 248.
 
@@ -908,364 +1085,669 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
 (Font)              size <5> substituted on input line 250.
 
-[16]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
 Underfull \vbox (badness 2134) has occurred while \output is active []
 
- [17])
-[18]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
 \openout2 = `Capitoli/Dinamica.aux'.
 
- (./Capitoli/Dinamica.tex [19
+ (Capitoli/Dinamica.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20
+
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
 Underfull \vbox (badness 1371) has occurred while \output is active []
 
- [21]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-<Immagini/Dinamica/confracct1.png, id=113, 462.0462pt x 371.9496pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+<Immagini/Dinamica/confracct1.png, id=123, 462.0462pt x 371.9496pt>
 File: Immagini/Dinamica/confracct1.png Graphic file (type png)
 <use Immagini/Dinamica/confracct1.png>
 Package pdftex.def Info: Immagini/Dinamica/confracct1.png  used on input line 3
-86.
+96.
 (pdftex.def)             Requested size: 149.80249pt x 120.59273pt.
-<Immagini/Dinamica/confracct2.png, id=114, 462.0462pt x 371.9496pt>
+<Immagini/Dinamica/confracct2.png, id=124, 462.0462pt x 371.9496pt>
 File: Immagini/Dinamica/confracct2.png Graphic file (type png)
 <use Immagini/Dinamica/confracct2.png>
-Package pdftex.def Info: Immagini/Dinamica/confracct2.png  used on input line 3
-93.
+Package pdftex.def Info: Immagini/Dinamica/confracct2.png  used on input line 4
+03.
 (pdftex.def)             Requested size: 149.80249pt x 120.59273pt.
-<Immagini/Dinamica/confrvelt1.png, id=115, 462.0462pt x 372.4314pt>
+<Immagini/Dinamica/confrvelt1.png, id=125, 462.0462pt x 372.4314pt>
 File: Immagini/Dinamica/confrvelt1.png Graphic file (type png)
 <use Immagini/Dinamica/confrvelt1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrvelt1.png  used on input line 4
-03.
+13.
 (pdftex.def)             Requested size: 149.80249pt x 120.74893pt.
-<Immagini/Dinamica/confrtvelt2.png, id=116, 457.71pt x 372.4314pt>
+<Immagini/Dinamica/confrtvelt2.png, id=126, 457.71pt x 372.4314pt>
 File: Immagini/Dinamica/confrtvelt2.png Graphic file (type png)
 <use Immagini/Dinamica/confrtvelt2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrtvelt2.png  used on input line 
-410.
+420.
 (pdftex.def)             Requested size: 149.80249pt x 121.89119pt.
-<Immagini/Dinamica/confrpost1.png, id=117, 457.71pt x 371.9496pt>
+<Immagini/Dinamica/confrpost1.png, id=127, 457.71pt x 371.9496pt>
 File: Immagini/Dinamica/confrpost1.png Graphic file (type png)
 <use Immagini/Dinamica/confrpost1.png>
 Package pdftex.def Info: Immagini/Dinamica/confrpost1.png  used on input line 4
-20.
+30.
 (pdftex.def)             Requested size: 149.80249pt x 121.7335pt.
-<Immagini/Dinamica/confrpost2.png, id=118, 457.71pt x 371.9496pt>
+<Immagini/Dinamica/confrpost2.png, id=128, 457.71pt x 371.9496pt>
 File: Immagini/Dinamica/confrpost2.png Graphic file (type png)
 <use Immagini/Dinamica/confrpost2.png>
 Package pdftex.def Info: Immagini/Dinamica/confrpost2.png  used on input line 4
-27.
+37.
 (pdftex.def)             Requested size: 149.80249pt x 121.7335pt.
-<Immagini/Dinamica/ModSimulink.png, id=119, 831.105pt x 292.84406pt>
+<Immagini/Dinamica/ModSimulink.png, id=129, 831.105pt x 292.84406pt>
 File: Immagini/Dinamica/ModSimulink.png Graphic file (type png)
 <use Immagini/Dinamica/ModSimulink.png>
 Package pdftex.def Info: Immagini/Dinamica/ModSimulink.png  used on input line 
-437.
+447.
 (pdftex.def)             Requested size: 457.10916pt x 161.06473pt.
 
-Overfull \hbox (30.31781pt too wide) in paragraph at lines 437--438
+Overfull \hbox (30.31781pt too wide) in paragraph at lines 447--448
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-Underfull \vbox (badness 1028) has occurred while \output is active []
 
- [26 <./Immagini/Dinamica/confracct1.png (PNG copy)> <./Immagini/Dinamica/confr
-acct2.png (PNG copy)> <./Immagini/Dinamica/confrvelt1.png (PNG copy)> <./Immagi
-ni/Dinamica/confrtvelt2.png (PNG copy)> <./Immagini/Dinamica/confrpost1.png (PN
-G copy)> <./Immagini/Dinamica/confrpost2.png (PNG copy)>]
-<Immagini/Dinamica/adams1.png, id=126, 561.89925pt x 386.04225pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27 <./Immagini/Dinamica/confracct1.png (PNG copy)> <./Immagini/Dinamica/confra
+cct2.png (PNG copy)> <./Immagini/Dinamica/confrvelt1.png (PNG copy)> <./Immagin
+i/Dinamica/confrtvelt2.png (PNG copy)> <./Immagini/Dinamica/confrpost1.png (PNG
+ copy)> <./Immagini/Dinamica/confrpost2.png (PNG copy)>]
+<Immagini/Dinamica/adams1.png, id=136, 561.89925pt x 386.04225pt>
 File: Immagini/Dinamica/adams1.png Graphic file (type png)
 <use Immagini/Dinamica/adams1.png>
-Package pdftex.def Info: Immagini/Dinamica/adams1.png  used on input line 449.
+Package pdftex.def Info: Immagini/Dinamica/adams1.png  used on input line 459.
 (pdftex.def)             Requested size: 192.0548pt x 131.94771pt.
-<Immagini/Dinamica/adams2.png, id=127, 467.346pt x 410.7345pt>
+<Immagini/Dinamica/adams2.png, id=137, 467.346pt x 410.7345pt>
 File: Immagini/Dinamica/adams2.png Graphic file (type png)
 <use Immagini/Dinamica/adams2.png>
-Package pdftex.def Info: Immagini/Dinamica/adams2.png  used on input line 456.
+Package pdftex.def Info: Immagini/Dinamica/adams2.png  used on input line 466.
 (pdftex.def)             Requested size: 170.71718pt x 150.03279pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 446--460
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 456--470
 []$[]$ $[]$ 
  []
 
-<Immagini/Dinamica/c1matlab.png, id=128, 292.6935pt x 248.127pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28 <./Immagini/Dinamica/ModSimulink.png> <./Immagini/Dinamica/adams1.png> <./I
+mmagini/Dinamica/adams2.png>]
+<Immagini/Dinamica/c1matlab.png, id=144, 292.6935pt x 248.127pt>
 File: Immagini/Dinamica/c1matlab.png Graphic file (type png)
 <use Immagini/Dinamica/c1matlab.png>
-Package pdftex.def Info: Immagini/Dinamica/c1matlab.png  used on input line 484
+Package pdftex.def Info: Immagini/Dinamica/c1matlab.png  used on input line 494
 .
-(pdftex.def)             Requested size: 192.0548pt x 162.814pt.
-<Immagini/Dinamica/c2matlab.png, id=129, 296.307pt x 257.16075pt>
+(pdftex.def)             Requested size: 172.84813pt x 146.52994pt.
+<Immagini/Dinamica/c2matlab.png, id=145, 296.307pt x 257.16075pt>
 File: Immagini/Dinamica/c2matlab.png Graphic file (type png)
 <use Immagini/Dinamica/c2matlab.png>
-Package pdftex.def Info: Immagini/Dinamica/c2matlab.png  used on input line 491
+Package pdftex.def Info: Immagini/Dinamica/c2matlab.png  used on input line 501
 .
-(pdftex.def)             Requested size: 192.0548pt x 166.68555pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 481--495
-[]$[]$ $[]$ 
- []
-
-<Immagini/Dinamica/c1adams.png, id=130, 289.08pt x 252.945pt>
+(pdftex.def)             Requested size: 172.84813pt x 150.0166pt.
+<Immagini/Dinamica/c1adams.png, id=146, 289.08pt x 252.945pt>
 File: Immagini/Dinamica/c1adams.png Graphic file (type png)
 <use Immagini/Dinamica/c1adams.png>
-Package pdftex.def Info: Immagini/Dinamica/c1adams.png  used on input line 501.
+Package pdftex.def Info: Immagini/Dinamica/c1adams.png  used on input line 511.
 
-(pdftex.def)             Requested size: 192.0548pt x 168.04807pt.
-<Immagini/Dinamica/c2adams.png, id=131, 290.2845pt x 248.72925pt>
+(pdftex.def)             Requested size: 172.84813pt x 151.2394pt.
+<Immagini/Dinamica/c2adams.png, id=147, 290.2845pt x 248.72925pt>
 File: Immagini/Dinamica/c2adams.png Graphic file (type png)
 <use Immagini/Dinamica/c2adams.png>
-Package pdftex.def Info: Immagini/Dinamica/c2adams.png  used on input line 508.
+Package pdftex.def Info: Immagini/Dinamica/c2adams.png  used on input line 518.
 
-(pdftex.def)             Requested size: 192.0548pt x 164.56032pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 498--512
-[]$[]$ $[]$ 
- []
-
-<Immagini/Dinamica/confrc1.png, id=132, 284.262pt x 255.95625pt>
+(pdftex.def)             Requested size: 172.84813pt x 148.1039pt.
+<Immagini/Dinamica/confrc1.png, id=148, 284.262pt x 255.95625pt>
 File: Immagini/Dinamica/confrc1.png Graphic file (type png)
 <use Immagini/Dinamica/confrc1.png>
-Package pdftex.def Info: Immagini/Dinamica/confrc1.png  used on input line 519.
+Package pdftex.def Info: Immagini/Dinamica/confrc1.png  used on input line 529.
 
 (pdftex.def)             Requested size: 192.0548pt x 172.93484pt.
-<Immagini/Dinamica/confrc2.png, id=133, 292.09125pt x 249.93375pt>
+<Immagini/Dinamica/confrc2.png, id=149, 292.09125pt x 249.93375pt>
 File: Immagini/Dinamica/confrc2.png Graphic file (type png)
 <use Immagini/Dinamica/confrc2.png>
-Package pdftex.def Info: Immagini/Dinamica/confrc2.png  used on input line 526.
+Package pdftex.def Info: Immagini/Dinamica/confrc2.png  used on input line 536.
 
 (pdftex.def)             Requested size: 192.0548pt x 164.33896pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 516--530
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 526--540
 []$[]$ $[]$ 
  []
 
-) [27 <./Immagini/Dinamica/ModSimulink.png> <./Immagini/Dinamica/adams1.png> <.
-/Immagini/Dinamica/adams2.png>] [28 <./Immagini/Dinamica/c1matlab.png> <./Immag
-ini/Dinamica/c2matlab.png> <./Immagini/Dinamica/c1adams.png> <./Immagini/Dinami
-ca/c2adams.png>] [29 <./Immagini/Dinamica/confrc1.png> <./Immagini/Dinamica/con
-frc2.png>] [30
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29 <./Immagini/Dinamica/c1matlab.png> <./Immagini/Dinamica/c2matlab.png> <./Im
+magini/Dinamica/c1adams.png> <./Immagini/Dinamica/c2adams.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30 <./Immagini/Dinamica/confrc1.png> <./Immagini/Dinamica/confrc2.png>]
+[31
+
 
 ]
 \openout2 = `Capitoli/Cinetostatica.aux'.
 
- (./Capitoli/Cinetostatica.tex
-<Immagini/Singolarity/0.jpg, id=156, 770.88pt x 433.62pt>
+ (Capitoli/Cinetostatica.tex
+<Immagini/Singolarity/0.jpg, id=166, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/0.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/0.jpg>
 Package pdftex.def Info: Immagini/Singolarity/0.jpg  used on input line 5.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
-<Immagini/Singolarity/1.jpg, id=157, 770.88pt x 433.62pt>
+<Immagini/Singolarity/1.jpg, id=167, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/1.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/1.jpg>
 Package pdftex.def Info: Immagini/Singolarity/1.jpg  used on input line 16.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
- [31
+
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32
 
  <./Immagini/Singolarity/0.jpg>]
-<Immagini/Singolarity/2.jpg, id=161, 770.88pt x 433.62pt>
+<Immagini/Singolarity/2.jpg, id=171, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/2.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/2.jpg>
-Package pdftex.def Info: Immagini/Singolarity/2.jpg  used on input line 27.
+Package pdftex.def Info: Immagini/Singolarity/2.jpg  used on input line 44.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
- [32 <./Immagini/Singolarity/1.jpg> <./Immagini/Singolarity/2.jpg>]
-<Immagini/Singolarity/5.jpg, id=165, 770.88pt x 433.62pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33 <./Immagini/Singolarity/1.jpg>]
+<Immagini/Singolarity/5.jpg, id=175, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/5.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/5.jpg>
-Package pdftex.def Info: Immagini/Singolarity/5.jpg  used on input line 41.
+Package pdftex.def Info: Immagini/Singolarity/5.jpg  used on input line 58.
 (pdftex.def)             Requested size: 308.34654pt x 173.44492pt.
- [33 <./Immagini/Singolarity/5.jpg>]
-<Immagini/Singolarity/3.jpg, id=170, 770.88pt x 433.62pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34 <./Immagini/Singolarity/2.jpg> <./Immagini/Singolarity/5.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35]
+<Immagini/Singolarity/3.jpg, id=183, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/3.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/3.jpg>
-Package pdftex.def Info: Immagini/Singolarity/3.jpg  used on input line 74.
+Package pdftex.def Info: Immagini/Singolarity/3.jpg  used on input line 109.
 (pdftex.def)             Requested size: 192.0548pt x 108.02759pt.
-<Immagini/Singolarity/4.jpg, id=171, 770.88pt x 433.62pt>
+<Immagini/Singolarity/4.jpg, id=184, 770.88pt x 433.62pt>
 File: Immagini/Singolarity/4.jpg Graphic file (type jpg)
 <use Immagini/Singolarity/4.jpg>
-Package pdftex.def Info: Immagini/Singolarity/4.jpg  used on input line 80.
+Package pdftex.def Info: Immagini/Singolarity/4.jpg  used on input line 115.
 (pdftex.def)             Requested size: 192.0548pt x 108.02759pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 71--83
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 106--118
 []$[]$ $[]$ 
  []
 
-<Immagini/Singolarity/SingNew.png, id=172, 526.96875pt x 395.22656pt>
-File: Immagini/Singolarity/SingNew.png Graphic file (type png)
-<use Immagini/Singolarity/SingNew.png>
-Package pdftex.def Info: Immagini/Singolarity/SingNew.png  used on input line 9
-7.
+<Immagini/Singolarity/SingNewNew.png, id=185, 526.96875pt x 395.22656pt>
+File: Immagini/Singolarity/SingNewNew.png Graphic file (type png)
+<use Immagini/Singolarity/SingNewNew.png>
+Package pdftex.def Info: Immagini/Singolarity/SingNewNew.png  used on input lin
+e 130.
 (pdftex.def)             Requested size: 342.52562pt x 256.89421pt.
-[34 <./Immagini/Singolarity/3.jpg> <./Immagini/Singolarity/4.jpg>]
-<Immagini/Singolarity/Ncond.png, id=176, 526.96875pt x 395.22656pt>
+
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36 <./Immagini/Singolarity/3.jpg> <./Immagini/Singolarity/4.jpg>]
+<Immagini/Singolarity/Ncond.png, id=189, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Ncond.png Graphic file (type png)
 <use Immagini/Singolarity/Ncond.png>
-Package pdftex.def Info: Immagini/Singolarity/Ncond.png  used on input line 117
+Package pdftex.def Info: Immagini/Singolarity/Ncond.png  used on input line 157
 .
 (pdftex.def)             Requested size: 211.26144pt x 158.44966pt.
-<Immagini/Singolarity/Ncond_surf.png, id=177, 526.96875pt x 395.22656pt>
+<Immagini/Singolarity/Ncond_surf.png, id=190, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/Ncond_surf.png Graphic file (type png)
 <use Immagini/Singolarity/Ncond_surf.png>
 Package pdftex.def Info: Immagini/Singolarity/Ncond_surf.png  used on input lin
-e 123.
+e 163.
 (pdftex.def)             Requested size: 211.26144pt x 158.44966pt.
 
-Overfull \hbox (45.29282pt too wide) in paragraph at lines 114--126
+Overfull \hbox (45.29282pt too wide) in paragraph at lines 154--166
 []$[]$ $[]$ 
  []
 
-[35 <./Immagini/Singolarity/SingNew.png (PNG copy)>]
-<Immagini/Singolarity/workangle.png, id=181, 462.22687pt x 270.25969pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37 <./Immagini/Singolarity/SingNewNew.png (PNG copy)>]
+<Immagini/Singolarity/workangle.png, id=194, 462.22687pt x 270.25969pt>
 File: Immagini/Singolarity/workangle.png Graphic file (type png)
 <use Immagini/Singolarity/workangle.png>
 Package pdftex.def Info: Immagini/Singolarity/workangle.png  used on input line
- 135.
+ 175.
 (pdftex.def)             Requested size: 323.5566pt x 189.18048pt.
-<Immagini/Singolarity/Worksing.png, id=182, 526.96875pt x 395.22656pt>
-File: Immagini/Singolarity/Worksing.png Graphic file (type png)
-<use Immagini/Singolarity/Worksing.png>
-Package pdftex.def Info: Immagini/Singolarity/Worksing.png  used on input line 
-142.
+<Immagini/Singolarity/WorksingNew.png, id=195, 526.96875pt x 395.22656pt>
+File: Immagini/Singolarity/WorksingNew.png Graphic file (type png)
+<use Immagini/Singolarity/WorksingNew.png>
+Package pdftex.def Info: Immagini/Singolarity/WorksingNew.png  used on input li
+ne 182.
 (pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
-<Immagini/Singolarity/ncondsl.png, id=183, 526.96875pt x 395.22656pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38 <./Immagini/Singolarity/Ncond.png (PNG copy)> <./Immagini/Singolarity/Ncond
+_surf.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39 <./Immagini/Singolarity/workangle.png> <./Immagini/Singolarity/WorksingNew.
+png>]
+<Immagini/Singolarity/ncondsl.png, id=204, 526.96875pt x 395.22656pt>
 File: Immagini/Singolarity/ncondsl.png Graphic file (type png)
 <use Immagini/Singolarity/ncondsl.png>
 Package pdftex.def Info: Immagini/Singolarity/ncondsl.png  used on input line 1
-49.
+96.
 (pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
-) [36 <./Immagini/Singolarity/Ncond.png (PNG copy)> <./Immagini/Singolarity/Nco
-nd_surf.png (PNG copy)>]
-[37 <./Immagini/Singolarity/workangle.png> <./Immagini/Singolarity/Worksing.png
->] [38 <./Immagini/Singolarity/ncondsl.png (PNG copy)>]
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40 <./Immagini/Singolarity/ncondsl.png (PNG copy)>]
 \openout2 = `Capitoli/Vite.aux'.
 
- (./Capitoli/Vite.tex
-<Immagini/ViteRicircolo.jpg, id=195, 468.75125pt x 270.00874pt>
+ (Capitoli/Vite.tex
+<Immagini/ViteRicircolo.jpg, id=208, 468.75125pt x 270.00874pt>
 File: Immagini/ViteRicircolo.jpg Graphic file (type jpg)
 <use Immagini/ViteRicircolo.jpg>
 Package pdftex.def Info: Immagini/ViteRicircolo.jpg  used on input line 6.
 (pdftex.def)             Requested size: 234.37505pt x 135.00403pt.
-<Immagini/utensile.jpg, id=196, 355.92975pt x 770.88pt>
+<Immagini/utensile.jpg, id=209, 355.92975pt x 770.88pt>
 File: Immagini/utensile.jpg Graphic file (type jpg)
 <use Immagini/utensile.jpg>
 Package pdftex.def Info: Immagini/utensile.jpg  used on input line 13.
 (pdftex.def)             Requested size: 88.98221pt x 192.71953pt.
 
-[39
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41
+
 
 
  <./Immagini/ViteRicircolo.jpg> <./Immagini/utensile.jpg>]
 Underfull \vbox (badness 3590) has occurred while \output is active []
 
- [40]
-<Immagini/coppiaTeoricaVite.png, id=205, 508.90125pt x 389.455pt>
-File: Immagini/coppiaTeoricaVite.png Graphic file (type png)
-<use Immagini/coppiaTeoricaVite.png>
-Package pdftex.def Info: Immagini/coppiaTeoricaVite.png  used on input line 88.
 
-(pdftex.def)             Requested size: 330.78189pt x 253.14275pt.
-)
-[41 <./Immagini/coppiaTeoricaVite.png>] [42
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43] [44
+
 
 ]
 \openout2 = `Capitoli/Implementazione.aux'.
 
- (./Capitoli/Implementazione.tex
-[43
+ (Capitoli/Implementazione.tex
+Underfull \vbox (badness 4441) has occurred while \output is active []
 
-] [44]
-<Immagini/Sperimentale/azionamenti.PNG, id=219, 442.0515pt x 215.6055pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[45
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46]
+<Immagini/Sperimentale/azionamenti.PNG, id=230, 442.0515pt x 215.6055pt>
 File: Immagini/Sperimentale/azionamenti.PNG Graphic file (type png)
 <use Immagini/Sperimentale/azionamenti.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/azionamenti.PNG  used on input l
 ine 22.
 (pdftex.def)             Requested size: 353.64168pt x 172.48462pt.
-<Immagini/Sperimentale/registri.PNG, id=220, 632.96475pt x 77.088pt>
+<Immagini/Sperimentale/registri.PNG, id=231, 632.96475pt x 77.088pt>
 File: Immagini/Sperimentale/registri.PNG Graphic file (type png)
 <use Immagini/Sperimentale/registri.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/registri.PNG  used on input line
  30.
 (pdftex.def)             Requested size: 379.78177pt x 46.25314pt.
- [45]) [46 <./Immagini/Sperimentale/azionamenti.PNG> <./Immagini/Sperimentale/r
-egistri.PNG>] [47] [48
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[47])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[48 <./Immagini/Sperimentale/azionamenti.PNG> <./Immagini/Sperimentale/registri
+.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49] [50
+
 
 ]
 \openout2 = `Capitoli/SistemaReale.aux'.
 
- (./Capitoli/SistemaReale.tex
-<Immagini/Sperimentale/banco.png, id=238, 540.0175pt x 399.4925pt>
+ (Capitoli/SistemaReale.tex
+<Immagini/Sperimentale/banco.png, id=248, 540.0175pt x 399.4925pt>
 File: Immagini/Sperimentale/banco.png Graphic file (type png)
 <use Immagini/Sperimentale/banco.png>
 Package pdftex.def Info: Immagini/Sperimentale/banco.png  used on input line 10
 .
 (pdftex.def)             Requested size: 324.013pt x 239.69734pt.
- [49
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[51
 
  <./Immagini/Sperimentale/banco.png>]
-<Immagini/Sperimentale/Beckoffschema.PNG, id=243, 221.628pt x 259.56975pt>
+<Immagini/Sperimentale/Beckoffschema.PNG, id=253, 221.628pt x 259.56975pt>
 File: Immagini/Sperimentale/Beckoffschema.PNG Graphic file (type png)
 <use Immagini/Sperimentale/Beckoffschema.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/Beckoffschema.PNG  used on input
  line 26.
 (pdftex.def)             Requested size: 132.97781pt x 155.74304pt.
- [50]
-<Immagini/Sperimentale/Topology.PNG, id=247, 665.48625pt x 260.77425pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[52]
+<Immagini/Sperimentale/Topology.PNG, id=257, 665.48625pt x 260.77425pt>
 File: Immagini/Sperimentale/Topology.PNG Graphic file (type png)
 <use Immagini/Sperimentale/Topology.PNG>
 Package pdftex.def Info: Immagini/Sperimentale/Topology.PNG  used on input line
  35.
 (pdftex.def)             Requested size: 332.74231pt x 130.3868pt.
-<Immagini/Sperimentale/ConfEthernet.png, id=248, 390.258pt x 97.5645pt>
+<Immagini/Sperimentale/ConfEthernet.png, id=258, 390.258pt x 97.5645pt>
 File: Immagini/Sperimentale/ConfEthernet.png Graphic file (type png)
 <use Immagini/Sperimentale/ConfEthernet.png>
 Package pdftex.def Info: Immagini/Sperimentale/ConfEthernet.png  used on input 
 line 43.
 (pdftex.def)             Requested size: 273.17873pt x 68.29466pt.
-<Immagini/Sperimentale/NetTopology.png, id=249, 159.59625pt x 211.38976pt>
+<Immagini/Sperimentale/NetTopology.png, id=259, 159.59625pt x 211.38976pt>
 File: Immagini/Sperimentale/NetTopology.png Graphic file (type png)
 <use Immagini/Sperimentale/NetTopology.png>
 Package pdftex.def Info: Immagini/Sperimentale/NetTopology.png  used on input l
 ine 51.
 (pdftex.def)             Requested size: 111.7166pt x 147.9718pt.
- [51 <./Immagini/Sperimentale/Beckoffschema.PNG> <./Immagini/Sperimentale/Topol
-ogy.PNG>] [52 <./Immagini/Sperimentale/ConfEthernet.png> <./Immagini/Sperimenta
-le/NetTopology.png>]
-<Immagini/Sperimentale/pdo1in.png, id=261, 277.035pt x 113.223pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[53 <./Immagini/Sperimentale/Beckoffschema.PNG> <./Immagini/Sperimentale/Topolo
+gy.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[54 <./Immagini/Sperimentale/ConfEthernet.png> <./Immagini/Sperimentale/NetTopo
+logy.png>]
+<Immagini/Sperimentale/pdo1in.png, id=271, 277.035pt x 113.223pt>
 File: Immagini/Sperimentale/pdo1in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo1in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo1in.png  used on input line 6
 7.
 (pdftex.def)             Requested size: 149.37631pt x 61.04967pt.
-<Immagini/Sperimentale/pdo2in.png, id=262, 275.22826pt x 115.02975pt>
+<Immagini/Sperimentale/pdo2in.png, id=272, 275.22826pt x 115.02975pt>
 File: Immagini/Sperimentale/pdo2in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo2in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo2in.png  used on input line 7
 4.
 (pdftex.def)             Requested size: 149.37631pt x 62.43108pt.
-<Immagini/Sperimentale/pdo3in.png, id=263, 275.8305pt x 96.96225pt>
+<Immagini/Sperimentale/pdo3in.png, id=273, 275.8305pt x 96.96225pt>
 File: Immagini/Sperimentale/pdo3in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo3in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo3in.png  used on input line 8
 1.
 (pdftex.def)             Requested size: 149.37631pt x 52.50974pt.
-<Immagini/Sperimentale/pdo4in.png, id=264, 274.02374pt x 118.041pt>
+<Immagini/Sperimentale/pdo4in.png, id=274, 274.02374pt x 118.041pt>
 File: Immagini/Sperimentale/pdo4in.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo4in.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo4in.png  used on input line 8
@@ -1281,13 +1763,24 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 64--92
 []$ $[]$ 
  []
 
-<Immagini/Sperimentale/pdo12out.png, id=265, 347.49825pt x 151.767pt>
+<Immagini/Sperimentale/pdo12out.png, id=275, 347.49825pt x 151.767pt>
 File: Immagini/Sperimentale/pdo12out.png Graphic file (type png)
 <use Immagini/Sperimentale/pdo12out.png>
 Package pdftex.def Info: Immagini/Sperimentale/pdo12out.png  used on input line
- 102.
-(pdftex.def)             Requested size: 232.8226pt x 101.68335pt.
-<Immagini/Sperimentale/generalSchema.png, id=266, 877.47826pt x 187.902pt>
+ 98.
+(pdftex.def)             Requested size: 208.50053pt x 91.06088pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[55 <./Immagini/Sperimentale/pdo1in.png> <./Immagini/Sperimentale/pdo2in.png> <
+./Immagini/Sperimentale/pdo3in.png> <./Immagini/Sperimentale/pdo4in.png> <./Imm
+agini/Sperimentale/pdo12out.png>]
+<Immagini/Sperimentale/generalSchema.png, id=284, 877.47826pt x 187.902pt>
 File: Immagini/Sperimentale/generalSchema.png Graphic file (type png)
 <use Immagini/Sperimentale/generalSchema.png>
 Package pdftex.def Info: Immagini/Sperimentale/generalSchema.png  used on input
@@ -1298,52 +1791,77 @@ Overfull \hbox (11.9467pt too wide) in paragraph at lines 111--112
  [] 
  []
 
-[53 <./Immagini/Sperimentale/pdo1in.png> <./Immagini/Sperimentale/pdo2in.png> <
-./Immagini/Sperimentale/pdo3in.png> <./Immagini/Sperimentale/pdo4in.png> <./Imm
-agini/Sperimentale/pdo12out.png>]
-<Immagini/Sperimentale/Inizializzazione.png, id=275, 554.07pt x 440.847pt>
+<Immagini/Sperimentale/Inizializzazione.png, id=285, 554.07pt x 440.847pt>
 File: Immagini/Sperimentale/Inizializzazione.png Graphic file (type png)
 <use Immagini/Sperimentale/Inizializzazione.png>
 Package pdftex.def Info: Immagini/Sperimentale/Inizializzazione.png  used on in
 put line 122.
 (pdftex.def)             Requested size: 349.06595pt x 277.73508pt.
- [54 <./Immagini/Sperimentale/generalSchema.png> <./Immagini/Sperimentale/Inizi
-alizzazione.png>]
-<Immagini/Sperimentale/Input.png, id=281, 184.89075pt x 440.24475pt>
-File: Immagini/Sperimentale/Input.png Graphic file (type png)
-<use Immagini/Sperimentale/Input.png>
-Package pdftex.def Info: Immagini/Sperimentale/Input.png  used on input line 14
-9.
-(pdftex.def)             Requested size: 120.17754pt x 286.1557pt.
-<Immagini/Sperimentale/convertS.png, id=282, 528.7755pt x 193.32225pt>
+<Immagini/Sperimentale/convertS.png, id=286, 528.7755pt x 193.32225pt>
 File: Immagini/Sperimentale/convertS.png Graphic file (type png)
 <use Immagini/Sperimentale/convertS.png>
 Package pdftex.def Info: Immagini/Sperimentale/convertS.png  used on input line
- 157.
-(pdftex.def)             Requested size: 370.14034pt x 135.32465pt.
-<Immagini/Sperimentale/sf0.png, id=283, 302.3295pt x 413.1435pt>
+ 149.
+(pdftex.def)             Requested size: 317.26775pt x 115.99423pt.
+<Immagini/Sperimentale/Input.png, id=287, 184.89075pt x 440.24475pt>
+File: Immagini/Sperimentale/Input.png Graphic file (type png)
+<use Immagini/Sperimentale/Input.png>
+Package pdftex.def Info: Immagini/Sperimentale/Input.png  used on input line 15
+6.
+(pdftex.def)             Requested size: 120.17754pt x 286.1557pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[56 <./Immagini/Sperimentale/generalSchema.png>]
+<Immagini/Sperimentale/sf0.png, id=292, 302.3295pt x 413.1435pt>
 File: Immagini/Sperimentale/sf0.png Graphic file (type png)
 <use Immagini/Sperimentale/sf0.png>
-Package pdftex.def Info: Immagini/Sperimentale/sf0.png  used on input line 167.
+Package pdftex.def Info: Immagini/Sperimentale/sf0.png  used on input line 166.
 
-(pdftex.def)             Requested size: 211.6292pt x 289.19846pt.
- [55 <./Immagini/Sperimentale/Input.png>] [56 <./Immagini/Sperimentale/convertS
-.png> <./Immagini/Sperimentale/sf0.png>]
-<Immagini/Sperimentale/ControlloViteSchema.png, id=293, 301.72725pt x 434.8245p
+(pdftex.def)             Requested size: 181.3991pt x 247.888pt.
+
+Underfull \vbox (badness 6542) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[57 <./Immagini/Sperimentale/Inizializzazione.png> <./Immagini/Sperimentale/con
+vertS.png>]
+<Immagini/Sperimentale/ControlloViteSchema.png, id=298, 301.72725pt x 434.8245p
 t>
 File: Immagini/Sperimentale/ControlloViteSchema.png Graphic file (type png)
 <use Immagini/Sperimentale/ControlloViteSchema.png>
 Package pdftex.def Info: Immagini/Sperimentale/ControlloViteSchema.png  used on
- input line 178.
-(pdftex.def)             Requested size: 211.20763pt x 304.37505pt.
- [57 <./Immagini/Sperimentale/ControlloViteSchema.png>]
-<Immagini/Sperimentale/ControlloBraccia.png, id=299, 313.17pt x 432.4155pt>
+ input line 177.
+(pdftex.def)             Requested size: 181.03773pt x 260.8967pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[58 <./Immagini/Sperimentale/Input.png>]
+<Immagini/Sperimentale/ControlloBraccia.png, id=303, 313.17pt x 432.4155pt>
 File: Immagini/Sperimentale/ControlloBraccia.png Graphic file (type png)
 <use Immagini/Sperimentale/ControlloBraccia.png>
 Package pdftex.def Info: Immagini/Sperimentale/ControlloBraccia.png  used on in
-put line 189.
+put line 188.
 (pdftex.def)             Requested size: 234.8769pt x 324.31082pt.
-<Immagini/Sperimentale/Saturatore.png, id=300, 793.16325pt x 148.75575pt>
+<Immagini/Sperimentale/Saturatore.png, id=304, 793.16325pt x 148.75575pt>
 File: Immagini/Sperimentale/Saturatore.png Graphic file (type png)
 <use Immagini/Sperimentale/Saturatore.png>
 Package pdftex.def Info: Immagini/Sperimentale/Saturatore.png  used on input li
@@ -1354,29 +1872,88 @@ Overfull \hbox (9.4498pt too wide) in paragraph at lines 199--200
  [] 
  []
 
-<Immagini/Sperimentale/CoppieOut.png, id=301, 319.1925pt x 431.211pt>
+<Immagini/Sperimentale/CoppieOut.png, id=305, 319.1925pt x 431.211pt>
 File: Immagini/Sperimentale/CoppieOut.png Graphic file (type png)
 <use Immagini/Sperimentale/CoppieOut.png>
 Package pdftex.def Info: Immagini/Sperimentale/CoppieOut.png  used on input lin
 e 207.
 (pdftex.def)             Requested size: 191.51697pt x 258.72859pt.
-[58 <./Immagini/Sperimentale/ControlloBraccia.png>] [59 <./Immagini/Sperimental
-e/Saturatore.png> <./Immagini/Sperimentale/CoppieOut.png>] [60]
-<Immagini/Sperimentale/state1new.png, id=314, 407.72325pt x 434.8245pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[59 <./Immagini/Sperimentale/sf0.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[60 <./Immagini/Sperimentale/ControlloViteSchema.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[61 <./Immagini/Sperimentale/ControlloBraccia.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[62 <./Immagini/Sperimentale/Saturatore.png> <./Immagini/Sperimentale/CoppieOut
+.png>]
+<Immagini/Sperimentale/state1new.png, id=324, 407.72325pt x 434.8245pt>
 File: Immagini/Sperimentale/state1new.png Graphic file (type png)
 <use Immagini/Sperimentale/state1new.png>
 Package pdftex.def Info: Immagini/Sperimentale/state1new.png  used on input lin
 e 226.
 (pdftex.def)             Requested size: 326.17903pt x 347.86005pt.
- [61 <./Immagini/Sperimentale/state1new.png>]
-<Immagini/Sperimentale/state2New.png, id=319, 596.2275pt x 256.5585pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[63 <./Immagini/Sperimentale/state1new.png>]
+<Immagini/Sperimentale/state2New.png, id=329, 596.2275pt x 256.5585pt>
 File: Immagini/Sperimentale/state2New.png Graphic file (type png)
 <use Immagini/Sperimentale/state2New.png>
 Package pdftex.def Info: Immagini/Sperimentale/state2New.png  used on input lin
 e 236.
 (pdftex.def)             Requested size: 417.3564pt x 179.58972pt.
- [62]
-<Immagini/Sperimentale/LdmPosizionamento.png, id=323, 731.73375pt x 370.38374pt
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[64]
+<Immagini/Sperimentale/LdmPosizionamento.png, id=333, 731.73375pt x 370.38374pt
 >
 File: Immagini/Sperimentale/LdmPosizionamento.png Graphic file (type png)
 <use Immagini/Sperimentale/LdmPosizionamento.png>
@@ -1389,31 +1966,71 @@ Overfull \hbox (12.25229pt too wide) in paragraph at lines 255--256
  []
 
 
-Underfull \vbox (badness 1173) has occurred while \output is active []
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
- [63 <./Immagini/Sperimentale/state2New.png>]
-<Immagini/Sperimentale/state3New.png, id=329, 678.1335pt x 328.8285pt>
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[65 <./Immagini/Sperimentale/state2New.png>]
+<Immagini/Sperimentale/state3New.png, id=339, 678.1335pt x 328.8285pt>
 File: Immagini/Sperimentale/state3New.png Graphic file (type png)
 <use Immagini/Sperimentale/state3New.png>
 Package pdftex.def Info: Immagini/Sperimentale/state3New.png  used on input lin
 e 265.
 (pdftex.def)             Requested size: 406.88324pt x 197.29861pt.
- [64 <./Immagini/Sperimentale/LdmPosizionamento.png>] [65 <./Immagini/Speriment
-ale/state3New.png>]
-<Immagini/Sperimentale/GUI2.png, id=338, 604.05675pt x 360.1455pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[66 <./Immagini/Sperimentale/LdmPosizionamento.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[67 <./Immagini/Sperimentale/state3New.png>]
+<Immagini/Sperimentale/GUI2.png, id=348, 604.05675pt x 360.1455pt>
 File: Immagini/Sperimentale/GUI2.png Graphic file (type png)
 <use Immagini/Sperimentale/GUI2.png>
 Package pdftex.def Info: Immagini/Sperimentale/GUI2.png  used on input line 318
 .
 (pdftex.def)             Requested size: 362.43684pt x 216.08896pt.
- [66] [67 <./Immagini/Sperimentale/GUI2.png>]
-<Immagini/Controllori/Pschema.jpg, id=346, 451.6875pt x 146.04562pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[68]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[69 <./Immagini/Sperimentale/GUI2.png>]
+<Immagini/Controllori/Pschema.jpg, id=356, 451.6875pt x 146.04562pt>
 File: Immagini/Controllori/Pschema.jpg Graphic file (type jpg)
 <use Immagini/Controllori/Pschema.jpg>
 Package pdftex.def Info: Immagini/Controllori/Pschema.jpg  used on input line 3
 53.
 (pdftex.def)             Requested size: 271.01459pt x 87.62804pt.
-<Immagini/Controllori/Vite.png, id=347, 1197.47375pt x 466.74374pt>
+<Immagini/Controllori/Vite.png, id=357, 1197.47375pt x 466.74374pt>
 File: Immagini/Controllori/Vite.png Graphic file (type png)
 <use Immagini/Controllori/Vite.png>
 Package pdftex.def Info: Immagini/Controllori/Vite.png  used on input line 362.
@@ -1424,38 +2041,55 @@ Overfull \hbox (16.267pt too wide) in paragraph at lines 362--363
  [] 
  []
 
-[68]
-<Immagini/Controllori/PDSchema.png, id=351, 693.59125pt x 204.765pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[70]
+<Immagini/Controllori/PDSchema.png, id=361, 693.59125pt x 204.765pt>
 File: Immagini/Controllori/PDSchema.png Graphic file (type png)
 <use Immagini/Controllori/PDSchema.png>
 Package pdftex.def Info: Immagini/Controllori/PDSchema.png  used on input line 
 376.
 (pdftex.def)             Requested size: 242.76057pt x 71.66881pt.
- [69 <./Immagini/Controllori/Pschema.jpg> <./Immagini/Controllori/Vite.png>]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[71 <./Immagini/Controllori/Pschema.jpg> <./Immagini/Controllori/Vite.png>]
 File: Immagini/Controllori/Vite.png Graphic file (type png)
 <use Immagini/Controllori/Vite.png>
 Package pdftex.def Info: Immagini/Controllori/Vite.png  used on input line 388.
 
 (pdftex.def)             Requested size: 419.12209pt x 163.36275pt.
-<Immagini/Traiettorie/TrasVitePD.png, id=357, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/TrasVitePD.png, id=367, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/TrasVitePD.png Graphic file (type png)
 <use Immagini/Traiettorie/TrasVitePD.png>
 Package pdftex.def Info: Immagini/Traiettorie/TrasVitePD.png  used on input lin
 e 397.
 (pdftex.def)             Requested size: 153.64441pt x 115.23392pt.
-<Immagini/Traiettorie/RotVitePD.png, id=358, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/RotVitePD.png, id=368, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/RotVitePD.png Graphic file (type png)
 <use Immagini/Traiettorie/RotVitePD.png>
 Package pdftex.def Info: Immagini/Traiettorie/RotVitePD.png  used on input line
  402.
 (pdftex.def)             Requested size: 153.64441pt x 115.23392pt.
-<Immagini/Traiettorie/ErroreTrasVite.png, id=359, 438.8897pt x 328.97906pt>
+<Immagini/Traiettorie/ErroreTrasVite.png, id=369, 438.8897pt x 328.97906pt>
 File: Immagini/Traiettorie/ErroreTrasVite.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTrasVite.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTrasVite.png  used on input
  line 412.
 (pdftex.def)             Requested size: 170.71718pt x 127.96498pt.
-<Immagini/Traiettorie/ErroreRotVite.png, id=360, 438.8897pt x 328.97906pt>
+<Immagini/Traiettorie/ErroreRotVite.png, id=370, 438.8897pt x 328.97906pt>
 File: Immagini/Traiettorie/ErroreRotVite.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreRotVite.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreRotVite.png  used on input 
@@ -1466,29 +2100,61 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 411--421
 []$[]$ $[]$ 
  []
 
-[70 <./Immagini/Controllori/PDSchema.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71 <./Immagini/Traiettorie/TrasVitePD.png (PNG copy)> <./Immagini/Traiettorie
-/RotVitePD.png (PNG copy)> <./Immagini/Traiettorie/ErroreTrasVite.png> <./Immag
-ini/Traiettorie/ErroreRotVite.png>] [72]
-<Immagini/Controllori/PDBraccia.png, id=373, 1069.9975pt x 452.69125pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[72 <./Immagini/Controllori/PDSchema.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[73 <./Immagini/Traiettorie/TrasVitePD.png (PNG copy)> <./Immagini/Traiettorie/
+RotVitePD.png (PNG copy)>]
+Underfull \vbox (badness 4168) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[74 <./Immagini/Traiettorie/ErroreTrasVite.png> <./Immagini/Traiettorie/ErroreR
+otVite.png>]
+<Immagini/Controllori/PDBraccia.png, id=383, 1069.9975pt x 452.69125pt>
 File: Immagini/Controllori/PDBraccia.png Graphic file (type png)
 <use Immagini/Controllori/PDBraccia.png>
 Package pdftex.def Info: Immagini/Controllori/PDBraccia.png  used on input line
  464.
 (pdftex.def)             Requested size: 395.89288pt x 167.49313pt.
 
-Underfull \vbox (badness 4096) has occurred while \output is active []
 
- [73]
-<Immagini/Traiettorie/CoppiaT1PD.png, id=377, 526.96875pt x 395.22656pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[75]
+<Immagini/Traiettorie/CoppiaT1PD.png, id=387, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT1PD.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT1PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT1PD.png  used on input lin
 e 475.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/CoppiaT2PD.png, id=378, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT2PD.png, id=388, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT2PD.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT2PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT2PD.png  used on input lin
@@ -1499,25 +2165,25 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 472--486
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/Theta1PD.png, id=379, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta1PD.png, id=389, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta1PD.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta1PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta1PD.png  used on input line 
 493.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/Theta2PD.png, id=380, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta2PD.png, id=390, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta2PD.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta2PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta2PD.png  used on input line 
 500.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/ErroreTheta1PD.png, id=381, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta1PD.png, id=391, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta1PD.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta1PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta1PD.png  used on input
  line 507.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/ErroreTheta2PD.png, id=382, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta2PD.png, id=392, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta2PD.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta2PD.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta2PD.png  used on input
@@ -1533,33 +2199,41 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 490--518
 []$ $[]$ 
  []
 
-<Immagini/Traiettorie/Cerchio.png, id=383, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Cerchio.png, id=393, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Cerchio.png Graphic file (type png)
 <use Immagini/Traiettorie/Cerchio.png>
 Package pdftex.def Info: Immagini/Traiettorie/Cerchio.png  used on input line 5
 24.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-[74 <./Immagini/Controllori/PDBraccia.png> <./Immagini/Traiettorie/CoppiaT1PD.p
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[76 <./Immagini/Controllori/PDBraccia.png> <./Immagini/Traiettorie/CoppiaT1PD.p
 ng (PNG copy)> <./Immagini/Traiettorie/CoppiaT2PD.png (PNG copy)>]
-<Immagini/Controllori/FFschema.png, id=388, 599.23875pt x 336.25626pt>
+<Immagini/Controllori/FFschema.png, id=398, 599.23875pt x 336.25626pt>
 File: Immagini/Controllori/FFschema.png Graphic file (type png)
 <use Immagini/Controllori/FFschema.png>
 Package pdftex.def Info: Immagini/Controllori/FFschema.png  used on input line 
 538.
 (pdftex.def)             Requested size: 299.61864pt x 168.12772pt.
-<Immagini/Controllori/feedForward.png, id=389, 1017.8025pt x 262.9825pt>
+<Immagini/Controllori/feedForward.png, id=399, 1017.8025pt x 262.9825pt>
 File: Immagini/Controllori/feedForward.png Graphic file (type png)
 <use Immagini/Controllori/feedForward.png>
 Package pdftex.def Info: Immagini/Controllori/feedForward.png  used on input li
 ne 546.
 (pdftex.def)             Requested size: 376.58104pt x 97.30199pt.
-<Immagini/Traiettorie/CoppiaT1FF.png, id=390, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT1FF.png, id=400, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT1FF.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT1FF.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT1FF.png  used on input lin
 e 556.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Traiettorie/CoppiaT2FF.png, id=391, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT2FF.png, id=401, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT2FF.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT2FF.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT2FF.png  used on input lin
@@ -1570,43 +2244,87 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 553--567
 []$[]$ $[]$ 
  []
 
-[75 <./Immagini/Traiettorie/Theta1PD.png (PNG copy)> <./Immagini/Traiettorie/Th
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[77 <./Immagini/Traiettorie/Theta1PD.png (PNG copy)> <./Immagini/Traiettorie/Th
 eta2PD.png (PNG copy)> <./Immagini/Traiettorie/ErroreTheta1PD.png (PNG copy)> <
-./Immagini/Traiettorie/ErroreTheta2PD.png (PNG copy)>] [76 <./Immagini/Traietto
-rie/Cerchio.png (PNG copy)> <./Immagini/Controllori/FFschema.png>] [77 <./Immag
-ini/Controllori/feedForward.png> <./Immagini/Traiettorie/CoppiaT1FF.png (PNG co
-py)> <./Immagini/Traiettorie/CoppiaT2FF.png (PNG copy)>]
-<Immagini/Controllori/IDTeoria.png, id=404, 398.48875pt x 218.8175pt>
+./Immagini/Traiettorie/ErroreTheta2PD.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[78 <./Immagini/Traiettorie/Cerchio.png (PNG copy)> <./Immagini/Controllori/FFs
+chema.png>]
+Underfull \vbox (badness 3954) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[79 <./Immagini/Controllori/feedForward.png> <./Immagini/Traiettorie/CoppiaT1FF
+.png (PNG copy)> <./Immagini/Traiettorie/CoppiaT2FF.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[80]
+<Immagini/Controllori/IDTeoria.png, id=417, 398.48875pt x 218.8175pt>
 File: Immagini/Controllori/IDTeoria.png Graphic file (type png)
 <use Immagini/Controllori/IDTeoria.png>
 Package pdftex.def Info: Immagini/Controllori/IDTeoria.png  used on input line 
 602.
 (pdftex.def)             Requested size: 358.63657pt x 196.93391pt.
-<Immagini/Controllori/SchemaID.png, id=405, 1288.815pt x 512.91624pt>
+<Immagini/Controllori/SchemaID.png, id=418, 1288.815pt x 512.91624pt>
 File: Immagini/Controllori/SchemaID.png Graphic file (type png)
 <use Immagini/Controllori/SchemaID.png>
 Package pdftex.def Info: Immagini/Controllori/SchemaID.png  used on input line 
 610.
 (pdftex.def)             Requested size: 412.42923pt x 164.13655pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78]
-[79 <./Immagini/Controllori/IDTeoria.png> <./Immagini/Controllori/SchemaID.png>
-]
-<Immagini/Sperimentale/Test_Kd=15.png, id=414, 526.96875pt x 395.22656pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[81 <./Immagini/Controllori/IDTeoria.png>]
+<Immagini/Sperimentale/Test_Kd=15.png, id=423, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=15.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=15.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=15.png  used on input li
 ne 623.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=2.png, id=415, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=2.png, id=424, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=2.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=2.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=2.png  used on input lin
 e 630.
 (pdftex.def)             Requested size: 170.71718pt x 128.03702pt.
-<Immagini/Sperimentale/Test_Kd=3.png, id=416, 526.96875pt x 395.22656pt>
+<Immagini/Sperimentale/Test_Kd=3.png, id=425, 526.96875pt x 395.22656pt>
 File: Immagini/Sperimentale/Test_Kd=3.png Graphic file (type png)
 <use Immagini/Sperimentale/Test_Kd=3.png>
 Package pdftex.def Info: Immagini/Sperimentale/Test_Kd=3.png  used on input lin
@@ -1627,13 +2345,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 620--648
 []$ $[]$ 
  []
 
-<Immagini/Traiettorie/CoppiaT1ID.png, id=417, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT1ID.png, id=426, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT1ID.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT1ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT1ID.png  used on input lin
 e 656.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/CoppiaT2ID.png, id=418, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/CoppiaT2ID.png, id=427, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/CoppiaT2ID.png Graphic file (type png)
 <use Immagini/Traiettorie/CoppiaT2ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/CoppiaT2ID.png  used on input lin
@@ -1644,13 +2362,13 @@ Overfull \hbox (28.2175pt too wide) in paragraph at lines 654--666
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/Theta1ID.png, id=419, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta1ID.png, id=428, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta1ID.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta1ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta1ID.png  used on input line 
 674.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/Theta2ID.png, id=420, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/Theta2ID.png, id=429, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/Theta2ID.png Graphic file (type png)
 <use Immagini/Traiettorie/Theta2ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/Theta2ID.png  used on input line 
@@ -1661,13 +2379,13 @@ Overfull \hbox (28.2175pt too wide) in paragraph at lines 671--685
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/ErroreTheta1ID.png, id=421, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta1ID.png, id=430, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta1ID.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta1ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta1ID.png  used on input
  line 691.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/ErroreTheta2ID.png, id=422, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/ErroreTheta2ID.png, id=431, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/ErroreTheta2ID.png Graphic file (type png)
 <use Immagini/Traiettorie/ErroreTheta2ID.png>
 Package pdftex.def Info: Immagini/Traiettorie/ErroreTheta2ID.png  used on input
@@ -1678,107 +2396,270 @@ Overfull \hbox (15.41429pt too wide) in paragraph at lines 688--702
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/CerchioDinamicaInversa.png, id=423, 526.96875pt x 395.226
+<Immagini/Traiettorie/CerchioDinamicaInversa.png, id=432, 526.96875pt x 395.226
 56pt>
 File: Immagini/Traiettorie/CerchioDinamicaInversa.png Graphic file (type png)
 <use Immagini/Traiettorie/CerchioDinamicaInversa.png>
 Package pdftex.def Info: Immagini/Traiettorie/CerchioDinamicaInversa.png  used 
 on input line 708.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-[80 <./Immagini/Sperimentale/Test_Kd=15.png (PNG copy)> <./Immagini/Sperimental
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[82 <./Immagini/Controllori/SchemaID.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[83 <./Immagini/Sperimentale/Test_Kd=15.png (PNG copy)> <./Immagini/Sperimental
 e/Test_Kd=2.png (PNG copy)> <./Immagini/Sperimentale/Test_Kd=3.png (PNG copy)>]
-[81 <./Immagini/Traiettorie/CoppiaT1ID.png (PNG copy)> <./Immagini/Traiettorie/
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[84 <./Immagini/Traiettorie/CoppiaT1ID.png (PNG copy)> <./Immagini/Traiettorie/
 CoppiaT2ID.png (PNG copy)> <./Immagini/Traiettorie/Theta1ID.png (PNG copy)> <./
 Immagini/Traiettorie/Theta2ID.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82 <./Immagini/Traiettorie/ErroreTheta1ID.png (PNG copy)> <./Immagini/Traiett
-orie/ErroreTheta2ID.png (PNG copy)> <./Immagini/Traiettorie/CerchioDinamicaInve
-rsa.png (PNG copy)>]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[85 <./Immagini/Traiettorie/ErroreTheta1ID.png (PNG copy)> <./Immagini/Traietto
+rie/ErroreTheta2ID.png (PNG copy)> <./Immagini/Traiettorie/CerchioDinamicaInver
+sa.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[86]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83]
-[84]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[87]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86]
-<Immagini/Controllori/RobustTeoria.png, id=447, 389.455pt x 248.93pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[88]
+<Immagini/Controllori/RobustTeoria.png, id=457, 389.455pt x 248.93pt>
 File: Immagini/Controllori/RobustTeoria.png Graphic file (type png)
 <use Immagini/Controllori/RobustTeoria.png>
 Package pdftex.def Info: Immagini/Controllori/RobustTeoria.png  used on input l
-ine 865.
+ine 866.
 (pdftex.def)             Requested size: 311.5644pt x 199.14426pt.
-<Immagini/Sperimentale/BiellaManovella.png, id=448, 725.71124pt x 275.0275pt>
+<Immagini/Sperimentale/BiellaManovella.png, id=458, 725.71124pt x 275.0275pt>
 File: Immagini/Sperimentale/BiellaManovella.png Graphic file (type png)
 <use Immagini/Sperimentale/BiellaManovella.png>
 Package pdftex.def Info: Immagini/Sperimentale/BiellaManovella.png  used on inp
-ut line 876.
-(pdftex.def)             Requested size: 435.4301pt x 165.01776pt.
+ut line 877.
+(pdftex.def)             Requested size: 362.85474pt x 137.51341pt.
 
-Overfull \hbox (8.63875pt too wide) in paragraph at lines 876--877
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[89]
+<Immagini/Controllori/RobustSchema.png, id=463, 882.8985pt x 404.10976pt>
+File: Immagini/Controllori/RobustSchema.png Graphic file (type png)
+<use Immagini/Controllori/RobustSchema.png>
+Package pdftex.def Info: Immagini/Controllori/RobustSchema.png  used on input l
+ine 888.
+(pdftex.def)             Requested size: 441.44817pt x 202.05438pt.
+
+Overfull \hbox (14.65681pt too wide) in paragraph at lines 888--889
  [] 
  []
 
-[87 <./Immagini/Controllori/RobustTeoria.png>]
-<Immagini/Traiettorie/ConfontoErroriTheta1.png, id=454, 526.96875pt x 395.22656
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[90 <./Immagini/Controllori/RobustTeoria.png> <./Immagini/Sperimentale/BiellaMa
+novella.png>]
+<Immagini/Traiettorie/ConfontoErroriTheta1.png, id=468, 526.96875pt x 395.22656
 pt>
 File: Immagini/Traiettorie/ConfontoErroriTheta1.png Graphic file (type png)
 <use Immagini/Traiettorie/ConfontoErroriTheta1.png>
 Package pdftex.def Info: Immagini/Traiettorie/ConfontoErroriTheta1.png  used on
- input line 888.
+ input line 901.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
-<Immagini/Traiettorie/ConfontoErroriTheta2.png, id=455, 526.96875pt x 395.22656
+<Immagini/Traiettorie/ConfontoErroriTheta2.png, id=469, 526.96875pt x 395.22656
 pt>
 File: Immagini/Traiettorie/ConfontoErroriTheta2.png Graphic file (type png)
 <use Immagini/Traiettorie/ConfontoErroriTheta2.png>
 Package pdftex.def Info: Immagini/Traiettorie/ConfontoErroriTheta2.png  used on
- input line 895.
+ input line 908.
 (pdftex.def)             Requested size: 180.9598pt x 135.72008pt.
 
-Overfull \hbox (28.2175pt too wide) in paragraph at lines 885--899
+Overfull \hbox (28.2175pt too wide) in paragraph at lines 898--912
 []$[]$ $[]$ 
  []
 
-<Immagini/Traiettorie/QuadratoDinamicaInversa.png, id=456, 526.96875pt x 395.22
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[91 <./Immagini/Controllori/RobustSchema.png> <./Immagini/Traiettorie/ConfontoE
+rroriTheta1.png (PNG copy)> <./Immagini/Traiettorie/ConfontoErroriTheta2.png (P
+NG copy)>]
+<Immagini/Traiettorie/QuadratoDinamicaInversa.png, id=474, 526.96875pt x 395.22
 656pt>
 File: Immagini/Traiettorie/QuadratoDinamicaInversa.png Graphic file (type png)
 <use Immagini/Traiettorie/QuadratoDinamicaInversa.png>
 Package pdftex.def Info: Immagini/Traiettorie/QuadratoDinamicaInversa.png  used
- on input line 904.
+ on input line 920.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
-<Immagini/Traiettorie/PatternDinamicaInversa.png, id=457, 526.96875pt x 395.226
+<Immagini/Traiettorie/PatternDinamicaInversa.png, id=475, 526.96875pt x 395.226
 56pt>
 File: Immagini/Traiettorie/PatternDinamicaInversa.png Graphic file (type png)
 <use Immagini/Traiettorie/PatternDinamicaInversa.png>
 Package pdftex.def Info: Immagini/Traiettorie/PatternDinamicaInversa.png  used 
-on input line 911.
+on input line 928.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
-<Immagini/Traiettorie/SpiraleID.png, id=458, 526.96875pt x 395.22656pt>
+<Immagini/Traiettorie/SpiraleID.png, id=476, 526.96875pt x 395.22656pt>
 File: Immagini/Traiettorie/SpiraleID.png Graphic file (type png)
 <use Immagini/Traiettorie/SpiraleID.png>
 Package pdftex.def Info: Immagini/Traiettorie/SpiraleID.png  used on input line
- 918.
+ 936.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
-[88 <./Immagini/Sperimentale/BiellaManovella.png> <./Immagini/Traiettorie/Confo
-ntoErroriTheta1.png (PNG copy)> <./Immagini/Traiettorie/ConfontoErroriTheta2.pn
-g (PNG copy)>] [89 <./Immagini/Traiettorie/QuadratoDinamicaInversa.png (PNG cop
-y)> <./Immagini/Traiettorie/PatternDinamicaInversa.png (PNG copy)>]) [90 <./Imm
-agini/Traiettorie/SpiraleID.png (PNG copy)>]
-\openout2 = `./Capitoli/Conclusioni.aux'.
 
- (./Capitoli/Conclusioni.tex)
-[91
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-] [92
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[92 <./Immagini/Traiettorie/QuadratoDinamicaInversa.png (PNG copy)>]
+Underfull \vbox (badness 2600) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[93 <./Immagini/Traiettorie/PatternDinamicaInversa.png (PNG copy)> <./Immagini/
+Traiettorie/SpiraleID.png (PNG copy)>]
+<Immagini/Traiettorie/FiltroIOrdine.png, id=483, 526.96875pt x 395.22656pt>
+File: Immagini/Traiettorie/FiltroIOrdine.png Graphic file (type png)
+<use Immagini/Traiettorie/FiltroIOrdine.png>
+Package pdftex.def Info: Immagini/Traiettorie/FiltroIOrdine.png  used on input 
+line 953.
+(pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
+<Immagini/Traiettorie/FiltroIIOrdine.png, id=484, 526.96875pt x 395.22656pt>
+File: Immagini/Traiettorie/FiltroIIOrdine.png Graphic file (type png)
+<use Immagini/Traiettorie/FiltroIIOrdine.png>
+Package pdftex.def Info: Immagini/Traiettorie/FiltroIIOrdine.png  used on input
+ line 964.
+(pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[94 <./Immagini/Traiettorie/FiltroIOrdine.png (PNG copy)>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[95 <./Immagini/Traiettorie/FiltroIIOrdine.png (PNG copy)>]
+\openout2 = `Capitoli/Conclusioni.aux'.
+
+
+(Capitoli/Conclusioni.tex)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[96
+
+
+
+] [97
+
 
 ]
 \openout2 = `Capitoli/AppendiceDinamica.aux'.
 
- (./Capitoli/AppendiceDinamica.tex
+ (Capitoli/AppendiceDinamica.tex
 Overfull \hbox (5.84608pt too wide) detected at line 43
 []
  []
@@ -1786,7 +2667,16 @@ Overfull \hbox (5.84608pt too wide) detected at line 43
 
 Underfull \vbox (badness 1831) has occurred while \output is active []
 
- [93
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[98
 
 ]
 Overfull \hbox (8.40776pt too wide) detected at line 71
@@ -1796,26 +2686,62 @@ Overfull \hbox (8.40776pt too wide) detected at line 71
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[99]
 Overfull \hbox (27.07233pt too wide) detected at line 105
 []
  []
 
-) [95]
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[100]
 \openout2 = `Capitoli/AppendiceSistemi.aux'.
 
- (./Capitoli/AppendiceSistemi.tex
+ (Capitoli/AppendiceSistemi.tex
 Underfull \vbox (badness 3229) has occurred while \output is active []
 
- [96
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[101
+
 
 
 ])
-[97]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[102]
 \openout2 = `Capitoli/AppendiceQuadro.aux'.
 
- (./Capitoli/AppendiceQuadro.tex
-<quadro.pdf, id=491, 597.23125pt x 845.1575pt>
+ (Capitoli/AppendiceQuadro.tex
+<quadro.pdf, id=514, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 1.
@@ -1824,7 +2750,7 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 1.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<quadro.pdf, id=494, page=1, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=517, page=1, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 1>
 Package pdftex.def Info: quadro.pdf , page1 used on input line 1.
@@ -1841,11 +2767,21 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 1>
 Package pdftex.def Info: quadro.pdf , page1 used on input line 1.
 (pdftex.def)             Requested size: 447.92233pt x 633.86658pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 1>
 Package pdftex.def Info: quadro.pdf , page1 used on input line 1.
 (pdftex.def)             Requested size: 447.92233pt x 633.86658pt.
- [98
+[103
+
 
 
  <./quadro.pdf, page is rotated 180 degrees>]
@@ -1857,7 +2793,7 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf>
 Package pdftex.def Info: quadro.pdf  used on input line 2.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<quadro.pdf, id=511, page=2, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=534, page=2, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 2>
 Package pdftex.def Info: quadro.pdf , page2 used on input line 2.
@@ -1878,234 +2814,265 @@ File: quadro.pdf Graphic file (type pdf)
 <use quadro.pdf, page 2>
 Package pdftex.def Info: quadro.pdf , page2 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [99 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=516, page=3, 597.23125pt x 845.1575pt>
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 3>
-Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 3>
-Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 3>
-Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [100 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=524, page=4, 597.23125pt x 845.1575pt>
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 4>
-Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 4>
-Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 4>
-Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [101 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=528, page=5, 597.23125pt x 845.1575pt>
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 5>
-Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 5>
-Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 5>
-Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-[102 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=532, page=6, 597.23125pt x 845.1575pt>
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 6>
-Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 6>
-Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 6>
-Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [103 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=536, page=7, 597.23125pt x 845.1575pt>
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 7>
-Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 7>
-Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 7>
-Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [104 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=540, page=8, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=538, page=3, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 8>
-Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
+<use quadro.pdf, page 3>
+Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 8>
-Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
+<use quadro.pdf, page 3>
+Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 8>
-Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
+<use quadro.pdf, page 3>
+Package pdftex.def Info: quadro.pdf , page3 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [105 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=545, page=9, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=546, page=4, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 9>
-Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
+<use quadro.pdf, page 4>
+Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 9>
-Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
+<use quadro.pdf, page 4>
+Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 9>
-Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
+<use quadro.pdf, page 4>
+Package pdftex.def Info: quadro.pdf , page4 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [106 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=549, page=10, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=550, page=5, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 10>
-Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+<use quadro.pdf, page 5>
+Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 10>
-Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+<use quadro.pdf, page 5>
+Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 10>
-Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+<use quadro.pdf, page 5>
+Package pdftex.def Info: quadro.pdf , page5 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [107 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=553, page=11, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=555, page=6, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 11>
-Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+<use quadro.pdf, page 6>
+Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 11>
-Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+<use quadro.pdf, page 6>
+Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 11>
-Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+<use quadro.pdf, page 6>
+Package pdftex.def Info: quadro.pdf , page6 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [108 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=557, page=12, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=559, page=7, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 12>
-Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+<use quadro.pdf, page 7>
+Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 12>
-Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+<use quadro.pdf, page 7>
+Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 12>
-Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+<use quadro.pdf, page 7>
+Package pdftex.def Info: quadro.pdf , page7 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [109 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=561, page=13, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=563, page=8, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 13>
-Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+<use quadro.pdf, page 8>
+Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 13>
-Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+<use quadro.pdf, page 8>
+Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 13>
-Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+<use quadro.pdf, page 8>
+Package pdftex.def Info: quadro.pdf , page8 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
  [110 <./quadro.pdf, page is rotated 180 degrees>]
-<quadro.pdf, id=565, page=14, 597.23125pt x 845.1575pt>
+<quadro.pdf, id=567, page=9, 597.23125pt x 845.1575pt>
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 14>
-Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
+<use quadro.pdf, page 9>
+Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 14>
-Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
+<use quadro.pdf, page 9>
+Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 File: quadro.pdf Graphic file (type pdf)
-<use quadro.pdf, page 14>
-Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
+<use quadro.pdf, page 9>
+Package pdftex.def Info: quadro.pdf , page9 used on input line 2.
 (pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
- [111 <./quadro.pdf, page is rotated 180 degrees>]) [112
+ [111 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=571, page=10, 597.23125pt x 845.1575pt>
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 10>
+Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 10>
+Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 10>
+Package pdftex.def Info: quadro.pdf , page10 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+ [112 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=575, page=11, 597.23125pt x 845.1575pt>
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 11>
+Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 11>
+Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 11>
+Package pdftex.def Info: quadro.pdf , page11 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+ [113 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=580, page=12, 597.23125pt x 845.1575pt>
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 12>
+Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 12>
+Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 12>
+Package pdftex.def Info: quadro.pdf , page12 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
 
-] (./main.lof [113] [114])
+[114 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=584, page=13, 597.23125pt x 845.1575pt>
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 13>
+Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 13>
+Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 13>
+Package pdftex.def Info: quadro.pdf , page13 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+ [115 <./quadro.pdf, page is rotated 180 degrees>]
+<quadro.pdf, id=588, page=14, 597.23125pt x 845.1575pt>
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 14>
+Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 14>
+Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+File: quadro.pdf Graphic file (type pdf)
+<use quadro.pdf, page 14>
+Package pdftex.def Info: quadro.pdf , page14 used on input line 2.
+(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+ [116 <./quadro.pdf, page is rotated 180 degrees>])
+Overfull \hbox (10.53178pt too wide) in paragraph at lines 102--102
+[]\OT1/cmr/m/n/12 IEC-International Elec-tro-tech-ni-cal Com-mis-sion et al. ``
+IEC 61784-3-3''. In: (2016). 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[117
+
+
+] (main.lof [118]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[119])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- (./main.lot)
+ (main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [115]
-(./main.aux (./begin.aux) (./Capitoli/Dedica.aux) (./Capitoli/Introduzione.aux)
-(./Capitoli/Cinematica.aux) (./Capitoli/Dinamica.aux)
-(./Capitoli/Cinetostatica.aux) (./Capitoli/Vite.aux)
-(./Capitoli/Implementazione.aux) (./Capitoli/SistemaReale.aux)
-(./Capitoli/Conclusioni.aux) (./Capitoli/AppendiceDinamica.aux)
-(./Capitoli/AppendiceSistemi.aux) (./Capitoli/AppendiceQuadro.aux))
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[120] (main.aux (Capitoli/Introduzione.aux) (Capitoli/Cinematica.aux)
+(Capitoli/Dinamica.aux) (Capitoli/Cinetostatica.aux) (Capitoli/Vite.aux)
+(Capitoli/Implementazione.aux) (Capitoli/SistemaReale.aux)
+(Capitoli/Conclusioni.aux) (Capitoli/AppendiceDinamica.aux)
+(Capitoli/AppendiceSistemi.aux) (Capitoli/AppendiceQuadro.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14826 strings out of 492616
- 257272 string characters out of 6129482
- 717873 words of memory out of 5000000
- 18330 multiletter control sequences out of 15000+600000
- 18001 words of font info for 71 fonts, out of 8000000 for 9000
+ 17109 strings out of 478927
+ 323444 string characters out of 2852534
+ 1057302 words of memory out of 3000000
+ 34563 multiletter control sequences out of 15000+600000
+ 417522 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,22n,51p,1762b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (119 pages, 4955324 bytes).
+ 67i,22n,77p,1771b,1587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1200.pk><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmcsc10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Danie/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Danie/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Danie/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users
+/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><C:/Users/Danie/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Danie/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Danie/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Danie/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Danie/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
+s/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+><C:/Users/Danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb>
+Output written on main.pdf (122 pages, 5140597 bytes).
 PDF statistics:
- 648 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
+ 693 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 581 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 words of extra memory for PDF output out of 10000 (max. 10000000)
 

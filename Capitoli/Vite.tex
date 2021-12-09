@@ -7,7 +7,7 @@ L'obiettivo di questo capito consiste nel presentare la modellazione della cinem
 		\caption{Struttura vite}
 	\end{center}
 \end{figure}
-La prima è una vite a ricircolo di sfere che permette un movimento rotativo, mentre la seconda parte è una guida lineare che permette una traslazione positiva o negativa nell'asse z. Entrambi i componenti sono collegati a motori che permettono la movimentazione interfacciandosi con degli azionamenti. All'estermità della vite è possibile collegare un utensile, come è possibile vedere dalla foto è stato collegato un utensile utilizzato per disegnare le traiettorie su di un foglio.
+\\La prima è una vite a ricircolo di sfere che permette un movimento rotatorio, mentre la seconda parte è una guida lineare che permette una traslazione positiva o negativa nell'asse z. Entrambi i componenti sono collegati a motori che permettono la movimentazione interfacciandosi con degli azionamenti. All'estermità della vite è possibile collegare un utensile, come è possibile vedere dalla foto è stato collegato un utensile utilizzato per disegnare le traiettorie su un foglio.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.25]{Immagini/utensile}
@@ -29,9 +29,9 @@ La prima è una vite a ricircolo di sfere che permette un movimento rotativo, me
 \caption{Parametri end-effector}
 \label{table:2}
 \end{table}
-\\A livello teorico si è partito definendo una legge di modo per entrambi i componenti della vite, si è selezionata una legge polinomiale, per la guida è stata fatta una legge sulla posizione, mentre per la vite a ricircolo di sfere sull'orientamento.
+\\A livello teorico si è partito definendo una legge di moto per entrambi i componenti; la legge selezionata è di tipo polinomiale, per la guida è stata fatta una legge sulla posizione, mentre per la vite a ricircolo di sfere sull'orientamento.
 \subsection{Cinematica end-effector}
-Come anticipato, abbiamo quindi la presenza di due leggi di moto che identifichiamo con $z_{ee}$ e $\varphi_v$. Il risultato della cinematica di posizione è il parametro V, per velocità ed accelerazione saranno le sue derivate, $\dot{V}$ e $\ddot{V}$ definite come: 
+Come anticipato, abbiamo quindi la presenza di due leggi di moto che identifichiamo con $z_{ee}$ e $\varphi_v$. Il risultato della cinematica di posizione è il parametro V, con velocità ed accelerazione che saranno le sue derivate, $\dot{V}$ e $\ddot{V}$, definite come: 
 \begin{equation*}
 	V = 
 	\begin{bmatrix}
@@ -47,7 +47,7 @@ Come anticipato, abbiamo quindi la presenza di due leggi di moto che identifichi
 		\ddot{Z} \\ \ddot{\theta_Z}
 	\end{bmatrix}
 \end{equation*}
-V è composto da una parte di traslazione (Z) e da una parte di rotazione $\theta_Z$; Per andar a ricavare la cinematica abbiamo quindi bisogno della legge di moto e della jacobiana della vite, che possiamo definire come:
+V è composto da una parte di traslazione (Z) e da una parte di rotazione $\theta_Z$; Per andar a ricavare la cinematica abbiamo  bisogno della legge di moto e della jacobiana della vite, che possiamo definire come:
 \begin{equation}
 J_e =
     \begin{bmatrix}
@@ -69,23 +69,16 @@ Andando ora a combinare i parametri e sostituendoli nell'equazione precedente ot
 \end{equation}
 
 \subsection{Dinamica della vite}
-Per la definizione della dinamica della vite è stata usata, come per la dinamica dei link la tecnica del PLV. Per questa soluzione avremo bisogno delle accelerazioni dei due elementi quindi $\ddot{Z_{ee}}$ e $\ddot{\varphi_v}$. Andiamo poi ad introdurre la matrice di massa della vite, composta dalla massa e dall'inerzia e definita come:
+Per la definizione della dinamica della vite è stato usato, come per la dinamica dei link il principio dei lavori virtuali. Per questa soluzione abbiamo bisogno delle accelerazioni dei due elementi quindi $\ddot{Z}_{ee}$ e $\ddot{\varphi_v}$. Introduciamo la matrice di massa della vite, composta dalla massa e dall'inerzia, definita come:
 \begin{equation}
-	M_v\begin{bmatrix}
+	M_v = \begin{bmatrix}
 	m_e & 0 \\ 0 & I_v
 	\end{bmatrix}
 \end{equation} 
 La soluzione della dinamica la troviamo quindi come:
 \begin{equation}
-    C_{ee} = M_v
+    C_{ee} = J_e^TM_v
     J_e \begin{bmatrix}
-    \ddot{z_{ee}} \\ \ddot{\varphi_v}
+    \ddot{z}_{ee} \\ \ddot{\varphi_v}
     \end{bmatrix}
 \end{equation}
-Sono poi stati eseguiti vari test per la movimentazione della vite a livello teorico, nella seguente immagine è possibile vedere un risultato di questi test, in particolare nella figura sono mostrate le coppie fornite ai motori della vite e la posizione iniziale e finale della vite, tutto questo in funzione del tempo.
-\begin{figure}[ht]
-\begin{center}
-    \includegraphics[scale=0.65]{Immagini/coppiaTeoricaVite.png}
-    \caption{Coppie e posizione end-effector}
-\end{center}
-\end{figure}

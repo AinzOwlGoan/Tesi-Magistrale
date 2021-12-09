@@ -1,15 +1,17 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {italian}{}
-\babel@toc {italian}{}
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Parametri manipolatore\relax }}{9}% 
+\contentsline {table}{\numberline {1}{\ignorespaces Parametri manipolatore\relax }}{10}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2}{\ignorespaces Leggi di moto validazione\relax }}{28}% 
+\contentsline {table}{\numberline {2}{\ignorespaces Parametri dei motori\relax }}{25}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3}{\ignorespaces Parametri end-effector\relax }}{40}% 
+\contentsline {table}{\numberline {3}{\ignorespaces Leggi di moto validazione\relax }}{29}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4}{\ignorespaces Tipologie controllo azionamenti\relax }}{55}% 
+\contentsline {table}{\numberline {4}{\ignorespaces Parametri end-effector\relax }}{42}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5}{\ignorespaces Valori variabile \textit {bool}\relax }}{66}% 
+\contentsline {table}{\numberline {5}{\ignorespaces Tipologie controllo azionamenti\relax }}{56}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {6}{\ignorespaces Valori luci\relax }}{66}% 
+\contentsline {table}{\numberline {6}{\ignorespaces Valori variabile \textit {bool}\relax }}{68}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {7}{\ignorespaces Valori luci\relax }}{68}{}%

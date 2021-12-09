@@ -217,53 +217,53 @@ Il problema della dinamica inversa consiste nel determinare le coppie ai giunti 
 \begin{equation}
 \begin{split}
 \begin{bmatrix}
-\partial \theta_1 & \partial \theta_2
+\delta \theta_1 & \delta \theta_2
 \end{bmatrix}
 \begin{bmatrix}
 C_1 \\ C_2
 \end{bmatrix} 
 = \begin{bmatrix}
-\partial \theta_1 & \partial \theta_2
-\end{bmatrix} I_n \begin{bmatrix}
+\delta \theta_1 & \delta \theta_2
+\end{bmatrix} J_r \begin{bmatrix}
 \ddot{\theta}_1 \\ \ddot{\theta}_2
 \end{bmatrix}+ \begin{bmatrix}
-\partial x_{g1} & \partial y_{g1}
+\delta x_{g1} & \delta y_{g1}
 \end{bmatrix}m\begin{bmatrix}
 \ddot{x}_{g1} \\ \ddot{x}_{g1}
 \end{bmatrix} +
-\\ \begin{bmatrix} \partial x_{g2} & \partial y_{g2}
+\\ \begin{bmatrix} \delta x_{g2} & \delta y_{g2}
 \end{bmatrix}m\begin{bmatrix}
 \ddot{x}_{g2} \\ \ddot{x}_{g2}
 \end{bmatrix} +
 \begin{bmatrix}
-\partial \theta_3 & \partial \theta_4
+\delta \theta_3 & \delta \theta_4
 \end{bmatrix}I_m \begin{bmatrix}
-\partial \ddot{\theta_3} \\ \partial\ddot{\theta_4}
+\delta \ddot{\theta_3} \\ \delta\ddot{\theta_4}
 \end{bmatrix}+\begin{bmatrix}
-\partial x_{g2} & \partial y_{g2}
+\delta x_{g2} & \delta y_{g2}
 \end{bmatrix} m \begin{bmatrix}
 \ddot{x}_{g3} \\ \ddot{y}_{g3}
 \end{bmatrix}+\\+\begin{bmatrix}
-\partial x_{g4} & \partial y_{g4}
+\delta x_{g4} & \delta y_{g4}
 \end{bmatrix}m\begin{bmatrix}
-\partial \ddot{x}_{g4} \\ \partial \ddot{y}_{g4} \end{bmatrix} + \begin{bmatrix}
-\partial x & \partial y
+\delta \ddot{x}_{g4} \\ \delta \ddot{y}_{g4} \end{bmatrix} + \begin{bmatrix}
+\delta x & \delta y
 \end{bmatrix}m_e \begin{bmatrix}
 \ddot{x} \\ \ddot{y}
 \end{bmatrix}
 \end{split}
 \label{eq:DinamicaGrande}
 \end{equation}
-Andando ora ad introdurre le matrici $J_1, J_2, J_3, J_4, J_{34}$ e $J$ possiamo andare a sviluppare i calcoli ottenendo:
+Andando ora ad introdurre le matrici $J_1, J_2, J_3, J_4, J_{34}$ e $J$ possiamo esprimere i termini al secondo membro come funzioni di $\delta\theta_1$ e $\delta\theta_2$:
 \begin{equation*}
 \begin{split}
 \begin{bmatrix}
-\partial \theta_1 & \partial \theta_2
+\delta \theta_1 & \delta \theta_2
 \end{bmatrix}\begin{bmatrix}
 C_1 \\ C_2
 \end{bmatrix} =\begin{bmatrix}
-\partial \theta_1 & \partial \theta_2
-\end{bmatrix} \Bigg[ I_n\begin{bmatrix}
+\delta \theta_1 & \delta \theta_2
+\end{bmatrix} \Bigg[ J_r\begin{bmatrix}
 \ddot{\theta}_1 \\ \ddot{\theta}_2
 \end{bmatrix}+ J_1^T \bigg( mJ_1\begin{bmatrix}
 \ddot{\theta}_1 \\ \ddot{\theta_2}
@@ -293,27 +293,14 @@ C_1 \\ C_2
 \end{bmatrix} \bigg)\Bigg]
 \end{split} 
 \end{equation*}
-Esplicitando i parametri e sostituendo i valori costanti troviamo:
-\begin{equation*}
-\begin{aligned}
-    \delta \theta^T C = \delta \theta^T I_2 \ddot{\theta} + \delta \theta^T J_{34}^T I_2(J_{34}\ddot{\theta}+\dot{J_{34}}\dot{\theta})+ \delta \theta^T \frac{25}{4}ml^2\\\bigg(\begin{bmatrix}
-    -\cos\theta_1 & -\sin\theta_1 \\ -\cos\theta_2 & -\sin\theta_2
-    \end{bmatrix}
-    \dot{\theta^2} + \begin{bmatrix}
-    -\sin\theta_1 & \cos\theta_1 \\ -\sin\theta_2 & \cos\theta_2
-    \end{bmatrix} \ddot{\theta}\bigg) +  \delta \theta^T J_{34}^T\frac{9}{4}l^2(m+m_v)\\\bigg(\begin{bmatrix}
-    -\cos\theta_3 & -\sin\theta_3 \\ -\cos\theta_4 & -\sin\theta_4
-    \end{bmatrix}J_{34}J_{34}^T\dot{\theta^2}+\begin{bmatrix}
-    -\sin\theta_3 & \cos\theta_3 \\ -\sin\theta_4 & \cos\theta_4
-    \end{bmatrix}(\dot{J_{34}}\dot{\theta}+J_{34}\ddot{\theta})\bigg)
-    \end{aligned}
-\end{equation*}
-Semplificando e raccogliendo possiamo esprimere l'equazione come:
+Semplificando il termine dello spostamento virtuale $\begin{bmatrix}
+	\delta \theta_1 & \delta \theta_2
+\end{bmatrix}$ e raccogliendo possiamo esprimere l'equazione come:
 \begin{equation}
-    \tau = M \ddot{\theta} + K \dot{\theta}
+    \tau = M \ddot{\theta} + C \dot{\theta}
     \label{eq:dinamicaInv}
 \end{equation}
-Possiamo espandere l'equazione \ref{eq:dinamicaInv} e vederla come:
+Che possiamo vedere come:
 \begin{equation}
     \begin{bmatrix}
     \tau_1 \\ \tau_2
@@ -321,26 +308,49 @@ Possiamo espandere l'equazione \ref{eq:dinamicaInv} e vederla come:
     M\begin{bmatrix}
     \ddot{\theta_1} \\ \ddot{\theta_2}
     \end{bmatrix}
-    + K \begin{bmatrix}
+    + C \begin{bmatrix}
     \dot{\theta_1} \\ \dot{\theta_2}
     \end{bmatrix}
 \end{equation}
 Dove:
 \begin{equation}
-    M = J_r I_2 + m(J_1^T J_1 + J_2^TJ_2+J_3^TJ_3+J_4^TJ_4)+J_rJ_{34}^TJ_{34} + m_vJ_E^TJ_E
+    M = J_r I_2 + m(J_1^T J_1 + J_2^TJ_2+J_3^TJ_3+J_4^TJ_4)+J_rJ_{34}^TJ_{34} + m_vJ^TJ
     \label{eq:M}
 \end{equation}
 \begin{equation}
-    K = m(J_1^T\dot{J_1}+J_2^T\dot{J_2}+J_3^T\dot{J_3}+J_4^T\dot{J_4})+J_rJ_{34}^T\dot{J_{34}}+m_vJ_E^T\dot{J_E}
+    C = m(J_1^T\dot{J_1}+J_2^T\dot{J_2}+J_3^T\dot{J_3}+J_4^T\dot{J_4})+J_rJ_{34}^T\dot{J_{34}}+m_vJ^T\dot{J}
     \label{eq:K}
 \end{equation}
-% check
-Per tutti i calcoli svolti fino ad adesso le coppie devono considerarsi prese all'end-effector
+Le equazioni viste fino ad ora vanno a considerare la dinamica ai giunti. Note le coppie ai giunti, l'inerzia del motore e il rapporto di trasmissione è possibile calcolare le coppie motrici come:
+\begin{equation}
+	\begin{bmatrix}
+		\tau_{m1}  \\ \tau_{m2} 
+	\end{bmatrix} = \bigg(
+	\begin{bmatrix}
+	\tau_{1}  \\ \tau_{2} 
+\end{bmatrix} + J_mi^2 	\begin{bmatrix}
+\ddot{\theta}_{1}  \\ \ddot{\theta}_{2} 
+\end{bmatrix}\bigg) \frac{1}{i}
+\end{equation}
+Dove:
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c| c|} 
+		\hline
+		Nome &  Descrizione & Valore  \\
+		\hline\hline
+		i & Rapporto di riduzione & 64 \\
+		$J_m$ & Inerzia del motore &$1.7\cdot 10^{-5}$ \\
+		\hline
+	\end{tabular}
+	\caption{Parametri dei motori}
+	\label{table:parametriMotore}
+\end{table}
 \subsection{Dinamica diretta}
 Il problema della dinamica diretta invece consiste nel determinare le accelerazioni ai giunti a partire dalle coppie, dalla posizione e velocità iniziali di entrambi i link motorizzati.
 \\Andiamo ora a definire l'equazione della dinamica diretta andando ad invertire l'equazione \ref{eq:dinamicaInv} in questo modo:
 \begin{equation}
-	\ddot{\theta} = M^{-1}(-K\dot{\theta}+\tau)
+	\ddot{\theta} = M^{-1}(-C\dot{\theta}+\tau)
 	\label{eq:dinamicaDiretta}
 \end{equation}
 La dinamica del sistema non è lineare, per risolvere l'equazione differenziale del secondo ordine è necessario procedere mediante integrazione numerica. Note le condizioni iniziali identificate dal vettore $\Theta_0$ e definite come segue:
@@ -354,7 +364,7 @@ Possiamo andare a calcolare $\theta_3$ e $\theta_4$ come abbiamo visto in preced
 	\begin{bmatrix}
 		\ddot{\theta}_1(n) \\ \ddot{\theta}_2(n)
 	\end{bmatrix} = 
- M^{-1}(n)\Bigg( -K(n)\begin{bmatrix}
+ M^{-1}(n)\Bigg( -C(n)\begin{bmatrix}
  	\dot{\theta}_1(n) \\ \dot{\theta}_2(n)
  \end{bmatrix}+\tau(n)\Bigg)
 \end{equation*} 
@@ -441,7 +451,7 @@ e la posizione come:
 Il modello implementa l'equazione della dinamica diretta \ref{eq:dinamicaDiretta}, infatti riusciamo ad ottenere l'accelerazione a partire dalla moltiplicazione fra la matrice d'inerzia e la somma delle coppie con la matrice dei termini di Coriolis. Andando poi ad integrare otteniamo velocità e posizione che ci serviranno per trovare le accelerazioni negli step successivi.
 \subsubsection*{Modellazione su Adams}
 \addcontentsline{toc}{subsubsection}{Modellazione su Adams}
-Per quanto riguarda la modellazione su adams, è stato realizzato un prototipo del manipolatore composto da aste rigide, i due link motorizzati sono fissati mediante delle cerniere ed abbiamo anche la presenza dell'end-effector.
+Per quanto riguarda la modellazione su Adams, è stato realizzato un prototipo dei link del manipolatore composto da aste rigide, i due link motorizzati sono fissati a terra mediante delle cerniere.
 \begin{figure}[!ht]
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -459,10 +469,10 @@ Per quanto riguarda la modellazione su adams, è stato realizzato un prototipo d
 	\end{subfigure}
 	\caption{Modello Adams manipolatore 5R}
 \end{figure}
-Una volta definiti i vincoli e le modalità di movimento del manipolatore si è passati alla fase successiva ovvero quella dell'analisi del modello e della simulazione, andando ad assegnare leggi di moto al modello adams e verificare il suo comportamento rispetto al modello creato su simulink.
+Una volta definiti i vincoli e le modalità di movimento del manipolatore si è passati alla fase successiva ovvero quella dell'analisi del modello e della simulazione, andando ad assegnare le leggi di moto al modello Adams e verificando il suo comportamento rispetto al modello matlab.
 \subsubsection*{Validazione e confronto}
 \addcontentsline{toc}{subsubsection}{Validazione e confronto}
-Le leggi di moto assegnate al modello adams sono state anche assegnate nella stessa maniera al modello simulink, in particolare sono state utilizzate: 
+Le leggi di moto utilizzate per la validazione sono: 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|c|c|} 
@@ -476,33 +486,33 @@ Le leggi di moto assegnate al modello adams sono state anche assegnate nella ste
 	\caption{Leggi di moto validazione}
 	\label{table:ldmAdams}
 \end{table}
-Una volta assegnata la legge ed eseguita la simulazione si è fatto un confronto:
+\\Una volta assegnata la legge ed eseguita la simulazione si è fatto un confronto:
 \begin{figure}[!ht]
-	\begin{subfigure}{.5\textwidth}
+	\begin{subfigure}{.45\textwidth}
 		\centering
 		% include first image
 		\includegraphics[width=.9\linewidth]{Immagini/Dinamica/c1matlab.png}  
 		\caption{Coppia C1 Matlab}
 		\label{fig:leggiC1M}
 	\end{subfigure}
-	\begin{subfigure}{.5\textwidth}
+	\begin{subfigure}{.45\textwidth}
 		\centering
 		% include second image
 		\includegraphics[width=.9\linewidth]{Immagini/Dinamica/c2matlab.png}  
 		\caption{Coppia C2 Matlab}
 		\label{fig:leggiC2M}
 	\end{subfigure}
-	\caption{Coppie in uscita Simulink}
+	\caption{Coppie in uscita Matlab}
 \end{figure}
 \begin{figure}[!ht]
-	\begin{subfigure}{.5\textwidth}
+	\begin{subfigure}{.45\textwidth}
 		\centering
 		% include first image
 		\includegraphics[width=.9\linewidth]{Immagini/Dinamica/c1adams.png}  
 		\caption{Coppia C1 Adams}
 		\label{fig:leggiC1A}
 	\end{subfigure}
-	\begin{subfigure}{.5\textwidth}
+	\begin{subfigure}{.45\textwidth}
 		\centering
 		% include second image
 		\includegraphics[width=.9\linewidth]{Immagini/Dinamica/c2adams.png}  
@@ -511,7 +521,7 @@ Una volta assegnata la legge ed eseguita la simulazione si è fatto un confronto
 	\end{subfigure}
 	\caption{Coppie in uscita Adams}
 \end{figure}
-Andando poi a fare una differenza tra questi due grafici riusciamo a trovare l'andamento dell'errore sulle coppie:
+\\Andando poi a fare una differenza tra questi due grafici riusciamo a trovare l'andamento dell'errore sulle coppie:
 \begin{figure}[!ht]
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -529,4 +539,4 @@ Andando poi a fare una differenza tra questi due grafici riusciamo a trovare l'a
 	\end{subfigure}
 	\caption{Errore Simulink-Adams}
 \end{figure}
-Analizzando il grafico vediamo che l'errore è nell'ordine di $10^{-7}$ di conseguenza è possibile vedere che la validazione ha portato un risultato positivo in quanto le coppie del modello Simulink e le coppie del modello Adams sono praticamente identiche a parte un fattore d'errore dato dalle diverse modalità di calcolo/integrazione.
+\\Analizzando il grafico vediamo che l'errore è nell'ordine di $10^{-7}$ di conseguenza è possibile vedere che la validazione ha portato un risultato positivo in quanto le coppie ottenute da matlab e quelle da Adams sono molto simili a parte un fattore d'errore dato dalle diverse modalità di calcolo due due software.

@@ -18,7 +18,7 @@
 \usepackage[titletoc]{appendix}
 \usepackage[backend=biber]{biblatex}
 \usepackage{pdfpages}
-\usepackage[nottoc,numbib]{tocbibind}
+%\usepackage[nottoc,numbib]{tocbibind}
 \addbibresource{Bibliografia.bib}
 
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
@@ -46,12 +46,13 @@
 \counterwithin{equation}{section}
 \begin{document}
 
-\include{./begin}
+%\include{begin}
+\includepdf{FronteInfo}
 \newpage
 \thispagestyle{empty} % empty
 \mbox{}
 
-\include{./Capitoli/Dedica}
+%\include{./Capitoli/Dedica}
 \pagenumbering{gobble}
 
 \pagenumbering{arabic}
@@ -87,7 +88,7 @@
 \mbox{}
 \include{Capitoli/SistemaReale}
 
-\include{./Capitoli/Conclusioni}
+\include{Capitoli/Conclusioni}
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}

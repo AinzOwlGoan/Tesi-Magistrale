@@ -1,149 +1,153 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {italian}{}
-\babel@toc {italian}{}
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Robot PKM \relax }}{6}% 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Robot PKM \relax }}{7}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Rappresentazione fisica del robot \relax }}{9}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Rappresentazione fisica del robot \relax }}{10}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Equazioni alle circonferenze \relax }}{10}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Equazioni alle circonferenze \relax }}{11}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Confronto dinamica leggi di moto su accelerazioni\relax }}{26}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Confronto dinamica leggi di moto su accelerazioni\relax }}{27}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Confronto dinamica leggi di moto su velocit\IeC {\`a}\relax }}{26}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Confronto dinamica leggi di moto su velocità\relax }}{27}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Confronto dinamica leggi di moto su posizioni\relax }}{26}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Confronto dinamica leggi di moto su posizioni\relax }}{27}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Modello simulink manipolatore\relax }}{27}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Modello simulink manipolatore\relax }}{28}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Modello Adams manipolatore 5R\relax }}{27}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Modello Adams manipolatore 5R\relax }}{28}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Coppie in uscita Simulink\relax }}{28}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Coppie in uscita Matlab\relax }}{29}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Coppie in uscita Adams\relax }}{28}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Coppie in uscita Adams\relax }}{29}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Errore Simulink-Adams\relax }}{29}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Errore Simulink-Adams\relax }}{30}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Posizione standard manipolatore\relax }}{31}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Posizione standard manipolatore\relax }}{32}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Caso 1 singolarit\IeC {\`a}\relax }}{32}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Caso 1 singolarità\relax }}{33}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Caso 2 singolarit\IeC {\`a}\relax }}{32}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Caso 2 singolarità\relax }}{34}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Caso 3 singolarit\IeC {\`a}\relax }}{33}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Caso 3 singolarità\relax }}{34}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Caso 4 e 5 singolarit\IeC {\`a}\relax }}{34}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Caso 4 e 5 singolarità\relax }}{36}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Punti di singolarit\IeC {\`a}\relax }}{35}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Punti di singolarità\relax }}{37}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Numero di condizionamento\relax }}{36}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Numero di condizionamento\relax }}{38}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Angoli di movimentazione dei giunti motorizzati\relax }}{37}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Angoli di movimentazione dei giunti motorizzati\relax }}{39}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces \textit {Workspace} 5R\relax }}{37}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \textit {Workspace} 5R\relax }}{39}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Numero di condizionamento workspace\relax }}{38}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Numero di condizionamento workspace\relax }}{40}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Struttura vite\relax }}{39}% 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Struttura vite\relax }}{41}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Utensile da disegno\relax }}{39}% 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Utensile da disegno\relax }}{41}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Coppie e posizione end-effector\relax }}{41}% 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Schema azionamento\relax }}{48}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Schema azionamento\relax }}{46}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Registri azionamento\relax }}{48}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Registri azionamento\relax }}{46}% 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Banco di test\relax }}{51}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Banco di test\relax }}{49}% 
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Schema modulo bechoff\relax }}{53}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Schema modulo bechoff\relax }}{51}% 
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Topologia della rete\relax }}{53}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Topologia della rete\relax }}{51}% 
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Configurazione rete ethernet user PC\relax }}{54}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Configurazione rete ethernet user PC\relax }}{52}% 
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Topologia rete mediante Ec-engineer\relax }}{54}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Topologia rete mediante Ec-engineer\relax }}{52}% 
+\contentsline {figure}{\numberline {7.6}{\ignorespaces PDO in input\relax }}{55}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.6}{\ignorespaces PDO in input\relax }}{53}% 
+\contentsline {figure}{\numberline {7.7}{\ignorespaces PDO Output 1 e 2\relax }}{55}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.7}{\ignorespaces PDO Output 1 e 2\relax }}{53}% 
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Schema generale simulink\relax }}{56}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Schema generale simulink\relax }}{54}% 
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Fase 1: Inizializzazione\relax }}{57}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Fase 1: Inizializzazione\relax }}{54}% 
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Conversione e lettura motori\relax }}{57}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Fase 2: Input\relax }}{55}% 
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Fase 2: Input\relax }}{58}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Conversione e lettura motori\relax }}{56}% 
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Fase 3: Stateflow\relax }}{59}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Fase 3: Stateflow\relax }}{56}% 
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Fase 4: Schema di controllo della vite\relax }}{60}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Fase 4: Schema di controllo della vite\relax }}{57}% 
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Fase 5: Schema di controllo delle braccia\relax }}{61}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.14}{\ignorespaces Fase 5: Schema di controllo delle braccia\relax }}{58}% 
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Schema espanso invio coppia\relax }}{62}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.15}{\ignorespaces Schema espanso invio coppia\relax }}{59}% 
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Fase 6: Copie in uscita \relax }}{62}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.16}{\ignorespaces Fase 6: Copie in uscita \relax }}{59}% 
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Fase di Homing\relax }}{63}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.17}{\ignorespaces Fase di Homing\relax }}{61}% 
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Fase di posizionamento\relax }}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.18}{\ignorespaces Fase di posizionamento\relax }}{63}% 
+\contentsline {figure}{\numberline {7.19}{\ignorespaces Implementazione funzione di posizionamento\relax }}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.19}{\ignorespaces Implementazione funzione di posizionamento\relax }}{64}% 
+\contentsline {figure}{\numberline {7.20}{\ignorespaces Fase di controllo\relax }}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.20}{\ignorespaces Fase di controllo\relax }}{65}% 
+\contentsline {figure}{\numberline {7.21}{\ignorespaces Interfaccia grafica\relax }}{69}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.21}{\ignorespaces Interfaccia grafica\relax }}{67}% 
+\contentsline {figure}{\numberline {7.22}{\ignorespaces Schema teorico controllore proporzionale\relax }}{71}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.22}{\ignorespaces Schema teorico controllore proporzionale\relax }}{69}% 
+\contentsline {figure}{\numberline {7.23}{\ignorespaces CAMBIARE\relax }}{71}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.23}{\ignorespaces CAMBIARE\relax }}{69}% 
+\contentsline {figure}{\numberline {7.24}{\ignorespaces Schema teorico controllore PD \relax }}{72}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.24}{\ignorespaces Schema teorico controllore PD \relax }}{70}% 
+\contentsline {figure}{\numberline {7.25}{\ignorespaces Controllore PD Vite\relax }}{73}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.25}{\ignorespaces Controllore PD Vite\relax }}{70}% 
+\contentsline {figure}{\numberline {7.26}{\ignorespaces Andamento vite rispetto a riferimento\relax }}{73}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.26}{\ignorespaces Andamento vite rispetto a riferimento\relax }}{71}% 
+\contentsline {figure}{\numberline {7.27}{\ignorespaces Errori vite controllo PD\relax }}{74}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.27}{\ignorespaces Errori vite controllo PD\relax }}{71}% 
+\contentsline {figure}{\numberline {7.28}{\ignorespaces Controllore PD braccia\relax }}{76}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.28}{\ignorespaces Controllore PD braccia\relax }}{74}% 
+\contentsline {figure}{\numberline {7.29}{\ignorespaces Coppie controllore PD braccia\relax }}{76}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.29}{\ignorespaces Coppie controllore PD braccia\relax }}{74}% 
+\contentsline {figure}{\numberline {7.30}{\ignorespaces Andamenti posizione ed errori controllore PD\relax }}{77}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.30}{\ignorespaces Andamenti posizione ed errori controllore PD\relax }}{75}% 
+\contentsline {figure}{\numberline {7.31}{\ignorespaces Cerchio assi [x,y] controllore PD\relax }}{78}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.31}{\ignorespaces Cerchio assi [x,y] controllore PD\relax }}{76}% 
+\contentsline {figure}{\numberline {7.32}{\ignorespaces Schema teorico controllo feedforward\relax }}{78}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.32}{\ignorespaces Schema teorico controllo feedforward\relax }}{76}% 
+\contentsline {figure}{\numberline {7.33}{\ignorespaces Controllore feedforward\relax }}{79}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.33}{\ignorespaces Controllore feedforward\relax }}{77}% 
+\contentsline {figure}{\numberline {7.34}{\ignorespaces Coppie motori controllo fast-forward\relax }}{79}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.34}{\ignorespaces Coppie motori controllo fast-forward\relax }}{77}% 
+\contentsline {figure}{\numberline {7.35}{\ignorespaces Schema controllore dinamica inversa\relax }}{81}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.35}{\ignorespaces Schema controllore dinamica inversa\relax }}{79}% 
+\contentsline {figure}{\numberline {7.36}{\ignorespaces Controllore dinamica inversa\relax }}{82}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.36}{\ignorespaces Controllore dinamica inversa\relax }}{79}% 
+\contentsline {figure}{\numberline {7.37}{\ignorespaces Test su $K_d$\relax }}{83}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.37}{\ignorespaces Test su $K_d$\relax }}{80}% 
+\contentsline {figure}{\numberline {7.38}{\ignorespaces Coppie giunti controllo dinamica inversa\relax }}{84}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.38}{\ignorespaces Coppie giunti controllo dinamica inversa\relax }}{81}% 
+\contentsline {figure}{\numberline {7.39}{\ignorespaces Posizione vs riferimento controllore ID\relax }}{84}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.39}{\ignorespaces Posizione vs riferimento controllore ID\relax }}{81}% 
+\contentsline {figure}{\numberline {7.40}{\ignorespaces Errori controllore ID\relax }}{85}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.40}{\ignorespaces Errori controllore ID\relax }}{82}% 
+\contentsline {figure}{\numberline {7.41}{\ignorespaces Cerchio [X,Y] controllo ID\relax }}{85}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.41}{\ignorespaces Cerchio [X,Y] controllo ID\relax }}{82}% 
+\contentsline {figure}{\numberline {7.42}{\ignorespaces Schema controllore robusto\relax }}{90}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.42}{\ignorespaces Schema controllore robusto\relax }}{87}% 
+\contentsline {figure}{\numberline {7.43}{\ignorespaces Sistema biella manovella\relax }}{90}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.43}{\ignorespaces Sistema biella manovella\relax }}{88}% 
+\contentsline {figure}{\numberline {7.44}{\ignorespaces Controllore robusto\relax }}{91}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.44}{\ignorespaces Confronto controllore PD e ID\relax }}{88}% 
+\contentsline {figure}{\numberline {7.45}{\ignorespaces Confronto controllore PD e ID\relax }}{91}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.45}{\ignorespaces Quadrato controllo dinamica inversa\relax }}{89}% 
+\contentsline {figure}{\numberline {7.46}{\ignorespaces Quadrato controllo dinamica inversa\relax }}{92}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.46}{\ignorespaces Pattern controllo dinamica inversa\relax }}{89}% 
+\contentsline {figure}{\numberline {7.47}{\ignorespaces Pattern controllo dinamica inversa\relax }}{93}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.47}{\ignorespaces Spirale controllo dinamica inversa\relax }}{90}% 
+\contentsline {figure}{\numberline {7.48}{\ignorespaces Spirale controllo dinamica inversa\relax }}{93}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.49}{\ignorespaces Filtro primo ordine\relax }}{94}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.50}{\ignorespaces Filtro secondo ordine\relax }}{95}{}%
