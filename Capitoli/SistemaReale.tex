@@ -362,7 +362,24 @@ Andiamo ora a vedere l'implementazione del controllore:
 		\label{fig:PVite}
 	\end{center}
 \end{figure}
-INSERIRE DESCRIZIONE E ALTRO
+\\Il movimento effettuato è composto da una discesa di 5 centimetri in contemporanea ad una rotazione di $360^\circ$ in due secondi.
+\begin{figure}
+	\centering
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/TrasViteP}  
+		\caption{Traslazione vs riferimento}
+		\label{fig:sub-v0}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/RotViteP}  
+		\caption{Rotazione vs riferimento}
+		\label{fig:sub-v01}
+	\end{subfigure}
+	\caption{Andamento vite rispetto a riferimento}
+	\label{fig:ViteP}
+\end{figure}
 \subsubsection{Controllo proporzionale derivativo}
 A partire dal controllore precedente andiamo ad aggiungere una parte: l'azione derivativa. In uscita fornisce la derivata rispetto al tempo dell'errore, se dovessimo analizzarla singolarmente potremmo definire una legge del tipo:
 \begin{equation}
@@ -389,14 +406,17 @@ con $T_D = \frac{K_D}{K_P}$. In caso di ingresso definito come uno scalino, la p
 	\end{center}
 \end{figure}
 \\A partire da una legge di moto per entrambi i motori che fornisce quattro set point, abbiamo: una prima fase di raccolta dei dati nei quali si prendono le posizioni e velocità dei motori della vite, essendo i motori connessi a riduttori, ed operando sui giunti abbiamo un blocco che si occupa di fare la conversione; una volta fatta la conversione vi è la necessità di effettuare la cinematica diretta per poter passare dagli angoli alle coordinate dell'asse z. In seguito verrà fatta una differenza tra le posizioni e velocità ottenute con la cinematica e quelle del \textit{set-point}; gli errori verranno poi moltiplicati per $K_P$ (posizione) e $K_D$ (velocità) per ottenere i valori della legge di controllo da assegnare ai motori.
-Andiamo ora a presentare il risultato di una simulazione effettuata implementando il controllore PD, la traiettoria eseguita comprendeva la discesa della vite in 5 secondi di 5 centimetri ed un successiva rotazione [SISTEMA]
+Andiamo ora a presentare il risultato di una simulazione effettuata implementando il controllore PD, la traiettoria eseguita comprendeva la discesa della vite in due secondi di 5 centimetri ed in contemporanea una rotazione di $360^\circ$.
 \begin{figure}
+	\centering
 	\begin{subfigure}{.45\textwidth}
+		\centering
 		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/TrasVitePD}  
 		\caption{Traslazione vs riferimento}
 		\label{fig:sub-v1}
 	\end{subfigure}
 	\begin{subfigure}{.45\textwidth}
+		\centering
 		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/RotVitePD}  
 		\caption{Rotazione vs riferimento}
 		\label{fig:sub-v2}
@@ -404,21 +424,26 @@ Andiamo ora a presentare il risultato di una simulazione effettuata implementand
 	\caption{Andamento vite rispetto a riferimento}
 	\label{fig:ViteMovimenti}
 \end{figure}
-Possiamo da queste due curve andare a valutare gli errori tra riferimento e posizione attuale:
+\subsubsection{Confronto controllori vite}	
+Andiamo a presentare il confronto fra gli errori di traslazione e rotazione tra i due approcci di controllo implementati per la vite.
 \begin{figure}
-	\begin{subfigure}{.5\textwidth}
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTrasVite}  
+	\centering
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/errTras}  
 		\caption{Errore traslazione}
-		\label{fig:sub-ert}
+		\label{fig:sub-errT}
 	\end{subfigure}
-	\begin{subfigure}{.5\textwidth}
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreRotVite}  
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/errRot}  
 		\caption{Errore rotazione}
-		\label{fig:sub-err}
+		\label{fig:sub-errR}
 	\end{subfigure}
-	\caption{Errori vite controllo PD}
-	\label{fig:ErrVite}
+	\caption{Errori controllori vite}
+	\label{fig:errVite}
 \end{figure}
+A differenza del controllore P quello PD integra la velocità, seguendo questo approccio le traiettorie hanno un ritardo minore; il problema principale è che la velocità ricevuta in output dagli azionamenti presenta vibrazioni e di conseguenza il controllo risulta imperfetto. Per la scelta del controllore bisogna fare un \textit{trade-off} tra ritardo e vibrazioni.
 \subsection{Controllo braccia}
 Questa sottosezione si pone come obiettivo l'introduzione di approcci di controllo noti in letteratura e applicarli ai link motorizzati del manipolatore; in particolare andando ad analizzare il loro funzionamento a livello teorico, la loro implementazione pratica ed i risultati ottenuti, cercando quindi il controllore migliore. Tutte le tipologie di controllo introdotte saranno di tipo centralizzato, gli algoritmi di questa tipologia sfruttano una conoscenza più approfondita del modello dinamica del manipolatore in modo tale da compensare i termini di accoppiamento non lineari, verranno quindi introdotte coppie di compensazione per i termini NL, inoltre, qualsiasi incertezza della struttura e qualunque imprecisione nella misura della posizione daranno origine ad una perdita di accuratezza e quindi a problemi di controllo. %A differenza dei controllori della vite, la metodologia utilizzata per la spiegazione teorica in questo caso non includerà le funzioni di trasferimento, verterà però su metodi di Lyapunov e sui concetti di equilibrio.
 \subsubsection{Controllo proporzionale derivativo}
@@ -524,7 +549,6 @@ Osservando i grafici si può notare che la posizione segue bene il setpoint andi
 		\label{fig:PDBracciaC}
 	\end{center}
 \end{figure}
-[AGGIUNGI]
 \subsubsection{Controllo feed-forward con coppia pre-computata}
 Il passo successivo è stato quello di studiare ed implementare un controllore che opera in anello aperto; in particolare questo controllore calcola le coppie di disturbo basate sul modello matematico del sistema con parametri d'ingresso il \textit{set-point} in posizione e velocità e accelerazione. L'introduzione di questi termini riesce a risolvere in maniera corretta il problema del tracciamento della traiettoria desiderata, di conseguenza gli elementi introdotti riescono a compensare gli effetti di accoppiamento presenti nel modello dinamico del sistema. 
 \begin{equation}
@@ -551,20 +575,21 @@ A livello implementativo possiamo vederlo come:
 \begin{subfigure}{.5\textwidth}
   \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT1FF}  
-  \caption{Coppia $\theta_1$}
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/theta1FF}  
+  \caption{$\theta_1$ reale vs setpoint}
   \label{fig:sub-ff1}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT2FF}  
-  \caption{Coppia $\theta_2$}
+  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/theta2FF}  
+  \caption{$\theta_2$ vs setpoint}
   \label{fig:sub-ff2}
 \end{subfigure}
-\caption{Coppie motori controllo fast-forward}
+\caption{Andamenti controllo fast-forward}
 \label{fig:FFcoppie}
 \end{figure}
+Eseguendo traiettorie con una dinamica maggiore, con una conseguente diminuzione del tempo di esecuzione il manipolatore riesce ad eseguire un movimento, però non segue la traiettoria desiderata; questo è dovuto alla mancata stima degli attriti nel modello considerato.
 \subsubsection{Controllo in dinamica inversa}
 Riprendendo le tecniche di controllo centralizzato caratteristiche della letteratura l'approccio successivo è stato quello del controllo in dinamica inversa. Il primo step è stato quello di prendere l'equazione della dinamica e ridefinirla come: 
 \begin{equation}
@@ -866,18 +891,7 @@ Possiamo andare quindi a rappresentare lo schema del controllo robusto teorico n
 		\label{fig:RobustSchema}
 	\end{center}
 \end{figure}
-Data la difficoltà implementativa del controllore robusto sul modello reale sono state condotte due tipologie di analisi: la prima è stata un'analisi del comportamento del controllore grazie alla modellazione di un sistema più semplice, in particolare il sistema ad un grado di libertà del manovellismo; la seconda invece è stata la simulazione del controllore sul modello simulink del manipolatore.
-\subsubsection*{Analisi manovellismo}
-\addcontentsline{toc}{subsubsection}{Analisi manovellismo}
-Come è stato anticipato precedentemente è stata fatta un'analisi mediante il sistema ad un grado di libertà biella manovella, per valutare il comportamento del controllore robusto.
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[scale=0.5]{Immagini/Sperimentale/BiellaManovella}
-		\caption{Sistema biella manovella}
-		\label{fig:BiellaManovella}
-	\end{center}
-\end{figure}
-In figura possiamo vedere la rappresentazione teorica del sistema, per andare ad analizzare meglio il controllore in primis è stata fatta una cosimulazione Simulink-Adams per poter valutare se la cinematica e dinamica del manovellismo fossero state implementate correttamente, successivamente è stato implementato il controllore robusto su simulink e si è potuto osservare che: [continua]
+Data la difficoltà implementativa del controllore robusto sul modello reale è state condotta un'analisi e simulazione del controllore sul modello simulink del manipolatore.
 \subsubsection*{Implementazione controllore robusto}
 \addcontentsline{toc}{subsubsection}{Implementazione controllore robusto}
 L'implementazione su simulink del controllore robusto consiste nel seguente schema: 
@@ -888,10 +902,46 @@ L'implementazione su simulink del controllore robusto consiste nel seguente sche
 		\label{fig:robustSchema}
 	\end{center}
 \end{figure}
-Anche per questo approccio è stata condotta un'analisi su una traiettoria circolare di raggio 5 cm da eseguire in 3 secondi. Di rilevanza in tutti questi test è stato il parametro $\varepsilon$, visto nell'equazione \ref{eq:epsilon} presentiamo ora i risultati al variare del parametro.
-Si può vedere che per valori di $\varepsilon$ relativamente [Grandi/piccoli] presenta alti fenomeni vibratori causati dalla commutazione ad alta frequenza della variabile di controllo.
+Anche per questo approccio è stata condotta un'analisi su una traiettoria circolare di raggio 5 cm da eseguire in 3 secondi. Di rilevanza in tutti questi test è stato il parametro $\varepsilon$, visto nell'equazione \ref{eq:epsilon} presentiamo ora il risultato all'uscita del controllo robusto, quindi zV e le coppie di controllo ottenute al variare del parametro.
+Si può vedere che per valori di $\varepsilon$ relativamente piccoli il valore di zV presenta alti fenomeni vibratori causati dalla commutazione ad alta frequenza della variabile di controllo.
+\begin{figure}[!ht]
+	\begin{subfigure}{.53\textwidth}
+		\centering
+		% include first image
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/epsilon25uscita}  
+		\caption{zV con $\varepsilon = 2.5\cdot 10^{-4}$ }
+		\label{fig:rob1}
+	\end{subfigure}
+	\begin{subfigure}{.53\textwidth}
+		\centering
+		% include second image
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/epsilon5uscita}  
+		\caption{zV con $\varepsilon = 5\cdot 10^{-5}$}
+		\label{fig:rob2}
+	\end{subfigure}
+	\caption{Uscite parte robusta del controllo}
+\end{figure}
+\\Per quanto riguarda le coppie di controllo, si può facilmente notare che nel primo caso non vibrano in quanto la variabile d'uscita dal controllo robusto non presenta vibrazioni, nel secondo caso invece le coppie in uscita sono vibrate e questo non le rende ideali per il controllo.
+\begin{figure}[!ht]
+	\begin{subfigure}{.53\textwidth}
+		\centering
+		% include first image
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppieRobustoe25}  
+		\caption{Coppie di controllo con $\varepsilon = 2.5\cdot 10^{-4}$ }
+		\label{fig:rob3}
+	\end{subfigure}
+	\begin{subfigure}{.53\textwidth}
+		\centering
+		% include second image
+		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppieRobustoe5}  
+		\caption{Coppie di controllo con $\varepsilon = 5\cdot 10^{-5}$}
+		\label{fig:rob4}
+	\end{subfigure}
+	\caption{Coppie in uscita al variare di $\varepsilon$}
+\end{figure}
+\\A differenza dei controlli precedenti, l'unità di misura della coppia è il $[Nm]$ in quanto questi test sono stati condotti esclusivamente su simulink.
 \subsection{Confronto approcci controllori}
-Avendo introdotto e verificato le principali tipologie di controllo centralizzato è venuto il momento di fare un confronto andando a vedere quale tra gli approcci visti è il migliore. In particolare, sulla traiettoria effettuata andiamo a confrontare gli errori tra il controllore PD e quello ID:
+Avendo introdotto e verificato le principali tipologie di controllo centralizzato facciamo ora un confronto andando a vedere quale tra gli approcci analizzati è il migliore. In particolare, sulla traiettoria effettuata andiamo a confrontare l'andamento degli errori tra il controllore proporzionale derivativo e quello a dinamica inversa:
 \begin{figure}[!ht]
 \begin{subfigure}{.53\textwidth}
   \centering
@@ -909,10 +959,7 @@ Avendo introdotto e verificato le principali tipologie di controllo centralizzat
 \end{subfigure}
 \caption{Confronto controllore PD e ID}
 \end{figure}
-\\Gli errori sono espressi in radianti, facendo una conversione 
-\begin{equation*}
-	0.004 rad = 0.22^{\circ}
-\end{equation*} Il picco di errore è quindi circa due decimi di grado, andando però ad analizzare tutta la traiettoria dell'errore e facendo una media il valore tende a zero. Da entrambe le immagini è chiaro come è il controllore a dinamica inversa a prevalere. Di conseguenza si è scelto questo come controllore definitivo e sono stati analizzati altri andamenti con leggi di moto diverse al fine di valutarne il comportamento.
+\\Gli errori sono espressi in radianti, il picco di errore è circa due decimi di grado. Da entrambe le immagini è chiaro come il controllore a dinamica inversa risulti migliore. Di conseguenza si è scelto questo come controllore definitivo e sono stati analizzati altri andamenti con leggi di moto diverse al fine di valutarne il comportamento.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Immagini/Traiettorie/QuadratoDinamicaInversa}
@@ -920,7 +967,7 @@ Avendo introdotto e verificato le principali tipologie di controllo centralizzat
 		\label{fig:quadID}
 	\end{center}
 \end{figure}
-La prima traiettoria eseguita è stata quella del quadrato, nei lati orizzontali \textit{setpoint} e curva reale sono pressoché uguali, in quelli verticali invece il manipolatore segue ma non alla perfezione. 
+La prima traiettoria eseguita è stata quella del quadrato, nei lati orizzontali \textit{setpoint} e curva reale sono pressoché uguali, in quelli verticali invece il manipolatore segue ma non alla perfezione, questo è dovuto alla contrapposizione dei motori in fase di lavoro. 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Immagini/Traiettorie/PatternDinamicaInversa}
@@ -928,7 +975,7 @@ La prima traiettoria eseguita è stata quella del quadrato, nei lati orizzontali
 		\label{fig:patternID}
 	\end{center}
 \end{figure}
-La seconda figura è ancora una traiettoria in 2D ed è un pattern di quadrati nei quali il manipolatore non passa mai più di una volta per lo stesso punto, anche qua si può notare, come abbiamo visto in precedenza per il quadrato che i lati orizzontali sono eseguiti correttamente mentre in quelli verticali possono originarsi vibrazioni.
+La seconda figura è ancora una traiettoria in 2D ed è un pattern di quadrati nei quali il manipolatore non passa mai più di una volta per lo stesso punto, anche qua si può notare, come abbiamo visto in precedenza per il quadrato che i lati orizzontali sono eseguiti correttamente mentre in quelli verticali possono originarsi vibrazioni. Nella parte inferiore possiamo vedere più vibrazioni in quanto come visto [metti ref. a workspace] il numero di condizionamento è più alto e quindi ci si sta avvicinando ad una configurazione singolare.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Immagini/Traiettorie/SpiraleID}
@@ -938,14 +985,14 @@ La seconda figura è ancora una traiettoria in 2D ed è un pattern di quadrati n
 \end{figure}
 Come ultima traiettoria si è scelto di eseguirne una tridimensionale: la spirale, in questa è compresa la movimentazione sia delle braccia che della vite, è possibile selezionare quanti cerchi fare e di quanto far scendere la vite; si può vedere che il \textit{setpoint} e la traiettoria reale sono molto simili.
 \subsection{Problema della velocità}
-Implementando e studiando le tecniche di controllo centralizzato, si può vedere chiaramente come in tutte queste abbiamo bisogno della velocità $\dot{q}$. Ci si è quindi concentrati in particolare su di essa, notando che la velocità ricavata dagli encoder soffriva di rumore, questa situazione poteva essere critica in quanto un parametro "rumoroso" da origine ad una legge di moto vibrante e di conseguenza non è possibile alzare il contributo $K_d$ in maniera adeguata in quanto andrebbero ad aumentare le vibrazioni. Proprio per questo si è scelto di ricercare un metodo che potesse filtrare la velocità o predirla in modo da avere un risultato migliore da poter dare in ingresso al manipolatore.
+Implementando e studiando le tecniche di controllo centralizzato, si può vedere chiaramente come in tutte queste abbiamo bisogno della velocità $\dot{q}$. Ci si è quindi concentrati su di essa, notando che la velocità ricavata dagli encoder soffriva di rumore, questa situazione poteva essere critica in quanto un parametro "rumoroso" da origine ad una legge di moto vibrante e di conseguenza non è possibile alzare il contributo $K_d$ in maniera adeguata in quanto aumenterebbero le vibrazioni. Proprio per questo si è scelto di ricercare un metodo che potesse filtrare la velocità o predirla in modo da avere un risultato migliore da poter dare in ingresso al manipolatore.
 \subsubsection*{Filtro primo ordine}
 \addcontentsline{toc}{subsubsection}{Filtro primo ordine}
 L'idea iniziale è stata quella di implementare un filtro del primo ordine passa basso, con funzione di trasferimento:
 \begin{equation}
 T(s) = \frac{a_0}{s+\frac{b_0}{b_1}} = G_0 \frac{P_0}{s+P_0}
 \end{equation}
-In questa tipologia di filtri ci sarà un polo che deve essere reale e negativo per garantire la stabilità (possiamo vedere questa condizione nell'appendice \ref{Appendice:stabilita}. Andando ad analizzare in frequenza l'andamento del filtro $s=j\omega$ si trova che a basse frequenze l'input viene fatto passare completamente, mentre ad alte frequenze viene tagliato.
+In questa tipologia di filtri c'è un polo che deve essere reale e negativo per garantire la stabilità (possiamo vedere questa condizione nell'appendice \ref{Appendice:stabilita}). Andando ad analizzare in frequenza l'andamento del filtro $s=j\omega$ si trova che a basse frequenze l'input viene fatto passare completamente, mentre ad alte frequenze viene tagliato.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.6]{Immagini/Traiettorie/FiltroIOrdine}
@@ -953,7 +1000,7 @@ In questa tipologia di filtri ci sarà un polo che deve essere reale e negativo 
 		\label{fig:filtroIOrd}
 	\end{center}
 \end{figure}
- INSERISCI FOTO E COMMENTI
+Possiamo vedere in figura la velocità reale e due filtri. Il filtro con coefficiente $10^{-2}$ riesce ad approssimare meglio la curva ma è chiaramente in ritardo, invece, il filtro con coefficiente $10^{-3}$ è molto simile alla curva e non riesce a rimuovere le vibrazioni che essa porta.
 \subsubsection*{Filtro secondo ordine}
 \addcontentsline{toc}{subsubsection}{Filtro secondo ordine}
 Un filtro del secondo ordine si differenzia dal primo aggiungendo un polo, permette quindi di arrivare ad avere una pendenza del diagramma di Bode del modulo fino a 40$\frac{dB}{dec}$ nella banda attenuata, mentre in banda passante a seconda dell'approssimazione applicata possono verificarsi vari casi. Dal punto di vista pratico si realizzano mettendo più filtri del primo ordine in serie tra di loro. 
@@ -964,11 +1011,18 @@ Un filtro del secondo ordine si differenzia dal primo aggiungendo un polo, perme
 		\label{fig:filtroIIOrd}
 	\end{center}
 \end{figure}
-
+In figura possiamo vedere la velocità reale e tre filtri, anche in questo caso nessuno dei filtri riesce a fornire un output della velocità adeguato. 
 \subsubsection*{Filtro di Kalman}
 \addcontentsline{toc}{subsubsection}{Filtro di Kalman}
-[INSERISCI SPIEGAZIONE TEORICA KALMAN]
-Gli approcci implementativi del filtro sono stati due, il primo metodo consisteva nell'approccio al problema mediante tecniche di \textit{sensor fusion}, andando a ricercare i valori delle matrici di covarianza in modo sperimentale e valutare il comportamento del filtro rispetto alla velocità originale; il secondo approccio è stata un'implementazione del filtro in maniera più teorica facendo riferimento alla teoria automatica.
+Il filtro di Kalman è un efficiente filtro ricorsivo che valuta lo stato di un sistema dinamico a partire da una serie di misure soggette a rumore, gli approcci implementativi del filtro sono stati due, il primo metodo consisteva nell'approccio al problema mediante tecniche di \textit{sensor fusion}, andando a ricercare i valori delle matrici di covarianza in modo sperimentale e valutando il comportamento del filtro rispetto alla velocità originale; il secondo approccio è stato l'utilizzo del filtro di kalman esteso implementandolo in maniera più teorica.
+
+Il filtro di Kalman esteso Extended Kalman Filter (EKF) è una versione non-lineare del filtro di Kalman usata quando l'evoluzione o l'osservazione dello stato del sistema sono non-lineari, un sistema a tempo discreto, non lineare può essere descritto come:
+\begin{equation}
+	\begin{cases}
+		\xi_{k+1} = f(\xi_k,u_k)\\
+		y_k = h(\xi_k)
+	\end{cases}
+\end{equation}
 \\Per definire il filtro di Kalman partiamo dalla definizione dello stato come
 \begin{equation}
 \xi = \begin{bmatrix}
