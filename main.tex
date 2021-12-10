@@ -20,7 +20,8 @@
 \usepackage{pdfpages}
 \usepackage[nottoc,numbib]{tocbibind}
 \addbibresource{Bibliografia.bib}
-
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 %%%%% NUMERO PAGINE BEGIN
 \usepackage{fancyhdr}
@@ -52,7 +53,11 @@
 \thispagestyle{empty} % empty
 \mbox{}
 
-%\include{./Capitoli/Dedica}
+\include{./Capitoli/Dedica}
+\newpage
+\thispagestyle{empty} % empty
+\mbox{}
+
 \pagenumbering{gobble}
 
 \pagenumbering{arabic}
@@ -75,6 +80,7 @@
 \thispagestyle{plain} % empty
 \mbox{}
 \include{Capitoli/Cinetostatica}
+
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}
@@ -87,19 +93,26 @@
 \thispagestyle{plain} % empty
 \mbox{}
 \include{Capitoli/SistemaReale}
-
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
 \include{Capitoli/Conclusioni}
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}
 \begin{appendices}
 \include{Capitoli/AppendiceDinamica}
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
 \include{Capitoli/AppendiceSistemi}
 \include{Capitoli/AppendiceQuadro}
 \end{appendices}
 \addcontentsline{toc}{section}{Bibliografia}
 \printbibliography
 \newpage
+\thispagestyle{plain} % empty
+\mbox{}\newpage
 \thispagestyle{plain} % empty
 \mbox{}
 \listoffigures

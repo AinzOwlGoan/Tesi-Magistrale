@@ -2,7 +2,7 @@
 Una volta effettuata la cinematica e dinamica del sistema in questo capitolo presentiamo l'analisi cinetostatica. In particolare andremo a concentrarci sui punti di singolarità, sul numero di condizionamento e per concludere analizzeremo lo spazio di lavoro del manipolatore.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.4]{Immagini/Singolarity/0}
+		\includegraphics[scale=0.3]{Immagini/Singolarity/0}
 		\caption{Posizione standard manipolatore}
 	\end{center}
 \end{figure}
@@ -13,7 +13,7 @@ Nell'ambito matematico, una singolarità è un punto nel quale un oggetto non è
 In questo primo caso abbiamo $\overrightarrow{CD}$ che è parallelo a $\overrightarrow{DE}$, schematicamente possiamo andarlo a rappresentare nel seguente modo
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.4]{Immagini/Singolarity/1}
+		\includegraphics[scale=0.3]{Immagini/Singolarity/1}
 		\caption{Caso 1 singolarità}
 	\end{center}
 \end{figure}
@@ -41,7 +41,7 @@ Facendo variare x ricaviamo la y come:
 Per quanto riguarda il secondo caso è simmetrico al primo, abbiamo la catena $\overrightarrow{AB}$ parallela a $\overrightarrow{BC}$:
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.4]{Immagini/Singolarity/2}
+		\includegraphics[scale=0.3]{Immagini/Singolarity/2}
 		\caption{Caso 2 singolarità}
 	\end{center}
 \end{figure}
@@ -55,7 +55,7 @@ Entrambi i casi producono come risultato una circonferenza.
 Il terzo caso di singolarità avviene quando i due link non motorizzati sono paralleli, abbiamo tre giunti allineati tra di loro rendendo la configurazione labile. Per poter uscire da questa singolarità abbiamo la necessità di una maggior coppia.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.4]{Immagini/Singolarity/5}
+		\includegraphics[scale=0.3]{Immagini/Singolarity/5}
 		\caption{Caso 3 singolarità}
 	\end{center}
 \end{figure}
@@ -127,7 +127,7 @@ e per il quinto caso
 Per delimitare i confini di operabilità del manipolatore sono stati uniti tutti e cinque i casi di singolarità. Nella figura seguente è fornita una rappresentazione sul piano cartesiano dell'unione di questi luoghi di singolarità, facciamo notare che non tutti i punti sono fisicamente raggiungibili dal robot per come è stato progettato; in particolare la posizione y dell'\textit{end-effector} non potrà mai essere negativa.
 \begin{figure}[ht]
 \begin{center}
-    \includegraphics[scale=0.65]{Immagini/Singolarity/SingNewNew}
+    \includegraphics[scale=0.6]{Immagini/Singolarity/SingNewNew}
     \caption{Punti di singolarità}
     \label{puntiSing}
 \end{center}
@@ -172,14 +172,14 @@ Rappresentiamo il numero di condizionamento tramite i seguenti grafici:
 Dalle analisi appena effettuate sui punti di singolarità e sul numero di condizionamento è stato possibile descrivere i limiti di lavoro del manipolatore. In prima battuta ci si è concentrato sull'analizzare gli angoli di movimentazione dei giunti e i loro vincoli, in particolare il link sinistro con angolo $\theta_1$ può effettuare un movimento da $60^\circ$ fino a $210^\circ$, mentre il link destro da $-30^\circ$ e $150^\circ$. Questa limitata mobilità è data dai vincoli che ci sono tra le due braccia, infatti, se a livello teorico si possono ottenere configurazioni particolari come quella vista in figura \ref{Caso4Sing} nella pratica non è possibile muovere né manualmente né automaticamente i giunti per ottenere quei casi, l'unico modo possibile è quello di smontare e rimontare il manipolatore al contrario. \\Possiamo andare a rappresentare gli angoli di movimentazione mediante la seguente immagine: 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.7]{Immagini/Singolarity/workangle}
+		\includegraphics[scale=0.56]{Immagini/Singolarity/workangle}
 		\caption{Angoli di movimentazione dei giunti motorizzati}
 	\end{center}
 \end{figure}
 \\A partire dai limiti di lavoro è stato identificato uno spazio buono dove il manipolatore può operare non raggiungendo i punti singolari. Questo luogo è stato descritto mediante un rettangolo:
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.6]{Immagini/Singolarity/WorksingNew}
+		\includegraphics[scale=0.55]{Immagini/Singolarity/WorksingNew}
 		\caption{\textit{Workspace} 5R}
 	\end{center}
 \end{figure}
@@ -193,7 +193,7 @@ Dalle analisi appena effettuate sui punti di singolarità e sul numero di condiz
 \\Successivamente, per verificare che lo spazio di lavoro fosse corretto e rispettasse tutte le condizioni è stata fatta un'analisi sul numero di condizionamento del \textit{workspace}:
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.6]{Immagini/Singolarity/ncondsl}
+		\includegraphics[scale=0.55]{Immagini/Singolarity/ncondsl}
 		\caption{Numero di condizionamento workspace}
 	\end{center}
 \end{figure}

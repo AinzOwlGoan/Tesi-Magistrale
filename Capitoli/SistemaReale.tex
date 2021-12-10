@@ -210,15 +210,22 @@ Nella figura precedente è possibile vedere lo schema espanso come spiegato, lo 
 \\Successivo al blocco fungo abbiamo un saturatore, questo serve per evitare di danneggiare il manipolatore in caso che le coppie computate siano molto alte, è stato trovato sperimentalmente un limite che coincide con la coppia nominale che non può essere superato, per concludere l'ultima parte è quella che si occupa di inviare mediante PDO il valore di coppia convertito all'azionamento.
 \\Andiamo ora a concentrarci sulle parti principali di questo programma, in particolare andremo a trattare lo stateflow il metodo di funzionamento ed i vari stati, passeremo poi all'interfaccia grafica che permette di comandare il manipolatore, e per concludere andremo a vedere i controllori implementati per la vite e per le braccia, andando a vedere la struttura, lo schema e i risultati ottenuti per ogni approccio.
 \subsection{Stateflow}
-\textit{Stateflow} si occupa di fornire diagrammi di transizione, stato e di flusso utilizzando un linguaggio grafico. Nel caso del manipolatore è stato utilizzato per la progettazione di diagrammi di transizione in base agli stati del robot. In questa sezione andremo a vedere le fasi gli stadi di evoluzione che sono stati costruiti.
+\textit{Stateflow} si occupa di fornire diagrammi di transizione, di stato e di flusso utilizzando un linguaggio grafico. Nel caso del manipolatore è stato utilizzato per la progettazione dei diagrammi di transizione in base agli stati del robot. In questa sezione andremo a vedere le fasi gli stadi di evoluzione che sono stati costruiti, per comodità facciamo riferimento allo schema seguente:
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{Immagini/Sperimentale/statemachine}
+		\caption{Macchina a stati stateflow
+			\label{fig:macchinaStati}}
+	\end{center}
+\end{figure}
 \subsubsection{Fase di Homing}
-Appena il robot viene acceso non possiamo sapere dove si trova, di conseguenza abbiamo bisogno di uno stadio che ci vada a trovare una posizione di riferimento nella quale sappiamo dove è collocato effettivamente. Il primo stadio è quindi quello di \textit{homing}, consiste nel portare i motori a toccare i finecorsa indicandogli che quello è il loro punto di partenza. I motori utilizzati per questa fase sono stati quelli delle braccia e quello di traslazione della vite.
-\\L'approccio iniziale è stato quello di fornire una coppia costante che in automatico si occupava di andare a toccare i finercorsa, e dopo che li toccava si passava nello stato successivo. Però, per motivi di sicurezza e considerando che lasciando fermo il manipolatore per diverso tempo la stessa coppia magari potrebbe non farlo muovere si è deciso di chiudere l'anello in posizione, in particolare per eseguire la fase di homing è stata data una rampa con pendenza negativa in quanto i finecorsa vengono rilevati quando i link sono totalmente a destra.
-Per controllare questa rampa è stato fatto un controllo proporzionale e integrale sull'errore tra la posizione attuale ed il riferimento, la legge implementata è quindi del tipo:
+Appena il robot viene acceso non vi è alcuna conoscienza relativa alla sua posizione, di conseguenza abbiamo bisogno di uno stadio che ci porti in una posizione di riferimento nella quale sappiamo dov'è collocato effettivamente. Il primo stadio è quindi quello di \textit{homing}, consiste nel portare i motori a toccare i finecorsa indicando quello come punto di partenza. I motori utilizzati per questa fase sono stati quelli delle braccia e quello di traslazione della vite.
+\par L'approccio iniziale è stato quello di fornire una coppia costante che in automatico si occupava di andare a toccare i finercorsa, dopo che erano stati toccati si passava nello stato successivo. Però, per motivi di sicurezza e, considerando che lasciando fermo il manipolatore per diverso tempo la stessa coppia costante potrebbe non essere in grado di farlo muovere si è deciso di chiudere l'anello in posizione, in particolare per eseguire la fase di \textit{homing} è stata data una rampa con pendenza negativa\footnote{i finecorsa utilizzati per questa fase vengono rilevati quando i link sono totalmente a destra, quindi la direzione negativa per i motori delle braccia.}.
+Per controllare la rampa è stato fatto un controllo proporzionale e integrale sull'errore tra la posizione attuale ed il riferimento, la legge di controllo implementata è del tipo:
 \begin{equation*}
 	PI = \frac{K_p s + K_i}{s}
 \end{equation*}
-Nella figura \ref{fig:Zero} possiamo vedere lo schema effettivamente implementato per questa prima fase:
+Nella figura \ref{fig:Zero} possiamo vedere lo schema implementato per questa prima fase:
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.8]{Immagini/Sperimentale/state1new.png}
@@ -226,28 +233,25 @@ Nella figura \ref{fig:Zero} possiamo vedere lo schema effettivamente implementat
     \label{fig:Zero}
 \end{center}
 \end{figure}
-\\Il primo stato è quello di begin, appena il programma si avvia ci entriamo in automatico, per passare allo stato successivo, ovvero attivazione abbiamo bisogno di due condizioni, la prima si verifica quando la \textit{Status Word} è uguale a 1079, ovvero quando gli azionamenti sono usciti dalla fase \textit{pre-operational} e sono quindi pronti all'uso, la seconda condizione invece è quando il segnale avvio è vero, nello stato attivazione i motori sono ancora fermi però viene abilitato il loro utilizzo, passare quindi in questo stato è obbligatorio. Per passare allo stato successivo il segnale \textit{ZeroSignal} deve essere vero, questo è un segnale gestito mediante un bottone da interfaccia grafica, appena viene premuto entriamo nello stato \textbf{Home}. In questo stato vengono definite variabili per la conversione dei valori\footnote{I valori presi dai motori sono espressi tutti in conti, per quello è stata necessaria una fase di analisi dei motori per capire come convertirli, successivamente c'è stato un passaggio da counts a radianti e da radianti a gradi.}, viene poi salvata la posizione di riferimento dell'asse A e B dei motori delle braccia. La fase successiva è quella del \textit{during}, rimanendo in quello stato quella fase viene eseguita ad ogni ciclo (1ms), in questa abbiamo la rampa che decresce di 0.015 gradi al millisecondo (15 gradi al secondo) e abbiamo una funzione simulink che è quella che si occupa del controllo PI. Una volta raggiunta la posizione del finecorsa le coppie vengono settate a 0, impedendo quindi un'ulteriore movimentazione. Per passare alla fase successiva abbiamo bisogno che tutti gli elementi siano arrivati a finecorsa.
+\\Il primo stato è quello di \textbf{Begin}, appena il programma si avvia ci si entra in automatico, per passare allo stato successivo, ovvero \textbf{Attivazione} abbiamo bisogno di due condizioni, la prima si verifica quando la \textit{Status Word} è uguale a 1079, ovvero quando gli azionamenti sono usciti dalla fase \textit{pre-operational} e sono quindi pronti all'uso, la seconda invece quando il segnale avvio è vero. Nello stato attivazione i motori sono ancora fermi però viene abilitato il loro utilizzo, passare quindi in questo stato è obbligatorio. Proseguiamo nello stato successivo quando il segnale \textit{ZeroSignal} è vero, questo viene gestito mediante un bottone da interfaccia grafica, appena premuto entriamo automaticamente nello stato \textbf{Home}. 
+\par In questo stato abbiamo la definizione di variabili per la conversione dei valori presi dai motori\footnote{I valori sono espressi tutti in \textit{counts},  è stata necessaria una fase di analisi dei motori per capire come convertirli, effettuando quindi un passaggio da \textit{counts} a radianti e da radianti a gradi.}, viene poi salvata la posizione di riferimento degli assi A e B dei motori delle braccia. La fase successiva è quella del \textit{during}\footnote{Finché rimaniamo in quello stato, le operazioni vengono eseguite ad ogni ciclo (1ms).}, in questa abbiamo la rampa che decresce di 0.015 gradi al millisecondo, quindi 15 gradi al secondo e abbiamo una funzione simulink che si occupa del controllo PI. Una volta raggiunta la posizione del finecorsa le coppie vengono settate a 0, impedendo quindi un'ulteriore movimentazione,oltre al movimento delle braccia c'è anche quello della vite, che raggiunge la posizione di Homing salendo con una coppia negativa. Per passare alla fase successiva abbiamo bisogno che tutti gli elementi siano arrivati a finecorsa.
 \subsubsection{Fase di posizionamento}
-La fase successiva è quella di posizionamento, per non lasciare il robot nella configurazione di zero si è scelto di spostarlo in una configurazione standard lontana dai punti di singolarità e che sarà comoda per le movimentazioni e traiettorie successive. La configurazione scelta prevede che i giunti siano messi a $100^\circ$ e $80^\circ$, anche qua come prima il primo approccio è stato quello di utilizzare una coppia costante per il movimento; la fase di zero lasciava i link a $60^\circ$ e $-30^\circ$, vi era quindi la necessità di fare $+40^\circ$ per il motore a sinistra e $+110^\circ$ per il motore a destra, la coppia costante veniva erogata finché non si arrivava a quelle condizioni, dopodiché eravamo sicuri che il posizionamento era stato fatto in maniera corretta. La vite invece ha due modalità di configurazione, è possibile farla abbassare o lasciarla alta in finecorsa, si è scelto di proseguire in questo modo in quanto alla vite come abbiamo visto precedentemente è possibile collegare degli utensili e quindi l'abbassamento la predisponeva al disegno per traiettorie bidimensionali. L'approccio di controllo finale però non è stato quello della coppia costante, anche in questo caso per motivi di sicurezza ma, sapendo le posizioni finali che si volevano raggiungere, si è optato per definire una legge di moto che si occupa di portarci nella condizione di posizionamento desiderata.
+La fase successiva è quella di posizionamento, per non lasciare il robot nella configurazione di homing si è scelto di spostarlo in una configurazione standard lontana dai punti di singolarità che sarà comoda per le movimentazioni successive. La configurazione scelta prevede che i giunti siano messi a $100^\circ$ e $80^\circ$, anche in questo caso, come prima il primo approccio è stato quello di utilizzare una coppia costante per il movimento; la fase di homing lasciava i link a $60^\circ$ e $-30^\circ$, vi era quindi la necessità di fare $+40^\circ$ per il braccio sinistro e $+110^\circ$ per quello destro, la coppia costante veniva erogata finché la condizione non era vera, dopodiché eravamo sicuri che il posizionamento fosse stato effettuato in maniera corretta. 
+\par L'approccio di posizionamento finale però non è stato quello della coppia costante, anche in questo caso per motivi di sicurezza ma, sapendo le posizioni finali che si vogliono raggiungere, si è optato per definire una legge di moto che si occupa di portarci nella condizione desiderata.
 \begin{figure}[ht]
 \begin{center}
-    \includegraphics[scale=0.58]{Immagini/Sperimentale/state2New.png}
+    \includegraphics[scale=0.65]{Immagini/Sperimentale/state2New.png}
     \caption{Fase di posizionamento}
     \label{fig:Pos}
 \end{center}
 \end{figure}
-\\Riprendendo lo schema precedente, per passare allo stato \textbf{HomeDef} bisogna aver raggiunto tutti i finecorsa; non appena entriamo vengono salvati gli offset della posizione delle braccia, del tempo e la posizione desiderata di discesa della vite. Ad ogni ciclo, quindi ogni millisecondo viene eseguita la funzione \textbf{Posizionamento($\dots$)} la quale, mediante una legge di moto, ci consente di eseguire in maniera corretta il posizionamento.
-Andando ad analizzare nello specifico il blocco simulink del posizionamento, vengono costruite due leggi polinomiali, una per ogni motore che forniscono un \textit{setpoint} in posizione in gradi, che verrà confrontato con la posizione attuale. Per ottenere poi una coppia, e garantire errore a transitorio esaurito viene introdotto un sistema di controllo proporzionale integrativo, con legge di controllo: 
+\\A partire dallo schema precedente, per passare allo stato \textbf{HomeDef} bisogna aver raggiunto tutti i finecorsa; non appena entriamo nello stato vengono salvati gli offset della posizione delle braccia, del tempo e la posizione desiderata di discesa della vite. Ad ogni ciclo, quindi ogni millisecondo viene eseguita la funzione \textbf{Posizionamento($\dots$)} la quale, mediante una legge di moto, ci consente di eseguire in maniera corretta il posizionamento.
+Analizzando nello specifico il blocco simulink del posizionamento, vengono costruite due leggi polinomiali, una per ogni motore che producono un \textit{setpoint} in posizione in gradi, che verrà confrontato con la posizione attuale. Per ottenere la coppia, e garantire errore a transitorio esaurito viene introdotto un sistema di controllo proporzionale integrativo, con legge di controllo: 
 % check formula
 \begin{equation*}
-\tau = K \tilde{\theta} = \begin{bmatrix}
-K_p & K_p \\ K_i & K_i
-\end{bmatrix}
-\begin{bmatrix}
-\tilde{\theta_1} \\ \tilde{\theta_2}
-\end{bmatrix} = K_p\theta + K_i\theta
+\tau = K \tilde{\theta} =  K_p\tilde{\theta} + K_i\tilde{\theta}
 \end{equation*}
-Le coppie di controllo uscenti andranno quindi al manipolatore e si occuperanno della movimentazione. Possiamo vedere lo schema della legge di moto implementato in figura \ref{fig:ImpPos}.
+Le coppie di controllo uscenti andranno al manipolatore e si occuperanno della movimentazione. Possiamo vedere lo schema della legge di moto implementato in figura \ref{fig:ImpPos}.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.6]{Immagini/Sperimentale/LdmPosizionamento}
@@ -255,9 +259,10 @@ Le coppie di controllo uscenti andranno quindi al manipolatore e si occuperanno 
 		\label{fig:ImpPos}
 	\end{center}
 \end{figure}
-\par Una volta eseguito il posizionamento, lo stato successivo riguarderà la discesa della vite, per passarci le coppie dei bracci dovranno essere pari a zero e sull'interfaccia grafica dovrà essere premuto il bottone relativo alla discesa. In particolare per la discesa verrà utilizzata la variabile \textbf{dv} salvata precedentemente che indica di quanti centimetri la vite deve scendere; per farla scendere verrà fornita una coppia al motore di traslazione che si occuperà di arrivare alla posizione desiderata.
+Per quanto riguarda la vite sono state implementate due possibili scelte: la prima è l'opzione di farla abbassare la seconda invece è quella di lasciarla in posizione di finecorsa, si è scelto di proseguire in questo modo in quanto alla vite come abbiamo visto precedentemente nel capitolo \ref{DescrizioneEF},  è possibile collegare utensili e quindi l'abbassamento di una determinata quantità la predispone al disegno per traiettorie bidimensionali. 
+Una volta eseguito il posizionamento, lo stato successivo riguarda la discesa della vite, per entrarci le coppie delle braccia dovranno essere pari a zero e sull'interfaccia grafica dovrà essere premuto il bottone relativo all'abbassamento della vite\footnote{Sia che si voglia abbassare di una quantità che si voglia lasciare nella posizione alta il bottone va premuto.}. Per particolare per la discesa verrà utilizzata la variabile \textbf{dv} salvata precedentemente che indica di quanti centimetri la vite deve scendere; per farla scendere viene fornita una coppia al motore di traslazione finché non arriva alla posizione desiderata.
 \subsubsection{Fase di controllo}
-L'ultima fase è quella di controllo ed esecuzione della traiettoria, in questa fase andiamo a settare l'offset dei motori della vite, del tempo e dei motori delle braccia, serve resettare l'offset della vite in quanto il posizionamento (nel caso di discesa) è stato appena concluso; l'offset del tempo ci permette di far partire virtualmente il tempo da zero negli schemi di controllo dopo che siamo arrivati alla configurazione di \textit{Homing}.
+L'ultima fase è quella di controllo ed esecuzione della traiettoria, in questa fase andiamo a settare l'offset dei motori della vite, del tempo e dei motori delle braccia; resettare l'offset della vite è necessario in quanto il posizionamento (nel caso di discesa) è appena terminato; l'offset del tempo ci permette di far partire virtualmente il tempo da zero negli schemi di controllo dopo essere arrivati nella configurazione di \textit{Posizionamento}. I figura \ref{fig:Traiettoria} lo schema implementato di quest'ultima fase.
 \begin{figure}[ht]
 \begin{center}
     \includegraphics[scale=0.6]{Immagini/Sperimentale/state3New.png}
@@ -265,12 +270,12 @@ L'ultima fase è quella di controllo ed esecuzione della traiettoria, in questa 
     \label{fig:Traiettoria}
 \end{center}
 \end{figure}
-Come abbiamo anticipato precedentemente nello stato \textbf{OffSet} c'è il settaggio degli \textit{offset} e tutte le coppie vengono messe a zero per evitare eventuali movimentazioni indesiderate. Per passare alla fase successiva abbiamo bisogno che venga premuto il bottone \textbf{Work} sull'interfaccia grafica, questo garantirà il passaggio allo stato \textit{Controllo}, può darsi che il bottone non venga premuto subito, di conseguenza il clock potrebbe aumentare, per questo l'offset del clock viene settato nella fase di controllo. Per quanto riguarda la scelta della traiettoria tramite interfaccia grafica vi è la possibilità di scegliere quella desiderata. A livello implementativo le traiettorie non sono altro che leggi di moto fatte in due o tre dimensioni, dipendentemente dal caso, dopo che il manipolatore inizia ad eseguire la traiettoria possono esserci due evoluzioni:
+\par Come abbiamo anticipato precedentemente nello stato \textbf{OffSet} avviene il settaggio degli \textit{offset} e tutte le coppie vengono messe a zero per evitare eventuali movimentazioni indesiderate. Per passare alla fase successiva abbiamo bisogno che venga premuto il bottone \textbf{Work} sull'interfaccia grafica, questo garantisce il passaggio allo stato \textit{Controllo}, può darsi che il bottone non venga premuto subito, di conseguenza il clock potrebbe aumentare, per questo l'offset viene settato nella fase di \textbf{Controllo}. Per quanto riguarda la scelta della traiettoria tramite interfaccia grafica vi è la possibilità di scegliere quella desiderata. A livello di implementazione le traiettorie non sono altro che leggi di moto costruite in due o tre dimensioni. Dopo che il manipolatore inizia ad eseguire la traiettoria possono esserci due evoluzioni:
 \begin{itemize}
 	\item la traiettoria viene eseguita correttamente
 	\item la traiettoria da problemi
 \end{itemize}
-Nel primo caso abbiamo 40 secondi per eseguire la traiettoria (il tempo può essere personalizzato in base alla tipologia di traiettorie), alla fine di questo tempo passiamo allo stato \textbf{FineLavorazione} dove il manipolatore è fermo ed ha concluso la sua traiettoria, da questo mediante il bottone di reset è possibile ritornare alla fase di zero, oppure in automatico dopo un determinato periodo di tempo se il tasto di homing è stato lasciato attivo il manipolatore torna all'homing. Nel secondo caso ci si accorge che la traiettoria sta dando problemi, magari vibrazioni o si vede che il manipolatore rischia di entrare in singolarità, per prevenire questo vi è un bottone denominato \textbf{STOP} che permette l'arresto immediato del manipolatore, azzerando tutte le coppie. A differenza della pressione del fungo, che dopo lo sbloccaggio richiede il riavvio del dispositivo, nel caso in cui si entri nella fase di stop mediante il bottone di reset è possibile far tornare il manipolatore nella fase di attivazione, da questa poi sarà possibile far partire di nuovo la fase di zero e successivamente quella di homing.
+Nel primo caso abbiamo 40 secondi per eseguire la traiettoria (il tempo può essere personalizzato in base alla tipologia di traiettorie), alla fine di questo tempo passiamo allo stato \textbf{FineLavorazione} dove il manipolatore è fermo ed ha concluso la sua traiettoria, da questo, grazie al bottone reset è possibile ritornare alla fase di \textbf{homing}, oppure in automatico dopo un determinato periodo di tempo se il tasto di \textit{posizionamento} è stato lasciato attivo il manipolatore torna nella configurazione predefinita. Nel secondo caso ci si accorge che la traiettoria sta dando problemi, ad esempio vibrazioni o si nota che il manipolatore rischia di entrare in singolarità, per risolvere questi problemi vi è un bottone denominato \textbf{STOP} che permette l'arresto immediato del manipolatore, azzerando tutte le coppie. A differenza della pressione del fungo, che dopo lo sbloccaggio richiede il riavvio del dispositivo, nel caso in cui si entri nella fase di stop mediante il bottone di reset è possibile far tornare il manipolatore nella fase di attivazione, da questa poi sarà possibile far partire di nuovo la fase di homing e successivamente quella di posizionamento.
 \subsubsection*{Gestione variabile di stato e luci}
 \addcontentsline{toc}{subsubsection}{Gestione variabile di stato e luci}
 Durante tutte le fasi è possibile vedere nello stateflow che due variabili si evolvono costantemente: bool e luci.
@@ -364,16 +369,13 @@ Andiamo ora a vedere l'implementazione del controllore:
 \end{figure}
 \\Il movimento effettuato è composto da una discesa di 5 centimetri in contemporanea ad una rotazione di $360^\circ$ in due secondi.
 \begin{figure}
-	\centering
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/TrasViteP}  
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=1\linewidth]{Immagini/Traiettorie/TrasViteP}  
 		\caption{Traslazione vs riferimento}
 		\label{fig:sub-v0}
 	\end{subfigure}
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/RotViteP}  
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=1\linewidth]{Immagini/Traiettorie/RotViteP}  
 		\caption{Rotazione vs riferimento}
 		\label{fig:sub-v01}
 	\end{subfigure}
@@ -405,19 +407,16 @@ con $T_D = \frac{K_D}{K_P}$. In caso di ingresso definito come uno scalino, la p
 		\label{fig:PDVite}
 	\end{center}
 \end{figure}
-\\A partire da una legge di moto per entrambi i motori che fornisce quattro set point, abbiamo: una prima fase di raccolta dei dati nei quali si prendono le posizioni e velocità dei motori della vite, essendo i motori connessi a riduttori, ed operando sui giunti abbiamo un blocco che si occupa di fare la conversione; una volta fatta la conversione vi è la necessità di effettuare la cinematica diretta per poter passare dagli angoli alle coordinate dell'asse z. In seguito verrà fatta una differenza tra le posizioni e velocità ottenute con la cinematica e quelle del \textit{set-point}; gli errori verranno poi moltiplicati per $K_P$ (posizione) e $K_D$ (velocità) per ottenere i valori della legge di controllo da assegnare ai motori.
-Andiamo ora a presentare il risultato di una simulazione effettuata implementando il controllore PD, la traiettoria eseguita comprendeva la discesa della vite in due secondi di 5 centimetri ed in contemporanea una rotazione di $360^\circ$.
+\\A partire da una legge di moto per entrambi i motori che fornisce quattro set point, abbiamo: una prima fase di raccolta dei dati nei quali si prendono le posizioni e velocità dei motori della vite, essendo i motori connessi a riduttori, ed operando sui giunti abbiamo un blocco che si occupa di fare la conversione;  vi è poi la necessità di effettuare la cinematica diretta per poter passare dagli angoli alle coordinate dell'asse z. In seguito verrà fatta una differenza tra le posizioni e velocità per poter trovare gli errori. Questi, verranno poi moltiplicati per $K_p$ (posizione) e $K_d$ (velocità) per ottenere i valori della legge di controllo da assegnare ai motori.
+Presentiamo ora il risultato di una simulazione di una traiettoria che comprendeva la discesa della vite in due secondi di 5 centimetri ed in contemporanea una rotazione di $360^\circ$.
 \begin{figure}
-	\centering
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/TrasVitePD}  
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=1\linewidth]{Immagini/Traiettorie/TrasVitePD}  
 		\caption{Traslazione vs riferimento}
 		\label{fig:sub-v1}
 	\end{subfigure}
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/RotVitePD}  
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=1\linewidth]{Immagini/Traiettorie/RotVitePD}  
 		\caption{Rotazione vs riferimento}
 		\label{fig:sub-v2}
 	\end{subfigure}
@@ -425,18 +424,15 @@ Andiamo ora a presentare il risultato di una simulazione effettuata implementand
 	\label{fig:ViteMovimenti}
 \end{figure}
 \subsubsection{Confronto controllori vite}	
-Andiamo a presentare il confronto fra gli errori di traslazione e rotazione tra i due approcci di controllo implementati per la vite.
+Possiamo vedere confronto fra gli errori di traslazione e rotazione tra i due approcci di controllo implementati per la vite in figura \label{fig:errVite}.
 \begin{figure}
-	\centering
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/errTras}  
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=1\linewidth]{Immagini/Traiettorie/errTras}  
 		\caption{Errore traslazione}
 		\label{fig:sub-errT}
 	\end{subfigure}
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{Immagini/Traiettorie/errRot}  
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=1\linewidth]{Immagini/Traiettorie/errRot}  
 		\caption{Errore rotazione}
 		\label{fig:sub-errR}
 	\end{subfigure}
@@ -495,56 +491,56 @@ Avendo la possibilità di scegliere tra più traiettorie, a partire dal tempo at
 \begin{subfigure}{.5\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT1PD}  
+  \includegraphics[width=1\linewidth]{Immagini/Traiettorie/CoppiaT1PD}  
   \caption{Coppia $\theta_1$ controllore PD}
   \label{fig:sub-coppiaPD1}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT2PD}  
+  \includegraphics[width=1\linewidth]{Immagini/Traiettorie/CoppiaT2PD}  
   \caption{Coppia $\theta_2$ controllore PD}
   \label{fig:sub-coppiaPD2}
 \end{subfigure}
 \caption{Coppie controllore PD braccia}
 \end{figure}
-Possiamo poi andare ad analizzare la posizione ottenuta con quelle coppie rispetto al riferimento, e di conseguenza possiamo guardare anche l'errore:
+\\Possiamo poi andare ad analizzare la posizione ottenuta con quelle coppie rispetto al riferimento, e di conseguenza trovare anche l'errore:
 \begin{figure}[!ht]
 \begin{subfigure}{.5\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta1PD}  
+  \includegraphics[width=1\linewidth]{Immagini/Traiettorie/Theta1PD}  
   \caption{$\theta_1$ reale vs setpoint}
   \label{fig:sub-pd1p}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta2PD}  
+  \includegraphics[width=1\linewidth]{Immagini/Traiettorie/Theta2PD}  
   \caption{$\theta_2$ reale vs setpoint}
   \label{fig:sub-pd2p}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta1PD}  
+  \includegraphics[width=1\linewidth]{Immagini/Traiettorie/ErroreTheta1PD}  
   \caption{Errore su $\theta_1$}
   \label{fig:sub-pd3p}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta2PD}  
+  \includegraphics[width=1\linewidth]{Immagini/Traiettorie/ErroreTheta2PD}  
   \caption{Errore su $\theta_2$}
   \label{fig:sub-pd4p}
 \end{subfigure}
 \caption{Andamenti posizione ed errori controllore PD}
 \label{fig:AndamentiPD}
 \end{figure}
-Osservando i grafici si può notare che la posizione segue bene il setpoint andiamo poi a rappresentare la traiettoria reale e il riferimento anche sull'asse [X,Y] ottenendo: 
+\\Andiamo poi a rappresentare la traiettoria reale e il riferimento anche sull'asse [X,Y] in figura \ref{fig:PDBracciaC}
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.5]{Immagini/Traiettorie/Cerchio}
+		\includegraphics[scale=0.42]{Immagini/Traiettorie/Cerchio}
 		\caption{Cerchio assi  [x,y] controllore PD}
 		\label{fig:PDBracciaC}
 	\end{center}
@@ -554,40 +550,29 @@ Il passo successivo è stato quello di studiare ed implementare un controllore c
 \begin{equation}
 g_d = \Delta M(q^0_m)\ddot{q_m}^0 + C(q^0_m,\dot{q_m^0})\dot{q_m^0}
 \end{equation}
-L'idea è quindi che i termini vengono calcolati considerando i valori di posizione, velocità ed accelerazione del rifermento, in quanto mediante una legge di moto sono sempre ben noti. L'elemento $g_d$ compensa i termini di accoppiamento non lineari dovuti a forza d'inerzia, di Coriolis e centrifughe che dipendono dalla struttura e di conseguenza variano durante il movimento del manipolatore; in generale però calcolare questo termine è molto impegnativo, di conseguenza l'utilizzo di questo approccio su un sistema online può richiedere molto tempo, per questo solitamente vengono compensati solo i termini più importanti come quelli inerziali.
+L'idea è che i termini vengono calcolati considerando i valori di posizione, velocità ed accelerazione del rifermento, poiché grazie ad una legge di moto sono sempre ben noti. L'elemento $g_d$ compensa i termini di accoppiamento non lineari dovuti a forza d'inerzia, di Coriolis e centrifughe che dipendono dalla struttura e di conseguenza variano durante il movimento del manipolatore; in generale però calcolare questo termine è molto impegnativo, di conseguenza l'utilizzo di questo approccio su un sistema online può richiedere molto tempo, per questo solitamente vengono compensati solo i termini più importanti come quelli inerziali.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.5]{Immagini/Controllori/FFschema}
+		\includegraphics[scale=0.45]{Immagini/Controllori/FFschema}
 		\caption{Schema teorico controllo feedforward}
 		\label{fig:FFschema}
 	\end{center}
 \end{figure}
-A livello implementativo possiamo vederlo come:
+\\A livello implementativo possiamo vederlo come:
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.37]{Immagini/Controllori/feedForward}
+		\includegraphics[scale=0.35]{Immagini/Controllori/feedForward}
 		\caption{Controllore feedforward}
 		\label{fig:FF}
 	\end{center}
 \end{figure}
 \\A partire dalla legge di moto selezionata si ottengono i \textit{set-point} all'end-effector, che grazie alla cinematica inversa vengono convertiti in riferimento ai giunti.  Una volta ottenuti i riferimenti di posizione, velocità ed accelerazione si va ad applicare la funzione di dinamica inversa per calcolare le coppie di cui abbiamo bisogno. Le coppie sono quindi calcolate esclusivamente mediante dai riferimenti, è possibile vedere questo controllore come una versione di quello a dinamica inversa in anello aperto.
-\begin{figure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/theta1FF}  
-  \caption{$\theta_1$ reale vs setpoint}
-  \label{fig:sub-ff1}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/theta2FF}  
-  \caption{$\theta_2$ vs setpoint}
-  \label{fig:sub-ff2}
-\end{subfigure}
-\caption{Andamenti controllo fast-forward}
-\label{fig:FFcoppie}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.45]{Immagini/Traiettorie/fftot}
+\caption{Andamenti controllo feed-forward}
+		\label{fig:ffcoppie}
+	\end{center}
 \end{figure}
 Eseguendo traiettorie con una dinamica maggiore, con una conseguente diminuzione del tempo di esecuzione il manipolatore riesce ad eseguire un movimento, però non segue la traiettoria desiderata; questo è dovuto alla mancata stima degli attriti nel modello considerato.
 \subsubsection{Controllo in dinamica inversa}
@@ -636,72 +621,58 @@ L'utilizzo di questo approccio è basato sull'ipotesi della cancellazione perfet
 	\end{center}
 \end{figure}
 Come per tutti i controllori visti fino ad ora a partire da selettore e dal tempo ed applicando la cinematica inversa  andiamo ad ottenere i riferimenti di posizione,  velocità ed accelerazione; andiamo poi a prendere le posizioni e le velocità attuali dei motori e le convertiamo da motori ai giunti. Successivamente andiamo per posizione e velocità a trovare gli errori che verranno moltiplicati rispettivamente per $K_p$ e $K_d$. Per ottenere la y dobbiamo sommare questi due componenti insieme all'accelerazione del riferimento. Una volta ottenuto questo andiamo ad applicare la funzione di dinamica inversa con ingressi pari a $ID(y,q,\dot{q})$, da questa otteniamo la legge di controllo e le relative coppie che andranno assegnate ai link del manipolatore. 
-\subsubsection*{Test Kp e Kd SISTEMARE}
+\subsubsection*{Test Kp e Kd}
 \addcontentsline{toc}{subsubsection}{Test Kp e Kd}
-Per andare a scegliere $K_p$ e $K_d$ in modo preciso è stato adottato un approccio sperimentale, ovvero far variare $K_p$, in un range di valori compreso tra 350 e 950 ad intervalli di 50, in base ad un valore fisso di $K_d$, il tutto facendo fare una traiettoria circolare ed andando ad analizzare quando il controllo iniziava a dar origine a vibrazione. Andiamo ora a vedere un risultato di questo metodo.
+Per andare a scegliere $K_p$ e $K_d$ in modo preciso è stato adottato un approccio sperimentale, ovvero far variare $K_p$, in un range di valori compreso ad incrementi di 50, in base ad un valore fisso di $K_d$. La legge di moto selezionata è stata quella del cerchio in cinque secondi, una legge molto lenta andando ad analizzare quando il controllo iniziava a dar origine a vibrazioni. Vediamo in figura \ref{fig:KdTest} un risultato di questo metodo, dai test condotti si vede che all'aumentare di entrambi i parametri le vibrazioni iniziano a crescere, e sono visibili prima  
 \begin{figure}[!ht]
 \begin{subfigure}{.5\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/Test_Kd=15.png}  
+  \includegraphics[width=.85\linewidth]{Immagini/Sperimentale/Test_Kd=15.png}  
   \caption{Test con $K_d$ = 1.5}
   \label{fig:sub-kd1.5}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
-  % include second image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/Test_Kd=2.png}  
-  \caption{Test con $K_d$=2}
-  \label{fig:sub-kd2}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/Test_Kd=3.png}  
+  \includegraphics[width=.85\linewidth]{Immagini/Sperimentale/Test_Kd=3.png}  
   \caption{Test con $K_d$=3}
   \label{fig:sub-kd3}
 \end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Sperimentale/Test_Kd=3.png}  
-  \caption{Test con $K_d$=3}
-  \label{fig:sub-kd1}
-\end{subfigure}
-\caption{Test su $K_d$}
+\caption{Ricerca di $K_d$ al variare di $K_p$}
 \label{fig:KdTest}
 \end{figure}
 \subsubsection*{Analisi}
-Anche in questo caso, come nei precedenti la traiettoria principale testata è stata quella del cerchio raggio 5cm in 5 secondi, possiamo andare a vedere le coppie fornite ai giunti:
+Anche in questo caso, come nei precedenti la traiettoria principale testata è stata quella del cerchio raggio 5cm in 5 secondi, possiamo andare a vedere le coppie fornite ai giunti,
 \begin{figure}
 \begin{subfigure}{.53\textwidth}
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT1ID}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/CoppiaT1ID}  
   \caption{Coppia $\theta_1$}
   \label{fig:sub-ikd1}
 \end{subfigure}
 \begin{subfigure}{.53\textwidth}
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/CoppiaT2ID}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/CoppiaT2ID}  
   \caption{Coppia $\theta_2$}
   \label{fig:sub-ikd2}
 \end{subfigure}
 \caption{Coppie giunti controllo dinamica inversa}
 \label{fig:CoppieID}
 \end{figure}
-Come per il controllore PD possiamo andare a vedere e comparare la posizione attuale rispetto al riferimento e di conseguenza l'errore:
+come per il controllore PD possiamo andare a vedere e comparare la posizione attuale rispetto al riferimento e trovare l'errore:
 \begin{figure}[!ht]
 \begin{subfigure}{.53\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta1ID}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/Theta1ID}  
   \caption{$\theta_1$ reale vs setpoint}
   \label{fig:sub-id1}
 \end{subfigure}
 \begin{subfigure}{.53\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/Theta2ID}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/Theta2ID}  
   \caption{$\theta_2$ reale vs setpoint}
   \label{fig:sub-pd2k}
 \end{subfigure}
@@ -711,29 +682,28 @@ Come per il controllore PD possiamo andare a vedere e comparare la posizione att
 \begin{subfigure}{.53\textwidth}
   \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta1ID}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/ErroreTheta1ID}  
   \caption{Errore su $\theta_1$}
   \label{fig:sub-pd3k}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   % include third image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ErroreTheta2ID}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/ErroreTheta2ID}  
   \caption{Errore su $\theta_2$}
   \label{fig:sub-pd4}
 \end{subfigure}
 \caption{Errori controllore ID}
 \label{fig:AndamentiID}
 \end{figure}
-Come per il controllore PD anche qua possiamo andare a rappresentare la traiettoria nel piano cartesiano, ottenendo:
+\\Come per il controllore PD anche qua possiamo andare a rappresentare la traiettoria nel piano cartesiano, ottenendo:
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.5]{Immagini/Traiettorie/CerchioDinamicaInversa}
+		\includegraphics[scale=0.6]{Immagini/Traiettorie/CerchioDinamicaInversa}
 		\caption{Cerchio [X,Y] controllo ID}
 		\label{fig:IDbracciaC}
 	\end{center}
 \end{figure}
-AGGIUNGI COMMENTI
 \subsubsection{Controllo robusto}
  L'effetto di incertezze sul modello induce in errore il sistema di controllo, soprattutto nel caso reale bisogna supporre che la compensazione del modello dinamico risulti imperfetta magari a causa di approssimazioni oppure per semplificazioni.  Possiamo andare quindi a riscrivere l'equazione \ref{eq:ControlloreID} come:
 \begin{equation}
@@ -946,14 +916,14 @@ Avendo introdotto e verificato le principali tipologie di controllo centralizzat
 \begin{subfigure}{.53\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ConfontoErroriTheta1}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/ConfontoErroriTheta1}  
   \caption{Confronto errore $\theta_1$ }
   \label{fig:sub-tid1}
 \end{subfigure}
 \begin{subfigure}{.53\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.8\linewidth]{Immagini/Traiettorie/ConfontoErroriTheta2}  
+  \includegraphics[width=.9\linewidth]{Immagini/Traiettorie/ConfontoErroriTheta2}  
   \caption{Confronto errore $\theta_2$}
   \label{fig:sub-tid2}
 \end{subfigure}
@@ -962,12 +932,12 @@ Avendo introdotto e verificato le principali tipologie di controllo centralizzat
 \\Gli errori sono espressi in radianti, il picco di errore è circa due decimi di grado. Da entrambe le immagini è chiaro come il controllore a dinamica inversa risulti migliore. Di conseguenza si è scelto questo come controllore definitivo e sono stati analizzati altri andamenti con leggi di moto diverse al fine di valutarne il comportamento.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.45]{Immagini/Traiettorie/QuadratoDinamicaInversa}
+		\includegraphics[scale=0.46]{Immagini/Traiettorie/QuadratoDinamicaInversa}
 		\caption{Quadrato controllo dinamica inversa}
 		\label{fig:quadID}
 	\end{center}
 \end{figure}
-La prima traiettoria eseguita è stata quella del quadrato, nei lati orizzontali \textit{setpoint} e curva reale sono pressoché uguali, in quelli verticali invece il manipolatore segue ma non alla perfezione, questo è dovuto alla contrapposizione dei motori in fase di lavoro. 
+\\La prima traiettoria eseguita è stata quella del quadrato, nei lati orizzontali \textit{setpoint} e curva reale sono pressoché uguali, in quelli verticali invece il manipolatore segue ma non alla perfezione, questo è dovuto alla contrapposizione dei motori in fase di lavoro. 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Immagini/Traiettorie/PatternDinamicaInversa}
@@ -975,15 +945,15 @@ La prima traiettoria eseguita è stata quella del quadrato, nei lati orizzontali
 		\label{fig:patternID}
 	\end{center}
 \end{figure}
-La seconda figura è ancora una traiettoria in 2D ed è un pattern di quadrati nei quali il manipolatore non passa mai più di una volta per lo stesso punto, anche qua si può notare, come abbiamo visto in precedenza per il quadrato che i lati orizzontali sono eseguiti correttamente mentre in quelli verticali possono originarsi vibrazioni. Nella parte inferiore possiamo vedere più vibrazioni in quanto come visto [metti ref. a workspace] il numero di condizionamento è più alto e quindi ci si sta avvicinando ad una configurazione singolare.
+\\La seconda figura è ancora una traiettoria in 2D ed è un pattern di quadrati nei quali il manipolatore non passa mai più di una volta per lo stesso punto, anche qua si può notare, come abbiamo visto in precedenza per il quadrato che i lati orizzontali sono eseguiti correttamente mentre in quelli verticali possono originarsi vibrazioni. Nella parte inferiore possiamo vedere più vibrazioni in quanto come visto [metti ref. a workspace] il numero di condizionamento è più alto e quindi ci si sta avvicinando ad una configurazione singolare.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.45]{Immagini/Traiettorie/SpiraleID}
+		\includegraphics[scale=0.5]{Immagini/Traiettorie/SpiraleID}
 		\caption{Spirale controllo dinamica inversa}
 		\label{fig:SpiraleID}
 	\end{center}
 \end{figure}
-Come ultima traiettoria si è scelto di eseguirne una tridimensionale: la spirale, in questa è compresa la movimentazione sia delle braccia che della vite, è possibile selezionare quanti cerchi fare e di quanto far scendere la vite; si può vedere che il \textit{setpoint} e la traiettoria reale sono molto simili.
+\\Come ultima traiettoria si è scelto di eseguirne una tridimensionale: la spirale, in questa è compresa la movimentazione sia delle braccia che della vite, è possibile selezionare quanti cerchi fare e di quanto far scendere la vite; si può vedere che il \textit{setpoint} e la traiettoria reale sono molto simili.
 \subsection{Problema della velocità}
 Implementando e studiando le tecniche di controllo centralizzato, si può vedere chiaramente come in tutte queste abbiamo bisogno della velocità $\dot{q}$. Ci si è quindi concentrati su di essa, notando che la velocità ricavata dagli encoder soffriva di rumore, questa situazione poteva essere critica in quanto un parametro "rumoroso" da origine ad una legge di moto vibrante e di conseguenza non è possibile alzare il contributo $K_d$ in maniera adeguata in quanto aumenterebbero le vibrazioni. Proprio per questo si è scelto di ricercare un metodo che potesse filtrare la velocità o predirla in modo da avere un risultato migliore da poter dare in ingresso al manipolatore.
 \subsubsection*{Filtro primo ordine}
@@ -995,7 +965,7 @@ T(s) = \frac{a_0}{s+\frac{b_0}{b_1}} = G_0 \frac{P_0}{s+P_0}
 In questa tipologia di filtri c'è un polo che deve essere reale e negativo per garantire la stabilità (possiamo vedere questa condizione nell'appendice \ref{Appendice:stabilita}). Andando ad analizzare in frequenza l'andamento del filtro $s=j\omega$ si trova che a basse frequenze l'input viene fatto passare completamente, mentre ad alte frequenze viene tagliato.
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.6]{Immagini/Traiettorie/FiltroIOrdine}
+		\includegraphics[scale=0.5]{Immagini/Traiettorie/FiltroIOrdine}
 		\caption{Filtro primo ordine}
 		\label{fig:filtroIOrd}
 	\end{center}
@@ -1006,16 +976,91 @@ Possiamo vedere in figura la velocità reale e due filtri. Il filtro con coeffic
 Un filtro del secondo ordine si differenzia dal primo aggiungendo un polo, permette quindi di arrivare ad avere una pendenza del diagramma di Bode del modulo fino a 40$\frac{dB}{dec}$ nella banda attenuata, mentre in banda passante a seconda dell'approssimazione applicata possono verificarsi vari casi. Dal punto di vista pratico si realizzano mettendo più filtri del primo ordine in serie tra di loro. 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.6]{Immagini/Traiettorie/FiltroIIOrdine}
+		\includegraphics[scale=0.5]{Immagini/Traiettorie/FiltroIIOrdine}
 		\caption{Filtro secondo ordine}
 		\label{fig:filtroIIOrd}
 	\end{center}
 \end{figure}
-In figura possiamo vedere la velocità reale e tre filtri, anche in questo caso nessuno dei filtri riesce a fornire un output della velocità adeguato. 
+\\In figura possiamo vedere la velocità reale e tre filtri, anche in questo caso nessuno dei filtri riesce a fornire un output della velocità adeguato. 
 \subsubsection*{Filtro di Kalman}
 \addcontentsline{toc}{subsubsection}{Filtro di Kalman}
 Il filtro di Kalman è un efficiente filtro ricorsivo che valuta lo stato di un sistema dinamico a partire da una serie di misure soggette a rumore, gli approcci implementativi del filtro sono stati due, il primo metodo consisteva nell'approccio al problema mediante tecniche di \textit{sensor fusion}, andando a ricercare i valori delle matrici di covarianza in modo sperimentale e valutando il comportamento del filtro rispetto alla velocità originale; il secondo approccio è stato l'utilizzo del filtro di kalman esteso implementandolo in maniera più teorica.
-
+\subsubsection*{Approccio sensor fusion}
+Per l'approccio \textit{sensor fusion} è stato implementato un codice che permette di andare a trovare i valori migliori delle matrici di covarianza in base. Andiamo prima a definire le matrici che ci serviranno per la trattazione e poi riportare ora i due algoritmi fondamentali:
+\begin{equation}
+A = \begin{bmatrix}
+1 & T \\ 0 & 1
+\end{bmatrix}, B = \begin{bmatrix}
+0 \\ T
+\end{bmatrix}, C=\begin{bmatrix}
+ 1 & 0
+\end{bmatrix}, P_0 = \begin{bmatrix}
+1 & 0 \\ 0 & 1
+\end{bmatrix}
+\end{equation}
+con $T = 0.001 sec$.  Le variabili incognite che andremo a ricavare sono:
+\begin{equation}
+R , Q = \begin{bmatrix}
+Q_1 & 0 \\ 0 & Q_2
+\end{bmatrix}
+\end{equation}
+\begin{algorithm}
+\caption{Creazione del filtro}\label{alg:cap}
+\begin{algorithmic}
+\For $f \gets 1 : 1000$ \Comment{Costruzione filtro con 1000 punti}
+\State $S \gets C\cdot P_m \cdot C^T + R$
+\State $K \gets P_m \cdot C'\cdot S^{-1}$
+\State $P_p \gets P_m - K\cdot C\cdot P_m$
+\State $P_m = A\cdot P_p\cdot A^T + Q$\Comment{Passo di predizione}
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+\\Una volta definito il filtro il passo successivo è quello di avviarlo, per far questo andiamo a far ciclare i valori di $Q_1,Q_2$ ed R in modo da andare a trovare i migliori: 
+\begin{algorithm}
+\caption{Avvio filtro}\label{alg:avvio}
+\begin{algorithmic}
+\Require $Q_1, Q_2, R,Y,\dot{Y}_{rif}$
+\For{$i \gets 1 : N$}
+\For{$j \gets 1: N$}
+\State $Q \gets [Q_1(i),0,0,Q_2(j)]$
+\For{$k \gets 1:N$}
+\State $r \gets R(k)$
+\State $P_m = P_0$
+\State $em \gets [0,0]^T$
+\For $ g \gets 1 : length(Y)$
+\State $ ep \gets em + K\cdot (Y(k)-C*em)$
+\State $ [pos,vel] \gets [sep(1),sep(2)]$
+ \State $em \gets A\cdot ep + B\cdot Y(k)$
+ \State $err(k) \gets \dot{Y}_{rif} - vel$
+\EndFor
+\For $k \gets 1:length(err)$
+\If $mean(abs(err(k)) < my$
+\State $my = mean(abs(err(k))$
+\State $ Save [i,j,k]$
+\EndIf
+\EndFor
+\EndFor
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+Alla fine del ciclo otteniamo i valori di [i,j,k] che ci permettono di trovare le matrici Q ed R a minimo errore tra riferimento e stima. Grazie alla formula:
+\begin{equation}
+\frac{|\dot{y}_{rif}-\dot{\hat{y}}|}{N}
+\end{equation} 
+Per completezza sono stati condotti anche dei test scegliendo come risultato migliore la varianza minore:
+\begin{equation}
+\sum_{i=0}^{N} \frac{[(\dot{y}_{rif}-\dot{\hat{y}}) - \mu_y]^2}{N}
+\end{equation}
+Si è visto però che il risultato finale è identico.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.52]{Immagini/Kalman1}
+		\caption{Kalman \textit{sensor fusion}}
+		\label{fig:kalman}
+	\end{center}
+\end{figure}
+\subsubsection*{Filtro di Kalman esteso}
 Il filtro di Kalman esteso Extended Kalman Filter (EKF) è una versione non-lineare del filtro di Kalman usata quando l'evoluzione o l'osservazione dello stato del sistema sono non-lineari, un sistema a tempo discreto, non lineare può essere descritto come:
 \begin{equation}
 	\begin{cases}
@@ -1062,3 +1107,10 @@ Sfruttando il metodo delle differenze finite(\ref{appendix:diff} possiamo trovar
 \frac{\partial}{\partial \xi_d} f(\xi,u) \approx \frac{f(\xi+\Delta\xi\delta_d)-f(\xi-\Delta\xi\delta_d)}{2\Delta\xi}
 \end{equation}
 Con $\delta_d$ definito come la colonna della matrice identità calcolata col metodo di Sarrus.
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.52]{Immagini/Kalman2}
+		\caption{Filtro di Kalman esteso}
+		\label{fig:kalmanek}
+	\end{center}
+\end{figure}
