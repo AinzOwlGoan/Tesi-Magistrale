@@ -1,6 +1,6 @@
 \section{Cenni sistemi dinamici}
-In questa sezione dell'appendice  andremo a considerare un sistema non lineare come quello del manipolatore e analizzeremo la stabilità dell'equilibrio a tempo discreto.
-\\Dato un sistema dinamico, a dimensione finita, stazionario, di tipologia MIMO (\textit{multiple input multiple output}), non lineare e a tempo discreto possiamo descriverlo mediante l'equazione:
+In questa sezione dell'appendice  verrà considerato un sistema non lineare come quello del manipolatore e verrà analizzata la stabilità dell'equilibrio a tempo discreto.
+\\Dato un sistema dinamico, a dimensione finita, stazionario, di tipologia MIMO (\textit{multiple input multiple output}), non lineare e a tempo discreto è possibile descriverlo mediante l'equazione:
 \begin{equation}
 \xi(k+1) = f(\xi(k),u(k))
 \end{equation}
@@ -18,11 +18,11 @@ Il sistema può andare ad evolversi in due stati:
 \end{cases}
 \end{equation}
 \end{itemize}
-Possiamo andare a definire la perturbazione sullo stato del sistema come la differenza fra i due movimenti in particolare possiamo esprimerla come:
+Viene definita la perturbazione sullo stato del sistema come la differenza fra i due movimenti in particolare possiamo esprimerla come:
 \begin{equation}
 \delta \xi(k) = \xi(k)-\overline{\xi} \in \mathbb{R}^n 
 \end{equation}
-procedendo in maniera incrementale troviamo:
+procedendo in maniera incrementale si trova:
 \begin{equation}
 \delta \xi(k+1) = \xi(k+1)+\overline{\xi} = f(\xi(k),\overline{u})-\overline{\xi} = f(\overline{\xi}+\delta\xi(k),\overline{u})-\overline{\xi}
 \end{equation}
@@ -41,25 +41,25 @@ Con $A = \frac{\partial f(\xi,\overline{u})}{\partial \xi}\bigg|_{\xi = \overlin
 \begin{equation}
 \delta \xi (k+1) = f(\overline{\xi}+\delta \xi (k),\overline{u}) = A\delta\xi(k)+h(\delta\xi(k))
 \end{equation}
-Da tutto questo possiamo derivare anche la condizione di instabilità, esprimibile come:
+Da tutto questo è possibile derivare anche la condizione di instabilità, esprimibile come:
 \begin{equation}
 \exists i : |\lambda_i(A)|>1
 \end{equation}
 con A definita come prima. In questo caso, non esiste alcun introno dell'equilibrio che fa rimanere la perturbazione dello stato limitata a partire da una perturbazione iniziale $\delta \xi_0 \in \Psi_{\overline{\xi}}$. 
 \subsection{Metodo delle differenze finite}\label{appendix:diff}
-In caso di equazioni differenziali ordinarie l'interesse è quello di risolvere in un preciso dominio, in particolare, per poterle risolvere numericamente dobbiamo imporre la condizione che il dominio sia limitato. Le differenze finite vengono utilizzate per risolvere equazioni differenziali che descrivono fenomeni stazionari, ovvero quando le quantità di riferimento variano nello spazio (ipotizzando che non varino nel tempo). La trattazione seguente utilizzerà come esempio l'equazione di Poisson
+In caso di equazioni differenziali ordinarie l'interesse è quello di risolvere in un preciso dominio, in particolare, per poterle risolvere numericamente bisogna imporre la condizione che il dominio sia limitato. Le differenze finite vengono utilizzate per risolvere equazioni differenziali che descrivono fenomeni stazionari, ovvero quando le quantità di riferimento variano nello spazio (ipotizzando che non varino nel tempo). La trattazione seguente utilizzerà come esempio l'equazione di Poisson
 \begin{equation}
 - \frac{d^2 u(\gamma)}{d\gamma^2}  =f(\gamma)
 \end{equation}
-con $\gamma\in[0,R]$ e $f:\mathbb{R}\rightarrow \mathbb{R}$ una funzione con condizioni $u(0)=a, u(R)=b$; per poterla risolvere dobbiamo garantire un minimo di regolarità per la funzione f. La prima idea che applichiamo è la discretizzazione del dominio, ovvero dividiamo l'intervallo $[0,R]$ in intervalli sufficientemente piccoli la cui unione restituisce il dominio iniziale. Definiamo quindi la discretizzazione come:
+con $\gamma\in[0,R]$ e $f:\mathbb{R}\rightarrow \mathbb{R}$ una funzione con condizioni $u(0)=a, u(R)=b$; per poterla risolvere bisogna garantire un minimo di regolarità per la funzione f. La prima idea applicata è la discretizzazione del dominio, ovvero la divisione dell'intervallo $[0,R]$ in intervalli sufficientemente piccoli la cui unione restituisce il dominio iniziale. Si definisce quindi la discretizzazione come:
 \begin{equation}
 \Gamma = \{\gamma_1 = 0 < \gamma_2 < \dots < \gamma_{N-1} < \gamma_N = R\}
 \end{equation}
-tale che $\cup_{i=1}^{N-1} [\gamma_i,\gamma_{i+1}] = [0,R]$. Essendo la discretizzazione costruita con distanze uguali chiamiamo $\Delta \gamma_k = \gamma_{k+1} -\gamma_k$. Ricordandoci il concetto di rapporto incrementale per la definizione della derivata prima, sapendo che la derivata di una funzione è definita come il limite del rapporto incrementale in caso che sia finito, ne consegue che possiamo definire la derivata seconda come:
+tale che $\cup_{i=1}^{N-1} [\gamma_i,\gamma_{i+1}] = [0,R]$. Essendo la discretizzazione costruita con distanze uguali chiamiamo $\Delta \gamma_k = \gamma_{k+1} -\gamma_k$. Riprendendo il concetto di rapporto incrementale per la definizione della derivata prima, sapendo che la derivata di una funzione è definita come il limite del rapporto incrementale in caso che sia finito, ne consegue che è possibile definire la derivata seconda come:
 \begin{equation*}
 u''(\gamma) = \lim_{\Delta\gamma \to 0} \frac{u'(\gamma+\Delta\gamma) -u'(\gamma)}{\Delta \gamma}
 \end{equation*}
-Introduciamo quindi $u(\gamma_k) \approx u_k$, cioè, quello che noi andiamo a calcolare è l'approssimazione della soluzione calcolata in $\gamma_k$. Per fornire un'approssimazione alle differenze finite di queste derivate utilizziamo l'idea di trovare un intervallo di discretizzazione piccolo tale per cui prendendo due elementi $\gamma_k$ e $\gamma_{k+1}$ distano sufficientemente poco. Possiamo quindi approssimare la derivata come:
+Introducendo quindi $u(\gamma_k) \approx u_k$, cioè, quello che viene calcolato è l'approssimazione della soluzione calcolata in $\gamma_k$. Per fornire un'approssimazione alle differenze finite di queste derivate utilizziamo l'idea di trovare un intervallo di discretizzazione piccolo tale per cui prendendo due elementi $\gamma_k$ e $\gamma_{k+1}$ distano sufficientemente poco. È possibile approssimare la derivata come:
 \begin{equation}
 u'(\gamma_k) \approx \frac{u_{k+1}+u_k}{\Delta \gamma}
 \end{equation}

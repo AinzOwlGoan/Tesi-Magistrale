@@ -1,20 +1,20 @@
 \section{Modellazione end-effector}\label{DescrizioneEF}
-L'obiettivo di questo capito consiste nel presentare la modellazione della cinematica e dinamica dell'end-effector.
-\\L'end-effector, identificato anche come utensile, è composto da due parti: 
+L'obiettivo di questo capito consiste nel presentare la modellazione della cinematica e dinamica dell'\textit{end-effector}.
+\\L'\textit{end-effector}, identificato anche come utensile, è composto da due parti: 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.5]{Immagini/ViteRicircolo}
 		\caption{Struttura vite}
 	\end{center}
 \end{figure}
-\\La prima è una vite a ricircolo di sfere che permette un movimento rotatorio, mentre la seconda parte è una guida lineare che permette una traslazione positiva o negativa nell'asse z. Entrambi i componenti sono collegati a motori che permettono la movimentazione interfacciandosi con degli azionamenti. All'estermità della vite è possibile collegare un utensile, come è possibile vedere dalla foto è stato collegato un utensile utilizzato per disegnare le traiettorie su un foglio.
+\\La prima è una vite a ricircolo di sfere che permette un movimento rotatorio, mentre la seconda parte è una guida lineare che permette una traslazione positiva o negativa nell'asse z. Entrambi i componenti sono collegati a motori che permettono la movimentazione interfacciandosi con degli azionamenti. All'estermità della vite è possibile collegare un utensile, dalla foto si nota che è stato collegato un utensile per il disegno, utilizzato per disegnare le traiettorie su un supporto cartaceo.
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.25]{Immagini/utensile}
 		\caption{Utensile da disegno}
 	\end{center}
 \end{figure}
-\\Per proseguire con la trattazione della parte cinematica e dinamica andiamo ad introdurre i parametri della vite:
+\\Per proseguire con la trattazione della parte cinematica e dinamica si introducono i parametri della vite:
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c |c |c|} 
@@ -31,7 +31,7 @@ L'obiettivo di questo capito consiste nel presentare la modellazione della cinem
 \end{table}
 \\A livello teorico si è partito definendo una legge di moto per entrambi i componenti; la legge selezionata è di tipo polinomiale, per la guida è stata fatta una legge sulla posizione, mentre per la vite a ricircolo di sfere sull'orientamento.
 \subsection{Cinematica end-effector}
-Come anticipato, abbiamo quindi la presenza di due leggi di moto che identifichiamo con $z_{ee}$ e $\varphi_v$. Il risultato della cinematica di posizione è il parametro V, con velocità ed accelerazione che saranno le sue derivate, $\dot{V}$ e $\ddot{V}$, definite come: 
+Come anticipato, si ha la presenza di due leggi di moto che vengono identificate con $z_{ee}$ e $\varphi_v$. Il risultato della cinematica di posizione è il parametro V, con velocità ed accelerazione che saranno le sue derivate, $\dot{V}$ e $\ddot{V}$, definite come: 
 \begin{equation*}
 	V = 
 	\begin{bmatrix}
@@ -47,7 +47,7 @@ Come anticipato, abbiamo quindi la presenza di due leggi di moto che identifichi
 		\ddot{Z} \\ \ddot{\theta_Z}
 	\end{bmatrix}
 \end{equation*}
-V è composto da una parte di traslazione (Z) e da una parte di rotazione $\theta_Z$; Per andar a ricavare la cinematica abbiamo  bisogno della legge di moto e della jacobiana della vite, che possiamo definire come:
+V è composto da una parte di traslazione (Z) e da una parte di rotazione $\theta_Z$; Per andar a ricavare la cinematica vi è la necessità della legge di moto e della jacobiana della vite, che viene definita come:
 \begin{equation}
 J_e =
     \begin{bmatrix}
@@ -55,7 +55,7 @@ J_e =
     0 & 1
     \end{bmatrix}
 \end{equation}
-Andando ora a combinare i parametri e sostituendoli nell'equazione precedente otteniamo:
+Andando ora a combinare i parametri e sostituendoli nell'equazione precedente si ottiene:
 \begin{equation}
     V = J_e \begin{bmatrix}
     z_{ee} \\ \varphi_v
@@ -69,13 +69,13 @@ Andando ora a combinare i parametri e sostituendoli nell'equazione precedente ot
 \end{equation}
 
 \subsection{Dinamica della vite}
-Per la definizione della dinamica della vite è stato usato, come per la dinamica dei link il principio dei lavori virtuali. Per questa soluzione abbiamo bisogno delle accelerazioni dei due elementi quindi $\ddot{Z}_{ee}$ e $\ddot{\varphi_v}$. Introduciamo la matrice di massa della vite, composta dalla massa e dall'inerzia, definita come:
+Per la definizione della dinamica della vite è stato usato, come per la dinamica dei link il principio dei lavori virtuali. Per questa soluzione sono necessarie le accelerazioni dei due elementi quindi $\ddot{Z}_{ee}$ e $\ddot{\varphi_v}$. Viene introdotta la matrice di massa della vite, composta dalla massa e dall'inerzia, definita come:
 \begin{equation}
 	M_v = \begin{bmatrix}
 	m_e & 0 \\ 0 & I_v
 	\end{bmatrix}
 \end{equation} 
-La soluzione della dinamica la troviamo quindi come:
+La soluzione della dinamica si trova quindi come:
 \begin{equation}
     C_{ee} = J_e^TM_v
     J_e \begin{bmatrix}

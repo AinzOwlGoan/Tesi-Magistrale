@@ -1,24 +1,24 @@
 \section{Dinamica Manipolatore}
-Il modello dinamico del manipolatore ci fornisce una descrizione matematica della relazione che è instaurata tra le forze agenti sul robot (generalizzate) ed il movimento prodotto dalla sua struttura, cioè le configurazioni che assume nel tempo. Inizialmente, nel calcolo della dinamica sono stati usati tre metodi diversi, il metodo delle azioni vincolari, il metodo di Lagrange e quello dei lavori virtuali. Si è poi deciso di proseguire esclusivamente con il PLV. L'obiettivo di questa sezione è quello di mostrare l'approccio e i risultati ottenuti per il calcolo della dinamica diretta ed inversa.
+Il modello dinamico del manipolatore fornisce una descrizione matematica della relazione che è instaurata tra le forze agenti sul robot (generalizzate) ed il movimento prodotto dalla sua struttura, cioè le configurazioni che assume nel tempo. Inizialmente, nel calcolo della dinamica sono stati usati tre metodi diversi, il metodo delle azioni vincolari, il metodo di Lagrange e quello dei lavori virtuali. Si è poi deciso di proseguire esclusivamente con il PLV. \par L'obiettivo di questa sezione è quello di mostrare l'approccio e i risultati ottenuti per il calcolo della dinamica diretta ed inversa.
 \subsection{Prerequisiti per il calcolo della dinamica}\label{sec:prerequisiti-dinamica}
-Prima di andare ad analizzare i metodi utilizzati, è importante andare a ricavare tutte le matrici delle quali avremo bisogno, in particolare è necessario andare a definire delle matrici che ci permettano di ottenere $\theta_3$ e $\theta_4$ in funzione di $\theta_1$ e $\theta_2$.
+Prima di andare ad analizzare i metodi utilizzati, è importante andare a ricavare tutte le matrici delle quali avremo bisogno, in particolare è necessario andare a definire delle matrici che permettano di ottenere $\theta_3$ e $\theta_4$ in funzione di $\theta_1$ e $\theta_2$.
 \subsubsection{Jacobiana $J_{34}$ e calcolo $\dot{\theta_3},\dot{\theta_4}$}
-A partire da $\theta_1, \theta_2$ possiamo, mediante la cinematica diretta ottenere $\theta_3$ e $\theta_4$. Dall'equazione dei loop vettoriali \ref{eq:loopVettoriali} derivandola otteniamo: 
+A partire da $\theta_1, \theta_2$ è possibile, mediante la cinematica diretta ottenere $\theta_3$ e $\theta_4$. Dall'equazione dei loop vettoriali \ref{eq:loopVettoriali} derivandola si ottiene: 
 \begin{equation}
 	\begin{cases}
 		-\sin\theta_1 \dot{\theta_1} -\sin\theta_3\dot{\theta_3}+\sin\theta_2\dot{\theta_2}+\sin\theta_4\dot{\theta_4} = 0
 		\\ \cos\theta_1\dot{\theta_1} + \cos\theta_3\dot{\theta_3}-\cos\theta_2\dot{\theta_2}-\cos\theta_4\dot{\theta_4} = 0
 	\end{cases}
 \end{equation}
-Considerando anche le velocità $\dot{\theta_1}$ e $\dot{\theta_2}$ possiamo dobbiamo ricavare $\dot{\theta_3}, \dot{\theta_4}$, per far questo dalla seconda equazione ricaviamo $\dot{\theta_4}$ in funzione di $\dot{\theta_3}$:
+Considerando anche le velocità $\dot{\theta}_1$ e $\dot{\theta}_2$ andranno ricavate $\dot{\theta_3}, \dot{\theta_4}$, per far questo dalla seconda equazione si ricava $\dot{\theta_4}$ in funzione di $\dot{\theta_3}$:
 \begin{equation*}
 	\dot{\theta_4} = \frac{\cos\theta_1\dot{\theta_1} + \cos\theta_3\dot{\theta_3}-\cos\theta_2\dot{\theta_2}}{\cos\theta_4}
 \end{equation*}
-Sostituendo $\dot{\theta_4}$ nella prima equazione otteniamo:
+Sostituendo $\dot{\theta_4}$ nella prima equazione si ottiene:
 \begin{equation*}
 	\cos\theta_4(-\sin\theta_1\dot{\theta_1}-\sin\theta_3\dot{\theta_3}+\sin\theta_2\dot{\theta_2})+\tan\theta_4(\cos\theta_1\dot{\theta_1}+\cos\theta_3\dot{\theta_3}-\cos\theta_2\dot{\theta_2}) = 0
 \end{equation*}
-Da questa possiamo ricavare $\dot{\theta_3}$ come:
+Da questa si ricava $\dot{\theta_3}$ come:
 \begin{equation}
 	\dot{\theta_3} = \frac{N_{13}}{D_{13}}\dot{\theta_1}+\frac{N_{23}}{D_{13}}\dot{\theta_2}
 \end{equation}
@@ -32,7 +32,7 @@ dove:
 \begin{equation*}
     D_{13} = \cos\theta_3-\frac{\cos\theta_4}{\sin\theta_4}\sin\theta_3
 \end{equation*}
-Avendo ottenuto questo valore possiamo anche esprimere $\dot{\theta_4}$ come:
+Avendo ottenuto questo valore è possibile esprimere $\dot{\theta_4}$ come:
 \begin{equation}
 	\dot{\theta_4} = \frac{N_{14}}{D_{14}}\dot{\theta_1}+\frac{N_{24}}{D_{14}}\dot{\theta_2}
 \end{equation} 
@@ -53,14 +53,6 @@ Il passo finale è quello di andare a rappresentare la matrice jacobiana che leg
     \frac{N_{14}}{D_{14}} & \frac{N_{24}}{D_{14}}
     \end{bmatrix}
 \end{equation}
-%Notiamo che possiamo esprimere i parametri appena calcolati anche come:
-%\begin{equation*}
-%	\begin{bmatrix}
-%		\dot{\theta_3} \\ \dot{\theta_4}
-%	\end{bmatrix} = J_{34}\begin{bmatrix}
-%	\dot{\theta_1} \\ \dot{\theta_2}
-%\end{bmatrix}
-%\end{equation*}
 \subsubsection{Jacobiana $\dot{J_{34}}$ e calcolo di $\ddot{\theta_3}, \ddot{\theta_4}$}
 Per andar ad ottenere la jacobiana finale, ed i valori delle accelerazioni sui giunti non motorizzati occorre derivare tutti gli elementi visti in precedenza, in particolare:
 \begin{equation*} %  N11p =  N13p
@@ -86,17 +78,17 @@ Per andar ad ottenere la jacobiana finale, ed i valori delle accelerazioni sui g
 \begin{equation*} % D2p = D14p
    \dot{D_{14}} = \cos\theta_4\dot{\theta_4}(\cot\theta_3-\cot\theta_4)+\sin\theta_4\bigg(\frac{-1}{\sin^2\theta_3}\dot{\theta_3} + \frac{1}{\sin^2\theta_4}\dot{\theta_4}\bigg)
 \end{equation*}
-Esprimendo la matrice jacobiana $\dot{J_{34}}$ in funzione dei parametri appena trovati scriviamo:
+Esprimendo la matrice jacobiana $\dot{J_{34}}$ in funzione dei parametri appena trovati si può rappresentare come:
 \begin{equation}
     \dot{J_{34}} =
     \begin{bmatrix}
-    \frac{\dot{N_{13}}D_{13}-N_{13}\dot{D_{13}}}{D_{13}^2} & 
-     \frac{\dot{N_{23}}D_{13}-N_{23}\dot{D_{13}}}{D_{13}^2} \\
-    \frac{\dot{N_{14}}D_{14}-N_{14}\dot{D_{14}}}{D_{14}^2} &
-     \frac{\dot{N_{24}}D_{14}-N_{24}\dot{D_{14}}}{D_{14}^2}
+    \frac{\dot{N}_{13}D_{13}-N_{13}\dot{D}_{13}}{D_{13}^2} & 
+     \frac{\dot{N}_{23}D_{13}-N_{23}\dot{D}_{13}}{D_{13}^2} \\
+    \frac{\dot{N}_{14}D_{14}-N_{14}\dot{D}_{14}}{D_{14}^2} &
+     \frac{\dot{N}_{24}D_{14}-N_{24}\dot{D}_{14}}{D_{14}^2}
     \end{bmatrix}
 \end{equation}
-Per concludere andiamo a trovare:
+Per concludere si trovano:
 \begin{equation}
     \begin{bmatrix}
     \ddot{\theta_3} \\ \ddot{\theta_4}
@@ -110,7 +102,7 @@ Per concludere andiamo a trovare:
     \end{bmatrix}
 \end{equation}
 \subsubsection{Matrici di inerzia}
-Per trovare la soluzione all'equazione del PLV introduciamo le matrici che hanno avuto un ruolo fondamentale nel calcolo:
+Per trovare la soluzione all'equazione del PLV vengono introdotte le matrici che hanno avuto un ruolo fondamentale nel calcolo:
 \begin{equation*}
     J_1 = \begin{bmatrix}
      -0.5l\sin\theta_1 & 0 \\ 0.5l\cos\theta_1 & 0
@@ -202,18 +194,18 @@ In particolare, le matrici assumo il significato di jacobiano che consente il pa
 		\dot{\theta_1} \\ \dot{\theta_2}
 	\end{bmatrix}
 \end{equation*}
-Importanti nel calcolo della dinamica sono anche le derivate delle matrici che abbiamo appena visto, ovvero $\dot{J_3}, \dot{J_4}$,  riportate in appendice \ref{appendice:t34punto}
+Importanti nel calcolo della dinamica sono anche le derivate delle matrici che appena viste, ovvero $\dot{J_3}, \dot{J_4}$,  riportate in appendice \ref{appendice:t34punto}
 \subsection{Principio dei lavori virtuali}
 Il lavoro virtuale è il lavoro svolto da una forza reale che agisce attraverso uno spostamento virtuale o da una forza virtuale che agisce attraverso uno spostamento reale.
 Uno spostamento virtuale è uno spostamento coerente con i vincoli della struttura, cioè che soddisfano le condizioni al contorno in corrispondenza degli appoggi.
-Una forza virtuale è un qualsiasi sistema di forze in equilibrio.
+\par Una forza virtuale è un qualsiasi sistema di forze in equilibrio.
 Per problemi nei quali i corpo sono composti da membri interconnessi che si possono muovere relativamente gli uni rispetto agli altri, originando diverse configurazioni di equilibrio un buon metodo di analisi è quello del "principio dei lavori virtuali" conosciuto anche come PLV ci permette di ottenere una relazione relativamente semplice, è basato sul concetto di Lavoro sviluppato da una forza, ed inoltre ci consente di analizzare la stabilità di un sistema in equilibrio.
 \begin{equation}
     \sum_{i=1}^m F_j\delta q_j\label{eq:din}
 \end{equation}
 \subsection{Dinamica inversa}
 Il problema della dinamica inversa consiste nel determinare le coppie ai giunti necessarie per generare il movimento a partire da posizione, velocità ed accelerazione.
-\\Andando a sviluppare l'equazione dei principi virtuali troviamo le coppie dei link motorizzati nel seguente modo:
+\\Andando a sviluppare l'equazione dei principi virtuali si possono trovare le coppie dei link motorizzati nel seguente modo:
 \begin{equation}
 \begin{split}
 \begin{bmatrix}
@@ -254,7 +246,7 @@ C_1 \\ C_2
 \end{split}
 \label{eq:DinamicaGrande}
 \end{equation}
-Andando ora ad introdurre le matrici $J_1, J_2, J_3, J_4, J_{34}$ e $J$ possiamo esprimere i termini al secondo membro come funzioni di $\delta\theta_1$ e $\delta\theta_2$:
+Andando ora ad introdurre le matrici $J_1, J_2, J_3, J_4, J_{34}$ e $J$ è possibile esprimere i termini al secondo membro come funzioni di $\delta\theta_1$ e $\delta\theta_2$:
 \begin{equation*}
 \begin{split}
 \begin{bmatrix}
@@ -295,12 +287,12 @@ C_1 \\ C_2
 \end{equation*}
 Semplificando il termine dello spostamento virtuale $\begin{bmatrix}
 	\delta \theta_1 & \delta \theta_2
-\end{bmatrix}$ e raccogliendo possiamo esprimere l'equazione come:
+\end{bmatrix}$ e raccogliendo è possibile esprimere l'equazione come:
 \begin{equation}
     \tau = M \ddot{\theta} + C \dot{\theta}
     \label{eq:dinamicaInv}
 \end{equation}
-Che possiamo vedere come:
+Che si può vedere come:
 \begin{equation}
     \begin{bmatrix}
     \tau_1 \\ \tau_2
@@ -348,7 +340,7 @@ Dove:
 \end{table}
 \subsection{Dinamica diretta}
 Il problema della dinamica diretta invece consiste nel determinare le accelerazioni ai giunti a partire dalle coppie, dalla posizione e velocità iniziali di entrambi i link motorizzati.
-\\Andiamo ora a definire l'equazione della dinamica diretta andando ad invertire l'equazione \ref{eq:dinamicaInv} in questo modo:
+\\Si definisce l'equazione della dinamica diretta invertendo l'equazione \ref{eq:dinamicaInv} in questo modo:
 \begin{equation}
 	\ddot{\theta} = M^{-1}(-C\dot{\theta}+\tau)
 	\label{eq:dinamicaDiretta}
@@ -359,7 +351,7 @@ La dinamica del sistema non è lineare, per risolvere l'equazione differenziale 
     \theta_1(t_0) \\ \theta_2(t_0) \\ \dot{\theta}_1(t_0) \\ \dot{\theta}_2(t_0)
     \end{bmatrix}
 \end{equation*}
-Possiamo andare a calcolare $\theta_3$ e $\theta_4$ come abbiamo visto in precedenza nella sezione \ref{sec:Cinematica-pos}, e di conseguenza anche tutte le matrici viste nella sezione \ref{sec:prerequisiti-dinamica}. Con tutti questi dati possiamo  ricalcolare le equazioni \ref{eq:M} e \ref{eq:K} riferite ad M e K nell'istante di tempo iniziale. Viene poi implementato un algoritmo che note posizioni e velocità in un istante calcola quelle dell'istante successivo.
+Si possono andare a calcolare $\theta_3$ e $\theta_4$ come visto in precedenza nella sezione \ref{sec:Cinematica-pos}, e di conseguenza anche tutte le matrici viste nella sezione \ref{sec:prerequisiti-dinamica}. Con tutti questi dati è possibile  ricalcolare le equazioni \ref{eq:M} e \ref{eq:K} riferite ad M e K nell'istante di tempo iniziale. Viene poi implementato un algoritmo che note posizioni e velocità in un istante calcola quelle dell'istante successivo.
 \begin{equation*}
 	\begin{bmatrix}
 		\ddot{\theta}_1(n) \\ \ddot{\theta}_2(n)
@@ -368,7 +360,7 @@ Possiamo andare a calcolare $\theta_3$ e $\theta_4$ come abbiamo visto in preced
  	\dot{\theta}_1(n) \\ \dot{\theta}_2(n)
  \end{bmatrix}+\tau(n)\Bigg)
 \end{equation*} 
-ricaviamo la velocità all'istante successivo come:
+Si ricava la velocità all'istante successivo come:
 \begin{equation*}
 	\begin{bmatrix}
 		\dot{\theta}_1 (n+1) \\ \dot{\theta}_2(n+1)
@@ -388,19 +380,19 @@ e la posizione come:
 		\dot{\theta}_1 (n) \\ \dot{\theta}_2(n)
 	\end{bmatrix}dt
 \end{equation*}
-\\Facciamo ora il confronto fra posizione, velocità ed accelerazione dei \textit{setpoint} rispetto a quelle ottenute tramite integrazione numerica:
+\\Facendo ora il confronto fra posizione, velocità ed accelerazione dei \textit{setpoint} rispetto a quelle ottenute tramite integrazione numerica:
 \begin{figure}[!ht]
 \begin{subfigure}{.45\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confracct1.png}  
+  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confracct1new.png}  
   \caption{Accelerazione $\theta_1$}
   \label{fig:sub-first}
 \end{subfigure}
 \begin{subfigure}{.45\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confracct2.png}  
+  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confracct2new.png}  
   \caption{Accelerazione $\theta_2$}
   \label{fig:sub-second}
 \end{subfigure}
@@ -410,14 +402,14 @@ e la posizione come:
 \begin{subfigure}{.45\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrvelt1.png}  
+  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrvelt1new.png}  
   \caption{Velocità $\theta_1$}
   \label{fig:sub-firstv}
 \end{subfigure}
 \begin{subfigure}{.45\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrtvelt2.png}  
+  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrtvelt2new.png}  
   \caption{Velocità $\theta_2$}
   \label{fig:sub-secondv}
 \end{subfigure}
@@ -427,28 +419,28 @@ e la posizione come:
 \begin{subfigure}{.45\textwidth}
   \centering
   % include first image
-  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrpost1.png}  
+  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrpost1new.png}  
   \caption{Posizione $\theta_1$}
   \label{fig:sub-firsta}
 \end{subfigure}
 \begin{subfigure}{.45\textwidth}
   \centering
   % include second image
-  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrpost2.png}  
+  \includegraphics[width=.78\linewidth]{Immagini/Dinamica/confrpost2new.png}  
   \caption{Posizione $\theta_2$}
   \label{fig:sub-seconda}
 \end{subfigure}
 \caption{Confronto dinamica leggi di moto su posizioni}
 \end{figure}
 \\Si può notare un errore tra le due curve dovuto al metodo di integrazione utilizzato.
-\\Una volta calcolati tutti i parametri di nostro interesse andiamo a costruire il modello simulink che sarà utile per una visione d'insieme e per effettuare la validazione:
+\par Una volta calcolati tutti i parametri di nostro interesse viene costruito il modello simulink, utile per una visione d'insieme e per effettuare la validazione:
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.55]{Immagini/Dinamica/ModSimulink}
 		\caption{Modello simulink manipolatore}
 	\end{center}
 \end{figure}
-Il modello implementa l'equazione della dinamica diretta \ref{eq:dinamicaDiretta}, infatti riusciamo ad ottenere l'accelerazione a partire dalla moltiplicazione fra la matrice d'inerzia e la somma delle coppie con la matrice dei termini di Coriolis. Andando poi ad integrare otteniamo velocità e posizione che ci serviranno per trovare le accelerazioni negli step successivi.
+Il modello implementa l'equazione della dinamica diretta \ref{eq:dinamicaDiretta}, infatti si riesce ad ottenere l'accelerazione a partire dalla moltiplicazione fra la matrice d'inerzia e la somma delle coppie con la matrice dei termini di Coriolis. Andando ad integrare si ottengono i parametri di velocità e posizione che serviranno per trovare le accelerazioni negli step successivi.
 \subsubsection*{Modellazione su Adams}
 \addcontentsline{toc}{subsubsection}{Modellazione su Adams}
 Per quanto riguarda la modellazione su Adams, è stato realizzato un prototipo dei link del manipolatore composto da aste rigide, i due link motorizzati sono fissati a terra mediante delle cerniere.
@@ -521,7 +513,7 @@ Le leggi di moto utilizzate per la validazione sono:
 	\end{subfigure}
 	\caption{Coppie in uscita Adams}
 \end{figure}
-\\Andando poi a fare una differenza tra questi due grafici riusciamo a trovare l'andamento dell'errore sulle coppie:
+\\Facendo una differenza tra questi due grafici si riesce a trovare l'andamento dell'errore sulle coppie:
 \begin{figure}[!ht]
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -539,4 +531,4 @@ Le leggi di moto utilizzate per la validazione sono:
 	\end{subfigure}
 	\caption{Errore Simulink-Adams}
 \end{figure}
-\\Analizzando il grafico vediamo che l'errore è nell'ordine di $10^{-7}$ di conseguenza è possibile vedere che la validazione ha portato un risultato positivo in quanto le coppie ottenute da matlab e quelle da Adams sono molto simili a parte un fattore d'errore dato dalle diverse modalità di calcolo due due software.
+\\Analizzando il grafico si vede che l'errore è nell'ordine di $10^{-7}$, di conseguenza è possibile vedere che la validazione ha portato un risultato positivo in quanto le coppie ottenute da matlab e quelle da Adams sono molto simili a parte un fattore d'errore dato dalle diverse modalità di calcolo due due software.
