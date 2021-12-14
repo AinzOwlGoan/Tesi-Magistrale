@@ -18,7 +18,7 @@ Il sistema può andare ad evolversi in due stati:
 \end{cases}
 \end{equation}
 \end{itemize}
-Viene definita la perturbazione sullo stato del sistema come la differenza fra i due movimenti in particolare possiamo esprimerla come:
+Viene definita la perturbazione sullo stato del sistema come la differenza fra i due movimenti in particolare è possibile esprimerla come:
 \begin{equation}
 \delta \xi(k) = \xi(k)-\overline{\xi} \in \mathbb{R}^n 
 \end{equation}
@@ -26,7 +26,7 @@ procedendo in maniera incrementale si trova:
 \begin{equation}
 \delta \xi(k+1) = \xi(k+1)+\overline{\xi} = f(\xi(k),\overline{u})-\overline{\xi} = f(\overline{\xi}+\delta\xi(k),\overline{u})-\overline{\xi}
 \end{equation}
-risulta essere non lineare, e possiamo trovare la condizione iniziale come:
+risulta essere non lineare, si può trovare la condizione iniziale come:
 \begin{equation*} 
 \delta \xi(k_0 = 0) = \xi_0 -\overline{\xi} \rightarrow \delta \xi \neq 0
 \end{equation*}
@@ -55,11 +55,11 @@ con $\gamma\in[0,R]$ e $f:\mathbb{R}\rightarrow \mathbb{R}$ una funzione con con
 \begin{equation}
 \Gamma = \{\gamma_1 = 0 < \gamma_2 < \dots < \gamma_{N-1} < \gamma_N = R\}
 \end{equation}
-tale che $\cup_{i=1}^{N-1} [\gamma_i,\gamma_{i+1}] = [0,R]$. Essendo la discretizzazione costruita con distanze uguali chiamiamo $\Delta \gamma_k = \gamma_{k+1} -\gamma_k$. Riprendendo il concetto di rapporto incrementale per la definizione della derivata prima, sapendo che la derivata di una funzione è definita come il limite del rapporto incrementale in caso che sia finito, ne consegue che è possibile definire la derivata seconda come:
+tale che $\cup_{i=1}^{N-1} [\gamma_i,\gamma_{i+1}] = [0,R]$. Essendo la discretizzazione costruita con distanze uguali si definisce $\Delta \gamma_k = \gamma_{k+1} -\gamma_k$. Riprendendo il concetto di rapporto incrementale per la definizione della derivata prima, sapendo che la derivata di una funzione è definita come il limite del rapporto incrementale in caso che sia finito, ne consegue che è possibile definire la derivata seconda come:
 \begin{equation*}
 u''(\gamma) = \lim_{\Delta\gamma \to 0} \frac{u'(\gamma+\Delta\gamma) -u'(\gamma)}{\Delta \gamma}
 \end{equation*}
-Introducendo quindi $u(\gamma_k) \approx u_k$, cioè, quello che viene calcolato è l'approssimazione della soluzione calcolata in $\gamma_k$. Per fornire un'approssimazione alle differenze finite di queste derivate utilizziamo l'idea di trovare un intervallo di discretizzazione piccolo tale per cui prendendo due elementi $\gamma_k$ e $\gamma_{k+1}$ distano sufficientemente poco. È possibile approssimare la derivata come:
+Introducendo quindi $u(\gamma_k) \approx u_k$, cioè, quello che viene calcolato è l'approssimazione della soluzione calcolata in $\gamma_k$. Per fornire un'approssimazione alle differenze finite di queste derivate si procede con l'idea di trovare un intervallo di discretizzazione piccolo tale per cui prendendo due elementi $\gamma_k$ e $\gamma_{k+1}$ distano sufficientemente poco. È possibile approssimare la derivata come:
 \begin{equation}
 u'(\gamma_k) \approx \frac{u_{k+1}+u_k}{\Delta \gamma}
 \end{equation}
